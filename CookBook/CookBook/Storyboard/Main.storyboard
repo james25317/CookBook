@@ -34,7 +34,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="FP8-Le-5gy"/>
                         <barButtonItem key="leftBarButtonItem" image="lightbulb" catalog="system" id="FOV-lu-o9S">
                             <connections>
-                                <segue destination="kt6-Cz-zcP" kind="push" id="QAy-3d-Jiw"/>
+                                <segue destination="kt6-Cz-zcP" kind="show" id="QAy-3d-Jiw"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>

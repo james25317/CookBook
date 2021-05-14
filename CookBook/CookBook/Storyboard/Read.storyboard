@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,7 +68,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Cook!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-bt-PYP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Cook!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-bt-PYP">
                                 <rect key="frame" x="161" y="781" width="76.5" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
@@ -76,6 +77,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-qj-X8S">
                                 <rect key="frame" x="241.5" y="778.5" width="20" height="22"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="NTn-6P-TAi" kind="presentation" modalPresentationStyle="overFullScreen" id="EJT-xq-agS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">
                                 <rect key="frame" x="366" y="62" width="24" height="19.5"/>
@@ -124,12 +128,83 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="x7K-VN-Sol">
+            <objects>
+                <viewController id="NTn-6P-TAi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XI8-js-dDB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RP3-XB-LPX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="readItem" id="2el-Ez-odb">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="joj-Ek-lnM">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-QQ-vXg">
+                                <rect key="frame" x="141" y="775" width="36" height="33.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="0yf-lp-TLs"/>
+                                    <constraint firstAttribute="width" secondItem="Rej-QQ-vXg" secondAttribute="height" multiplier="1:1" id="Xcz-bG-w05"/>
+                                    <constraint firstAttribute="height" constant="36" id="f6v-pB-Gkz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="arrow.uturn.backward" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P39-iZ-bcj">
+                                <rect key="frame" x="237" y="774.5" width="36" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="na2-nC-AXM"/>
+                                    <constraint firstAttribute="width" constant="36" id="qAu-8w-xBl"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="speaker.slash" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="crC-Tx-FzY"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                        <constraints>
+                            <constraint firstItem="P39-iZ-bcj" firstAttribute="centerX" secondItem="crC-Tx-FzY" secondAttribute="centerX" constant="48" id="6zI-PW-2aK"/>
+                            <constraint firstItem="2w8-3R-TAF" firstAttribute="height" secondItem="XI8-js-dDB" secondAttribute="height" multiplier="0.8" id="9Vn-BM-Lpo"/>
+                            <constraint firstItem="2w8-3R-TAF" firstAttribute="trailing" secondItem="crC-Tx-FzY" secondAttribute="trailing" id="9bG-0c-tUy"/>
+                            <constraint firstItem="P39-iZ-bcj" firstAttribute="width" secondItem="P39-iZ-bcj" secondAttribute="height" multiplier="1:1" id="E9C-ak-FJb"/>
+                            <constraint firstItem="P39-iZ-bcj" firstAttribute="centerY" secondItem="Rej-QQ-vXg" secondAttribute="centerY" id="Mmk-H6-l2W"/>
+                            <constraint firstItem="Rej-QQ-vXg" firstAttribute="centerX" secondItem="crC-Tx-FzY" secondAttribute="centerX" constant="-48" id="i6s-IK-rQO"/>
+                            <constraint firstItem="2w8-3R-TAF" firstAttribute="leading" secondItem="crC-Tx-FzY" secondAttribute="leading" id="pit-oC-C48"/>
+                            <constraint firstItem="2w8-3R-TAF" firstAttribute="top" secondItem="XI8-js-dDB" secondAttribute="top" id="qad-Sb-f1i"/>
+                            <constraint firstItem="Rej-QQ-vXg" firstAttribute="top" secondItem="2w8-3R-TAF" secondAttribute="bottom" constant="56" id="uOg-A7-jYX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ESS-oY-OfX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmQ-Uh-SSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998.55072463768124" y="113.83928571428571"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
+        <image name="speaker.slash" catalog="system" width="124" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

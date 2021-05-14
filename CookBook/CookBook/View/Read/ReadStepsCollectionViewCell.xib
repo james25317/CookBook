@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SetpsItem" id="gTV-IL-0wX" customClass="ReadCollectionViewCell" customModule="CookBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-FW-BT3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-Jc-8Mn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook the rice following pack instructions, then drain, spread it out to steam-dry and set aside." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-KX-82p">
+                                <rect key="frame" x="36" y="585.5" width="342" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLb-CQ-LbS">
+                                <rect key="frame" x="189.5" y="803.5" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyP-I1-oj8">
+                                <rect key="frame" x="36" y="802.5" width="20" height="22"/>
+                                <state key="normal" image="arrow.left" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-CX-ra2">
+                                <rect key="frame" x="358" y="802.5" width="20" height="22"/>
+                                <state key="normal" image="arrow.right" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6a6-KX-82p" firstAttribute="leading" secondItem="w8O-FW-BT3" secondAttribute="leading" constant="36" id="1IO-cQ-aFp"/>
+                            <constraint firstItem="tTS-Jc-8Mn" firstAttribute="height" secondItem="w8O-FW-BT3" secondAttribute="height" multiplier="0.6" id="6bk-hJ-Q7U"/>
+                            <constraint firstItem="VLb-CQ-LbS" firstAttribute="centerX" secondItem="w8O-FW-BT3" secondAttribute="centerX" id="Cmy-ch-vnR"/>
+                            <constraint firstItem="EGj-CX-ra2" firstAttribute="trailing" secondItem="6a6-KX-82p" secondAttribute="trailing" id="Hrz-e6-jJc"/>
+                            <constraint firstItem="6a6-KX-82p" firstAttribute="centerX" secondItem="w8O-FW-BT3" secondAttribute="centerX" id="Y1G-zZ-zAj"/>
+                            <constraint firstAttribute="bottom" secondItem="VLb-CQ-LbS" secondAttribute="bottom" constant="72" id="Y3a-5F-i6S"/>
+                            <constraint firstAttribute="trailing" secondItem="6a6-KX-82p" secondAttribute="trailing" constant="36" id="b6x-Ac-2DQ"/>
+                            <constraint firstItem="tTS-Jc-8Mn" firstAttribute="top" secondItem="w8O-FW-BT3" secondAttribute="top" id="hrw-c9-MiY"/>
+                            <constraint firstItem="EGj-CX-ra2" firstAttribute="firstBaseline" secondItem="VLb-CQ-LbS" secondAttribute="firstBaseline" id="i93-Zv-emg"/>
+                            <constraint firstItem="VLb-CQ-LbS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6a6-KX-82p" secondAttribute="bottom" constant="16" id="kEW-UC-5ig"/>
+                            <constraint firstItem="RyP-I1-oj8" firstAttribute="leading" secondItem="6a6-KX-82p" secondAttribute="leading" id="lYm-QS-fYG"/>
+                            <constraint firstItem="tTS-Jc-8Mn" firstAttribute="leading" secondItem="w8O-FW-BT3" secondAttribute="leading" id="mA5-gW-qCR"/>
+                            <constraint firstAttribute="trailing" secondItem="tTS-Jc-8Mn" secondAttribute="trailing" id="vYe-6z-0hj"/>
+                            <constraint firstItem="RyP-I1-oj8" firstAttribute="firstBaseline" secondItem="VLb-CQ-LbS" secondAttribute="firstBaseline" id="wtZ-0R-hbp"/>
+                            <constraint firstItem="6a6-KX-82p" firstAttribute="top" secondItem="tTS-Jc-8Mn" secondAttribute="baseline" constant="48" id="yjw-Z7-Twe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="w8O-FW-BT3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ORa-go-Nya"/>
+                <constraint firstItem="w8O-FW-BT3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZMK-oy-hY3"/>
+                <constraint firstAttribute="bottom" secondItem="w8O-FW-BT3" secondAttribute="bottom" id="lsS-Wm-Bbn"/>
+                <constraint firstAttribute="trailing" secondItem="w8O-FW-BT3" secondAttribute="trailing" id="tyd-SD-KrN"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
