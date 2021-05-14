@@ -21,6 +21,7 @@
 		7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */; };
 		7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1BA93264E4C9200B8ED13 /* ProfileCollectionViewCell.swift */; };
 		7FA1BA96264E4C9200B8ED13 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA94264E4C9200B8ED13 /* ProfileCollectionViewCell.xib */; };
+		7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA97264E678000B8ED13 /* Read.storyboard */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		7FA1BA93264E4C9200B8ED13 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FA1BA94264E4C9200B8ED13 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		7FA1BA97264E678000B8ED13 /* Read.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				7FA1BA89264CE8B600B8ED13 /* Search.storyboard */,
 				7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */,
 				7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */,
+				7FA1BA97264E678000B8ED13 /* Read.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				7FA1BA8A264CE8B600B8ED13 /* Search.storyboard in Resources */,
 				7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */,
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,
+				7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */,
 				7F284C33264BC19C001A0B4E /* Today.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
