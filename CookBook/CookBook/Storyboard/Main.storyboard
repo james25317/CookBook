@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWT-8u-yDR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController title="Feed" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-5h-MHb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZeW-5h-MHb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="5gp-GV-Fm6"/>
+                            <constraint firstAttribute="bottom" secondItem="ZeW-5h-MHb" secondAttribute="bottom" id="Ua2-Wh-D4b"/>
+                            <constraint firstItem="ZeW-5h-MHb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cCC-5y-ZGg"/>
+                            <constraint firstItem="ZeW-5h-MHb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="iHN-65-SFu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="13v-0Z-YIc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FP8-Le-5gy"/>
+                        <barButtonItem key="leftBarButtonItem" image="lightbulb" catalog="system" id="FOV-lu-o9S">
+                            <connections>
+                                <segue destination="kt6-Cz-zcP" kind="push" id="QAy-3d-Jiw"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="person.crop.circle" catalog="system" id="h1p-wh-NBp">
+                                <connections>
+                                    <segue destination="1mU-nt-EaB" kind="show" id="PBe-V8-PCu"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b">
+                                <connections>
+                                    <segue destination="ENT-6K-UVO" kind="show" id="Rzl-ey-Hau"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pencil" catalog="system" id="52R-yr-Ndc">
+                                <connections>
+                                    <segue destination="Jnm-t9-mak" kind="show" id="qoy-QY-pwL"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8kE-16-wFR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SWT-8u-yDR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="svW-6e-Oqu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ie1-cb-AWC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FfM-Vf-Bk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="PgK-zs-wMC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="1mU-nt-EaB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3Tz-np-VaN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8L-g2-ZzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="123"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="uTf-nu-2BA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Today" id="kt6-Cz-zcP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="E3V-aI-VN1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2r-uv-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="25"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="fAi-mg-OFx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Edit" id="Jnm-t9-mak" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V4q-tq-odB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahj-7g-ZzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="60"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="0tw-Ud-aKk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="ENT-6K-UVO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ATQ-CP-xIJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPV-gP-asc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
