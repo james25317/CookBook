@@ -26,8 +26,12 @@
 		7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */; };
 		7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */; };
 		7FE21430264E819F00208667 /* ReadIngredientsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */; };
-		7FE21433264E868700208667 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE21431264E868700208667 /* IngredientsTableViewCell.swift */; };
-		7FE21434264E868700208667 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE21432264E868700208667 /* IngredientsTableViewCell.xib */; };
+		7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE21431264E868700208667 /* ReadIngredientsTableViewCell.swift */; };
+		7FE21434264E868700208667 /* ReadIngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE21432264E868700208667 /* ReadIngredientsTableViewCell.xib */; };
+		7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE21436264F948F00208667 /* EditIngredientsTableViewCell.swift */; };
+		7FE21439264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE21437264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib */; };
+		7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */; };
+		7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +59,12 @@
 		7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadStepsCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIngredientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadIngredientsCollectionViewCell.xib; sourceTree = "<group>"; };
-		7FE21431264E868700208667 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
-		7FE21432264E868700208667 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		7FE21431264E868700208667 /* ReadIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		7FE21432264E868700208667 /* ReadIngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadIngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		7FE21436264F948F00208667 /* EditIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		7FE21437264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditIngredientsTableViewCell.IngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsTableViewCell.swift; sourceTree = "<group>"; };
+		7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditStepsTableViewCell.xib; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +128,7 @@
 		7FA1BA7B264CC5D600B8ED13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7FE21435264F942F00208667 /* Edit */,
 				7FE21428264E766D00208667 /* Read */,
 				7FA1BA90264E4C4E00B8ED13 /* Profile */,
 				7FA1BA8F264E4C3900B8ED13 /* Feed */,
@@ -202,10 +211,21 @@
 				7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */,
 				7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */,
 				7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */,
-				7FE21431264E868700208667 /* IngredientsTableViewCell.swift */,
-				7FE21432264E868700208667 /* IngredientsTableViewCell.xib */,
+				7FE21431264E868700208667 /* ReadIngredientsTableViewCell.swift */,
+				7FE21432264E868700208667 /* ReadIngredientsTableViewCell.xib */,
 			);
 			path = Read;
+			sourceTree = "<group>";
+		};
+		7FE21435264F942F00208667 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				7FE21436264F948F00208667 /* EditIngredientsTableViewCell.swift */,
+				7FE21437264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib */,
+				7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */,
+				7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		D63455D3A42A34D9C1BC7ED6 /* Frameworks */ = {
@@ -283,10 +303,12 @@
 				7FA1BA8A264CE8B600B8ED13 /* Search.storyboard in Resources */,
 				7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */,
 				7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */,
-				7FE21434264E868700208667 /* IngredientsTableViewCell.xib in Resources */,
+				7FE21434264E868700208667 /* ReadIngredientsTableViewCell.xib in Resources */,
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,
+				7FE21439264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib in Resources */,
 				7FE21430264E819F00208667 /* ReadIngredientsCollectionViewCell.xib in Resources */,
 				7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */,
+				7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */,
 				7F284C33264BC19C001A0B4E /* Today.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,10 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FE21433264E868700208667 /* IngredientsTableViewCell.swift in Sources */,
+				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,
+				7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
 				7F284C30264BC19C001A0B4E /* ViewController.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
+				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,
 				7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */,
 				7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */,

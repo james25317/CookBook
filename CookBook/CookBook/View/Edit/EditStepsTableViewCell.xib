@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="165" id="KGk-i7-Jjw" customClass="EditStepsTableViewCell" customModule="CookBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-Qd-rPm">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YHi-Qd-rPm" secondAttribute="height" multiplier="1:1" id="rsh-cx-NWB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Step 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iH-RV-Bsd">
+                        <rect key="frame" x="173" y="16" width="233" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roq-ec-GPv">
+                        <rect key="frame" x="173" y="45" width="233" height="112"/>
+                        <string key="text">Heat a tablespoon of the oil in a frying pan or wok over a medium heat. Add the eggs and cook, stirring, until scrambled. Transfer to a plate and return the pan to the heat.</string>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3iH-RV-Bsd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="AFj-dC-pYd"/>
+                    <constraint firstItem="YHi-Qd-rPm" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="Aku-mg-5rt"/>
+                    <constraint firstItem="roq-ec-GPv" firstAttribute="top" secondItem="3iH-RV-Bsd" secondAttribute="bottom" constant="8" symbolic="YES" id="Arx-7e-gJb"/>
+                    <constraint firstItem="3iH-RV-Bsd" firstAttribute="leading" secondItem="YHi-Qd-rPm" secondAttribute="trailing" constant="8" id="El6-RW-aSb"/>
+                    <constraint firstItem="roq-ec-GPv" firstAttribute="trailing" secondItem="3iH-RV-Bsd" secondAttribute="trailing" id="KmX-d4-9ye"/>
+                    <constraint firstAttribute="trailing" secondItem="3iH-RV-Bsd" secondAttribute="trailing" constant="8" id="VSN-1E-9vQ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="roq-ec-GPv" secondAttribute="bottom" priority="999" constant="8" id="Wrd-hL-eiz"/>
+                    <constraint firstAttribute="bottom" secondItem="YHi-Qd-rPm" secondAttribute="bottom" id="rDC-yJ-2P7"/>
+                    <constraint firstItem="YHi-Qd-rPm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sbl-gT-KE4"/>
+                    <constraint firstItem="roq-ec-GPv" firstAttribute="leading" secondItem="3iH-RV-Bsd" secondAttribute="leading" id="uGJ-BN-GvT"/>
+                    <constraint firstItem="YHi-Qd-rPm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xzf-1q-j8s"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="184.78260869565219" y="169.08482142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

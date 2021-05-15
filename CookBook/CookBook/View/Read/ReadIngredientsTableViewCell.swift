@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IngredientsTableViewCell: UITableViewCell {
+class ReadIngredientsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
