@@ -84,10 +84,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Rhk-5L-drT">
-                                                    <rect key="frame" x="0.0" y="360" width="414" height="40"/>
+                                                    <rect key="frame" x="0.0" y="358" width="414" height="42"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wza-PK-Oad">
-                                                            <rect key="frame" x="0.0" y="0.0" width="136.5" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="136.5" height="42"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <state key="normal" title="Recipes">
@@ -95,7 +95,7 @@
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRp-gs-Yiy">
-                                                            <rect key="frame" x="138.5" y="0.0" width="137" height="40"/>
+                                                            <rect key="frame" x="138.5" y="0.0" width="137" height="42"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <state key="normal" title="Favorites">
@@ -103,7 +103,7 @@
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crO-KH-1GT">
-                                                            <rect key="frame" x="277.5" y="0.0" width="136.5" height="40"/>
+                                                            <rect key="frame" x="277.5" y="0.0" width="136.5" height="42"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <state key="normal" title="Challenges">
@@ -114,7 +114,7 @@
                                                     <constraints>
                                                         <constraint firstItem="wza-PK-Oad" firstAttribute="height" secondItem="Rhk-5L-drT" secondAttribute="height" id="2h1-kl-jIm"/>
                                                         <constraint firstItem="zRp-gs-Yiy" firstAttribute="height" secondItem="Rhk-5L-drT" secondAttribute="height" id="GH8-VY-cxR"/>
-                                                        <constraint firstAttribute="height" constant="40" id="Qsd-Cn-E3d"/>
+                                                        <constraint firstAttribute="height" constant="42" id="Qsd-Cn-E3d"/>
                                                         <constraint firstItem="crO-KH-1GT" firstAttribute="height" secondItem="Rhk-5L-drT" secondAttribute="height" id="s58-Wk-EFQ"/>
                                                     </constraints>
                                                 </stackView>
@@ -176,7 +176,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JmV-u4-Ucl" secondAttribute="trailing" id="OFv-87-qfG"/>
                             <constraint firstItem="JmV-u4-Ucl" firstAttribute="top" secondItem="DF7-oW-BfX" secondAttribute="top" id="TGj-0T-XYr"/>
-                            <constraint firstItem="DF7-oW-BfX" firstAttribute="top" secondItem="Rhk-5L-drT" secondAttribute="bottom" priority="999" constant="40" id="Uza-q9-ZG4"/>
+                            <constraint firstItem="DF7-oW-BfX" firstAttribute="top" secondItem="Rhk-5L-drT" secondAttribute="bottom" priority="999" constant="42" id="Uza-q9-ZG4"/>
                             <constraint firstAttribute="bottom" secondItem="JmV-u4-Ucl" secondAttribute="bottom" id="WiT-DJ-zHJ"/>
                             <constraint firstItem="JmV-u4-Ucl" firstAttribute="leading" secondItem="wg1-Gw-0Mk" secondAttribute="leading" id="XqU-JE-QXU"/>
                         </constraints>

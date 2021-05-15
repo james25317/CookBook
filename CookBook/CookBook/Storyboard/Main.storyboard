@@ -50,7 +50,7 @@
                             </barButtonItem>
                             <barButtonItem image="pencil" catalog="system" id="52R-yr-Ndc">
                                 <connections>
-                                    <segue destination="Jnm-t9-mak" kind="show" id="qoy-QY-pwL"/>
+                                    <segue destination="Jnm-t9-mak" kind="presentation" modalPresentationStyle="overFullScreen" id="qoy-QY-pwL"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -116,7 +116,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPV-gP-asc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="90"/>
+            <point key="canvasLocation" x="1767" y="92"/>
         </scene>
     </scenes>
     <resources>
