@@ -57,6 +57,11 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" id="fDP-Rc-5hi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
         </scene>
