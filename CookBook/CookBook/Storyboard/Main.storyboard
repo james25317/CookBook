@@ -11,7 +11,7 @@
         <!--Feed-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Feed" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController title="Feed" id="Y6W-OH-hqX" customClass="FeedViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,9 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ZeW-5h-MHb" id="7YV-Qv-Dk2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <searchBar contentMode="redraw" id="fDP-Rc-5hi">

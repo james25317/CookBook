@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2B264BC19C001A0B4E /* AppDelegate.swift */; };
 		7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */; };
-		7F284C30264BC19C001A0B4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2F264BC19C001A0B4E /* ViewController.swift */; };
+		7F284C30264BC19C001A0B4E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2F264BC19C001A0B4E /* FeedViewController.swift */; };
 		7F284C33264BC19C001A0B4E /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C31264BC19C001A0B4E /* Today.storyboard */; };
 		7F284C35264BC19E001A0B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C34264BC19E001A0B4E /* Assets.xcassets */; };
 		7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */; };
@@ -34,6 +34,9 @@
 		7FE21439264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE21437264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib */; };
 		7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */; };
 		7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */; };
+		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
+		7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */; };
+		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +46,7 @@
 		7F284C28264BC19C001A0B4E /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F284C2B264BC19C001A0B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F284C2F264BC19C001A0B4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F284C2F264BC19C001A0B4E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7F284C32264BC19C001A0B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Today.storyboard; sourceTree = "<group>"; };
 		7F284C34264BC19E001A0B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F284C37264BC19E001A0B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +72,9 @@
 		7FE21437264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditIngredientsTableViewCell.IngredientsTableViewCell.xib; sourceTree = "<group>"; };
 		7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsTableViewCell.swift; sourceTree = "<group>"; };
 		7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditStepsTableViewCell.xib; sourceTree = "<group>"; };
+		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengesTableViewCell.swift; sourceTree = "<group>"; };
+		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +120,7 @@
 		7F284C2A264BC19C001A0B4E /* CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				7FFCF05F26500AEB0082ED8E /* Extension */,
 				7FA1BA82264CC85800B8ED13 /* Utility */,
 				7FA1BA81264CC84200B8ED13 /* Storyboard */,
 				7FA1BA7F264CC67900B8ED13 /* Controller */,
@@ -165,7 +172,7 @@
 		7FA1BA7F264CC67900B8ED13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7F284C2F264BC19C001A0B4E /* ViewController.swift */,
+				7F284C2F264BC19C001A0B4E /* FeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 		7FA1BA8F264E4C3900B8ED13 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */,
+				7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */,
 				7FA1BA8B264CFC9D00B8ED13 /* FeedTableViewCell.swift */,
 				7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */,
 			);
@@ -232,6 +241,14 @@
 				7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		7FFCF05F26500AEB0082ED8E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D63455D3A42A34D9C1BC7ED6 /* Frameworks */ = {
@@ -305,6 +322,7 @@
 				7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */,
 				7F284C35264BC19E001A0B4E /* Assets.xcassets in Resources */,
 				7FA1BA96264E4C9200B8ED13 /* ProfileCollectionViewCell.xib in Resources */,
+				7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */,
 				7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */,
 				7FA1BA86264CDBA600B8ED13 /* Profile.storyboard in Resources */,
 				7FA1BA84264CD1A900B8ED13 /* Main.storyboard in Resources */,
@@ -388,16 +406,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
 				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,
 				7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
-				7F284C30264BC19C001A0B4E /* ViewController.swift in Sources */,
+				7F284C30264BC19C001A0B4E /* FeedViewController.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,
 				7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */,
 				7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */,
 				7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */,
+				7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
