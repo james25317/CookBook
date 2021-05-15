@@ -7,5 +7,7 @@ target 'CookBook' do
 
   # Pods for CookBook
   pod 'SwiftLint'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
 end

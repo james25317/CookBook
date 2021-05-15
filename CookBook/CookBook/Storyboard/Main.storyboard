@@ -34,23 +34,19 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="FP8-Le-5gy"/>
                         <barButtonItem key="leftBarButtonItem" image="lightbulb" catalog="system" id="FOV-lu-o9S">
                             <connections>
-                                <segue destination="kt6-Cz-zcP" kind="show" id="QAy-3d-Jiw"/>
+                                <segue destination="kt6-Cz-zcP" kind="presentation" id="QAy-3d-Jiw"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="person.crop.circle" catalog="system" id="h1p-wh-NBp">
                                 <connections>
-                                    <segue destination="1mU-nt-EaB" kind="show" id="PBe-V8-PCu"/>
+                                    <segue destination="1mU-nt-EaB" kind="presentation" id="PBe-V8-PCu"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b">
-                                <connections>
-                                    <segue destination="ENT-6K-UVO" kind="show" id="Rzl-ey-Hau"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b"/>
                             <barButtonItem image="pencil" catalog="system" id="52R-yr-Ndc">
                                 <connections>
-                                    <segue destination="Jnm-t9-mak" kind="presentation" modalPresentationStyle="overFullScreen" id="qoy-QY-pwL"/>
+                                    <segue destination="Jnm-t9-mak" kind="presentation" id="qoy-QY-pwL"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -91,7 +87,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8L-g2-ZzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="123"/>
+            <point key="canvasLocation" x="1764" y="97"/>
         </scene>
         <!--Today-->
         <scene sceneID="uTf-nu-2BA">
@@ -112,16 +108,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahj-7g-ZzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754" y="60"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="0tw-Ud-aKk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="ENT-6K-UVO" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ATQ-CP-xIJ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fPV-gP-asc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1767" y="92"/>
         </scene>
     </scenes>
     <resources>
