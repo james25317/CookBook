@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Read View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Read" id="Y6W-OH-hqX" customClass="ReadViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-ag-hyF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-ag-hyF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-mM-LJ2">
@@ -82,13 +82,13 @@
                                     <segue destination="NTn-6P-TAi" kind="presentation" modalPresentationStyle="overFullScreen" id="EJT-xq-agS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">
-                                <rect key="frame" x="366" y="62" width="24" height="19.5"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">
+                                <rect key="frame" x="362" y="60" width="36" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="PBG-x4-8Sw"/>
-                                    <constraint firstAttribute="width" constant="24" id="eo6-gF-H1N"/>
+                                    <constraint firstAttribute="width" constant="36" id="E8y-kI-bNV"/>
+                                    <constraint firstAttribute="height" constant="36" id="ySb-I6-ZmL"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="xmark" catalog="system"/>
+                                <state key="normal" image="xmark" catalog="system"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -116,7 +116,7 @@
                             <constraint firstItem="Xch-ag-hyF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jhn-xm-cgq"/>
                             <constraint firstItem="Mdj-cb-a4k" firstAttribute="centerX" secondItem="oj6-xC-JfX" secondAttribute="centerX" id="jwt-8X-ASb"/>
                             <constraint firstItem="1g5-u7-m5U" firstAttribute="firstBaseline" secondItem="avX-UU-qSw" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="koC-Oi-vNL"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mIV-j4-Pse" secondAttribute="trailing" constant="24" id="kst-FH-r2d"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mIV-j4-Pse" secondAttribute="trailing" constant="16" id="kst-FH-r2d"/>
                             <constraint firstItem="hwQ-Qb-8D5" firstAttribute="centerX" secondItem="Z1G-rR-Ivp" secondAttribute="centerX" id="oHi-nv-7jh"/>
                             <constraint firstItem="3LF-bt-PYP" firstAttribute="firstBaseline" secondItem="1g5-u7-m5U" secondAttribute="baseline" constant="72" id="okG-yr-Afm"/>
                             <constraint firstAttribute="trailing" secondItem="Xch-ag-hyF" secondAttribute="trailing" id="ryz-7V-ovW"/>
@@ -208,7 +208,6 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="crC-Tx-FzY"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                         <constraints>
                             <constraint firstItem="0MR-iX-c3n" firstAttribute="top" secondItem="crC-Tx-FzY" secondAttribute="top" constant="16" id="27z-T1-wcb"/>
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="height" secondItem="XI8-js-dDB" secondAttribute="height" multiplier="0.65" id="9Vn-BM-Lpo"/>
@@ -230,6 +229,7 @@
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
+        <image name="demodish" width="1080" height="1080"/>
         <image name="speaker.slash" catalog="system" width="124" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

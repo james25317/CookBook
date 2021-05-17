@@ -16,7 +16,14 @@ class EditViewController: UIViewController {
     
     @IBAction func closePage(_ sender: Any) {
 
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 
+    @IBAction func goPreviewPage(_ sender: Any) {
+
+        guard let previewVC = storyboard?
+            .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+
+        navigationController?.pushViewController(previewVC, animated: true)
+    }
 }

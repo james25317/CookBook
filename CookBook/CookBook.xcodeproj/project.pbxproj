@@ -48,6 +48,8 @@
 		7FFCF078265233820082ED8E /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF077265233820082ED8E /* UIStoryboard+Extension.swift */; };
 		7FFCF07A26523C000082ED8E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07926523C000082ED8E /* EditViewController.swift */; };
 		7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */; };
+		7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */; };
+		7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07F265281C70082ED8E /* ReadViewController.swift */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		7FFCF077265233820082ED8E /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		7FFCF07926523C000082ED8E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreviewViewController.swift; sourceTree = "<group>"; };
+		7FFCF07F265281C70082ED8E /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +208,8 @@
 				7FFCF075265222520082ED8E /* TodayViewController.swift */,
 				7FFCF07926523C000082ED8E /* EditViewController.swift */,
 				7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */,
+				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
+				7FFCF07F265281C70082ED8E /* ReadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -464,10 +470,12 @@
 				7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
 				7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */,
+				7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */,
 				7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
 				7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */,
+				7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */,
 				7FFCF06E2650F51B0082ED8E /* DateHelper.swift in Sources */,
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,

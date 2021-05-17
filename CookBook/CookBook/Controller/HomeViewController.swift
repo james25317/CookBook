@@ -21,12 +21,25 @@ class HomeViewController: UIViewController {
 
     let viewModel = HomeViewModel()
 
+    // MARK: view lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+
+        super.viewWillAppear(animated)
+
+        let image = UIImage()
+
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+
+        self.navigationController?.navigationBar.shadowImage = image
+    }
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
         // 向 HomeVM 綁定 Box 觀察資料變化(fetch成功後的值)，VC 這邊要做的事情
         viewModel.feedViewModels.bind { [weak self] feeds in
+
             self?.tableView.reloadData()
         }
 
@@ -49,7 +62,7 @@ class HomeViewController: UIViewController {
         guard let editVC = UIStoryboard.edit
             .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
 
-        present(editVC, animated: true, completion: nil)
+        navigationController?.pushViewController(editVC, animated: true)
     }
 
     @IBAction func showProfilePage(_ sender: Any) {
@@ -59,7 +72,7 @@ class HomeViewController: UIViewController {
 
         navigationController?.pushViewController(profileVC, animated: true)
     }
-    
+
     private func setupTableView() {
 
         tableView.registerCellWithNib(identifier: "FeedTableViewCell", bundle: nil)
@@ -69,7 +82,9 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return self.viewModel.feedViewModels.value.count
     }
 
@@ -88,7 +103,6 @@ extension HomeViewController: UITableViewDataSource {
 
             print("onDead was activated")
             self?.viewModel.fetchData()
-
         }
 
         feedCell.setup(viewModel: cellViewModel)
@@ -98,4 +112,12 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        guard let readVC = UIStoryboard.read
+            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+        navigationController?.pushViewController(readVC, animated: true)
+    }
 }
