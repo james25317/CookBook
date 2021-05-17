@@ -52,6 +52,14 @@ class HomeViewController: UIViewController {
         present(editVC, animated: true, completion: nil)
     }
 
+    @IBAction func showProfilePage(_ sender: Any) {
+
+        guard let profileVC = UIStoryboard.profile
+            .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
+
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
+    
     private func setupTableView() {
 
         tableView.registerCellWithNib(identifier: "FeedTableViewCell", bundle: nil)

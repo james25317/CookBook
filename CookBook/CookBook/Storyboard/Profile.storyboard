@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="yWE-WR-hTb">
             <objects>
-                <viewController id="rJ6-ZM-lIM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="rJ6-ZM-lIM" customClass="ProfileViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-Gw-0Mk">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <subviews>
@@ -54,37 +54,37 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqX-qc-2lH">
-                                                    <rect key="frame" x="48.333333333333329" y="290" width="53.333333333333329" height="17"/>
+                                                    <rect key="frame" x="66.333333333333329" y="266" width="53.333333333333329" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO2-Ok-HlR">
-                                                    <rect key="frame" x="164.33333333333334" y="290" width="61.666666666666657" height="17"/>
+                                                    <rect key="frame" x="164.33333333333334" y="266" width="61.666666666666657" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-eZ-Fne">
-                                                    <rect key="frame" x="277.66666666666669" y="290" width="75" height="17"/>
+                                                    <rect key="frame" x="259.66666666666669" y="266" width="75" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4do-Rx-g8B" userLabel="RecipesCount">
-                                                    <rect key="frame" x="67.333333333333329" y="240.33333333333331" width="15.333333333333329" height="28.666666666666686"/>
+                                                    <rect key="frame" x="85.333333333333329" y="232.33333333333331" width="15.333333333333329" height="28.666666666666686"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmi-ST-xNI" userLabel="FavoritesCount">
-                                                    <rect key="frame" x="187.33333333333334" y="240.33333333333331" width="15.333333333333343" height="28.666666666666686"/>
+                                                    <rect key="frame" x="187.33333333333334" y="232.33333333333331" width="15.333333333333343" height="28.666666666666686"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-WR-DGp" userLabel="ChallengesCount">
-                                                    <rect key="frame" x="307.33333333333331" y="240.33333333333331" width="15.333333333333314" height="28.666666666666686"/>
+                                                    <rect key="frame" x="289.33333333333331" y="232.33333333333331" width="15.333333333333314" height="28.666666666666686"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -134,9 +134,9 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <constraints>
-                                                <constraint firstItem="Rhk-5L-drT" firstAttribute="top" secondItem="cO2-Ok-HlR" secondAttribute="bottom" constant="64" id="616-be-g8U"/>
+                                                <constraint firstItem="Rhk-5L-drT" firstAttribute="top" secondItem="cO2-Ok-HlR" secondAttribute="bottom" constant="88" id="616-be-g8U"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rhk-5L-drT" secondAttribute="trailing" id="9a2-mC-g2s"/>
-                                                <constraint firstItem="cO2-Ok-HlR" firstAttribute="centerX" secondItem="lqX-qc-2lH" secondAttribute="centerX" constant="120" id="C9C-WT-WCO"/>
+                                                <constraint firstItem="cO2-Ok-HlR" firstAttribute="centerX" secondItem="lqX-qc-2lH" secondAttribute="centerX" constant="102" id="C9C-WT-WCO"/>
                                                 <constraint firstItem="zmi-ST-xNI" firstAttribute="centerX" secondItem="cO2-Ok-HlR" secondAttribute="centerX" id="Cnv-0I-2mR"/>
                                                 <constraint firstItem="pnm-cV-ttB" firstAttribute="centerX" secondItem="wza-PK-Oad" secondAttribute="centerX" id="Fh3-EE-HOY"/>
                                                 <constraint firstItem="KnP-WR-DGp" firstAttribute="centerX" secondItem="bgM-eZ-Fne" secondAttribute="centerX" id="IEC-ib-yjq"/>
@@ -146,7 +146,7 @@
                                                 <constraint firstItem="4qg-sC-vMF" firstAttribute="trailing" secondItem="NIF-T7-c0R" secondAttribute="centerX" id="LYa-qd-Vdx"/>
                                                 <constraint firstItem="lqX-qc-2lH" firstAttribute="bottom" secondItem="cO2-Ok-HlR" secondAttribute="bottom" id="U8Y-Ao-jog"/>
                                                 <constraint firstItem="4do-Rx-g8B" firstAttribute="centerX" secondItem="lqX-qc-2lH" secondAttribute="centerX" id="URh-HA-o9q"/>
-                                                <constraint firstItem="cO2-Ok-HlR" firstAttribute="firstBaseline" secondItem="zmi-ST-xNI" secondAttribute="baseline" constant="40" id="UtH-FD-0fz"/>
+                                                <constraint firstItem="cO2-Ok-HlR" firstAttribute="firstBaseline" secondItem="zmi-ST-xNI" secondAttribute="baseline" constant="24" id="UtH-FD-0fz"/>
                                                 <constraint firstItem="6yZ-jo-GPb" firstAttribute="firstBaseline" secondItem="e4J-sq-pKR" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Z24-cW-saI"/>
                                                 <constraint firstItem="bgM-eZ-Fne" firstAttribute="bottom" secondItem="cO2-Ok-HlR" secondAttribute="bottom" id="c32-YW-u0M"/>
                                                 <constraint firstItem="pnm-cV-ttB" firstAttribute="bottom" secondItem="Rhk-5L-drT" secondAttribute="bottom" id="cG1-N2-jOs"/>
@@ -159,7 +159,7 @@
                                                 <constraint firstItem="Rhk-5L-drT" firstAttribute="leading" secondItem="NIF-T7-c0R" secondAttribute="leading" id="s1h-qe-ceU"/>
                                                 <constraint firstItem="e4J-sq-pKR" firstAttribute="leading" secondItem="NIF-T7-c0R" secondAttribute="centerX" constant="8" id="uAq-o7-19o"/>
                                                 <constraint firstItem="4qg-sC-vMF" firstAttribute="centerY" secondItem="NIF-T7-c0R" secondAttribute="top" constant="120" id="wr3-hW-lFN"/>
-                                                <constraint firstItem="cO2-Ok-HlR" firstAttribute="centerX" secondItem="bgM-eZ-Fne" secondAttribute="centerX" constant="-120" id="wtW-r8-ySO"/>
+                                                <constraint firstItem="cO2-Ok-HlR" firstAttribute="centerX" secondItem="bgM-eZ-Fne" secondAttribute="centerX" constant="-102" id="wtW-r8-ySO"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -191,7 +191,7 @@
                             <constraint firstItem="JmV-u4-Ucl" firstAttribute="leading" secondItem="DF7-oW-BfX" secondAttribute="leading" id="tNS-wR-BVn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cIW-q5-0JR">
+                    <navigationItem key="navigationItem" title="Profile" id="cIW-q5-0JR">
                         <barButtonItem key="rightBarButtonItem" title="Profile" image="gearshape" catalog="system" id="XZk-kV-OUL"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

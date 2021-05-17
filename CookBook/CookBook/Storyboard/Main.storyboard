@@ -40,7 +40,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="person.crop.circle" catalog="system" id="h1p-wh-NBp">
                                 <connections>
-                                    <segue destination="1mU-nt-EaB" kind="show" id="PBe-V8-PCu"/>
+                                    <action selector="showProfilePage:" destination="Y6W-OH-hqX" id="zid-Gl-ia4"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b"/>

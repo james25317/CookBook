@@ -15,6 +15,7 @@ private struct StoryboardCategory {
 
     static let edit = "Edit"
 
+    static let profile = "Profile"
 }
 
 extension UIStoryboard {
@@ -24,6 +25,8 @@ extension UIStoryboard {
     static var today: UIStoryboard { return storyBoard(name: StoryboardCategory.today) }
 
     static var edit: UIStoryboard { return storyBoard(name: StoryboardCategory.edit) }
+
+    static var profile: UIStoryboard { return storyBoard(name: StoryboardCategory.profile) }
 
     private static func storyBoard(name: String) -> UIStoryboard {
 
