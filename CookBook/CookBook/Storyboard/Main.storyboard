@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed-->
+        <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Feed" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="FP8-Le-5gy"/>
                         <barButtonItem key="leftBarButtonItem" image="lightbulb" catalog="system" id="FOV-lu-o9S">
                             <connections>
-                                <segue destination="kt6-Cz-zcP" kind="presentation" id="QAy-3d-Jiw"/>
+                                <action selector="showTodayPage:" destination="Y6W-OH-hqX" id="br2-NC-G4D"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -46,7 +46,7 @@
                             <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b"/>
                             <barButtonItem image="pencil" catalog="system" id="52R-yr-Ndc">
                                 <connections>
-                                    <segue destination="Jnm-t9-mak" kind="presentation" id="qoy-QY-pwL"/>
+                                    <action selector="showEditPage:" destination="Y6W-OH-hqX" id="EfC-11-gOQ"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -91,16 +91,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8L-g2-ZzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="97"/>
-        </scene>
-        <!--Today-->
-        <scene sceneID="uTf-nu-2BA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Today" id="kt6-Cz-zcP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="E3V-aI-VN1"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X2r-uv-9ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1763" y="25"/>
         </scene>
         <!--Edit-->
         <scene sceneID="fAi-mg-OFx">

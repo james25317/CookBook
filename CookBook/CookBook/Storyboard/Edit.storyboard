@@ -12,13 +12,13 @@
         <!--Edit-->
         <scene sceneID="CfQ-El-ITi">
             <objects>
-                <viewController title="Edit" id="qYP-99-ctS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditName" title="Edit" id="qYP-99-ctS" customClass="EditViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pb-wC-qx6">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XD-W2-exW">
-                                <rect key="frame" x="368" y="60" width="36" height="36"/>
+                                <rect key="frame" x="376" y="16" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="VJg-jB-4la"/>
                                     <constraint firstAttribute="height" constant="36" id="h1g-yc-1PC"/>
@@ -27,15 +27,18 @@
                                 <state key="normal">
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
                                 </state>
+                                <connections>
+                                    <action selector="closePage:" destination="qYP-99-ctS" eventType="touchUpInside" id="ZyE-cT-NBf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create CookBook" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwc-0o-Q5P">
-                                <rect key="frame" x="24" y="198" width="190" height="75"/>
+                                <rect key="frame" x="24" y="172.33333333333334" width="190" height="75"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="輸入食譜名稱" clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="06x-XG-dDU">
-                                <rect key="frame" x="24" y="297" width="380" height="36"/>
+                                <rect key="frame" x="24" y="271.33333333333331" width="380" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="m50-Pc-4iB"/>
                                 </constraints>
@@ -43,14 +46,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-iY-Fza" userLabel="UnderLine View">
-                                <rect key="frame" x="24" y="333" width="380" height="2"/>
+                                <rect key="frame" x="24" y="307.33333333333331" width="380" height="2"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="zqS-OO-uBN"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-d9-w7O">
-                                <rect key="frame" x="24" y="359" width="380" height="259.33333333333326"/>
+                                <rect key="frame" x="24" y="333.33333333333337" width="380" height="259.33333333333337"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <string key="text">For best results, make sure the rice is cooked and cooled beforehand to prevent it sticking together when frying. You could include some extras like chopped ham, cooked prawns or sweetcorn, when adding the peas.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -58,13 +61,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-al-bjg">
-                                <rect key="frame" x="190" y="701" width="32" height="17"/>
+                                <rect key="frame" x="190" y="675.33333333333337" width="32" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avS-kq-I1L">
-                                <rect key="frame" x="230" y="698.33333333333337" width="20" height="22"/>
+                                <rect key="frame" x="230" y="672.66666666666663" width="20" height="22"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
                                 <connections>
                                     <segue destination="Eai-jM-Ljp" kind="presentation" modalPresentationStyle="fullScreen" id="Tsk-45-cyy"/>
@@ -80,13 +83,13 @@
                             <constraint firstItem="cHn-al-bjg" firstAttribute="firstBaseline" secondItem="Zsb-d9-w7O" secondAttribute="baseline" constant="96" id="HK6-XX-GBQ"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="leading" secondItem="06x-XG-dDU" secondAttribute="leading" id="Hce-kl-hmC"/>
                             <constraint firstItem="Yoe-iY-Fza" firstAttribute="trailing" secondItem="06x-XG-dDU" secondAttribute="trailing" id="IuQ-Xv-BN8"/>
-                            <constraint firstItem="bLf-9H-Yvv" firstAttribute="trailing" secondItem="4XD-W2-exW" secondAttribute="trailing" constant="24" id="JW1-uE-DXx"/>
+                            <constraint firstItem="bLf-9H-Yvv" firstAttribute="trailing" secondItem="4XD-W2-exW" secondAttribute="trailing" constant="16" id="JW1-uE-DXx"/>
                             <constraint firstItem="06x-XG-dDU" firstAttribute="leading" secondItem="bLf-9H-Yvv" secondAttribute="leading" constant="24" id="QWS-j3-gI3"/>
                             <constraint firstItem="avS-kq-I1L" firstAttribute="leading" secondItem="cHn-al-bjg" secondAttribute="trailing" constant="8" id="ReN-uN-nnu"/>
                             <constraint firstItem="cHn-al-bjg" firstAttribute="centerX" secondItem="bLf-9H-Yvv" secondAttribute="centerX" constant="-8" id="VMU-kd-0Y4"/>
-                            <constraint firstItem="4XD-W2-exW" firstAttribute="top" secondItem="bLf-9H-Yvv" secondAttribute="top" constant="16" id="XGq-Ux-7Cj"/>
+                            <constraint firstItem="Zsb-d9-w7O" firstAttribute="centerY" secondItem="4pb-wC-qx6" secondAttribute="centerY" id="VQ2-b8-awQ"/>
+                            <constraint firstItem="4XD-W2-exW" firstAttribute="top" secondItem="4pb-wC-qx6" secondAttribute="top" constant="16" id="XGq-Ux-7Cj"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="width" secondItem="06x-XG-dDU" secondAttribute="width" id="c96-bA-6Xu"/>
-                            <constraint firstItem="Vwc-0o-Q5P" firstAttribute="top" secondItem="4XD-W2-exW" secondAttribute="bottom" constant="102" id="dUU-DT-W2o"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="height" secondItem="4pb-wC-qx6" secondAttribute="height" multiplier="0.28" id="dVi-5w-a7P"/>
                             <constraint firstItem="bLf-9H-Yvv" firstAttribute="trailing" secondItem="06x-XG-dDU" secondAttribute="trailing" constant="24" id="dkn-Z8-K8T"/>
                             <constraint firstItem="bLf-9H-Yvv" firstAttribute="centerX" secondItem="Vwc-0o-Q5P" secondAttribute="trailing" id="iUj-QZ-LRi"/>
@@ -106,7 +109,7 @@
         <!--View Controller-->
         <scene sceneID="VNz-fT-tSh">
             <objects>
-                <viewController id="Eai-jM-Ljp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditPreview" id="Eai-jM-Ljp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulu-Iw-0CM">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,6 +298,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="UoX-BW-M4C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HOW-Ku-f9g" secondAttribute="trailing" constant="24" id="CWZ-g5-aUf"/>

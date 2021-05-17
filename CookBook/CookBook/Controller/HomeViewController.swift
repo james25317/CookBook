@@ -10,8 +10,11 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
+
         didSet {
+
             self.tableView.delegate = self
+            
             self.tableView.dataSource = self
         }
     }
@@ -19,6 +22,7 @@ class HomeViewController: UIViewController {
     let viewModel = HomeViewModel()
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
         // 向 HomeVM 綁定 Box 觀察資料變化(fetch成功後的值)，VC 這邊要做的事情
@@ -32,8 +36,26 @@ class HomeViewController: UIViewController {
         viewModel.fetchData()
     }
 
+    @IBAction func showTodayPage(_ sender: Any) {
+        
+        guard let todayVC = UIStoryboard.today
+            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+
+        navigationController?.pushViewController(todayVC, animated: true)
+    }
+
+    @IBAction func showEditPage(_ sender: Any) {
+
+        guard let editVC = UIStoryboard.edit
+            .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+
+        present(editVC, animated: true, completion: nil)
+    }
+
     private func setupTableView() {
+
         tableView.registerCellWithNib(identifier: "FeedTableViewCell", bundle: nil)
+
         tableView.registerCellWithNib(identifier: "FeedChallengesTableViewCell", bundle: nil)
     }
 }
