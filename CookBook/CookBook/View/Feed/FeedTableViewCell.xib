@@ -66,11 +66,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="createdTime" destination="DGK-yi-tzZ" id="8A7-0g-Vx2"/>
-                <outlet property="profile" destination="YD8-fk-jeh" id="KOf-5O-fel"/>
-                <outlet property="recipeImage" destination="4Ba-tn-9TA" id="Hao-Os-UaX"/>
-                <outlet property="recipeName" destination="Nnk-7l-ulU" id="bJt-yc-Yiw"/>
-                <outlet property="userName" destination="BoV-FP-1Ff" id="bam-7k-Zm2"/>
+                <outlet property="imagePortrait" destination="YD8-fk-jeh" id="KOf-5O-fel"/>
+                <outlet property="imageRecipe" destination="4Ba-tn-9TA" id="Hao-Os-UaX"/>
+                <outlet property="labelCreatedTime" destination="DGK-yi-tzZ" id="8A7-0g-Vx2"/>
+                <outlet property="labelName" destination="BoV-FP-1Ff" id="bam-7k-Zm2"/>
+                <outlet property="labelRecipeName" destination="Nnk-7l-ulU" id="bJt-yc-Yiw"/>
             </connections>
             <point key="canvasLocation" x="189.85507246376812" y="186.49553571428569"/>
         </tableViewCell>
