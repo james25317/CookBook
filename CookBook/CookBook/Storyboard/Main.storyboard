@@ -32,21 +32,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="13v-0Z-YIc">
                         <barButtonItem key="backBarButtonItem" title=" " id="FP8-Le-5gy"/>
-                        <barButtonItem key="leftBarButtonItem" image="lightbulb" catalog="system" id="FOV-lu-o9S">
-                            <connections>
-                                <action selector="showTodayPage:" destination="Y6W-OH-hqX" id="br2-NC-G4D"/>
-                            </connections>
-                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="person.crop.circle" catalog="system" id="h1p-wh-NBp">
                                 <connections>
                                     <action selector="showProfilePage:" destination="Y6W-OH-hqX" id="zid-Gl-ia4"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b"/>
                             <barButtonItem image="pencil" catalog="system" id="52R-yr-Ndc">
                                 <connections>
                                     <action selector="showEditPage:" destination="Y6W-OH-hqX" id="EfC-11-gOQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="lightbulb" catalog="system" id="FOV-lu-o9S">
+                                <connections>
+                                    <action selector="showTodayPage:" destination="Y6W-OH-hqX" id="br2-NC-G4D"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -56,11 +55,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchBar contentMode="redraw" id="fDP-Rc-5hi">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
         </scene>
@@ -72,6 +66,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="svW-6e-Oqu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -82,20 +77,9 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="PgK-zs-wMC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="1mU-nt-EaB" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="3Tz-np-VaN"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h8L-g2-ZzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1713" y="114"/>
-        </scene>
     </scenes>
     <resources>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

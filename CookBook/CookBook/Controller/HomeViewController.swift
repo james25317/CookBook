@@ -21,6 +21,13 @@ class HomeViewController: UIViewController {
 
     let viewModel = HomeViewModel()
 
+    lazy var searchBar: UISearchBar = {
+
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+
+        return searchBar
+    }()
+
     // MARK: view lifecycle
     override func viewWillAppear(_ animated: Bool) {
 
@@ -47,6 +54,8 @@ class HomeViewController: UIViewController {
 
         // 向 HomeVM 要資料，回傳結果至 Box.value 給其他被綁定的 V
         viewModel.fetchData()
+
+        setupSearchBar()
     }
 
     @IBAction func showTodayPage(_ sender: Any) {
@@ -78,6 +87,17 @@ class HomeViewController: UIViewController {
         tableView.registerCellWithNib(identifier: "FeedTableViewCell", bundle: nil)
 
         tableView.registerCellWithNib(identifier: "FeedChallengesTableViewCell", bundle: nil)
+    }
+
+    private func setupSearchBar() {
+
+        searchBar.placeholder = "Search"
+
+        searchBar.sizeToFit()
+
+        let leftNavBarButton = UIBarButtonItem(customView: searchBar)
+
+        self.navigationItem.leftBarButtonItem = leftNavBarButton
     }
 }
 
