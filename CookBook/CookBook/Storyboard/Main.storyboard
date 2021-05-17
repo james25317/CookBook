@@ -40,7 +40,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="person.crop.circle" catalog="system" id="h1p-wh-NBp">
                                 <connections>
-                                    <segue destination="1mU-nt-EaB" kind="presentation" id="PBe-V8-PCu"/>
+                                    <segue destination="1mU-nt-EaB" kind="show" id="PBe-V8-PCu"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="magnifyingglass" catalog="system" id="jPo-kl-n1b"/>
@@ -90,17 +90,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8L-g2-ZzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="97"/>
-        </scene>
-        <!--Edit-->
-        <scene sceneID="fAi-mg-OFx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Edit" id="Jnm-t9-mak" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="V4q-tq-odB"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ahj-7g-ZzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1754" y="60"/>
+            <point key="canvasLocation" x="1713" y="114"/>
         </scene>
     </scenes>
     <resources>
