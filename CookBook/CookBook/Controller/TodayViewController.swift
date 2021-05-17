@@ -9,11 +9,13 @@ import UIKit
 
 class TodayViewController: UIViewController {
 
+    @IBOutlet weak var recipeImageView: UIImageView!
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTapGesture()
     }
     
     @IBAction func skipThisPage(_ sender: UIButton) {
@@ -22,5 +24,24 @@ class TodayViewController: UIViewController {
         navigationController?.popViewController(animated: true)
 
         // comes from beginning goes here
+    }
+
+    private func setupTapGesture() {
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(goReadPage))
+
+        recipeImageView.isUserInteractionEnabled = true
+
+        recipeImageView.addGestureRecognizer(gesture)
+    }
+
+    @objc func goReadPage() {
+
+        guard let readVC = UIStoryboard.read
+            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+        navigationController?.pushViewController(readVC, animated: true)
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }

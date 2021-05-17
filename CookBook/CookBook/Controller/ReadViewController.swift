@@ -12,8 +12,13 @@ class ReadViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func goReadMode(_ sender: Any) {
+
+        guard let readModeVC = storyboard?
+            .instantiateViewController(withIdentifier: "ReadMode") as? ReadModeViewController else { return }
+
+        present(readModeVC, animated: true, completion: nil)
+    }
 }

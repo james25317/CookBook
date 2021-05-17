@@ -54,7 +54,7 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-d9-w7O">
                                 <rect key="frame" x="24" y="304" width="342" height="236"/>
-                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <string key="text">For best results, make sure the rice is cooked and cooled beforehand to prevent it sticking together when frying. You could include some extras like chopped ham, cooked prawns or sweetcorn, when adding the peas.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02j-jl-dUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266.666666666667" y="15.401785714285714"/>
+            <point key="canvasLocation" x="2145" y="14"/>
         </scene>
         <!--Edit Preview-->
         <scene sceneID="VNz-fT-tSh">
@@ -121,6 +121,7 @@
                                     <constraint firstAttribute="height" constant="36" id="2dt-61-jkg"/>
                                     <constraint firstAttribute="width" constant="36" id="3bz-V3-PHw"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
                                 </state>
@@ -139,14 +140,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-fd-ecV">
                                         <rect key="frame" x="0.0" y="0.0" width="194" height="42"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                         <state key="normal" title="Ingredients (0)">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-rX-5IY">
                                         <rect key="frame" x="196" y="0.0" width="194" height="42"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                         <state key="normal" title="Steps (0)">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -164,7 +163,7 @@
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIJ-Eb-zd2" userLabel="Indicator View">
                                 <rect key="frame" x="0.0" y="266" width="194" height="2"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="d9b-Ev-CYn"/>
                                 </constraints>
@@ -198,6 +197,7 @@
                                     <constraint firstAttribute="width" constant="36" id="Tfq-0s-ehZ"/>
                                     <constraint firstAttribute="height" constant="36" id="rb5-3w-ITS"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="medium"/>
                                 </state>
@@ -259,11 +259,13 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEt-2I-bCz">
                                 <rect key="frame" x="24" y="353" width="342" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="mrI-R7-WCp"/>
                                 </constraints>
-                                <state key="normal" title="Edit"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="1ON-fo-21O" kind="presentation" id="Pg1-vM-4P2"/>
                                 </connections>
@@ -308,10 +310,11 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOW-Ku-f9g">
                                 <rect key="frame" x="24" y="353" width="342" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Iyn-T1-8pO"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <segue destination="fJs-wT-tUT" kind="presentation" id="qVw-5n-mXx"/>
@@ -354,8 +357,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

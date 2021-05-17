@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,75 +15,75 @@
             <objects>
                 <viewController storyboardIdentifier="Read" id="Y6W-OH-hqX" customClass="ReadViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-ag-hyF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="506.33333333333331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-mM-LJ2">
-                                <rect key="frame" x="24" y="555.5" width="366" height="23"/>
+                                <rect key="frame" x="24" y="524.33333333333337" width="342" height="23"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du9-Z2-9Xi">
-                                <rect key="frame" x="24" y="582" width="366" height="14.5"/>
+                                <rect key="frame" x="24" y="551" width="342" height="14.333333333333371"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g5-u7-m5U">
-                                <rect key="frame" x="164" y="698" width="86" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <rect key="frame" x="163.33333333333334" y="651" width="63.666666666666657" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-xC-JfX">
-                                <rect key="frame" x="85" y="698" width="40" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <rect key="frame" x="78.333333333333329" y="651" width="29.333333333333329" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1G-rR-Ivp">
-                                <rect key="frame" x="287" y="698" width="44" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <rect key="frame" x="280.66666666666669" y="651" width="32.666666666666686" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avX-UU-qSw">
-                                <rect key="frame" x="199.5" y="667" width="15" height="29"/>
+                                <rect key="frame" x="187.66666666666666" y="619" width="15" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwQ-Qb-8D5">
-                                <rect key="frame" x="301.5" y="667" width="15" height="29"/>
+                                <rect key="frame" x="289.66666666666669" y="619" width="15" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-cb-a4k">
-                                <rect key="frame" x="97.5" y="667" width="15" height="29"/>
+                                <rect key="frame" x="85.666666666666671" y="619" width="15" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Cook!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-bt-PYP">
-                                <rect key="frame" x="161" y="781" width="76.5" height="17"/>
+                                <rect key="frame" x="148.66666666666666" y="729" width="76.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-qj-X8S">
-                                <rect key="frame" x="241.5" y="778.5" width="20" height="22"/>
+                                <rect key="frame" x="229.33333333333334" y="726.66666666666663" width="20" height="22"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="NTn-6P-TAi" kind="presentation" modalPresentationStyle="fullScreen" id="EJT-xq-agS"/>
+                                    <action selector="goReadMode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E7W-Mg-S97"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">
-                                <rect key="frame" x="362" y="60" width="36" height="36"/>
+                                <rect key="frame" x="338" y="60" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="E8y-kI-bNV"/>
                                     <constraint firstAttribute="height" constant="36" id="ySb-I6-ZmL"/>
@@ -129,16 +129,16 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Read Mode View Controller-->
         <scene sceneID="x7K-VN-Sol">
             <objects>
-                <viewController id="NTn-6P-TAi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReadMode" modalPresentationStyle="fullScreen" id="NTn-6P-TAi" customClass="ReadModeViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XI8-js-dDB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
-                                <rect key="frame" x="0.0" y="100" width="414" height="582.5"/>
+                                <rect key="frame" x="0.0" y="112" width="390" height="548.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RP3-XB-LPX">
                                     <size key="itemSize" width="128" height="128"/>
@@ -158,15 +158,19 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-iX-c3n" userLabel="Cancel Button">
-                                <rect key="frame" x="366" y="62" width="24" height="19.5"/>
+                                <rect key="frame" x="330" y="60" width="36" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="Smk-IC-jcz"/>
-                                    <constraint firstAttribute="width" constant="24" id="lhM-5w-HeG"/>
+                                    <constraint firstAttribute="width" constant="36" id="YQn-tL-jCw"/>
+                                    <constraint firstAttribute="height" constant="36" id="ZlP-i6-PeK"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="xmark" catalog="system"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="leave:" destination="NTn-6P-TAi" eventType="touchUpInside" id="XhG-nW-Whu"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="li5-pk-8Ww">
-                                <rect key="frame" x="108" y="746.5" width="198" height="36"/>
+                                <rect key="frame" x="96" y="724.66666666666663" width="198" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-QQ-vXg" userLabel="Return Button">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>

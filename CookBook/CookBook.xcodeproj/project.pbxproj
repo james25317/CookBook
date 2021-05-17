@@ -50,6 +50,7 @@
 		7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */; };
 		7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */; };
 		7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07F265281C70082ED8E /* ReadViewController.swift */; };
+		7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreviewViewController.swift; sourceTree = "<group>"; };
 		7FFCF07F265281C70082ED8E /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadModeViewController.swift; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 				7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */,
 				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
 				7FFCF07F265281C70082ED8E /* ReadViewController.swift */,
+				7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */,
 				7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */,
 				7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */,
+				7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
 				7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */,
