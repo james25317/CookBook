@@ -115,6 +115,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebl-uf-60B">
+                                <rect key="frame" x="16" y="60" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Tfq-0s-ehZ"/>
+                                    <constraint firstAttribute="height" constant="36" id="rb5-3w-ITS"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="oAz-am-jhl"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luc-xT-CyG">
                                 <rect key="frame" x="338" y="60" width="36" height="36"/>
                                 <constraints>
@@ -140,25 +154,46 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-fd-ecV">
                                         <rect key="frame" x="0.0" y="0.0" width="194" height="42"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Ingredients (0)">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <state key="selected">
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChangeSections:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="E1Y-dg-C1b"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-rX-5IY">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-rX-5IY">
                                         <rect key="frame" x="196" y="0.0" width="194" height="42"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Steps (0)">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <state key="selected">
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChangeSections:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="LkV-26-8mN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="kRJ-9t-Spl"/>
                                 </constraints>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-F6-aKs" userLabel="Steps Container View">
+                                <rect key="frame" x="0.0" y="268" width="390" height="419"/>
+                                <connections>
+                                    <segue destination="fK8-A1-YVQ" kind="embed" identifier="IngredientsSegue" id="4YA-Vd-3bD"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehl-8L-7ye" userLabel="Ingredients Container View">
                                 <rect key="frame" x="0.0" y="268" width="390" height="419"/>
                                 <connections>
-                                    <segue destination="AvZ-op-BtV" kind="embed" id="Jih-Mv-dQb"/>
+                                    <segue destination="AvZ-op-BtV" kind="embed" identifier="StepsSegue" id="Jih-Mv-dQb"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIJ-Eb-zd2" userLabel="Indicator View">
@@ -184,26 +219,6 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                            </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-F6-aKs">
-                                <rect key="frame" x="0.0" y="268" width="390" height="419"/>
-                                <connections>
-                                    <segue destination="fK8-A1-YVQ" kind="embed" id="4YA-Vd-3bD"/>
-                                </connections>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebl-uf-60B">
-                                <rect key="frame" x="16" y="60" width="36" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="Tfq-0s-ehZ"/>
-                                    <constraint firstAttribute="height" constant="36" id="rb5-3w-ITS"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="medium"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="oAz-am-jhl"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Vr-o8-0Pw"/>
@@ -240,6 +255,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PSe-Xg-wn0"/>
+                    <connections>
+                        <outlet property="indicatorCenterXConstraint" destination="Zas-ds-i2r" id="hec-RJ-H0L"/>
+                        <outlet property="indicatorView" destination="kIJ-Eb-zd2" id="lHk-EB-WMc"/>
+                        <outlet property="ingredientsContainerView" destination="ehl-8L-7ye" id="sPj-Ac-xYD"/>
+                        <outlet property="stepsContainerView" destination="UBo-F6-aKs" id="sSL-un-5r5"/>
+                        <outletCollection property="sectionButtons" destination="mjx-fd-ecV" collectionClass="NSMutableArray" id="Us5-5P-OjH"/>
+                        <outletCollection property="sectionButtons" destination="t4f-rX-5IY" collectionClass="NSMutableArray" id="TCq-rf-MTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNw-cq-irh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +286,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="mrI-R7-WCp"/>
                                 </constraints>
-                                <state key="normal" title="Edit">
+                                <state key="normal" title="Edit Ingredients">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -286,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49x-Tz-bES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="-165"/>
+            <point key="canvasLocation" x="4017" y="264"/>
         </scene>
         <!--EditIngredients-->
         <scene sceneID="KrM-si-aov">
@@ -294,7 +317,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="EditIngredients" storyboardName="EditIngredients" id="1ON-fo-21O" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6az-La-Crq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4694" y="-165"/>
+            <point key="canvasLocation" x="4718" y="263"/>
         </scene>
         <!--StepsPreview-->
         <scene sceneID="OiX-qB-IzV">
@@ -315,7 +338,7 @@
                                     <constraint firstAttribute="height" constant="42" id="Iyn-T1-8pO"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Edit"/>
+                                <state key="normal" title="Edit Steps"/>
                                 <connections>
                                     <segue destination="fJs-wT-tUT" kind="presentation" id="qVw-5n-mXx"/>
                                 </connections>
@@ -336,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ6-we-Sqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="296"/>
+            <point key="canvasLocation" x="4017" y="-240"/>
         </scene>
         <!--EditSteps-->
         <scene sceneID="iT3-fW-9hP">
@@ -344,7 +367,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="EditSteps" storyboardName="EditSteps" referencedIdentifier="EditSteps" id="fJs-wT-tUT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Cv-Eb-EED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4694" y="295"/>
+            <point key="canvasLocation" x="4693" y="-241"/>
         </scene>
     </scenes>
     <resources>
@@ -359,6 +382,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
