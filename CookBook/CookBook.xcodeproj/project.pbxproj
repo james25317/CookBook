@@ -51,6 +51,8 @@
 		7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */; };
 		7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF07F265281C70082ED8E /* ReadViewController.swift */; };
 		7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */; };
+		7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */; };
+		7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreviewViewController.swift; sourceTree = "<group>"; };
 		7FFCF07F265281C70082ED8E /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadModeViewController.swift; sourceTree = "<group>"; };
+		7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsViewController.swift; sourceTree = "<group>"; };
+		7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsViewController.swift; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,19 +152,19 @@
 		7F284C2A264BC19C001A0B4E /* CookBook */ = {
 			isa = PBXGroup;
 			children = (
-				7FFCF06C2650F5070082ED8E /* Helper */,
-				7FFCF0652650C49E0082ED8E /* Wrapper */,
-				7FFCF05F26500AEB0082ED8E /* Extension */,
-				7FA1BA82264CC85800B8ED13 /* Utility */,
+				7F284C34264BC19E001A0B4E /* Assets.xcassets */,
+				7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */,
+				7F284C2B264BC19C001A0B4E /* AppDelegate.swift */,
 				7FA1BA81264CC84200B8ED13 /* Storyboard */,
 				7FA1BA7F264CC67900B8ED13 /* Controller */,
-				7FA1BA7E264CC60C00B8ED13 /* Network */,
-				7FA1BA7D264CC5E400B8ED13 /* ViewModel */,
+				7FFCF05F26500AEB0082ED8E /* Extension */,
+				7FFCF06C2650F5070082ED8E /* Helper */,
 				7FA1BA7C264CC5DD00B8ED13 /* Model */,
+				7FA1BA7E264CC60C00B8ED13 /* Network */,
+				7FA1BA82264CC85800B8ED13 /* Utility */,
 				7FA1BA7B264CC5D600B8ED13 /* View */,
-				7F284C2B264BC19C001A0B4E /* AppDelegate.swift */,
-				7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */,
-				7F284C34264BC19E001A0B4E /* Assets.xcassets */,
+				7FA1BA7D264CC5E400B8ED13 /* ViewModel */,
+				7FFCF0652650C49E0082ED8E /* Wrapper */,
 				7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */,
 				7F284C39264BC19E001A0B4E /* Info.plist */,
 			);
@@ -206,13 +210,15 @@
 		7FA1BA7F264CC67900B8ED13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7F284C2F264BC19C001A0B4E /* HomeViewController.swift */,
-				7FFCF075265222520082ED8E /* TodayViewController.swift */,
-				7FFCF07926523C000082ED8E /* EditViewController.swift */,
-				7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */,
+				7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */,
 				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
-				7FFCF07F265281C70082ED8E /* ReadViewController.swift */,
+				7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */,
+				7FFCF07926523C000082ED8E /* EditViewController.swift */,
+				7F284C2F264BC19C001A0B4E /* HomeViewController.swift */,
+				7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */,
 				7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */,
+				7FFCF07F265281C70082ED8E /* ReadViewController.swift */,
+				7FFCF075265222520082ED8E /* TodayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,10 +485,12 @@
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
 				7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */,
+				7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */,
 				7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */,
 				7FFCF06E2650F51B0082ED8E /* DateHelper.swift in Sources */,
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,
+				7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,
 				7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */,
 				7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */,
