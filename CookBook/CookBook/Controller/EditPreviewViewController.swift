@@ -66,6 +66,16 @@ class EditPreviewViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 
+    @IBAction func goEditDonePage(_ sender: Any) {
+
+        guard let editVC = UIStoryboard.editDone
+            .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
+
+        navigationController?.pushViewController(editVC, animated: true)
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
     @IBAction func onChangeSections(_ sender: UIButton) {
 
         for button in sectionButtons {

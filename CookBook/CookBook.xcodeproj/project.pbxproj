@@ -53,6 +53,8 @@
 		7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */; };
 		7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */; };
 		7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */; };
+		7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */; };
+		7FFCF08B26540BA40082ED8E /* EditDone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF08A26540BA40082ED8E /* EditDone.storyboard */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,8 @@
 		7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadModeViewController.swift; sourceTree = "<group>"; };
 		7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsViewController.swift; sourceTree = "<group>"; };
 		7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsViewController.swift; sourceTree = "<group>"; };
+		7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDoneViewController.swift; sourceTree = "<group>"; };
+		7FFCF08A26540BA40082ED8E /* EditDone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditDone.storyboard; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +214,7 @@
 		7FA1BA7F264CC67900B8ED13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */,
 				7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */,
 				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
 				7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */,
@@ -226,14 +231,15 @@
 		7FA1BA81264CC84200B8ED13 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */,
+				7FFCF08A26540BA40082ED8E /* EditDone.storyboard */,
+				7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */,
+				7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */,
 				7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */,
 				7FA1BA83264CD1A900B8ED13 /* Main.storyboard */,
-				7F284C31264BC19C001A0B4E /* Today.storyboard */,
-				7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */,
-				7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */,
-				7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */,
 				7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */,
 				7FA1BA97264E678000B8ED13 /* Read.storyboard */,
+				7F284C31264BC19C001A0B4E /* Today.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,
 				7FE21439264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib in Resources */,
 				7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */,
+				7FFCF08B26540BA40082ED8E /* EditDone.storyboard in Resources */,
 				7FE21430264E819F00208667 /* ReadIngredientsCollectionViewCell.xib in Resources */,
 				7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */,
 				7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */,
@@ -489,6 +496,7 @@
 				7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */,
 				7FFCF06E2650F51B0082ED8E /* DateHelper.swift in Sources */,
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
+				7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,
 				7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,

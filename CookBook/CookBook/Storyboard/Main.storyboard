@@ -35,17 +35,17 @@
                         <rightBarButtonItems>
                             <barButtonItem image="person.crop.circle" catalog="system" id="h1p-wh-NBp">
                                 <connections>
-                                    <action selector="showProfilePage:" destination="Y6W-OH-hqX" id="zid-Gl-ia4"/>
+                                    <action selector="goProfilePage:" destination="Y6W-OH-hqX" id="zid-Gl-ia4"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="pencil" catalog="system" id="52R-yr-Ndc">
                                 <connections>
-                                    <action selector="showEditPage:" destination="Y6W-OH-hqX" id="EfC-11-gOQ"/>
+                                    <action selector="goEditPage:" destination="Y6W-OH-hqX" id="EfC-11-gOQ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="lightbulb" catalog="system" id="FOV-lu-o9S">
                                 <connections>
-                                    <action selector="showTodayPage:" destination="Y6W-OH-hqX" id="br2-NC-G4D"/>
+                                    <action selector="goTodayPage:" destination="Y6W-OH-hqX" id="br2-NC-G4D"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>

@@ -219,6 +219,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goEditDonePage:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="Ebq-X8-tUI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Vr-o8-0Pw"/>

@@ -58,7 +58,7 @@ class HomeViewController: UIViewController {
         setupSearchBar()
     }
 
-    @IBAction func showTodayPage(_ sender: Any) {
+    @IBAction func goTodayPage(_ sender: Any) {
         
         guard let todayVC = UIStoryboard.today
             .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(todayVC, animated: true)
     }
 
-    @IBAction func showEditPage(_ sender: Any) {
+    @IBAction func goEditPage(_ sender: Any) {
 
         guard let editVC = UIStoryboard.edit
             .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
@@ -74,7 +74,7 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(editVC, animated: true)
     }
 
-    @IBAction func showProfilePage(_ sender: Any) {
+    @IBAction func goProfilePage(_ sender: Any) {
 
         guard let profileVC = UIStoryboard.profile
             .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
