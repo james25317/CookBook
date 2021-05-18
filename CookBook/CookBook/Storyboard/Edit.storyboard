@@ -154,13 +154,13 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-fd-ecV">
                                         <rect key="frame" x="0.0" y="0.0" width="194" height="42"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Ingredients (0)">
-                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
                                         </state>
                                         <state key="selected">
-                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                            <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
                                             <action selector="onChangeSections:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="E1Y-dg-C1b"/>
@@ -170,10 +170,10 @@
                                         <rect key="frame" x="196" y="0.0" width="194" height="42"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Steps (0)">
-                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
                                         </state>
                                         <state key="selected">
-                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                            <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
                                             <action selector="onChangeSections:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="LkV-26-8mN"/>
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49x-Tz-bES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="264"/>
+            <point key="canvasLocation" x="4017" y="269"/>
         </scene>
         <!--EditIngredients-->
         <scene sceneID="KrM-si-aov">
@@ -317,7 +317,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="EditIngredients" storyboardName="EditIngredients" id="1ON-fo-21O" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6az-La-Crq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4718" y="263"/>
+            <point key="canvasLocation" x="4718" y="268"/>
         </scene>
         <!--StepsPreview-->
         <scene sceneID="OiX-qB-IzV">
