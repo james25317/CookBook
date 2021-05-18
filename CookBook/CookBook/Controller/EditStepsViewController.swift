@@ -20,4 +20,11 @@ class EditStepsViewController: UIViewController {
 
         dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func saveAndLeave(_ sender: Any) {
+
+        // uplaod before leave logic
+
+        dismiss(animated: true, completion: nil)
+    }
 }
