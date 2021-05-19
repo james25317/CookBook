@@ -88,7 +88,6 @@ class HomeViewController: UIViewController {
 
         tableView.registerCellWithNib(identifier: "FeedChallengesTableViewCell", bundle: nil)
 
-        // tableView.contentInset = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
     }
 
     private func setupSearchBar() {
@@ -104,26 +103,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-
-        return 16
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
-        let header = UIView()
-
-        header.backgroundColor = .clear
-
-        return header
-    }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return self.viewModel.feedViewModels.value.count

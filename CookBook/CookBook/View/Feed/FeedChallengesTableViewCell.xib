@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="vQm-05-oxz" userLabel="Left Image View">
-                        <rect key="frame" x="16" y="88" width="208.5" height="120"/>
+                        <rect key="frame" x="16" y="96" width="208.5" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="VBg-CC-6KH"/>
                         </constraints>
@@ -48,13 +48,13 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Due-sF-SNx" userLabel="Left Recipe Name">
-                        <rect key="frame" x="24" y="186.5" width="192.5" height="17"/>
+                        <rect key="frame" x="24" y="194.5" width="192.5" height="17"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vni-j1-pzu" userLabel="Right Image View">
-                        <rect key="frame" x="232.5" y="88" width="208.5" height="120"/>
+                        <rect key="frame" x="232.5" y="96" width="208.5" height="120"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="IZB-OU-336"/>
@@ -66,7 +66,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOv-wL-zsg" userLabel="Right Recipe Name">
-                        <rect key="frame" x="240.5" y="186.5" width="192.5" height="17"/>
+                        <rect key="frame" x="240.5" y="194.5" width="192.5" height="17"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                     <constraint firstItem="vni-j1-pzu" firstAttribute="trailing" secondItem="qOv-wL-zsg" secondAttribute="trailing" constant="8" id="FEB-Q2-GHF"/>
                     <constraint firstItem="vQm-05-oxz" firstAttribute="baseline" secondItem="Due-sF-SNx" secondAttribute="firstBaseline" constant="8" id="Hpg-zv-baH"/>
                     <constraint firstItem="BoV-FP-1Ff" firstAttribute="leading" secondItem="YD8-fk-jeh" secondAttribute="trailing" constant="8" symbolic="YES" id="Lgd-d6-zsU"/>
-                    <constraint firstItem="vQm-05-oxz" firstAttribute="top" secondItem="YD8-fk-jeh" secondAttribute="bottom" constant="8" id="Msh-bL-W0J"/>
+                    <constraint firstItem="vQm-05-oxz" firstAttribute="top" secondItem="YD8-fk-jeh" secondAttribute="bottom" constant="16" id="Msh-bL-W0J"/>
                     <constraint firstAttribute="bottom" secondItem="vQm-05-oxz" secondAttribute="bottom" constant="16" id="Osi-Yp-Ocm"/>
                     <constraint firstItem="DGK-yi-tzZ" firstAttribute="top" secondItem="BoV-FP-1Ff" secondAttribute="bottom" id="WkT-zI-HrK"/>
                     <constraint firstItem="DGK-yi-tzZ" firstAttribute="leading" secondItem="BoV-FP-1Ff" secondAttribute="leading" id="d9P-No-8P0"/>

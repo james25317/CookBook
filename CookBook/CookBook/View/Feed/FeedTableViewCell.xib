@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="355" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="355" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="323" height="220"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catprofile" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-fk-jeh">
@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="4Ba-tn-9TA">
-                        <rect key="frame" x="16" y="88" width="323" height="120"/>
+                        <rect key="frame" x="16" y="96" width="323" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="n6F-PH-Qxz"/>
                         </constraints>
@@ -48,14 +48,14 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnk-7l-ulU">
-                        <rect key="frame" x="24" y="186.5" width="307" height="17"/>
+                        <rect key="frame" x="24" y="194.5" width="307" height="17"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4Ba-tn-9TA" firstAttribute="top" secondItem="YD8-fk-jeh" secondAttribute="bottom" constant="8" id="56n-Fs-Sr4"/>
+                    <constraint firstItem="4Ba-tn-9TA" firstAttribute="top" secondItem="YD8-fk-jeh" secondAttribute="bottom" constant="16" id="56n-Fs-Sr4"/>
                     <constraint firstItem="4Ba-tn-9TA" firstAttribute="leading" secondItem="YD8-fk-jeh" secondAttribute="leading" id="5cN-0L-jrI"/>
                     <constraint firstAttribute="trailing" secondItem="4Ba-tn-9TA" secondAttribute="trailing" constant="16" id="9Ky-R7-lF8"/>
                     <constraint firstItem="Nnk-7l-ulU" firstAttribute="leading" secondItem="4Ba-tn-9TA" secondAttribute="leading" constant="8" id="BaG-9h-DSt"/>
