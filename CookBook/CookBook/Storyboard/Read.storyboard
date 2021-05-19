@@ -136,9 +136,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
                                 <rect key="frame" x="0.0" y="112" width="390" height="548.66666666666663"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mpa-Jj-7xj" customClass="SnapCollectionFlowLayout" customModule="CookBook" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -160,7 +159,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="li5-pk-8Ww">
-                                <rect key="frame" x="136.66666666666666" y="724.66666666666663" width="117" height="36"/>
+                                <rect key="frame" x="136.66666666666666" y="702" width="117" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-QQ-vXg" userLabel="Return Button">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
@@ -207,11 +206,11 @@
                             <constraint firstItem="0MR-iX-c3n" firstAttribute="top" secondItem="crC-Tx-FzY" secondAttribute="top" constant="16" id="27z-T1-wcb"/>
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="height" secondItem="XI8-js-dDB" secondAttribute="height" multiplier="0.65" id="9Vn-BM-Lpo"/>
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="trailing" secondItem="crC-Tx-FzY" secondAttribute="trailing" id="9bG-0c-tUy"/>
-                            <constraint firstItem="li5-pk-8Ww" firstAttribute="top" secondItem="2w8-3R-TAF" secondAttribute="bottom" constant="64" id="Mv2-1G-a6U"/>
                             <constraint firstItem="crC-Tx-FzY" firstAttribute="trailing" secondItem="0MR-iX-c3n" secondAttribute="trailing" constant="24" id="iOl-il-M8q"/>
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="leading" secondItem="crC-Tx-FzY" secondAttribute="leading" id="pit-oC-C48"/>
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="top" secondItem="0MR-iX-c3n" secondAttribute="bottom" constant="16" id="qbc-zc-2mm"/>
                             <constraint firstItem="li5-pk-8Ww" firstAttribute="centerX" secondItem="crC-Tx-FzY" secondAttribute="centerX" id="vdm-i5-Xva"/>
+                            <constraint firstItem="crC-Tx-FzY" firstAttribute="bottom" secondItem="li5-pk-8Ww" secondAttribute="bottom" constant="72" id="yFP-5J-XFX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ESS-oY-OfX"/>
@@ -234,9 +233,6 @@
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

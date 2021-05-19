@@ -23,43 +23,44 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-Jc-8Mn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="582.33333333333337"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook the rice following pack instructions, then drain, spread it out to steam-dry and set aside." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-KX-82p">
-                                <rect key="frame" x="36" y="606.33333333333337" width="342" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLb-CQ-LbS">
-                                <rect key="frame" x="189.66666666666666" y="803.66666666666663" width="35" height="20.333333333333371"/>
+                                <rect key="frame" x="189.66666666666666" y="851.66666666666663" width="35" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyP-I1-oj8">
-                                <rect key="frame" x="36" y="803" width="20" height="22"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyP-I1-oj8">
+                                <rect key="frame" x="24" y="851" width="20" height="22"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-CX-ra2">
-                                <rect key="frame" x="358" y="803" width="20" height="22"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-CX-ra2">
+                                <rect key="frame" x="370" y="851" width="20" height="22"/>
                                 <state key="normal" image="arrow.right" catalog="system"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
+                                <rect key="frame" x="24" y="598.33333333333337" width="366" height="237.33333333333337"/>
+                                <string key="text">Heat the remaining tablespoon of oil in the pan over a high heat. Add the onion and pepper, then season with salt and pepper. Fry for 2 minutes, then add the garlic and ginger, if using, and fry for a further minute.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="6a6-KX-82p" firstAttribute="leading" secondItem="w8O-FW-BT3" secondAttribute="leading" constant="36" id="1IO-cQ-aFp"/>
                             <constraint firstItem="tTS-Jc-8Mn" firstAttribute="height" secondItem="w8O-FW-BT3" secondAttribute="height" multiplier="0.65" id="6bk-hJ-Q7U"/>
+                            <constraint firstItem="VLb-CQ-LbS" firstAttribute="top" secondItem="XRy-Rs-eqJ" secondAttribute="bottom" constant="16" id="CSD-fm-M6s"/>
                             <constraint firstItem="VLb-CQ-LbS" firstAttribute="centerX" secondItem="w8O-FW-BT3" secondAttribute="centerX" id="Cmy-ch-vnR"/>
-                            <constraint firstItem="EGj-CX-ra2" firstAttribute="trailing" secondItem="6a6-KX-82p" secondAttribute="trailing" id="Hrz-e6-jJc"/>
-                            <constraint firstItem="6a6-KX-82p" firstAttribute="centerX" secondItem="w8O-FW-BT3" secondAttribute="centerX" id="Y1G-zZ-zAj"/>
-                            <constraint firstAttribute="bottom" secondItem="VLb-CQ-LbS" secondAttribute="bottom" constant="72" id="Y3a-5F-i6S"/>
-                            <constraint firstAttribute="trailing" secondItem="6a6-KX-82p" secondAttribute="trailing" constant="36" id="b6x-Ac-2DQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XRy-Rs-eqJ" secondAttribute="trailing" constant="24" id="MQh-B3-Thu"/>
+                            <constraint firstAttribute="bottom" secondItem="VLb-CQ-LbS" secondAttribute="bottom" constant="24" id="Y3a-5F-i6S"/>
+                            <constraint firstItem="RyP-I1-oj8" firstAttribute="leading" secondItem="XRy-Rs-eqJ" secondAttribute="leading" id="aFb-b9-sgP"/>
+                            <constraint firstItem="EGj-CX-ra2" firstAttribute="trailing" secondItem="XRy-Rs-eqJ" secondAttribute="trailing" id="fh6-X0-gef"/>
                             <constraint firstItem="tTS-Jc-8Mn" firstAttribute="top" secondItem="w8O-FW-BT3" secondAttribute="top" id="hrw-c9-MiY"/>
                             <constraint firstItem="EGj-CX-ra2" firstAttribute="firstBaseline" secondItem="VLb-CQ-LbS" secondAttribute="firstBaseline" id="i93-Zv-emg"/>
-                            <constraint firstItem="RyP-I1-oj8" firstAttribute="leading" secondItem="6a6-KX-82p" secondAttribute="leading" id="lYm-QS-fYG"/>
                             <constraint firstItem="tTS-Jc-8Mn" firstAttribute="leading" secondItem="w8O-FW-BT3" secondAttribute="leading" id="mA5-gW-qCR"/>
+                            <constraint firstItem="XRy-Rs-eqJ" firstAttribute="leading" secondItem="w8O-FW-BT3" secondAttribute="leading" constant="24" id="pBG-LP-vNs"/>
                             <constraint firstAttribute="trailing" secondItem="tTS-Jc-8Mn" secondAttribute="trailing" id="vYe-6z-0hj"/>
                             <constraint firstItem="RyP-I1-oj8" firstAttribute="firstBaseline" secondItem="VLb-CQ-LbS" secondAttribute="firstBaseline" id="wtZ-0R-hbp"/>
-                            <constraint firstItem="6a6-KX-82p" firstAttribute="top" secondItem="tTS-Jc-8Mn" secondAttribute="baseline" constant="24" id="yjw-Z7-Twe"/>
+                            <constraint firstItem="XRy-Rs-eqJ" firstAttribute="top" secondItem="tTS-Jc-8Mn" secondAttribute="bottom" constant="16" id="zwi-iu-6fj"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -78,6 +79,9 @@
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="demodish" width="1080" height="1080"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
