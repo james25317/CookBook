@@ -9,8 +9,31 @@ import UIKit
 
 class FeedChallengesTableViewCell: UITableViewCell {
 
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    // Initialization code
-  }
+    @IBOutlet weak var imageViewPortrait: UIImageView!
+
+    @IBOutlet weak var labelUserName: UILabel!
+
+    @IBOutlet weak var labelCreatedTime: UILabel!
+
+    @IBOutlet weak var imageViewOwnerRecipe: UIImageView!
+
+    @IBOutlet weak var labelOwnerRecipeName: UILabel!
+
+    @IBOutlet weak var imageViewChallengeRecipe: UIImageView!
+
+    @IBOutlet weak var labelChallengeRecipeName: UILabel!
+    
+    override func awakeFromNib() {
+
+        super.awakeFromNib()
+
+        roundedImageView()
+        
+        // Initialization code
+    }
+
+    private func roundedImageView() {
+
+        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.height / 2
+    }
 }

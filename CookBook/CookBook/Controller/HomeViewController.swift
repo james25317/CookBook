@@ -50,10 +50,10 @@ class HomeViewController: UIViewController {
             self?.tableView.reloadData()
         }
 
-        setupTableView()
-
         // 向 HomeVM 要資料，回傳結果至 Box.value 給其他被綁定的 V
         viewModel.fetchData()
+
+        setupTableView()
 
         setupSearchBar()
     }
@@ -87,6 +87,8 @@ class HomeViewController: UIViewController {
         tableView.registerCellWithNib(identifier: "FeedTableViewCell", bundle: nil)
 
         tableView.registerCellWithNib(identifier: "FeedChallengesTableViewCell", bundle: nil)
+
+        // tableView.contentInset = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
     }
 
     private func setupSearchBar() {
@@ -125,7 +127,7 @@ extension HomeViewController: UITableViewDataSource {
             print("onDead was activated")
             self?.viewModel.fetchData()
         }
-
+        
         feedCell.setup(viewModel: cellViewModel)
 
         return feedCell

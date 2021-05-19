@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F13B15D265557980042F3EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B15C265557980042F3EC /* UIView+Extension.swift */; };
 		7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2B264BC19C001A0B4E /* AppDelegate.swift */; };
 		7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */; };
 		7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2F264BC19C001A0B4E /* HomeViewController.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0DAE1C997DAE8278848C0706 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F13B15C265557980042F3EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7F284C28264BC19C001A0B4E /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F284C2B264BC19C001A0B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,15 +170,15 @@
 				7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */,
 				7F284C2B264BC19C001A0B4E /* AppDelegate.swift */,
 				7FFCF05F26500AEB0082ED8E /* Extension */,
-				7FA1BA81264CC84200B8ED13 /* Storyboard */,
-				7FA1BA7F264CC67900B8ED13 /* Controller */,
+				7FFCF0652650C49E0082ED8E /* ThirdPartyWrapper */,
 				7FFCF06C2650F5070082ED8E /* Helper */,
-				7FA1BA7C264CC5DD00B8ED13 /* Model */,
 				7FA1BA7E264CC60C00B8ED13 /* Network */,
 				7FA1BA82264CC85800B8ED13 /* Utility */,
+				7FA1BA7F264CC67900B8ED13 /* Controller */,
+				7FA1BA7C264CC5DD00B8ED13 /* Model */,
 				7FA1BA7B264CC5D600B8ED13 /* View */,
 				7FA1BA7D264CC5E400B8ED13 /* ViewModel */,
-				7FFCF0652650C49E0082ED8E /* ThirdPartyWrapper */,
+				7FA1BA81264CC84200B8ED13 /* Storyboard */,
 				7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */,
 				7F284C39264BC19E001A0B4E /* Info.plist */,
 			);
@@ -312,6 +314,7 @@
 				7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */,
 				7FFCF077265233820082ED8E /* UIStoryboard+Extension.swift */,
 				7FFCF0932654EB9F0082ED8E /* UICollectionView+Extension.swift */,
+				7F13B15C265557980042F3EC /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F13B15D265557980042F3EC /* UIView+Extension.swift in Sources */,
 				7FFCF0692650C8420082ED8E /* FeedViewModel.swift in Sources */,
 				7FFCF072265104EE0082ED8E /* HomeViewModel.swift in Sources */,
 				7FFCF074265105F00082ED8E /* Box.swift in Sources */,

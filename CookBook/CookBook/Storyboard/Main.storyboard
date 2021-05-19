@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-5h-MHb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-5h-MHb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZeW-5h-MHb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="5gp-GV-Fm6"/>
+                            <constraint firstItem="ZeW-5h-MHb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5gp-GV-Fm6"/>
                             <constraint firstAttribute="bottom" secondItem="ZeW-5h-MHb" secondAttribute="bottom" id="Ua2-Wh-D4b"/>
-                            <constraint firstItem="ZeW-5h-MHb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cCC-5y-ZGg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZeW-5h-MHb" secondAttribute="trailing" id="ew8-fW-hYd"/>
                             <constraint firstItem="ZeW-5h-MHb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="iHN-65-SFu"/>
                         </constraints>
                     </view>
