@@ -55,6 +55,8 @@
 		7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */; };
 		7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */; };
 		7FFCF08B26540BA40082ED8E /* EditDone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF08A26540BA40082ED8E /* EditDone.storyboard */; };
+		7FFCF08D2654B70D0082ED8E /* Challenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF08C2654B70D0082ED8E /* Challenge.storyboard */; };
+		7FFCF08F2654C4A60082ED8E /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF08E2654C4A60082ED8E /* ChallengeViewController.swift */; };
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsViewController.swift; sourceTree = "<group>"; };
 		7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDoneViewController.swift; sourceTree = "<group>"; };
 		7FFCF08A26540BA40082ED8E /* EditDone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditDone.storyboard; sourceTree = "<group>"; };
+		7FFCF08C2654B70D0082ED8E /* Challenge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Challenge.storyboard; sourceTree = "<group>"; };
+		7FFCF08E2654C4A60082ED8E /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		B6EC1FF843BFE59FD2CD440B /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +228,7 @@
 				7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */,
 				7FFCF07F265281C70082ED8E /* ReadViewController.swift */,
 				7FFCF075265222520082ED8E /* TodayViewController.swift */,
+				7FFCF08E2654C4A60082ED8E /* ChallengeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */,
 				7FA1BA97264E678000B8ED13 /* Read.storyboard */,
 				7F284C31264BC19C001A0B4E /* Today.storyboard */,
+				7FFCF08C2654B70D0082ED8E /* Challenge.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */,
 				7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */,
 				7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */,
+				7FFCF08D2654B70D0082ED8E /* Challenge.storyboard in Resources */,
 				7FE21434264E868700208667 /* ReadIngredientsTableViewCell.xib in Resources */,
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,
 				7FE21439264F948F00208667 /* EditIngredientsTableViewCell.IngredientsTableViewCell.xib in Resources */,
@@ -493,6 +500,7 @@
 				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
 				7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */,
 				7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */,
+				7FFCF08F2654C4A60082ED8E /* ChallengeViewController.swift in Sources */,
 				7FFCF080265281C70082ED8E /* ReadViewController.swift in Sources */,
 				7FFCF06E2650F51B0082ED8E /* DateHelper.swift in Sources */,
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,

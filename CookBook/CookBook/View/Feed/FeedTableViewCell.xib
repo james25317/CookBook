@@ -36,26 +36,27 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="4Ba-tn-9TA">
-                        <rect key="frame" x="88" y="88" width="238" height="96"/>
+                        <rect key="frame" x="16" y="88" width="310" height="96"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="n6F-PH-Qxz"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnk-7l-ulU">
-                        <rect key="frame" x="96" y="162.5" width="84" height="17"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <rect key="frame" x="24" y="161.5" width="294" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4Ba-tn-9TA" firstAttribute="top" secondItem="YD8-fk-jeh" secondAttribute="bottom" constant="8" id="56n-Fs-Sr4"/>
+                    <constraint firstItem="4Ba-tn-9TA" firstAttribute="leading" secondItem="YD8-fk-jeh" secondAttribute="leading" id="5cN-0L-jrI"/>
                     <constraint firstAttribute="trailing" secondItem="4Ba-tn-9TA" secondAttribute="trailing" constant="16" id="9Ky-R7-lF8"/>
-                    <constraint firstItem="4Ba-tn-9TA" firstAttribute="leading" secondItem="BoV-FP-1Ff" secondAttribute="leading" id="9X2-MQ-Vxc"/>
+                    <constraint firstItem="Nnk-7l-ulU" firstAttribute="leading" secondItem="4Ba-tn-9TA" secondAttribute="leading" constant="8" id="BaG-9h-DSt"/>
                     <constraint firstItem="BoV-FP-1Ff" firstAttribute="leading" secondItem="YD8-fk-jeh" secondAttribute="trailing" constant="8" symbolic="YES" id="Lgd-d6-zsU"/>
                     <constraint firstItem="DGK-yi-tzZ" firstAttribute="top" secondItem="BoV-FP-1Ff" secondAttribute="bottom" id="WkT-zI-HrK"/>
+                    <constraint firstItem="4Ba-tn-9TA" firstAttribute="trailing" secondItem="Nnk-7l-ulU" secondAttribute="trailing" constant="8" id="YtM-Ah-W5i"/>
                     <constraint firstItem="DGK-yi-tzZ" firstAttribute="leading" secondItem="BoV-FP-1Ff" secondAttribute="leading" id="d9P-No-8P0"/>
-                    <constraint firstItem="Nnk-7l-ulU" firstAttribute="leading" secondItem="4Ba-tn-9TA" secondAttribute="leading" constant="8" id="doP-b7-MZ5"/>
                     <constraint firstItem="BoV-FP-1Ff" firstAttribute="firstBaseline" secondItem="YD8-fk-jeh" secondAttribute="centerY" id="ejb-Se-Lwi"/>
                     <constraint firstAttribute="bottom" secondItem="4Ba-tn-9TA" secondAttribute="bottom" constant="16" id="kRs-Ni-chS"/>
                     <constraint firstItem="4Ba-tn-9TA" firstAttribute="bottom" secondItem="Nnk-7l-ulU" secondAttribute="firstBaseline" constant="8" id="lQ9-xQ-pLy"/>
