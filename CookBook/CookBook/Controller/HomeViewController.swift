@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
     @IBAction func goTodayPage(_ sender: Any) {
         
         guard let todayVC = UIStoryboard.today
-            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+                .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
         navigationController?.pushViewController(todayVC, animated: true)
     }
@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
     @IBAction func goEditPage(_ sender: Any) {
 
         guard let editVC = UIStoryboard.edit
-            .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+                .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
 
         navigationController?.pushViewController(editVC, animated: true)
     }
@@ -77,7 +77,7 @@ class HomeViewController: UIViewController {
     @IBAction func goProfilePage(_ sender: Any) {
 
         guard let profileVC = UIStoryboard.profile
-            .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
+                .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
 
         navigationController?.pushViewController(profileVC, animated: true)
     }
@@ -104,6 +104,25 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+
+        return 16
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let header = UIView()
+
+        header.backgroundColor = .clear
+
+        return header
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -139,7 +158,7 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         guard let readVC = UIStoryboard.read
-            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
         navigationController?.pushViewController(readVC, animated: true)
     }

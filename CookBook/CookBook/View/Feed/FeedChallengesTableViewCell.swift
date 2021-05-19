@@ -34,6 +34,6 @@ class FeedChallengesTableViewCell: UITableViewCell {
 
     private func roundedImageView() {
 
-        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.height / 2
+        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
     }
 }

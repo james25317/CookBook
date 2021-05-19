@@ -18,13 +18,13 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewRecipe: UIImageView!
 
     @IBOutlet weak var labelRecipeName: UILabel!
-    
+
     var viewModel: FeedViewModel?
 
     override func awakeFromNib() {
 
         super.awakeFromNib()
-
+        
         // Initialization code
     }
 
@@ -53,6 +53,6 @@ class FeedTableViewCell: UITableViewCell {
 
     private func roundedImageView() {
 
-        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.height / 2
+        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
     }
 }
