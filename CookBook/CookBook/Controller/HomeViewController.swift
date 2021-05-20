@@ -122,9 +122,7 @@ extension HomeViewController: UITableViewDataSource {
         // Adding challengeFeedCall logic later on
 
         let cell = tableView.dequeueReusableCell(
-
             withIdentifier: String(describing: FeedTableViewCell.self),
-
             for: indexPath
         )
         

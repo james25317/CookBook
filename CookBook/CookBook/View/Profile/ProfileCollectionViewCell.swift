@@ -8,10 +8,13 @@
 import UIKit
 
 class ProfileCollectionViewCell: UICollectionViewCell {
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    // Initialization code
-  }
-  
+
+    @IBOutlet weak var imageViewRecipe: UIImageView!
+
+    @IBOutlet weak var labelLikesCounts: UILabel!
+    
+    override func awakeFromNib() {
+
+        super.awakeFromNib()
+    }
 }
