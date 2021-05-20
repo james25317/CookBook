@@ -37,9 +37,15 @@ class ReadModeViewController: UIViewController {
 
     private func setupCollecitonView() {
 
-        collectionView.registerCellWithNib(identifier: "ReadStepsCollectionViewCell", bundle: nil)
+        collectionView.registerCellWithNib(
+            identifier: String(describing: ReadStepsCollectionViewCell.self),
+            bundle: nil
+        )
 
-        collectionView.registerCellWithNib(identifier: "ReadIngredientsCollectionViewCell", bundle: nil)
+        collectionView.registerCellWithNib(
+            identifier: String(describing: ReadIngredientsCollectionViewCell.self),
+            bundle: nil
+        )
 
         collectionView.backgroundColor = .clear
     }
@@ -62,7 +68,10 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReadStepsCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
+            for: indexPath
+        )
 
         guard let readCell = cell as? ReadStepsCollectionViewCell else { return cell }
 

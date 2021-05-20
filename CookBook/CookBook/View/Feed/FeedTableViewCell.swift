@@ -46,7 +46,9 @@ class FeedTableViewCell: UITableViewCell {
 
         super.awakeFromNib()
         
-        // Initialization code
+        self.selectionStyle = .none
+
+        roundedImageView()
     }
 
     // 綁定VM對象來做替換
@@ -55,8 +57,6 @@ class FeedTableViewCell: UITableViewCell {
         self.viewModel = viewModel
 
         layoutCell()
-
-        roundedImageView()
     }
 
     private func layoutCell() {

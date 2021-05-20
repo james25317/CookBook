@@ -84,10 +84,18 @@ class HomeViewController: UIViewController {
 
     private func setupTableView() {
 
-        tableView.registerCellWithNib(identifier: "FeedTableViewCell", bundle: nil)
+        tableView.registerCellWithNib(
 
-        tableView.registerCellWithNib(identifier: "FeedChallengesTableViewCell", bundle: nil)
+            identifier: String(describing: FeedTableViewCell.self),
 
+            bundle: nil
+        )
+
+        tableView.registerCellWithNib(
+
+            identifier: String(describing: FeedChallengesTableViewCell.self),
+
+            bundle: nil)
     }
 
     private func setupSearchBar() {
@@ -113,7 +121,12 @@ extension HomeViewController: UITableViewDataSource {
 
         // Adding challengeFeedCall logic later on
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+
+            withIdentifier: String(describing: FeedTableViewCell.self),
+
+            for: indexPath
+        )
         
         guard let feedCell = cell as? FeedTableViewCell else { return cell }
 
@@ -124,6 +137,7 @@ extension HomeViewController: UITableViewDataSource {
         cellViewModel.onDead = { [weak self] in
 
             print("onDead was activated")
+
             self?.viewModel.fetchData()
         }
         
@@ -136,6 +150,8 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: false)
 
         guard let readVC = UIStoryboard.read
                 .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
