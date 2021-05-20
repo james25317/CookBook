@@ -18,7 +18,19 @@ class ProfileViewController: UIViewController {
         case challenges = 2
     }
 
+    @IBOutlet weak var imageViewUserPortrait: UIImageView!
+
+    @IBOutlet weak var labelUserName: UILabel!
+
     @IBOutlet weak var indicatorView: UIView!
+
+    @IBOutlet weak var labelUserId: UILabel!
+
+    @IBOutlet weak var labelRecipeCounts: UILabel!
+
+    @IBOutlet weak var labelFavoritesCounts: UILabel!
+
+    @IBOutlet weak var labelChallengeCounts: UILabel!
 
     @IBOutlet weak var indicatorCenterXConstraint: NSLayoutConstraint!
     
@@ -27,6 +39,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        roundedPortrait()
 
         sortButtons[0].isSelected = true
     }
@@ -46,6 +60,11 @@ class ProfileViewController: UIViewController {
         // guard let type = SortType(rawValue: sender.tag) else { return }
 
         // updateContainer(type: type)
+    }
+
+    private func roundedPortrait() {
+
+        imageViewUserPortrait.layer.cornerRadius = imageViewUserPortrait.frame.size.height / 2
     }
 
     private func moveIndicatorView(reference: UIView) {

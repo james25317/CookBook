@@ -31,8 +31,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIF-T7-c0R" userLabel="Profile View">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="360"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-sC-vMF">
-                                                    <rect key="frame" x="95" y="53.000000000000007" width="100" height="98.666666666666671"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catprofile" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-sC-vMF">
+                                                    <rect key="frame" x="95" y="52" width="100" height="100"/>
                                                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="3Te-Ro-eOh"/>
@@ -149,6 +149,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstItem="Rhk-5L-drT" firstAttribute="top" secondItem="cO2-Ok-HlR" secondAttribute="bottom" constant="48" id="616-be-g8U"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rhk-5L-drT" secondAttribute="trailing" id="9a2-mC-g2s"/>
@@ -204,8 +205,14 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="imageViewUserPortrait" destination="4qg-sC-vMF" id="XSp-6f-78a"/>
                         <outlet property="indicatorCenterXConstraint" destination="Fh3-EE-HOY" id="wkl-jA-xzy"/>
                         <outlet property="indicatorView" destination="pnm-cV-ttB" id="RBn-5A-TZj"/>
+                        <outlet property="labelChallengeCounts" destination="KnP-WR-DGp" id="Yey-Vs-Gja"/>
+                        <outlet property="labelFavoritesCounts" destination="zmi-ST-xNI" id="mKn-53-MgG"/>
+                        <outlet property="labelRecipeCounts" destination="4do-Rx-g8B" id="OSM-MN-p5N"/>
+                        <outlet property="labelUserId" destination="6yZ-jo-GPb" id="1ZT-yT-j1E"/>
+                        <outlet property="labelUserName" destination="e4J-sq-pKR" id="uli-dS-jkq"/>
                         <outletCollection property="sortButtons" destination="wza-PK-Oad" collectionClass="NSMutableArray" id="zbM-F9-80W"/>
                         <outletCollection property="sortButtons" destination="zRp-gs-Yiy" collectionClass="NSMutableArray" id="kr4-z2-F0B"/>
                         <outletCollection property="sortButtons" destination="crO-KH-1GT" collectionClass="NSMutableArray" id="705-H8-Pv3"/>
@@ -217,13 +224,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="catprofile" width="3888" height="2592"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
