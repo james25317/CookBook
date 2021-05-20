@@ -15,6 +15,7 @@ class FeedViewModel {
     var onDead: (() -> Void)?
 
     init(model feed: Feed) {
+        
         self.feed = feed
     }
 

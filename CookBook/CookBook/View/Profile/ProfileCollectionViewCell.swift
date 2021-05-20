@@ -12,9 +12,20 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewRecipe: UIImageView!
 
     @IBOutlet weak var labelLikesCounts: UILabel!
-    
-    override func awakeFromNib() {
 
-        super.awakeFromNib()
+    var viewModel: RecipeViewModel?
+
+    func setup(viewModel: RecipeViewModel) {
+
+        self.viewModel = viewModel
+
+        layoutCell()
+    }
+
+    func layoutCell() {
+
+        imageViewRecipe.loadImage(viewModel?.mainImage)
+
+        labelLikesCounts.text = String(describing: viewModel?.likes)
     }
 }

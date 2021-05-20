@@ -21,6 +21,7 @@ class HomeViewModel {
             case .success(let feeds):
 
                 print("Fetch feeds success!")
+
                 self?.setFeeds(feeds)
 
             case .failure(let error):

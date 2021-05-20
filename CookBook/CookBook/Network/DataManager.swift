@@ -20,6 +20,7 @@ enum MainError: Error {
 }
 
 class DataManager {
+
     static let shared = DataManager()
 
     lazy var db = Firestore.firestore()
@@ -57,6 +58,38 @@ class DataManager {
 
                     // 獲取資料成功，escaping completion
                     completion(.success(feeds))
+                }
+            }
+    }
+
+    func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
+
+        db.collection("Recipe")
+            .order(by: "createdTime", descending: true)
+            .getDocuments() { (querySnapshot, error) in
+
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    var recipes: [Recipe] = []
+
+                    for document in querySnapshot!.documents {
+
+                        print("\(document.documentID) => \(document.data())")
+
+                        do {
+                            if let recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+                                recipes.append(recipe)
+                            }
+                        } catch {
+                            completion(.failure(error))
+                            // completion(.failure(FirebaseError.documentError))
+                        }
+                    }
+
+                    completion(.success(recipes))
                 }
             }
     }

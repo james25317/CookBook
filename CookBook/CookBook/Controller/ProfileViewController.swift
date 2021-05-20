@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestoreSwift
 
 class ProfileViewController: UIViewController {
 
@@ -41,10 +43,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView! {
 
         didSet {
+
             self.collectionView.delegate = self
+
             self.collectionView.dataSource = self
         }
     }
+
+    let viewModel = ProfileViewModel()
 
     override func viewDidLoad() {
 
@@ -55,6 +61,13 @@ class ProfileViewController: UIViewController {
         setupCollectionView()
 
         sortButtons[0].isSelected = true
+
+        viewModel.recipeViewModels.bind { [weak self] recipes in
+
+            self?.collectionView.reloadData()
+        }
+
+        viewModel.fetchRecipesData()
     }
 
 
@@ -69,9 +82,9 @@ class ProfileViewController: UIViewController {
 
         moveIndicatorView(reference: sender)
 
-        // guard let type = SortType(rawValue: sender.tag) else { return }
+        guard let type = SortType(rawValue: sender.tag) else { return }
 
-        // updateContainer(type: type)
+        updateCollectionView(type: type)
     }
 
     private func roundedPortrait() {
@@ -151,18 +164,18 @@ class ProfileViewController: UIViewController {
             self?.view.layoutIfNeeded()
         })
     }
+
+    private func updateCollectionView(type: SortType) {
+
+        // 根據點擊的按鈕來源判斷向哪個 Collection 叫資料（？）
+    }
 }
 
 extension ProfileViewController: UICollectionViewDataSource {
 
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-
-        return 1
-    }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 21
+        return self.viewModel.recipeViewModels.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -172,16 +185,23 @@ extension ProfileViewController: UICollectionViewDataSource {
             for: indexPath
         )
 
-        guard let productCell = cell as? ProfileCollectionViewCell else { return cell }
+        guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
-        return productCell
+        let cellViewModel = self.viewModel.recipeViewModels.value[indexPath.item]
+
+        cellViewModel.onDead = { [weak self] in
+
+            print("onDead was activated")
+
+            self?.viewModel.fetchRecipesData()
+        }
+
+        recipeCell.setup(viewModel: cellViewModel)
+
+        return recipeCell
     }
 }
 
 extension ProfileViewController: UICollectionViewDelegate {
-
-}
-
-extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 
 }

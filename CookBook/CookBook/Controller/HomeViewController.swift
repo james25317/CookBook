@@ -44,6 +44,10 @@ class HomeViewController: UIViewController {
 
         super.viewDidLoad()
 
+        setupTableView()
+
+        setupSearchBar()
+
         // 向 HomeVM 綁定 Box 觀察資料變化(fetch成功後的值)，VC 這邊要做的事情
         viewModel.feedViewModels.bind { [weak self] feeds in
 
@@ -52,10 +56,6 @@ class HomeViewController: UIViewController {
 
         // 向 HomeVM 要資料，回傳結果至 Box.value 給其他被綁定的 V
         viewModel.fetchData()
-
-        setupTableView()
-
-        setupSearchBar()
     }
 
     @IBAction func goTodayPage(_ sender: Any) {
