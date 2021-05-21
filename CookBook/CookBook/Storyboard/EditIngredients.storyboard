@@ -46,16 +46,25 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onIngredientNameChanged:" destination="RvM-aT-hMS" eventType="editingDidEnd" id="i9U-dj-nKx"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="單位" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3BR-mP-5Za">
                                 <rect key="frame" x="333" y="617" width="57" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onUnitChanged:" destination="RvM-aT-hMS" eventType="editingDidEnd" id="EBT-kR-u4A"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="數量" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pe4-Cp-0du">
                                 <rect key="frame" x="260" y="617" width="57" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onAmountChanged:" destination="RvM-aT-hMS" eventType="editingDidEnd" id="trg-ha-c1U"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt4-8g-1zi" userLabel="Divider View">
                                 <rect key="frame" x="0.0" y="739" width="414" height="1"/>
@@ -75,6 +84,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="onTapSave:" destination="RvM-aT-hMS" eventType="touchUpInside" id="s03-DL-NI9"/>
                                     <action selector="saveAndLeave:" destination="RvM-aT-hMS" eventType="touchUpInside" id="ZYm-mU-kvt"/>
                                 </connections>
                             </button>
@@ -88,6 +98,10 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="addIngredientsData:" destination="RvM-aT-hMS" eventType="touchUpInside" id="8f8-pK-rSI"/>
+                                    <action selector="onTapAdd:" destination="RvM-aT-hMS" eventType="touchUpInside" id="X7G-zH-8bh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MTa-uG-H04"/>
@@ -124,6 +138,9 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="doY-QC-fyh" id="Qll-ku-RXc"/>
+                        <outlet property="textFieldAmount" destination="Pe4-Cp-0du" id="amJ-kJ-PIi"/>
+                        <outlet property="textFieldUnit" destination="3BR-mP-5Za" id="4wQ-a5-YHx"/>
+                        <outlet property="textFieldingredientName" destination="lzu-4Z-3Ze" id="ore-W0-POy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS0-4n-Q4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

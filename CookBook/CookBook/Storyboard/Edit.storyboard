@@ -274,13 +274,13 @@
         <!--IngredientsPreview-->
         <scene sceneID="Le7-fz-6mX">
             <objects>
-                <viewController title="IngredientsPreview" id="AvZ-op-BtV" sceneMemberID="viewController">
+                <viewController title="IngredientsPreview" id="AvZ-op-BtV" customClass="EditIngredientsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jxJ-nQ-Kch">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="419"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-y6-lq6">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="419"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-y6-lq6">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="329"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEt-2I-bCz">
@@ -303,16 +303,19 @@
                             <constraint firstItem="QAx-y6-lq6" firstAttribute="trailing" secondItem="T3K-JS-5zP" secondAttribute="trailing" id="9yD-ei-TzQ"/>
                             <constraint firstItem="sEt-2I-bCz" firstAttribute="leading" secondItem="jxJ-nQ-Kch" secondAttribute="leading" constant="24" id="HnB-wq-HyV"/>
                             <constraint firstItem="T3K-JS-5zP" firstAttribute="bottom" secondItem="sEt-2I-bCz" secondAttribute="bottom" constant="24" id="U3J-gd-Dav"/>
-                            <constraint firstItem="QAx-y6-lq6" firstAttribute="bottom" secondItem="T3K-JS-5zP" secondAttribute="bottom" id="XFV-UF-w17"/>
                             <constraint firstAttribute="trailing" secondItem="sEt-2I-bCz" secondAttribute="trailing" constant="24" id="cdn-AM-Kfu"/>
                             <constraint firstItem="QAx-y6-lq6" firstAttribute="top" secondItem="jxJ-nQ-Kch" secondAttribute="top" id="rpc-a0-J9B"/>
+                            <constraint firstItem="sEt-2I-bCz" firstAttribute="top" secondItem="QAx-y6-lq6" secondAttribute="bottom" constant="24" id="tOl-vt-WjU"/>
                             <constraint firstItem="QAx-y6-lq6" firstAttribute="leading" secondItem="T3K-JS-5zP" secondAttribute="leading" id="u8G-mY-eJO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="QAx-y6-lq6" id="D5D-b0-nPM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49x-Tz-bES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="269"/>
+            <point key="canvasLocation" x="4016.9230769230767" y="268.3649289099526"/>
         </scene>
         <!--EditIngredients-->
         <scene sceneID="KrM-si-aov">

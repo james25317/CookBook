@@ -89,4 +89,46 @@ class DataManager {
                 }
             }
     }
+
+    func updateIngredient(ingredients: inout [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新(覆寫) Ingredient 欄位
+        let ref = db.collection("cities").document("w2Un7JQnj5q1zqbs0nHC")
+
+        try? ref.setData(from: ingredients) { error in
+
+            if let error = error {
+
+                print("Error updating ingredients: \(error)")
+            } else {
+
+                print("Ingredients successfully updated")
+            }
+        }
+    }
+
+    func uploadRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫上傳 (Create CookBook) Recipe 資料的部分
+        var ref: DocumentReference?
+
+        recipe.id = ref?.documentID
+
+        recipe.createdTime = Timestamp(date: Date())
+
+        ref = try? db.collection("Recipe").addDocument(from: recipe) { error in
+
+            if let error = error {
+
+                print("Error adding document: \(error)")
+
+                completion(.failure(error))
+            } else {
+
+                print("Document added with ID: \(ref!.documentID)")
+
+                completion(.success("Upload Ingredient Success!"))
+            }
+        }
+    }
 }

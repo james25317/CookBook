@@ -13,12 +13,12 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditIngredientsTableViewCell" rowHeight="91" id="KGk-i7-Jjw" customClass="EditIngredientsTableViewCell" customModule="CookBook" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="422" height="91"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="422" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFl-Hc-WJW" userLabel="Bg View">
-                        <rect key="frame" x="16" y="4" width="390" height="48"/>
+                        <rect key="frame" x="16" y="16" width="390" height="48"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="IngredientName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-QE-KaE">
                                 <rect key="frame" x="16" y="15.5" width="257" height="17"/>
@@ -76,8 +76,8 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="BFl-Hc-WJW" secondAttribute="bottom" constant="4" id="aYD-mT-rgG"/>
-                    <constraint firstItem="BFl-Hc-WJW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="cpz-nH-P6J"/>
+                    <constraint firstAttribute="bottom" secondItem="BFl-Hc-WJW" secondAttribute="bottom" id="aYD-mT-rgG"/>
+                    <constraint firstItem="BFl-Hc-WJW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="cpz-nH-P6J"/>
                     <constraint firstItem="BFl-Hc-WJW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lzD-vq-aeY"/>
                     <constraint firstAttribute="trailing" secondItem="BFl-Hc-WJW" secondAttribute="trailing" constant="16" id="pQu-fv-sOw"/>
                     <constraint firstItem="BFl-Hc-WJW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="q3h-fl-uW3"/>

@@ -22,6 +22,8 @@
 		7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */; };
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
+		7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */; };
+		7F7C735B2657B0E200D1AFD4 /* EditIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735A2657B0E200D1AFD4 /* EditIngredientsViewModel.swift */; };
 		7FA1BA84264CD1A900B8ED13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA83264CD1A900B8ED13 /* Main.storyboard */; };
 		7FA1BA86264CDBA600B8ED13 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */; };
 		7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */; };
@@ -87,6 +89,8 @@
 		7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditIngredients.storyboard; sourceTree = "<group>"; };
 		7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditSteps.storyboard; sourceTree = "<group>"; };
 		7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsPreviewViewController.swift; sourceTree = "<group>"; };
+		7F7C735A2657B0E200D1AFD4 /* EditIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsViewModel.swift; sourceTree = "<group>"; };
 		7FA1BA83264CD1A900B8ED13 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				7FFCF071265104EE0082ED8E /* HomeViewModel.swift */,
 				7F13B15E265688D10042F3EC /* RecipeViewModel.swift */,
 				7F13B1662656AD3E0042F3EC /* ProfileViewModel.swift */,
+				7F7C735A2657B0E200D1AFD4 /* EditIngredientsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -237,7 +242,9 @@
 		7FA1BA7F264CC67900B8ED13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7FFCF08E2654C4A60082ED8E /* ChallengeViewController.swift */,
 				7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */,
+				7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */,
 				7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */,
 				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
 				7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */,
@@ -247,7 +254,6 @@
 				7FFCF0812652C12D0082ED8E /* ReadModeViewController.swift */,
 				7FFCF07F265281C70082ED8E /* ReadViewController.swift */,
 				7FFCF075265222520082ED8E /* TodayViewController.swift */,
-				7FFCF08E2654C4A60082ED8E /* ChallengeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -520,12 +526,14 @@
 				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
 				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,
 				7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */,
+				7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
 				7F13B161265689330042F3EC /* Recipe.swift in Sources */,
 				7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */,
 				7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */,
 				7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */,
 				7F13B16526568BB90042F3EC /* Step.swift in Sources */,
+				7F7C735B2657B0E200D1AFD4 /* EditIngredientsViewModel.swift in Sources */,
 				7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
