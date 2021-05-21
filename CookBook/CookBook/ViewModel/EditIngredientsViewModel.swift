@@ -9,18 +9,25 @@ import Foundation
 
 class EditIngredientsViewModel {
 
-    var ingredient: Ingredient = Ingredient(
+    var ingredient = Ingredient(
         amount: 0,
         name: "",
         unit: ""
     )
 
     // 這邊要怎麼將輸入的內容自動append到這個陣列裡？
-    var ingredients: [Ingredient] = [Ingredient(
+    var ingredients: [Ingredient] = [
+        Ingredient(
         amount: 999,
         name: "name override",
         unit: "unit override"
-    )]
+        ),
+        Ingredient(
+        amount: 999,
+        name: "name override",
+        unit: "unit override"
+        )
+    ]
 
     func onIngredientNameChanged(text name: String) {
 

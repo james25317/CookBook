@@ -93,9 +93,14 @@ class DataManager {
     func updateIngredient(ingredients: inout [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Ingredient 欄位
-        let ref = db.collection("cities").document("w2Un7JQnj5q1zqbs0nHC")
+        let ref = db.collection("Recipe").document("w2Un7JQnj5q1zqbs0nHC")
 
-        try? ref.setData(from: ingredients) { error in
+        let dic = ingredients.compactMap { ingredient in
+
+            ingredient.toDict
+        }
+
+        try? ref.updateData(["ingredients": dic]) { error in
 
             if let error = error {
 
