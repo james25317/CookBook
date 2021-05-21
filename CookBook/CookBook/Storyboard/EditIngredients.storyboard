@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--EditIngredients-->
+        <!--Edit Ingredients View Controller-->
         <scene sceneID="elj-zS-wLr">
             <objects>
-                <viewController storyboardIdentifier="EditIngredients" title="EditIngredients" id="RvM-aT-hMS" customClass="EditIngredientsViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditIngredients" id="RvM-aT-hMS" customClass="EditIngredientsViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bz6-0r-gaS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBa-bI-6fh">
-                                <rect key="frame" x="354" y="60" width="36" height="36"/>
+                                <rect key="frame" x="362" y="60" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="9M4-F0-GNm"/>
                                     <constraint firstAttribute="height" constant="36" id="UBN-VV-RZ7"/>
@@ -35,9 +35,9 @@
                                     <action selector="leave:" destination="RvM-aT-hMS" eventType="touchUpInside" id="blc-Ok-xld"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="doY-QC-fyh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="doY-QC-fyh">
                                 <rect key="frame" x="0.0" y="162" width="414" height="431"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入材料名稱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-4Z-3Ze">
                                 <rect key="frame" x="24" y="617" width="220" height="40"/>
@@ -100,7 +100,7 @@
                             <constraint firstItem="3BR-mP-5Za" firstAttribute="centerY" secondItem="Pe4-Cp-0du" secondAttribute="centerY" id="NUk-Xq-gJ5"/>
                             <constraint firstItem="ptA-un-BcM" firstAttribute="top" secondItem="MTa-uG-H04" secondAttribute="top" constant="72" id="Np7-Ui-Zq8"/>
                             <constraint firstItem="eBa-bI-6fh" firstAttribute="top" secondItem="MTa-uG-H04" secondAttribute="top" constant="16" id="Olg-gb-euO"/>
-                            <constraint firstItem="MTa-uG-H04" firstAttribute="trailing" secondItem="eBa-bI-6fh" secondAttribute="trailing" constant="24" id="QCv-hK-7ta"/>
+                            <constraint firstItem="MTa-uG-H04" firstAttribute="trailing" secondItem="eBa-bI-6fh" secondAttribute="trailing" constant="16" id="QCv-hK-7ta"/>
                             <constraint firstItem="jt4-8g-1zi" firstAttribute="top" secondItem="Ta8-Be-IW1" secondAttribute="bottom" constant="24" id="SI1-fT-9lK"/>
                             <constraint firstItem="MTa-uG-H04" firstAttribute="trailing" secondItem="ZRV-Fj-02o" secondAttribute="trailing" constant="24" id="T5q-Br-9PF"/>
                             <constraint firstItem="lzu-4Z-3Ze" firstAttribute="leading" secondItem="Ta8-Be-IW1" secondAttribute="leading" id="UN6-O8-yHI"/>
@@ -122,6 +122,9 @@
                             <constraint firstItem="3BR-mP-5Za" firstAttribute="leading" secondItem="Pe4-Cp-0du" secondAttribute="trailing" constant="16" id="zTK-m7-AoF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="doY-QC-fyh" id="Qll-ku-RXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS0-4n-Q4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
