@@ -234,7 +234,7 @@
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnm-cV-ttB" userLabel="Indicator View">
-                            <rect key="frame" x="0.3333333333333286" y="358" width="127.99999999999999" height="2"/>
+                            <rect key="frame" x="0.3333333333333286" y="357" width="127.99999999999999" height="2"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="2" id="H7J-Xr-DUQ"/>
@@ -258,7 +258,7 @@
                         <constraint firstItem="cO2-Ok-HlR" firstAttribute="firstBaseline" secondItem="zmi-ST-xNI" secondAttribute="baseline" constant="24" id="UtH-FD-0fz"/>
                         <constraint firstItem="6yZ-jo-GPb" firstAttribute="firstBaseline" secondItem="e4J-sq-pKR" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Z24-cW-saI"/>
                         <constraint firstItem="bgM-eZ-Fne" firstAttribute="bottom" secondItem="cO2-Ok-HlR" secondAttribute="bottom" id="c32-YW-u0M"/>
-                        <constraint firstItem="pnm-cV-ttB" firstAttribute="bottom" secondItem="Rhk-5L-drT" secondAttribute="bottom" id="cG1-N2-jOs"/>
+                        <constraint firstItem="pnm-cV-ttB" firstAttribute="bottom" secondItem="Rhk-5L-drT" secondAttribute="bottom" constant="-1" id="cG1-N2-jOs"/>
                         <constraint firstItem="e4J-sq-pKR" firstAttribute="leading" secondItem="4qg-sC-vMF" secondAttribute="trailing" constant="8" id="g7T-dJ-DeR"/>
                         <constraint firstItem="e4J-sq-pKR" firstAttribute="firstBaseline" secondItem="4qg-sC-vMF" secondAttribute="centerY" id="lqw-P9-8fn"/>
                         <constraint firstItem="KnP-WR-DGp" firstAttribute="firstBaseline" secondItem="zmi-ST-xNI" secondAttribute="firstBaseline" id="mDU-r6-Vko"/>

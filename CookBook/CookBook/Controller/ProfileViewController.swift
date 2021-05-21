@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
 
         setupCollectionView()
 
-        // sortButtons[0].isSelected = true
+        sortButtons[2].isSelected = true
 
         viewModel.recipeViewModels.bind { [weak self] recipes in
 
