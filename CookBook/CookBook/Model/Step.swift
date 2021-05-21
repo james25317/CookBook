@@ -9,7 +9,7 @@ import Foundation
 
 struct Step: Codable {
 
-    var description: Int
+    var description: String
     var image: String
 
     enum CodingKeys: String, CodingKey {

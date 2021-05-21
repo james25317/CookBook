@@ -43,16 +43,12 @@ class DataManager {
                         print("\(document.documentID) => \(document.data())")
 
                         do {
-
                             if let feed = try document.data(as: Feed.self, decoder: Firestore.Decoder()) {
                                 feeds.append(feed)
                             }
-
                         } catch {
-
                             completion(.failure(error))
                             // completion(.failure(FirebaseError.documentError))
-
                         }
                     }
 
