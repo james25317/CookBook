@@ -92,7 +92,7 @@ class DataManager {
 
         db.collection("Recipe")
             .order(by: "createdTime", descending: true)
-            .getDocuments() { (querySnapshot, error) in
+            .getDocuments { querySnapshot, error in
 
                 if let error = error {
 
@@ -106,12 +106,13 @@ class DataManager {
                         print("\(document.documentID) => \(document.data())")
 
                         do {
+
                             if let recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
                                 recipes.append(recipe)
                             }
                         } catch {
+
                             completion(.failure(error))
-                            // completion(.failure(FirebaseError.documentError))
                         }
                     }
 
@@ -142,14 +143,11 @@ class DataManager {
         }
     }
 
-    func uploadRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
+    func createRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫上傳 (Create CookBook) Recipe 資料的部分
         var ref: DocumentReference?
 
         recipe.id = ref?.documentID
-
-        recipe.createdTime = Timestamp(date: Date())
 
         ref = try? db.collection("Recipe").addDocument(from: recipe) { error in
 
@@ -160,9 +158,10 @@ class DataManager {
                 completion(.failure(error))
             } else {
 
-                print("Document added with ID: \(ref!.documentID)")
+                print("Document added with ID: \(String(describing: ref!.documentID))")
 
-                completion(.success("Upload Ingredient Success!"))
+                // 回傳產生的 DocumentId
+                completion(.success(ref!.documentID))
             }
         }
     }

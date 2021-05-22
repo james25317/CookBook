@@ -37,13 +37,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="輸入食譜名稱" clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="06x-XG-dDU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="輸入食譜標題" clearsOnBeginEditing="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="06x-XG-dDU">
                                 <rect key="frame" x="24" y="242" width="342" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="m50-Pc-4iB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onNameChanged:" destination="qYP-99-ctS" eventType="editingDidEnd" id="hhs-Ng-kcx"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-iY-Fza" userLabel="UnderLine View">
                                 <rect key="frame" x="24" y="278" width="342" height="2"/>
@@ -55,10 +58,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-d9-w7O">
                                 <rect key="frame" x="24" y="304" width="342" height="236"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <string key="text">For best results, make sure the rice is cooked and cooled beforehand to prevent it sticking together when frying. You could include some extras like chopped ham, cooked prawns or sweetcorn, when adding the peas.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-al-bjg">
                                 <rect key="frame" x="171" y="622.66666666666663" width="32" height="17"/>
@@ -70,7 +76,7 @@
                                 <rect key="frame" x="211" y="620.33333333333337" width="20" height="22"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="goPreviewPage:" destination="qYP-99-ctS" eventType="touchUpInside" id="1P0-pr-gTW"/>
+                                    <action selector="createCookBook:" destination="qYP-99-ctS" eventType="touchUpInside" id="1P0-pr-gTW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,6 +108,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="8DH-i7-9tD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="textFieldName" destination="06x-XG-dDU" id="CP3-t5-C3k"/>
+                        <outlet property="textViewDescription" destination="Zsb-d9-w7O" id="X9R-TQ-N1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02j-jl-dUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

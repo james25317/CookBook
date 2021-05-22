@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 import Firebase
 
 class RecipeViewModel {
@@ -16,6 +15,7 @@ class RecipeViewModel {
     var onDead: (() -> Void)?
     
     init(model recipe: Recipe) {
+
         self.recipe = recipe
     }
     

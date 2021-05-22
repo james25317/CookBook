@@ -56,12 +56,6 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
-        setupProfileInfo()
-
-        setupCollectionView()
-
-        sortButtons[2].isSelected = true
-
         viewModel.recipeViewModels.bind { [weak self] recipes in
 
             self?.collectionView.reloadData()
@@ -75,6 +69,12 @@ class ProfileViewController: UIViewController {
         viewModel.fetchUserData()
 
         viewModel.fetchRecipesData()
+
+        setupProfileInfo()
+
+        setupCollectionView()
+
+        sortButtons[2].isSelected = true
     }
 
 
