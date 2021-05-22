@@ -43,10 +43,12 @@ class DataManager {
                         print("\(document.documentID) => \(document.data())")
 
                         do {
+
                             if let feed = try document.data(as: Feed.self, decoder: Firestore.Decoder()) {
                                 feeds.append(feed)
                             }
                         } catch {
+
                             completion(.failure(error))
                             // completion(.failure(FirebaseError.documentError))
                         }
@@ -56,6 +58,34 @@ class DataManager {
                     completion(.success(feeds))
                 }
             }
+    }
+
+    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
+
+        // where 篩出 appleId
+
+        db.collection("User")
+            .document("SADUxqR04ihqg1XUgDHn")
+            .addSnapshotListener({ documentSnapshot, error in
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    guard let document = documentSnapshot else { return }
+
+                    do {
+
+                        if let user = try document.data(as: User.self) {
+
+                            completion(.success(user))
+                        }
+                    } catch {
+
+                        completion(.failure(error))
+                    }
+                }
+            })
     }
 
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
@@ -95,12 +125,12 @@ class DataManager {
         // 這邊寫更新(覆寫) Ingredient 欄位
         let ref = db.collection("Recipe").document("w2Un7JQnj5q1zqbs0nHC")
 
-        let dic = ingredients.compactMap { ingredient in
+        let dicArray = ingredients.compactMap { ingredient in
 
             ingredient.toDict
         }
 
-        try? ref.updateData(["ingredients": dic]) { error in
+        ref.updateData(["ingredients": dicArray]) { error in
 
             if let error = error {
 

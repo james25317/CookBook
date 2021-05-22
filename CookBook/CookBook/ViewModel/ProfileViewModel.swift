@@ -9,7 +9,30 @@ import Foundation
 
 class ProfileViewModel {
 
-    let recipeViewModels = Box([RecipeViewModel]())
+    let userViewModel: Box<UserViewModel?> = Box(nil)
+
+    // let recipeViewModels = Box([RecipeViewModel]())
+
+    let recipeViewModels: Box<[RecipeViewModel]> = Box([])
+
+    func fetchUserData() {
+
+        DataManager.shared.fetchUser { [weak self] result in
+
+            switch result {
+
+            case .success(let user):
+
+                print("Fetch user success!")
+
+                self?.setUser(user)
+
+            case .failure(let error):
+
+                print("fetchData.failure: \(error)")
+            }
+        }
+    }
 
     func fetchRecipesData() {
 
@@ -30,6 +53,13 @@ class ProfileViewModel {
         }
     }
 
+    func convertUserToViewModel(from user: User) -> UserViewModel {
+
+        let viewModel = UserViewModel(model: user)
+
+        return viewModel
+    }
+
     func convertRecipesToViewModels(from recipes: [Recipe]) -> [RecipeViewModel] {
 
         var viewModels: [RecipeViewModel] = []
@@ -42,6 +72,11 @@ class ProfileViewModel {
         }
 
         return viewModels
+    }
+
+    func setUser(_ user: User) {
+
+        userViewModel.value = convertUserToViewModel(from: user)
     }
 
     func setRecipes(_ articles: [Recipe]) {

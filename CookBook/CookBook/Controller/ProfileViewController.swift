@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var labelUserId: UILabel!
 
-    @IBOutlet weak var labelRecipeCounts: UILabel!
+    @IBOutlet weak var labelRecipesCounts: UILabel!
 
     @IBOutlet weak var labelFavoritesCounts: UILabel!
 
@@ -56,7 +56,7 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
-        roundedPortrait()
+        setupProfileInfo()
 
         setupCollectionView()
 
@@ -66,6 +66,13 @@ class ProfileViewController: UIViewController {
 
             self?.collectionView.reloadData()
         }
+
+        viewModel.userViewModel.bind { [weak self] user in
+
+            self?.setupProfileInfo()
+        }
+
+        viewModel.fetchUserData()
 
         viewModel.fetchRecipesData()
     }
@@ -85,6 +92,23 @@ class ProfileViewController: UIViewController {
         guard let type = SortType(rawValue: sender.tag) else { return }
 
         updateCollectionView(type: type)
+    }
+
+    private func setupProfileInfo() {
+
+        guard let data = viewModel.userViewModel.value else { return }
+
+        imageViewUserPortrait.loadImage(data.portrait)
+
+        labelUserId.text = data.appleId
+
+        labelRecipesCounts.text = String(describing: data.recipesCounts)
+
+        labelFavoritesCounts.text = String(describing: data.favoritesCounts)
+
+        labelChallengeCounts.text = String(describing: data.challengesCounts)
+
+        roundedPortrait()
     }
 
     private func roundedPortrait() {
