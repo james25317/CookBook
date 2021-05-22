@@ -24,8 +24,10 @@ class ProfileCollectionViewCell: UICollectionViewCell {
 
     func layoutCell() {
 
-        imageViewRecipe.loadImage(viewModel?.mainImage)
+        guard let data = viewModel else { return }
 
-        labelLikesCounts.text = String(describing: viewModel?.likes)
+        imageViewRecipe.loadImage(data.mainImage)
+
+        labelLikesCounts.text = String(describing: data.likes)
     }
 }
