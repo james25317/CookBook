@@ -9,6 +9,15 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+enum Collections: String {
+
+    case feed = "Feed"
+
+    case user = "User"
+
+    case recipe = "Recipe"
+}
+
 // What's this?
 enum FirebaseError: Error {
     case documentError
@@ -27,7 +36,7 @@ class DataManager {
 
     func fetchFeeds(completion: @escaping (Result<[Feed], Error>) -> Void) {
 
-        db.collection("Feed")
+        db.collection(Collections.feed.rawValue)
             .order(by: "createdTime", descending: true)
             .getDocuments { querySnapshot, error in
 
@@ -64,7 +73,7 @@ class DataManager {
 
         // where 篩出 appleId
 
-        db.collection("User")
+        db.collection(Collections.user.rawValue)
             .document("SADUxqR04ihqg1XUgDHn")
             .addSnapshotListener({ documentSnapshot, error in
                 if let error = error {
@@ -90,7 +99,7 @@ class DataManager {
 
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
-        db.collection("Recipe")
+        db.collection(Collections.recipe.rawValue)
             .order(by: "createdTime", descending: true)
             .getDocuments { querySnapshot, error in
 
@@ -124,7 +133,7 @@ class DataManager {
     func updateIngredient(ingredients: inout [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Ingredient 欄位
-        let ref = db.collection("Recipe").document("w2Un7JQnj5q1zqbs0nHC")
+        let ref = db.collection(Collections.recipe.rawValue).document("w2Un7JQnj5q1zqbs0nHC")
 
         let dicArray = ingredients.compactMap { ingredient in
 
@@ -149,7 +158,7 @@ class DataManager {
 
         recipe.id = ref?.documentID
 
-        ref = try? db.collection("Recipe").addDocument(from: recipe) { error in
+        ref = try? db.collection(Collections.recipe.rawValue).addDocument(from: recipe) { error in
 
             if let error = error {
 

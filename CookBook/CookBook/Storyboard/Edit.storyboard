@@ -50,19 +50,25 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-iY-Fza" userLabel="UnderLine View">
                                 <rect key="frame" x="24" y="278" width="342" height="2"/>
-                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="zqS-OO-uBN"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-d9-w7O">
                                 <rect key="frame" x="24" y="304" width="342" height="236"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGray6Color"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
@@ -197,13 +203,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-F6-aKs" userLabel="Steps Container View">
                                 <rect key="frame" x="0.0" y="268" width="390" height="419"/>
                                 <connections>
-                                    <segue destination="fK8-A1-YVQ" kind="embed" identifier="IngredientsSegue" id="4YA-Vd-3bD"/>
+                                    <segue destination="fK8-A1-YVQ" kind="embed" identifier="SegueSteps" id="4YA-Vd-3bD"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehl-8L-7ye" userLabel="Ingredients Container View">
                                 <rect key="frame" x="0.0" y="268" width="390" height="419"/>
                                 <connections>
-                                    <segue destination="AvZ-op-BtV" kind="embed" identifier="StepsSegue" id="Jih-Mv-dQb"/>
+                                    <segue destination="AvZ-op-BtV" kind="embed" identifier="SegueIngredients" id="Jih-Mv-dQb"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIJ-Eb-zd2" userLabel="Indicator View">
@@ -338,13 +344,13 @@
         <!--StepsPreview-->
         <scene sceneID="OiX-qB-IzV">
             <objects>
-                <viewController title="StepsPreview" id="fK8-A1-YVQ" sceneMemberID="viewController">
+                <viewController title="StepsPreview" id="fK8-A1-YVQ" customClass="EditStepsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHA-cn-u23">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="419"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WsI-lC-g2o">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="419"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="329"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOW-Ku-f9g">
@@ -365,17 +371,20 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HOW-Ku-f9g" secondAttribute="trailing" constant="24" id="CWZ-g5-aUf"/>
                             <constraint firstItem="WsI-lC-g2o" firstAttribute="leading" secondItem="tHA-cn-u23" secondAttribute="leading" id="UnC-Sk-GsN"/>
+                            <constraint firstItem="HOW-Ku-f9g" firstAttribute="top" secondItem="WsI-lC-g2o" secondAttribute="bottom" constant="24" id="hFt-uG-V0p"/>
                             <constraint firstAttribute="bottom" secondItem="HOW-Ku-f9g" secondAttribute="bottom" constant="24" id="huM-QD-S0r"/>
-                            <constraint firstAttribute="bottom" secondItem="WsI-lC-g2o" secondAttribute="bottom" id="qvo-b2-6Qj"/>
                             <constraint firstItem="HOW-Ku-f9g" firstAttribute="leading" secondItem="tHA-cn-u23" secondAttribute="leading" constant="24" id="ucm-k7-rDp"/>
                             <constraint firstItem="WsI-lC-g2o" firstAttribute="top" secondItem="tHA-cn-u23" secondAttribute="top" id="vgz-Vd-Gve"/>
                             <constraint firstAttribute="trailing" secondItem="WsI-lC-g2o" secondAttribute="trailing" id="yaa-dQ-4Gf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="WsI-lC-g2o" id="uAT-if-m51"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ6-we-Sqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="-240"/>
+            <point key="canvasLocation" x="4016.9230769230767" y="-240.63981042654027"/>
         </scene>
         <!--EditSteps-->
         <scene sceneID="iT3-fW-9hP">

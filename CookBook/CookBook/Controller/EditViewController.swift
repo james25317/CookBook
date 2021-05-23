@@ -42,6 +42,7 @@ class EditViewController: UIViewController {
             .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
 
         // pass VM & created DocumentId
+        previewVC.viewModel = viewModel
 
         navigationController?.pushViewController(previewVC, animated: true)
     }

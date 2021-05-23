@@ -1,13 +1,13 @@
 //
-//  EditIngredientsPreviewViewController.swift
+//  EditStepsPreviewViewController.swift
 //  CookBook
 //
-//  Created by James Hung on 2021/5/21.
+//  Created by James Hung on 2021/5/23.
 //
 
 import UIKit
 
-class EditIngredientsPreviewViewController: UIViewController {
+class EditStepsPreviewViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -28,31 +28,32 @@ class EditIngredientsPreviewViewController: UIViewController {
     private func setupTableView() {
 
         tableView.registerCellWithNib(
-            identifier: String(describing: EditIngredientsTableViewCell.self),
+            identifier: String(describing: EditStepsTableViewCell.self),
             bundle: nil
         )
     }
 }
 
-extension EditIngredientsPreviewViewController: UITableViewDataSource {
-
+extension EditStepsPreviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 8
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EditIngredientsTableViewCell.self), for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EditStepsTableViewCell.self), for: indexPath)
 
-        guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
+        guard let ingredientCell = cell as? EditStepsTableViewCell else { return cell }
 
         // 更新Firebase上的資料至cell顯示
 
         return ingredientCell
+
     }
+
 }
 
-extension EditIngredientsPreviewViewController: UITableViewDelegate {
+extension EditStepsPreviewViewController: UITableViewDelegate {
 
 }

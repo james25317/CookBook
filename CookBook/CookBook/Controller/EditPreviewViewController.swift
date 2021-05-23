@@ -16,6 +16,13 @@ class EditPreviewViewController: UIViewController {
         case steps = 1
     }
 
+    private enum Segue {
+
+        static let ingredients = "SegueIngredients"
+
+        static let steps = "SegueSteps"
+    }
+
     @IBOutlet weak var indicatorView: UIView!
 
     @IBOutlet weak var indicatorCenterXConstraint: NSLayoutConstraint!
@@ -31,6 +38,8 @@ class EditPreviewViewController: UIViewController {
         return [ingredientsContainerView, stepsContainerView]
     }
 
+    var viewModel: EditViewModel?
+
     override func viewWillAppear(_ animated: Bool) {
 
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -41,6 +50,15 @@ class EditPreviewViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        viewModel?.recipeViewModel.bind { [weak self] articles in
+
+            // reloading container's tableView data
+
+            // ingredientsContainerView
+
+            // stepsContainerView
+        }
 
         // set first button is selected by default
         sectionButtons[0].isSelected = true
@@ -90,6 +108,21 @@ class EditPreviewViewController: UIViewController {
         guard let type = SectionType(rawValue: sender.tag) else { return }
 
         updateContainer(type: type)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let identifier = segue.identifier
+
+        if identifier == Segue.ingredients {
+
+            guard let ingredientsVC = segue.destination as? EditIngredientsViewController else { return }
+
+            // pass VM data?
+        } else if identifier == Segue.steps {
+
+        }
+
     }
 
     private func moveIndicatorView(reference: UIView) {

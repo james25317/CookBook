@@ -10,6 +10,8 @@ import Firebase
 
 class EditViewModel {
 
+    let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
+
     // init a Recipe data set
     var recipe = Recipe(
         id: "",

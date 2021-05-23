@@ -27,6 +27,7 @@
 		7F7C735D26589CED00D1AFD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735C26589CED00D1AFD4 /* User.swift */; };
 		7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */; };
 		7F7C736126594C5F00D1AFD4 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C736026594C5F00D1AFD4 /* EditViewModel.swift */; };
+		7F7C7363265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C7362265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift */; };
 		7FA1BA84264CD1A900B8ED13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA83264CD1A900B8ED13 /* Main.storyboard */; };
 		7FA1BA86264CDBA600B8ED13 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */; };
 		7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */; };
@@ -97,6 +98,7 @@
 		7F7C735C26589CED00D1AFD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		7F7C736026594C5F00D1AFD4 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		7F7C7362265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsPreviewViewController.swift; sourceTree = "<group>"; };
 		7FA1BA83264CD1A900B8ED13 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */,
 				7FFCF0862653F9770082ED8E /* EditIngredientsViewController.swift */,
 				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
+				7F7C7362265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift */,
 				7FFCF0832653F44D0082ED8E /* EditStepsViewController.swift */,
 				7FFCF07926523C000082ED8E /* EditViewController.swift */,
 				7F284C2F264BC19C001A0B4E /* HomeViewController.swift */,
@@ -536,6 +539,7 @@
 				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
 				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,
 				7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */,
+				7F7C7363265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift in Sources */,
 				7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
 				7F13B161265689330042F3EC /* Recipe.swift in Sources */,
