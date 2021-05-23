@@ -11,6 +11,7 @@ import UIKit
 class EditIngredientsPreviewViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
+        
         didSet {
 
             tableView.delegate = self
@@ -25,6 +26,7 @@ class EditIngredientsPreviewViewController: UIViewController {
 
         super.viewDidLoad()
 
+        // 綁定要 listen 的對象 (RecipeViewModel), 收到後刷新
         viewModel?.recipeViewModel.bind { [weak self] recipe in
 
             self?.tableView.reloadData()
@@ -47,19 +49,22 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         guard let viewModel = viewModel,
-              let data = viewModel.recipeViewModel.value else { return 0 }
+            let data = viewModel.recipeViewModel.value else { return 0 }
 
         return data.ingredients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EditIngredientsTableViewCell.self), for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(describing: EditIngredientsTableViewCell.self),
+            for: indexPath
+        )
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
         guard let viewModel = viewModel,
-              let cellViewModel = viewModel.recipeViewModel.value else { return cell }
+            let cellViewModel = viewModel.recipeViewModel.value else { return cell }
 
         // How can I arrange sequence?
         ingredientCell.setup(viewModel: cellViewModel, indexPath: indexPath)

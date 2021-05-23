@@ -38,8 +38,6 @@ class EditViewModel {
         self.recipe.description = description
     }
 
-    var onCreated: (() -> Void)?
-
     func createRecipe(with recipe: inout Recipe) {
 
         DataManager.shared.createRecipe(recipe: &recipe) { result in
@@ -48,13 +46,14 @@ class EditViewModel {
 
             case .success(let documentId):
 
-            print("ID: \(documentId) CookBook Created")
+                print("ID: \(documentId) CookBook Created")
 
-            self.fetchRecipeData(documentId: documentId)
+                // 用回傳的 documentId 再去發一次請求
+                self.fetchRecipeData(documentId: documentId)
 
             case .failure(let error):
 
-            print("Create fail, failure: \(error)")
+                print("Create fail, failure: \(error)")
             }
         }
     }
@@ -78,15 +77,15 @@ class EditViewModel {
         }
     }
 
+    func setRecipe(_ recipe: Recipe) {
+
+        recipeViewModel.value = convertRecipeToViewModel(from: recipe)
+    }
+
     func convertRecipeToViewModel(from recipe: Recipe) -> RecipeViewModel {
 
         let viewModel = RecipeViewModel(model: recipe)
 
         return viewModel
-    }
-
-    func setRecipe(_ recipe: Recipe) {
-
-        recipeViewModel.value = convertRecipeToViewModel(from: recipe)
     }
 }

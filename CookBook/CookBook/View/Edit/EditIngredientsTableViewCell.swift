@@ -26,7 +26,7 @@ class EditIngredientsTableViewCell: UITableViewCell {
         self.selectionStyle = .none
     }
 
-    @IBAction func deleteIngredient(_ sender: Any) {
+    @IBAction func deleteIngredient(_ sender: UIButton) {
 
         print("Delete button pressed")
     }

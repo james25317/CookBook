@@ -135,6 +135,7 @@ class DataManager {
         db.collection(Collections.recipe.rawValue)
             .document(documentId)
             .addSnapshotListener({ documentSnapshot, error in
+
                 if let error = error {
 
                     completion(.failure(error))

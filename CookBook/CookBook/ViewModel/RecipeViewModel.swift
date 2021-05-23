@@ -12,12 +12,12 @@ class RecipeViewModel {
     
     var recipe: Recipe
     
-    var onFetch: (() -> Void)?
-    
     init(model recipe: Recipe) {
 
         self.recipe = recipe
     }
+
+    var onFetch: (() -> Void)?
     
     var createdTime: Timestamp {
         get {

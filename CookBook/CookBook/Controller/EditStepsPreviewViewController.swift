@@ -10,6 +10,7 @@ import UIKit
 class EditStepsPreviewViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
+
         didSet {
 
             tableView.delegate = self
@@ -17,6 +18,8 @@ class EditStepsPreviewViewController: UIViewController {
             tableView.dataSource = self
         }
     }
+
+    var viewModel: EditViewModel?
 
     override func viewDidLoad() {
 

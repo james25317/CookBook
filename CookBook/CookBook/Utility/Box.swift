@@ -4,9 +4,9 @@
 //
 //  Created by James Hung on 2021/5/16.
 //
-/*  From raywenderlich: https://www.raywenderlich.com/6733535-ios-mvvm-tutorial-refactoring-from-mvc#toc-anchor-008
- */
-// 被加到 Box 的對象會跟 listener 綁定，一但 Box.value 值變動，listener 獲取新的值，所有正在綁定(監聽)的對象都會接到最新的值。
+//  From raywenderlich: https://www.raywenderlich.com/6733535-ios-mvvm-tutorial-refactoring-from-mvc#toc-anchor-008
+//
+//  被加到 Box 的對象會跟 listener 綁定，一但 Box.value 值變動，listener 獲取新的值，所有正在綁定(監聽)的對象都會接到最新的值。
 
 import Foundation
 
@@ -19,10 +19,11 @@ final class Box<T> {
 
     // 2 Box has a generic type value. The didSet property observer detects any changes and notifies Listener of any value update.
     var value: T {
-        
+
         didSet {
 
             listeners.forEach { listener in
+
                 listener?(value)
             }
         }

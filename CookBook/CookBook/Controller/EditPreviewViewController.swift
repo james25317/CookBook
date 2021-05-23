@@ -51,8 +51,17 @@ class EditPreviewViewController: UIViewController {
 
         super.viewDidLoad()
 
+        viewModel?.recipeViewModel.bind { [weak self] recipe in
+
+            self?.sectionButtons[SectionType.ingredients.rawValue]
+                .setTitle("Ingredient (\(recipe?.ingredients.count ?? 0))", for: .normal)
+
+            self?.sectionButtons[SectionType.steps.rawValue]
+                .setTitle( "Step (\(recipe?.steps.count ?? 0))", for: .normal)
+        }
+
         // set first button is selected by default
-        sectionButtons[0].isSelected = true
+        sectionButtons[SectionType.ingredients.rawValue].isSelected = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -101,7 +110,7 @@ class EditPreviewViewController: UIViewController {
         updateContainer(type: type)
     }
 
-    // MARK: Prepare data for segue transfer
+    // MARK: Prepare segue for data transfer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         guard let viewModel = viewModel else { return }
@@ -112,16 +121,13 @@ class EditPreviewViewController: UIViewController {
 
             guard let ingredientsPreviewVC = segue.destination as? EditIngredientsPreviewViewController else { return }
 
-            // pass new created VM data?
             ingredientsPreviewVC.viewModel = viewModel
         } else if identifier == Segue.steps {
 
             guard let stepsPreviewVC = segue.destination as? EditStepsPreviewViewController else { return }
 
-            // pass new created VM data?
-            // stepsVC.previewViewModel = viewModel
+            stepsPreviewVC.viewModel = viewModel
         }
-
     }
 
     private func moveIndicatorView(reference: UIView) {
