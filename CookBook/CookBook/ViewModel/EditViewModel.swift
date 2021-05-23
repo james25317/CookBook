@@ -50,6 +50,8 @@ class EditViewModel {
 
             print("ID: \(documentId) CookBook Created")
 
+            self.fetchRecipeData(documentId: documentId)
+
             case .failure(let error):
 
             print("Create fail, failure: \(error)")
@@ -57,9 +59,9 @@ class EditViewModel {
         }
     }
 
-    func fetchRecipeData() {
+    func fetchRecipeData(documentId: String) {
 
-        DataManager.shared.fetchRecipe { [weak self] result in
+        DataManager.shared.fetchRecipe(documentId: documentId) { [weak self] result in
 
             switch result {
 

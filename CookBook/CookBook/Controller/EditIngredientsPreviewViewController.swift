@@ -30,8 +30,6 @@ class EditIngredientsPreviewViewController: UIViewController {
             self?.tableView.reloadData()
         }
 
-        viewModel?.fetchRecipeData()
-
         setupTableView()
     }
 
@@ -60,16 +58,11 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
-        // 更新Firebase上的資料至cell顯示
         guard let viewModel = viewModel,
-              let data = viewModel.recipeViewModel.value else { return cell }
+              let cellViewModel = viewModel.recipeViewModel.value else { return cell }
 
-        data.onFetch = { [weak self] in
-
-            print("onFetch was activated")
-
-            self?.viewModel?.fetchRecipeData()
-        }
+        // How can I arrange sequence?
+        ingredientCell.setup(viewModel: cellViewModel, indexPath: indexPath)
 
         return ingredientCell
     }

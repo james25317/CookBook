@@ -130,10 +130,10 @@ class DataManager {
             }
     }
 
-    func fetchRecipe(completion: @escaping (Result<Recipe, Error>) -> Void) {
+    func fetchRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
-            .document("w2Un7JQnj5q1zqbs0nHC")
+            .document(documentId)
             .addSnapshotListener({ documentSnapshot, error in
                 if let error = error {
 

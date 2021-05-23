@@ -33,13 +33,13 @@ class EditIngredientsViewController: UIViewController {
 
         super.viewDidLoad()
 
-        editViewModel.recipeViewModel.bind{ [weak self] recipe in
-
-            self?.tableView.reloadData()
-        }
+//        editViewModel.recipeViewModel.bind{ [weak self] recipe in
+//
+//            self?.tableView.reloadData()
+//        }
 
         // 利用傳進來的 VM(含資料) 幫忙 fetchRecipe
-        editViewModel.fetchRecipeData()
+        // editViewModel.fetchRecipeData()
 
         setupTableView()
     }
@@ -107,9 +107,11 @@ extension EditIngredientsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        guard let data = editViewModel.recipeViewModel.value else { return 0 }
+        // guard let data = editViewModel.recipeViewModel.value else { return 0 }
 
-        return data.ingredients.count
+        // return data.ingredients.count
+
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,7 +122,7 @@ extension EditIngredientsViewController: UITableViewDataSource {
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
         // 從 Fb 更新來的資料顯示，Edit 頁面的資料在本地加減後上傳
-        let cellViewModel = self.editViewModel.recipeViewModel.value
+        // let cellViewModel = self.editViewModel.recipeViewModel.value
 
         return ingredientCell
     }
