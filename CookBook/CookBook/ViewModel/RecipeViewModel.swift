@@ -12,7 +12,7 @@ class RecipeViewModel {
     
     var recipe: Recipe
     
-    var onDead: (() -> Void)?
+    var onFetch: (() -> Void)?
     
     init(model recipe: Recipe) {
 

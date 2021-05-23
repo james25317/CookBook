@@ -9,6 +9,8 @@ import UIKit
 
 class EditStepsViewController: UIViewController {
 
+    var previewViewModel = EditViewModel()
+
     override func viewDidLoad() {
 
         super.viewDidLoad()

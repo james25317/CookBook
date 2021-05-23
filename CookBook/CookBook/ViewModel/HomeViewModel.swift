@@ -12,7 +12,7 @@ class HomeViewModel {
     // 這邊 Sign 進 Box 的事 FeedVM 初始值 (也就是一開始View會接到的值)
     let feedViewModels = Box([FeedViewModel]())
 
-    func fetchData() {
+    func fetchFeedsData() {
 
         DataManager.shared.fetchFeeds { [weak self] result in
 

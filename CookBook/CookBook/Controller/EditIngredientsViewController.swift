@@ -25,11 +25,21 @@ class EditIngredientsViewController: UIViewController {
         }
     }
 
-    let viewModel = EditIngredientsViewModel()
+    var editViewModel = EditViewModel()
+
+    var editIngredientsViewModel = EditIngredientsViewModel()
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        editViewModel.recipeViewModel.bind{ [weak self] recipe in
+
+            self?.tableView.reloadData()
+        }
+
+        // 利用傳進來的 VM(含資料) 幫忙 fetchRecipe
+        editViewModel.fetchRecipeData()
 
         setupTableView()
     }
@@ -56,21 +66,21 @@ class EditIngredientsViewController: UIViewController {
 
         guard let name = sender.text else { return }
 
-        viewModel.onIngredientNameChanged(text: name)
+        editIngredientsViewModel.onIngredientNameChanged(text: name)
     }
 
     @IBAction func onAmountChanged(_ sender: UITextField) {
 
         guard let amount = sender.text else { return }
 
-        viewModel.onAmountChanged(text: Int(amount) ?? 0)
+        editIngredientsViewModel.onAmountChanged(text: Int(amount) ?? 0)
     }
 
     @IBAction func onUnitChanged(_ sender: UITextField) {
 
         guard let unit = sender.text else { return }
 
-        viewModel.onUnitChanged(text: unit)
+        editIngredientsViewModel.onUnitChanged(text: unit)
     }
 
     @IBAction func onTapAdd(_ sender: Any) {
@@ -81,7 +91,7 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onTapSave(_ sender: Any) {
 
-        viewModel.update(with: &viewModel.ingredients)
+        editIngredientsViewModel.update(with: &editIngredientsViewModel.ingredients)
     }
 
     private func setupTableView() {
@@ -97,7 +107,9 @@ extension EditIngredientsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 12
+        guard let data = editViewModel.recipeViewModel.value else { return 0 }
+
+        return data.ingredients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,7 +119,8 @@ extension EditIngredientsViewController: UITableViewDataSource {
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
-        // 獲取VM的資料（來自本地增減）至cell顯示
+        // 從 Fb 更新來的資料顯示，Edit 頁面的資料在本地加減後上傳
+        let cellViewModel = self.editViewModel.recipeViewModel.value
 
         return ingredientCell
     }

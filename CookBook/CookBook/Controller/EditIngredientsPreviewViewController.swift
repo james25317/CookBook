@@ -4,6 +4,7 @@
 //
 //  Created by James Hung on 2021/5/21.
 //
+//  ContainerView Preview - Ingredients
 
 import UIKit
 
@@ -18,9 +19,18 @@ class EditIngredientsPreviewViewController: UIViewController {
         }
     }
 
+    var viewModel: EditViewModel?
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        viewModel?.recipeViewModel.bind { [weak self] recipe in
+
+            self?.tableView.reloadData()
+        }
+
+        viewModel?.fetchRecipeData()
 
         setupTableView()
     }
@@ -38,7 +48,10 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 8
+        guard let viewModel = viewModel,
+              let data = viewModel.recipeViewModel.value else { return 0 }
+
+        return data.ingredients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +61,15 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
         // 更新Firebase上的資料至cell顯示
+        guard let viewModel = viewModel,
+              let data = viewModel.recipeViewModel.value else { return cell }
+
+        data.onFetch = { [weak self] in
+
+            print("onFetch was activated")
+
+            self?.viewModel?.fetchRecipeData()
+        }
 
         return ingredientCell
     }

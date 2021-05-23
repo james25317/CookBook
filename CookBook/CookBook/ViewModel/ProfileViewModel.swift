@@ -10,9 +10,7 @@ import Foundation
 class ProfileViewModel {
 
     let userViewModel: Box<UserViewModel?> = Box(nil)
-
-    // let recipeViewModels = Box([RecipeViewModel]())
-
+    
     let recipeViewModels: Box<[RecipeViewModel]> = Box([])
 
     func fetchUserData() {

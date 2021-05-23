@@ -130,6 +130,32 @@ class DataManager {
             }
     }
 
+    func fetchRecipe(completion: @escaping (Result<Recipe, Error>) -> Void) {
+
+        db.collection(Collections.recipe.rawValue)
+            .document("w2Un7JQnj5q1zqbs0nHC")
+            .addSnapshotListener({ documentSnapshot, error in
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    guard let document = documentSnapshot else { return }
+
+                    do {
+
+                        if let recipe = try document.data(as: Recipe.self) {
+
+                            completion(.success(recipe))
+                        }
+                    } catch {
+
+                        completion(.failure(error))
+                    }
+                }
+            })
+    }
+
     func updateIngredient(ingredients: inout [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Ingredient 欄位

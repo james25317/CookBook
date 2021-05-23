@@ -40,7 +40,7 @@ class EditViewModel {
 
     var onCreated: (() -> Void)?
 
-    func create(with recipe: inout Recipe) {
+    func createRecipe(with recipe: inout Recipe) {
 
         DataManager.shared.createRecipe(recipe: &recipe) { result in
 
@@ -55,5 +55,36 @@ class EditViewModel {
             print("Create fail, failure: \(error)")
             }
         }
+    }
+
+    func fetchRecipeData() {
+
+        DataManager.shared.fetchRecipe { [weak self] result in
+
+            switch result {
+
+            case .success(let recipe):
+
+                print("Fetch recipe success!")
+
+                self?.setRecipe(recipe)
+
+            case .failure(let error):
+
+                print("fetchData.failure: \(error)")
+            }
+        }
+    }
+
+    func convertRecipeToViewModel(from recipe: Recipe) -> RecipeViewModel {
+
+        let viewModel = RecipeViewModel(model: recipe)
+
+        return viewModel
+    }
+
+    func setRecipe(_ recipe: Recipe) {
+
+        recipeViewModel.value = convertRecipeToViewModel(from: recipe)
     }
 }

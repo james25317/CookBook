@@ -51,15 +51,6 @@ class EditPreviewViewController: UIViewController {
 
         super.viewDidLoad()
 
-        viewModel?.recipeViewModel.bind { [weak self] articles in
-
-            // reloading container's tableView data
-
-            // ingredientsContainerView
-
-            // stepsContainerView
-        }
-
         // set first button is selected by default
         sectionButtons[0].isSelected = true
     }
@@ -110,17 +101,25 @@ class EditPreviewViewController: UIViewController {
         updateContainer(type: type)
     }
 
+    // MARK: Prepare data for segue transfer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let viewModel = viewModel else { return }
 
         let identifier = segue.identifier
 
         if identifier == Segue.ingredients {
 
-            guard let ingredientsVC = segue.destination as? EditIngredientsViewController else { return }
+            guard let ingredientsPreviewVC = segue.destination as? EditIngredientsPreviewViewController else { return }
 
-            // pass VM data?
+            // pass new created VM data?
+            ingredientsPreviewVC.viewModel = viewModel
         } else if identifier == Segue.steps {
 
+            guard let stepsPreviewVC = segue.destination as? EditStepsPreviewViewController else { return }
+
+            // pass new created VM data?
+            // stepsVC.previewViewModel = viewModel
         }
 
     }

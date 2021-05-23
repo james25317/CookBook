@@ -35,7 +35,7 @@ class EditViewController: UIViewController {
 
     @IBAction func createCookBook(_ sender: Any) {
 
-        viewModel.create(with: &viewModel.recipe)
+        viewModel.createRecipe(with: &viewModel.recipe)
 
         // go EditPreview Page
         guard let previewVC = storyboard?

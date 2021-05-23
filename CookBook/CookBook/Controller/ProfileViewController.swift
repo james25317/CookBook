@@ -199,7 +199,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return self.viewModel.recipeViewModels.value.count
+        return viewModel.recipeViewModels.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -213,9 +213,9 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         let cellViewModel = self.viewModel.recipeViewModels.value[indexPath.item]
 
-        cellViewModel.onDead = { [weak self] in
+        cellViewModel.onFetch = { [weak self] in
 
-            print("onDead was activated")
+            print("onFetch was activated")
 
             self?.viewModel.fetchRecipesData()
         }
