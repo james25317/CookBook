@@ -36,6 +36,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="Yam-Ha-ztM" userLabel="Recipe Image View Recipe">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-9H-hy9" userLabel="Icon Image View">
                                                     <rect key="frame" x="8" y="95.666666666666671" width="24" height="23.666666666666671"/>
@@ -111,9 +112,9 @@
                         <outlet property="labelUserId" destination="6yZ-jo-GPb" id="40H-eT-Qr6"/>
                         <outlet property="labelUserName" destination="e4J-sq-pKR" id="Pqz-2g-LTG"/>
                         <outlet property="profileView" destination="NIF-T7-c0R" id="OS0-9X-az0"/>
-                        <outletCollection property="sortButtons" destination="crO-KH-1GT" collectionClass="NSMutableArray" id="705-H8-Pv3"/>
-                        <outletCollection property="sortButtons" destination="zRp-gs-Yiy" collectionClass="NSMutableArray" id="kr4-z2-F0B"/>
-                        <outletCollection property="sortButtons" destination="wza-PK-Oad" collectionClass="NSMutableArray" id="zbM-F9-80W"/>
+                        <outletCollection property="sortButtons" destination="wza-PK-Oad" collectionClass="NSMutableArray" id="364-KU-lg1"/>
+                        <outletCollection property="sortButtons" destination="zRp-gs-Yiy" collectionClass="NSMutableArray" id="9gw-BU-rkc"/>
+                        <outletCollection property="sortButtons" destination="crO-KH-1GT" collectionClass="NSMutableArray" id="jge-cQ-3SM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHd-Mj-Ska" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,7 +124,7 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catprofile" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-sC-vMF">
                             <rect key="frame" x="107" y="64" width="72" height="72"/>
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="72" id="3Te-Ro-eOh"/>
                                 <constraint firstAttribute="height" constant="72" id="IWo-pq-RAs"/>
@@ -282,6 +283,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

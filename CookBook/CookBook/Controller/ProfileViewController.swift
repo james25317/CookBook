@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController {
 
         setupCollectionView()
 
-        sortButtons[2].isSelected = true
+        sortButtons[SortType.recipes.rawValue].isSelected = true
     }
 
 
