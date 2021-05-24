@@ -41,16 +41,14 @@ class EditIngredientsViewController: UIViewController {
 
             tableView.dataSource = self
 
-            guard let ingredients = ingredients else { return }
+            if let ingredients = ingredients {
 
-            tableView.reloadData()
+                tableView.reloadData()
+            }
         }
     }
 
     @IBOutlet weak var buttonAdd: UIButton!
-
-    // 將本地增減結果用 VM 的方法上傳
-    var editIngredientsViewModel = EditIngredientsViewModel()
 
     var viewModel: EditViewModel? {
 
@@ -67,9 +65,10 @@ class EditIngredientsViewController: UIViewController {
 
         didSet {
 
-            guard let tableView = tableView else { return }
+            if let tableView = tableView {
 
-            tableView.reloadData()
+                tableView.reloadData()
+            }
         }
     }
 

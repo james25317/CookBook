@@ -23,7 +23,6 @@
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
 		7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */; };
-		7F7C735B2657B0E200D1AFD4 /* EditIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735A2657B0E200D1AFD4 /* EditIngredientsViewModel.swift */; };
 		7F7C735D26589CED00D1AFD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735C26589CED00D1AFD4 /* User.swift */; };
 		7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */; };
 		7F7C736126594C5F00D1AFD4 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C736026594C5F00D1AFD4 /* EditViewModel.swift */; };
@@ -94,7 +93,6 @@
 		7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditSteps.storyboard; sourceTree = "<group>"; };
 		7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsPreviewViewController.swift; sourceTree = "<group>"; };
-		7F7C735A2657B0E200D1AFD4 /* EditIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsViewModel.swift; sourceTree = "<group>"; };
 		7F7C735C26589CED00D1AFD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		7F7C736026594C5F00D1AFD4 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		7FA1BA7D264CC5E400B8ED13 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7F7C735A2657B0E200D1AFD4 /* EditIngredientsViewModel.swift */,
 				7F7C736026594C5F00D1AFD4 /* EditViewModel.swift */,
 				7FFCF0682650C8420082ED8E /* FeedViewModel.swift */,
 				7FFCF071265104EE0082ED8E /* HomeViewModel.swift */,
@@ -547,7 +544,6 @@
 				7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */,
 				7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */,
 				7F13B16526568BB90042F3EC /* Step.swift in Sources */,
-				7F7C735B2657B0E200D1AFD4 /* EditIngredientsViewModel.swift in Sources */,
 				7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7F7C735D26589CED00D1AFD4 /* User.swift in Sources */,
