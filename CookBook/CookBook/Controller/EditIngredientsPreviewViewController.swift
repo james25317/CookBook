@@ -42,6 +42,19 @@ class EditIngredientsPreviewViewController: UIViewController {
             bundle: nil
         )
     }
+
+    // MARK: Prepare segue for data transfer
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let viewModel = viewModel else { return }
+
+        if segue.identifier == "SegueEditIngredients",
+           let editIngredientsVC = segue.destination as? EditIngredientsViewController {
+
+            // 傳 EditVM 過去
+            editIngredientsVC.viewModel = viewModel
+        }
+    }
 }
 
 extension EditIngredientsPreviewViewController: UITableViewDataSource {
@@ -63,11 +76,13 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
-        guard let viewModel = viewModel,
-            let cellViewModel = viewModel.recipeViewModel.value else { return cell }
+        guard let recipeViewModel = viewModel?.recipeViewModel.value,
+              indexPath.row < recipeViewModel.ingredients.count else { return cell }
 
-        // How can I arrange sequence?
-        ingredientCell.setup(viewModel: cellViewModel, indexPath: indexPath)
+        let ingredient = recipeViewModel.ingredients[indexPath.item]
+
+        // can I arrange sequence?
+        ingredientCell.layoutCell(with: ingredient)
 
         return ingredientCell
     }

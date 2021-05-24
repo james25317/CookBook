@@ -46,22 +46,22 @@ class EditIngredientsViewModel {
 
     var onIngredientUpdated: (() -> Void)?
 
-    func update(with ingredients: inout [Ingredient]) {
-
-        DataManager.shared.updateIngredient(ingredients: &ingredients) { result in
-
-            switch result {
-
-            case .success:
-
-                print("Ingredient updated, success")
-
-                self.onIngredientUpdated?()
-
-            case .failure(let error):
-
-                print("Updated fail, failure: \(error)")
-            }
-        }
-    }
+//    func updateIngredients(with ingredients: inout [Ingredient]) {
+//
+//        DataManager.shared.updateIngredients(documentId: <#String#>, ingredients: ingredients) { result in
+//
+//            switch result {
+//
+//            case .success:
+//
+//                print("Ingredient updated, success")
+//
+//                self.onIngredientUpdated?()
+//
+//            case .failure(let error):
+//
+//                print("Updated fail, failure: \(error)")
+//            }
+//        }
+//    }
 }

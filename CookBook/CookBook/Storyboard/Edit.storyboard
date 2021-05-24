@@ -309,7 +309,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1ON-fo-21O" kind="presentation" id="Pg1-vM-4P2"/>
+                                    <segue destination="1ON-fo-21O" kind="presentation" identifier="SegueEditIngredients" id="Pg1-vM-4P2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -362,7 +362,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Edit Steps"/>
                                 <connections>
-                                    <segue destination="fJs-wT-tUT" kind="presentation" id="qVw-5n-mXx"/>
+                                    <segue destination="fJs-wT-tUT" kind="presentation" identifier="SegueEditSteps" id="qVw-5n-mXx"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -157,10 +157,10 @@ class DataManager {
             })
     }
 
-    func updateIngredient(ingredients: inout [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
+    func updateIngredients(documentId: String, ingredients: [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Ingredient 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document("w2Un7JQnj5q1zqbs0nHC")
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
 
         let dicArray = ingredients.compactMap { ingredient in
 

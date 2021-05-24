@@ -31,21 +31,12 @@ class EditIngredientsTableViewCell: UITableViewCell {
         print("Delete button pressed")
     }
 
-    func setup(viewModel: RecipeViewModel, indexPath: IndexPath) {
+    func layoutCell(with ingredient: Ingredient) {
 
-        self.viewModel = viewModel
+        labelName.text = ingredient.name
 
-        layoutCell(indexPath: indexPath)
-    }
+        labelAmount.text = String(describing: ingredient.amount)
 
-    private func layoutCell(indexPath: IndexPath) {
-
-        guard let viewModel = viewModel else { return }
-
-        labelName.text = viewModel.ingredients[indexPath.item].name
-
-        labelAmount.text = String(describing: viewModel.ingredients[indexPath.item].amount)
-
-        labelUnit.text = viewModel.ingredients[indexPath.item].unit
+        labelUnit.text = ingredient.unit
     }
 }

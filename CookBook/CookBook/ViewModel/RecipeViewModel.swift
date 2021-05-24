@@ -18,6 +18,12 @@ class RecipeViewModel {
     }
 
     var onFetch: (() -> Void)?
+
+    var id: String {
+        get {
+            return recipe.id ?? ""
+        }
+    }
     
     var createdTime: Timestamp {
         get {

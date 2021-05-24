@@ -22,24 +22,40 @@ class EditIngredientsViewController: UIViewController {
             tableView.delegate = self
 
             tableView.dataSource = self
+
+            guard let ingredients = ingredients else { return }
+
+            tableView.reloadData()
         }
     }
 
-    var editViewModel = EditViewModel()
-
+    // 將本地增減結果用 VM 的方法上傳
     var editIngredientsViewModel = EditIngredientsViewModel()
+
+    var viewModel: EditViewModel? {
+
+        didSet {
+
+            guard let viewModel = viewModel else { return }
+
+            ingredients = viewModel.recipeViewModel.value?.ingredients
+        }
+    }
+
+    // 傳過來的 Struct 來做本地增減
+    var ingredients: [Ingredient]? {
+
+        didSet {
+
+            guard let tableView = tableView else { return }
+
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
-//        editViewModel.recipeViewModel.bind{ [weak self] recipe in
-//
-//            self?.tableView.reloadData()
-//        }
-
-        // 利用傳進來的 VM(含資料) 幫忙 fetchRecipe
-        // editViewModel.fetchRecipeData()
 
         setupTableView()
     }
@@ -85,13 +101,15 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onTapAdd(_ sender: Any) {
 
-        // Add Ingredient data to local VM
+        // Add Ingredient data with VM's function (local)
     }
 
 
     @IBAction func onTapSave(_ sender: Any) {
 
-        editIngredientsViewModel.update(with: &editIngredientsViewModel.ingredients)
+        guard let ingredients = ingredients else { return }
+
+        viewModel?.updateIngredients(with: ingredients)
     }
 
     private func setupTableView() {
@@ -107,22 +125,25 @@ extension EditIngredientsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        // guard let data = editViewModel.recipeViewModel.value else { return 0 }
+        guard let ingredients = ingredients else { return 0 }
 
-        // return data.ingredients.count
-
-        return 10
+        return ingredients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EditIngredientsTableViewCell.self
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(describing: EditIngredientsTableViewCell.self
         ), for: indexPath)
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
-        // 從 Fb 更新來的資料顯示，Edit 頁面的資料在本地加減後上傳
-        // let cellViewModel = self.editViewModel.recipeViewModel.value
+        // 用本地的 Ingredients 資料更新
+        guard let ingredients = ingredients else { return cell }
+
+        let ingredient = ingredients[indexPath.item]
+
+        ingredientCell.layoutCell(with: ingredient)
 
         return ingredientCell
     }
