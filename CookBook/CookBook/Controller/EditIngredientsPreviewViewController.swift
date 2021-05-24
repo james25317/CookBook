@@ -81,7 +81,6 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
 
         let ingredient = recipeViewModel.ingredients[indexPath.row]
 
-        // can I arrange sequence?
         ingredientCell.layoutCell(with: ingredient)
 
         ingredientCell.buttonDelete.isHidden = true

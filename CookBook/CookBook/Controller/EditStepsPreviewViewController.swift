@@ -25,6 +25,12 @@ class EditStepsPreviewViewController: UIViewController {
 
         super.viewDidLoad()
 
+        // 綁定顯示的資料組
+        viewModel?.recipeViewModel.bind { [weak self] recipe in
+
+            self?.tableView.reloadData()
+        }
+
         setupTableView()
     }
 
@@ -35,23 +41,46 @@ class EditStepsPreviewViewController: UIViewController {
             bundle: nil
         )
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let viewModel = viewModel else { return }
+
+        if segue.identifier == "SegueEditSteps",
+           let editStepsVC = segue.destination as? EditStepsViewController {
+
+            // 傳 EditVM 過去
+            editStepsVC.viewModel = viewModel
+        }
+    }
 }
 
 extension EditStepsPreviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 1
+        guard let viewModel = viewModel,
+            let data = viewModel.recipeViewModel.value else { return 0 }
+
+        return data.steps.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EditStepsTableViewCell.self), for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(describing: EditStepsTableViewCell.self),
+            for: indexPath
+        )
 
-        guard let ingredientCell = cell as? EditStepsTableViewCell else { return cell }
+        guard let stepsCell = cell as? EditStepsTableViewCell else { return cell }
 
-        // 更新Firebase上的資料至cell顯示
+        guard let recipeViewModel = viewModel?.recipeViewModel.value,
+              indexPath.row < recipeViewModel.steps.count else { return cell }
 
-        return ingredientCell
+        let step = recipeViewModel.steps[indexPath.row]
+
+        stepsCell.layoutCell(with: step, at: indexPath.row)
+
+        return stepsCell
 
     }
 

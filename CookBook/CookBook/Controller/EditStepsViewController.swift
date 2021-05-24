@@ -9,7 +9,24 @@ import UIKit
 
 class EditStepsViewController: UIViewController {
 
-    var previewViewModel = EditViewModel()
+    var viewModel: EditViewModel? {
+
+        didSet {
+
+            guard let viewModel = viewModel else { return }
+
+            steps = viewModel.recipeViewModel.value?.steps
+        }
+    }
+
+    // 本地資料組
+    var steps: [Step]? {
+
+        didSet {
+
+            // 值變動，觸發刷新畫面
+        }
+    }
 
     override func viewDidLoad() {
 

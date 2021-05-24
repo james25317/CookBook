@@ -9,14 +9,25 @@ import UIKit
 
 class EditStepsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageViewRecipeImage: UIImageView!
+
+    @IBOutlet weak var labelStepTitle: UILabel!
+
+    @IBOutlet weak var labelStepDescription: UILabel!
+
     override func awakeFromNib() {
+
         super.awakeFromNib()
+
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func layoutCell(with step: Step, at index: Int) {
 
-        // Configure the view for the selected state
+        imageViewRecipeImage.loadImage(step.image)
+
+        labelStepTitle.text = "Step \(index)"
+
+        labelStepDescription.text = step.description
     }
 }

@@ -47,7 +47,9 @@ class DataManager {
 
                     var feeds: [Feed] = []
 
-                    for document in querySnapshot!.documents {
+                    guard let documents = querySnapshot?.documents else { return }
+
+                    for document in documents {
 
                         print("\(document.documentID) => \(document.data())")
 
