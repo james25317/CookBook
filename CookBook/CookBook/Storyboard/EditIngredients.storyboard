@@ -99,8 +99,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addIngredientsData:" destination="RvM-aT-hMS" eventType="touchUpInside" id="8f8-pK-rSI"/>
-                                    <action selector="onTapAdd:" destination="RvM-aT-hMS" eventType="touchUpInside" id="X7G-zH-8bh"/>
+                                    <action selector="onTapAdd:" destination="RvM-aT-hMS" eventType="touchUpInside" id="GZE-Hl-uK4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,6 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonAdd" destination="Ta8-Be-IW1" id="k9U-r1-c11"/>
                         <outlet property="tableView" destination="doY-QC-fyh" id="Qll-ku-RXc"/>
                         <outlet property="textFieldAmount" destination="Pe4-Cp-0du" id="amJ-kJ-PIi"/>
                         <outlet property="textFieldUnit" destination="3BR-mP-5Za" id="4wQ-a5-YHx"/>

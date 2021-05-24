@@ -14,7 +14,7 @@ class EditViewModel {
 
     var documentId: String?
 
-    // init a Recipe data set
+    // init Recipe
     var recipe = Recipe(
         id: "",
         createdTime: Timestamp(date: Date()),
@@ -31,6 +31,7 @@ class EditViewModel {
     )
 
     // 來自 EditIngredientsVM
+    // init Ingredient
     var ingredient = Ingredient(
         amount: 0,
         name: "",
@@ -66,12 +67,9 @@ class EditViewModel {
     }
 
     // 來自 EditIngredientsVM
-    var onIngredientUpdated: (() -> Void)?
-
-    // 來自 EditIngredientsVM
     func updateIngredients(with ingredients: [Ingredient]) {
 
-        guard let documentId = recipeViewModel.value?.id else { return }
+        guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
         DataManager.shared.updateIngredients(documentId: documentId, ingredients: ingredients) { result in
 
@@ -80,8 +78,6 @@ class EditViewModel {
             case .success:
 
                 print("Ingredient updated, success")
-
-                self.onIngredientUpdated?()
 
             case .failure(let error):
 
@@ -102,9 +98,6 @@ class EditViewModel {
 
                 // 用回傳的 documentId 再去發一次請求
                 self.fetchRecipe(documentId: documentId)
-
-                // 儲存回傳的 DocumentId
-                // self.documentId = documentId
 
             case .failure(let error):
 

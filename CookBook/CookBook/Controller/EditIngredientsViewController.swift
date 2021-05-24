@@ -9,11 +9,29 @@ import UIKit
 
 class EditIngredientsViewController: UIViewController {
 
-    @IBOutlet weak var textFieldingredientName: UITextField!
+    @IBOutlet weak var textFieldingredientName: UITextField! {
 
-    @IBOutlet weak var textFieldAmount: UITextField!
+        didSet {
 
-    @IBOutlet weak var textFieldUnit: UITextField!
+            textFieldingredientName.delegate = self
+        }
+    }
+
+    @IBOutlet weak var textFieldAmount: UITextField! {
+
+        didSet {
+
+            textFieldAmount.delegate = self
+        }
+    }
+
+    @IBOutlet weak var textFieldUnit: UITextField! {
+
+        didSet {
+
+            textFieldUnit.delegate = self
+        }
+    }
 
     @IBOutlet weak var tableView: UITableView! {
 
@@ -28,6 +46,8 @@ class EditIngredientsViewController: UIViewController {
             tableView.reloadData()
         }
     }
+
+    @IBOutlet weak var buttonAdd: UIButton!
 
     // 將本地增減結果用 VM 的方法上傳
     var editIngredientsViewModel = EditIngredientsViewModel()
@@ -67,10 +87,6 @@ class EditIngredientsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func addIngredientsData(_ sender: Any) {
-
-    }
-
     @IBAction func saveAndLeave(_ sender: Any) {
         
         // uplaod before leave logic
@@ -80,36 +96,52 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onIngredientNameChanged(_ sender: UITextField) {
 
-        guard let name = sender.text else { return }
+        guard sender.text?.isEmpty == false else { return }
 
-        editIngredientsViewModel.onIngredientNameChanged(text: name)
+        guard let name = sender.text, let viewModel = viewModel else { return }
+
+        viewModel.onIngredientNameChanged(text: name)
     }
 
     @IBAction func onAmountChanged(_ sender: UITextField) {
 
-        guard let amount = sender.text else { return }
+        guard sender.text?.isEmpty == false else { return }
 
-        editIngredientsViewModel.onAmountChanged(text: Int(amount) ?? 0)
+        guard let amount = sender.text, let viewModel = viewModel else { return }
+
+        viewModel.onAmountChanged(text: Int(amount) ?? 0)
     }
 
     @IBAction func onUnitChanged(_ sender: UITextField) {
 
-        guard let unit = sender.text else { return }
+        guard sender.text?.isEmpty == false else { return }
 
-        editIngredientsViewModel.onUnitChanged(text: unit)
+        guard let unit = sender.text, let viewModel = viewModel else { return }
+
+        viewModel.onUnitChanged(text: unit)
     }
 
     @IBAction func onTapAdd(_ sender: Any) {
 
+        guard let viewModel = viewModel else { return }
+
         // Add Ingredient data with VM's function (local)
+        ingredients?.append(viewModel.ingredient)
+
+        // reset 輸入框內容
+        resetTextField()
+
+        // reset VM's Ingredient
+        resetIngredient()
     }
 
 
     @IBAction func onTapSave(_ sender: Any) {
 
-        guard let ingredients = ingredients else { return }
+        guard let viewModel = viewModel, let ingredients = ingredients else { return }
 
-        viewModel?.updateIngredients(with: ingredients)
+        // update local Ingredient struct
+        viewModel.updateIngredients(with: ingredients)
     }
 
     private func setupTableView() {
@@ -117,6 +149,26 @@ class EditIngredientsViewController: UIViewController {
         tableView.registerCellWithNib(
             identifier: String(describing: EditIngredientsTableViewCell.self),
             bundle: nil
+        )
+    }
+
+    private func resetTextField() {
+
+        textFieldingredientName.text?.removeAll()
+
+        textFieldAmount.text?.removeAll()
+
+        textFieldUnit.text?.removeAll()
+    }
+
+    private func resetIngredient() {
+
+        guard let viewModel = viewModel else { return }
+
+        viewModel.ingredient = Ingredient(
+            amount: 0,
+            name: "",
+            unit: ""
         )
     }
 }
@@ -134,7 +186,7 @@ extension EditIngredientsViewController: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(
             withIdentifier: String(describing: EditIngredientsTableViewCell.self
-        ), for: indexPath)
+            ), for: indexPath)
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
@@ -151,4 +203,25 @@ extension EditIngredientsViewController: UITableViewDataSource {
 
 extension EditIngredientsViewController: UITableViewDelegate {
 
+}
+
+extension EditIngredientsViewController: UITextFieldDelegate {
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        guard let textFieldingredient = textFieldingredientName.text,
+              let textFieldAmount = textFieldAmount.text,
+              let textFieldUnit = textFieldUnit.text,
+              !textFieldingredient.isEmpty,
+              !textFieldAmount.isEmpty,
+              !textFieldUnit.isEmpty
+        else {
+            buttonAdd.isUserInteractionEnabled = false
+            buttonAdd.isEnabled = false
+            return
+        }
+
+        buttonAdd.isUserInteractionEnabled = true
+        buttonAdd.isEnabled = true
+    }
 }
