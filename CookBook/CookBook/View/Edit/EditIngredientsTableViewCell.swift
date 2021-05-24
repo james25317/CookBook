@@ -17,7 +17,7 @@ class EditIngredientsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var buttonDelete: UIButton!
 
-    var viewModel: RecipeViewModel?
+    var onDelete: (() -> Void)?
 
     override func awakeFromNib() {
 
@@ -26,9 +26,11 @@ class EditIngredientsTableViewCell: UITableViewCell {
         self.selectionStyle = .none
     }
 
-    @IBAction func deleteIngredient(_ sender: UIButton) {
+    @IBAction func deleteIngredient(_ sender: Any) {
 
-        print("Delete button pressed")
+        print("Delete Ingredient Success!")
+
+        onDelete?()
     }
 
     func layoutCell(with ingredient: Ingredient) {

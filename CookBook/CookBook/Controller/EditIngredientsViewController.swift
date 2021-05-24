@@ -158,6 +158,12 @@ class EditIngredientsViewController: UIViewController {
 
         textFieldUnit.text?.removeAll()
     }
+
+    func deleteData(at index: Int) {
+
+        // 刪除 ingredients 中點擊的值
+        ingredients?.remove(at: index)
+    }
 }
 
 extension EditIngredientsViewController: UITableViewDataSource {
@@ -183,6 +189,12 @@ extension EditIngredientsViewController: UITableViewDataSource {
         let ingredient = ingredients[indexPath.item]
 
         ingredientCell.layoutCell(with: ingredient)
+
+        ingredientCell.onDelete = { [weak self] in
+
+            // 定義刪除的行為
+            self?.deleteData(at: indexPath.item)
+        }
 
         return ingredientCell
     }

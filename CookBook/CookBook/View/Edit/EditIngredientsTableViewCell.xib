@@ -51,7 +51,7 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="x.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="delete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Tul-M9-2zg"/>
+                                            <action selector="deleteIngredient:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tpb-cc-RhC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,7 +88,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="buttonDelete" destination="bwA-Ze-ea6" id="myZ-Q9-PFG"/>
+                <outlet property="buttonDelete" destination="bwA-Ze-ea6" id="s1E-hN-A5c"/>
                 <outlet property="labelAmount" destination="ZF7-zh-OCd" id="pnb-0Q-tLB"/>
                 <outlet property="labelName" destination="Cab-QE-KaE" id="LgD-gd-caH"/>
                 <outlet property="labelUnit" destination="DS7-XU-nIc" id="SMi-4z-aYp"/>

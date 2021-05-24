@@ -79,10 +79,12 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
         guard let recipeViewModel = viewModel?.recipeViewModel.value,
               indexPath.row < recipeViewModel.ingredients.count else { return cell }
 
-        let ingredient = recipeViewModel.ingredients[indexPath.item]
+        let ingredient = recipeViewModel.ingredients[indexPath.row]
 
         // can I arrange sequence?
         ingredientCell.layoutCell(with: ingredient)
+
+        ingredientCell.buttonDelete.isHidden = true
 
         return ingredientCell
     }
