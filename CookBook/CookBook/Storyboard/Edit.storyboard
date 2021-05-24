@@ -81,6 +81,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avS-kq-I1L">
                                 <rect key="frame" x="211" y="620.33333333333337" width="20" height="22"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
+                                <state key="disabled" image="arrow.right.circle" catalog="system"/>
                                 <connections>
                                     <action selector="createCookBook:" destination="qYP-99-ctS" eventType="touchUpInside" id="1P0-pr-gTW"/>
                                 </connections>
@@ -115,6 +116,7 @@
                     <navigationItem key="navigationItem" id="8DH-i7-9tD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="buttonNext" destination="avS-kq-I1L" id="dOn-o4-YfB"/>
                         <outlet property="textFieldName" destination="06x-XG-dDU" id="CP3-t5-C3k"/>
                         <outlet property="textViewDescription" destination="Zsb-d9-w7O" id="X9R-TQ-N1b"/>
                     </connections>
@@ -396,6 +398,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

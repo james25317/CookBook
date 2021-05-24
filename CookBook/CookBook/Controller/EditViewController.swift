@@ -9,7 +9,13 @@ import UIKit
 
 class EditViewController: UIViewController {
 
-    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldName: UITextField! {
+
+        didSet {
+
+            textFieldName.delegate = self
+        }
+    }
 
     @IBOutlet weak var textViewDescription: UITextView! {
 
@@ -19,11 +25,15 @@ class EditViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var buttonNext: UIButton!
+
     let viewModel = EditViewModel()
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        setupTextView()
     }
     
     @IBAction func onNameChanged(_ sender: UITextField) {
@@ -40,7 +50,7 @@ class EditViewController: UIViewController {
 
         // go EditPreview Page
         guard let previewVC = storyboard?
-            .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+                .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
 
         navigationController?.pushViewController(previewVC, animated: true)
 
@@ -52,6 +62,13 @@ class EditViewController: UIViewController {
 
         navigationController?.popViewController(animated: true)
     }
+
+    func setupTextView() {
+
+        textViewDescription.text = "請輸入食譜簡介"
+
+        textViewDescription.textColor = UIColor.lightGray
+    }
 }
 
 extension EditViewController: UITextViewDelegate {
@@ -62,4 +79,73 @@ extension EditViewController: UITextViewDelegate {
 
         viewModel.onDescriptionChanged(text: description)
     }
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+
+        if textView.textColor == UIColor.lightGray {
+
+            textView.text = nil
+
+            textView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+
+        if textView.text.isEmpty {
+
+            textView.text = "請輸入食譜簡介"
+
+            textView.textColor = UIColor.lightGray
+        }
+    }
+}
+
+extension EditViewController: UITextFieldDelegate {
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+    }
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+
+        // Combine the textView text and the replacement text to
+        // create the updated text string
+        let currentText: String = textView.text
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+
+        // If updated text view will be empty, add the placeholder
+        // and set the cursor to the beginning of the text view
+        if updatedText.isEmpty {
+
+            textView.text = "請輸入食譜簡介"
+
+            textView.textColor = UIColor.lightGray
+
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+        }
+
+        // Else if the text view's placeholder is showing and the
+        // length of the replacement string is greater than 0, set
+        // the text color to black then set its text to the
+        // replacement string
+        else if textView.textColor == UIColor.lightGray && !text.isEmpty {
+
+            textView.textColor = UIColor.black
+
+            textView.text = text
+        }
+
+        // For every other case, the text should change with the usual
+        // behavior...
+        else {
+
+            return true
+        }
+
+        // ...otherwise return false since the updates have already
+        // been made
+        return false
+    }
+
 }

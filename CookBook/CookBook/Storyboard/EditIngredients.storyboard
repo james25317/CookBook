@@ -40,28 +40,28 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入材料名稱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-4Z-3Ze">
-                                <rect key="frame" x="24" y="617" width="220" height="40"/>
+                                <rect key="frame" x="24" y="617" width="236" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="j4h-dp-HSO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="onIngredientNameChanged:" destination="RvM-aT-hMS" eventType="editingDidEnd" id="i9U-dj-nKx"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="單位" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3BR-mP-5Za">
                                 <rect key="frame" x="333" y="617" width="57" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="onUnitChanged:" destination="RvM-aT-hMS" eventType="editingDidEnd" id="EBT-kR-u4A"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="數量" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pe4-Cp-0du">
-                                <rect key="frame" x="260" y="617" width="57" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <rect key="frame" x="268" y="617" width="57" height="40"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="onAmountChanged:" destination="RvM-aT-hMS" eventType="editingDidEnd" id="trg-ha-c1U"/>
                                 </connections>
@@ -98,6 +98,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                </state>
                                 <connections>
                                     <action selector="onTapAdd:" destination="RvM-aT-hMS" eventType="touchUpInside" id="GZE-Hl-uK4"/>
                                 </connections>
@@ -109,7 +112,7 @@
                             <constraint firstItem="MTa-uG-H04" firstAttribute="bottom" secondItem="ZRV-Fj-02o" secondAttribute="bottom" constant="56" id="54a-bi-fJL"/>
                             <constraint firstItem="3BR-mP-5Za" firstAttribute="trailing" secondItem="Ta8-Be-IW1" secondAttribute="trailing" id="FfO-oh-Gbp"/>
                             <constraint firstItem="Ta8-Be-IW1" firstAttribute="trailing" secondItem="ZRV-Fj-02o" secondAttribute="trailing" id="GqH-jJ-PRg"/>
-                            <constraint firstItem="Pe4-Cp-0du" firstAttribute="leading" secondItem="lzu-4Z-3Ze" secondAttribute="trailing" constant="16" id="GrI-fT-4Lb"/>
+                            <constraint firstItem="Pe4-Cp-0du" firstAttribute="leading" secondItem="lzu-4Z-3Ze" secondAttribute="trailing" constant="8" id="GrI-fT-4Lb"/>
                             <constraint firstItem="3BR-mP-5Za" firstAttribute="centerY" secondItem="Pe4-Cp-0du" secondAttribute="centerY" id="NUk-Xq-gJ5"/>
                             <constraint firstItem="ptA-un-BcM" firstAttribute="top" secondItem="MTa-uG-H04" secondAttribute="top" constant="72" id="Np7-Ui-Zq8"/>
                             <constraint firstItem="eBa-bI-6fh" firstAttribute="top" secondItem="MTa-uG-H04" secondAttribute="top" constant="16" id="Olg-gb-euO"/>
@@ -132,7 +135,7 @@
                             <constraint firstItem="ZRV-Fj-02o" firstAttribute="top" secondItem="jt4-8g-1zi" secondAttribute="bottom" constant="24" id="wF2-Pl-KRO"/>
                             <constraint firstItem="Pe4-Cp-0du" firstAttribute="centerY" secondItem="lzu-4Z-3Ze" secondAttribute="centerY" id="xby-2d-Ukh"/>
                             <constraint firstAttribute="trailing" secondItem="jt4-8g-1zi" secondAttribute="trailing" id="xsf-ox-mFc"/>
-                            <constraint firstItem="3BR-mP-5Za" firstAttribute="leading" secondItem="Pe4-Cp-0du" secondAttribute="trailing" constant="16" id="zTK-m7-AoF"/>
+                            <constraint firstItem="3BR-mP-5Za" firstAttribute="leading" secondItem="Pe4-Cp-0du" secondAttribute="trailing" constant="8" id="zTK-m7-AoF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -158,6 +161,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

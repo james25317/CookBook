@@ -77,6 +77,8 @@ class EditIngredientsViewController: UIViewController {
 
         super.viewDidLoad()
 
+        buttonAdd.isEnabled = false
+
         setupTableView()
     }
 
@@ -96,7 +98,7 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onIngredientNameChanged(_ sender: UITextField) {
 
-        guard sender.text?.isEmpty == false else { return }
+        // guard sender.text?.isEmpty == false else { return }
 
         guard let name = sender.text, let viewModel = viewModel else { return }
 
@@ -105,7 +107,7 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onAmountChanged(_ sender: UITextField) {
 
-        guard sender.text?.isEmpty == false else { return }
+        // guard sender.text?.isEmpty == false else { return }
 
         guard let amount = sender.text, let viewModel = viewModel else { return }
 
@@ -114,7 +116,7 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onUnitChanged(_ sender: UITextField) {
 
-        guard sender.text?.isEmpty == false else { return }
+        // guard sender.text?.isEmpty == false else { return }
 
         guard let unit = sender.text, let viewModel = viewModel else { return }
 
@@ -130,9 +132,6 @@ class EditIngredientsViewController: UIViewController {
 
         // reset 輸入框內容
         resetTextField()
-
-        // reset VM's Ingredient
-        resetIngredient()
     }
 
 
@@ -159,17 +158,6 @@ class EditIngredientsViewController: UIViewController {
         textFieldAmount.text?.removeAll()
 
         textFieldUnit.text?.removeAll()
-    }
-
-    private func resetIngredient() {
-
-        guard let viewModel = viewModel else { return }
-
-        viewModel.ingredient = Ingredient(
-            amount: 0,
-            name: "",
-            unit: ""
-        )
     }
 }
 
@@ -216,12 +204,12 @@ extension EditIngredientsViewController: UITextFieldDelegate {
               !textFieldAmount.isEmpty,
               !textFieldUnit.isEmpty
         else {
-            buttonAdd.isUserInteractionEnabled = false
+
             buttonAdd.isEnabled = false
+
             return
         }
 
-        buttonAdd.isUserInteractionEnabled = true
         buttonAdd.isEnabled = true
     }
 }
