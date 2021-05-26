@@ -31,6 +31,11 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
 
     var onDescriptionChanged: ((String) -> Void)?
 
+    override func awakeFromNib() {
+
+        super.awakeFromNib()
+    }
+
     func setupCell(with step: Step, at index: Int) {
 
         labelStepTitle.text = "Step \(index + 1)"

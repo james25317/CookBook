@@ -19,7 +19,7 @@ class EditStepsTableViewCell: UITableViewCell {
 
         super.awakeFromNib()
 
-        // Initialization code
+        self.selectionStyle = .none
     }
 
     func layoutCell(with step: Step, at index: Int) {

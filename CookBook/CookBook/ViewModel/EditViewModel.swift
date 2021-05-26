@@ -11,7 +11,7 @@ import Firebase
 class EditViewModel {
 
     let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
-    
+
     // init Recipe
     var recipe = Recipe(
         id: "",
@@ -37,7 +37,7 @@ class EditViewModel {
         steps: [
             Step(
             description: "步驟描述",
-            image: "https://via.placeholder.com/300x200.png/059BE5/FFFFFF?text=FirebaseImage"
+            image: "https://loremflickr.com/320/240/dish"
             )
         ]
     )
