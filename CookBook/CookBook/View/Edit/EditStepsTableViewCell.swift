@@ -26,7 +26,7 @@ class EditStepsTableViewCell: UITableViewCell {
 
         imageViewRecipeImage.loadImage(step.image)
 
-        labelStepTitle.text = "Step \(index)"
+        labelStepTitle.text = "Step \(index + 1)"
 
         labelStepDescription.text = step.description
     }

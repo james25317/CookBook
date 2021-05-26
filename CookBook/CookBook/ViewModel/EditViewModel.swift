@@ -11,23 +11,35 @@ import Firebase
 class EditViewModel {
 
     let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
-
-    var documentId: String?
-
+    
     // init Recipe
     var recipe = Recipe(
         id: "",
         createdTime: Timestamp(date: Date()),
         description: "",
         favoritesUserId: [],
-        ingredients: [],
+
+        ingredients: [
+            Ingredient(
+            amount: 0,
+            name: "食材名稱",
+            unit: "食材單位"
+            )
+        ],
+
         isEditDone: false,
         likedUserId: [],
         likes: 0,
         mainImage: "",
         name: "",
         owner: "",
-        steps: []
+
+        steps: [
+            Step(
+            description: "步驟描述",
+            image: "https://via.placeholder.com/300x200.png/059BE5/FFFFFF?text=FirebaseImage"
+            )
+        ]
     )
 
     // init Ingredient

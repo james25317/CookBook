@@ -33,7 +33,7 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
 
     func setupCell(with step: Step, at index: Int) {
 
-        labelStepTitle.text = "Step \(index)"
+        labelStepTitle.text = "Step \(index + 1)"
 
         imageViewUploadedImage.loadImage(step.image)
 

@@ -48,6 +48,14 @@ class EditStepsViewController: UIViewController {
         super.viewDidLoad()
 
         setupCollecitonViewFlowLayout()
+
+        if steps == nil {
+
+            steps?.append(Step(
+                description: "",
+                image: "初始化描述"
+            ))
+        }
     }
 
     @IBAction func leave(_ sender: Any) {
@@ -74,7 +82,7 @@ class EditStepsViewController: UIViewController {
 
 extension EditStepsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+
         guard let steps = steps else { return 0 }
 
         return steps.count
@@ -92,6 +100,7 @@ extension EditStepsViewController: UICollectionViewDataSource {
 
         guard let steps = steps else { return cell }
 
+        // out of range
         let step = steps[indexPath.row]
 
         // setupCell
