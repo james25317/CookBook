@@ -37,7 +37,7 @@ class EditViewController: UIViewController {
 
         setupTextView()
 
-        setupNextEntrance()
+        // setupNextEntrance()
     }
     
     @IBAction func onNameChanged(_ sender: UITextField) {

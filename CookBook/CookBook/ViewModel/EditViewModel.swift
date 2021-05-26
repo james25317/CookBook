@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 
 class EditViewModel {
 
@@ -86,6 +87,43 @@ class EditViewModel {
     func onStepsDescriptionChanged(text description: String) {
 
         self.step.description = description
+    }
+
+    func uploadImagePickerImage(with pickerImage: UIImage, completion: @escaping (Result<String, Error>) -> Void) {
+
+        let uuid = UUID().uuidString
+
+        // 選擇的圖片（並壓縮）
+        guard let image = pickerImage.jpegData(compressionQuality: 0.5) else { return }
+
+        let storageRef = Storage.storage().reference()
+
+        let imageRef = storageRef.child("CookBookImages").child("\(uuid).jpg")
+
+        // 上傳圖片
+        imageRef.putData(image, metadata: nil) { metadata, error in
+
+            if let error = error {
+
+                completion(.failure(error))
+            }
+
+            guard let metadata = metadata else { return }
+
+            imageRef.downloadURL { url, error in
+
+                if let error = error {
+
+                    completion(.failure(error))
+                }
+
+                if let url = url {
+
+                    // escaping callback
+                    completion(.success(url.absoluteString))
+                }
+            }
+        }
     }
 
     // 來自 EditIngredientsVM

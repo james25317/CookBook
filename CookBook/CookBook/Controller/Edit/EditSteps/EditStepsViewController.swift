@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class EditStepsViewController: UIViewController {
 
@@ -38,12 +39,14 @@ class EditStepsViewController: UIViewController {
 
             guard let collectionView = collectionView else { return }
 
-            // 值變動，觸發刷新畫面
+            // reload data
             collectionView.reloadData()
         }
     }
 
     var imagePicker = UIImagePickerController()
+
+    var stepImageViewCell: EditStepsCollectionViewCell?
 
     override func viewDidLoad() {
 
@@ -75,11 +78,11 @@ class EditStepsViewController: UIViewController {
         snapCollectionFlowLayout.scrollDirection = .horizontal
     }
 
-    private func openUploadMenu() {
+    private func setupUploadMenu() {
 
         let controller = UIAlertController(
-            title: "上傳圖片",
-            message: "可選擇照相或是相簿照片上傳",
+            title: "上傳步驟圖片",
+            message: nil,
             preferredStyle: .actionSheet
         )
 
@@ -96,7 +99,7 @@ class EditStepsViewController: UIViewController {
             style: .default) { _ in
 
             // 開啟相簿
-            self.openLibrary()
+            self.openAlbum()
         }
 
         let cancelAction = UIAlertAction(
@@ -116,12 +119,16 @@ class EditStepsViewController: UIViewController {
 
         imagePicker.sourceType = .camera
 
+        imagePicker.allowsEditing = true
+
         present(imagePicker, animated: true)
     }
 
-    private func openLibrary() {
+    private func openAlbum() {
 
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.sourceType = .savedPhotosAlbum
+
+        imagePicker.allowsEditing = true
 
         present(imagePicker, animated: true)
     }
@@ -143,31 +150,30 @@ extension EditStepsViewController: UICollectionViewDataSource {
             for: indexPath
         )
 
-        guard let stepsCell = cell as? EditStepsCollectionViewCell else { return cell }
+        guard let stepCell = cell as? EditStepsCollectionViewCell else { return cell }
 
         guard let steps = steps else { return cell }
 
-        // out of range
         let step = steps[indexPath.row]
 
-        // setupCell
-        stepsCell.setupCell(with: step, at: indexPath.row)
+        stepCell.setupCell(with: step, at: indexPath.row)
 
-        // 定義 onDescriptionChanged closure 行為
-        stepsCell.onDescriptionChanged = { [weak self] description in
+        stepCell.onDescriptionChanged = { [weak self] description in
 
-
+            // write in steps data
             self?.steps?[indexPath.row].description = description
         }
 
-        stepsCell.onUploadedImageTapped = { [weak self] in
+        stepCell.onUploadedImageTapped = { [weak self] in
 
             // upload menu open
-            self?.openUploadMenu()
+            self?.setupUploadMenu()
+
+            // callback to know which cell is it
+            self?.stepImageViewCell = stepCell
         }
 
-
-        return stepsCell
+        return stepCell
     }
 }
 
@@ -177,6 +183,45 @@ extension EditStepsViewController: UICollectionViewDelegate {
 
 extension EditStepsViewController: UIImagePickerControllerDelegate {
 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+
+            // upload function
+            viewModel?.uploadImagePickerImage(with: image) { [weak self] result in
+
+                switch result {
+
+                case .failure(let error):
+
+                    print("Error: \(error)")
+
+                case .success(let downloadUrl):
+
+                    print("Image upload success!, downloadUrl: \(downloadUrl)")
+
+                    // located current indexPath of collectionViewCell
+                    guard let cell = self?.collectionView.visibleCells[0],
+                          let indexpath = self?.collectionView.indexPath(for: cell) else { return }
+
+                    // write in steps data
+                    self?.steps?[indexpath.row].image = downloadUrl
+                }
+            }
+
+            // replace cell's image with pickerImgae
+            stepImageViewCell?.setImage(with: image)
+
+            // UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+
+        dismiss(animated: true)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+
+        picker.dismiss(animated: true)
+    }
 }
 
 extension EditStepsViewController: UINavigationControllerDelegate {

@@ -58,11 +58,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Access Camera</string>
+	<string>Please allow access to your camera.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Rreserve Photo</string>
+	<string>Please allow reserve photos to your album.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access Photo</string>
+	<string>Please allow access to upload photos.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

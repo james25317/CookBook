@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class EditStepsPreviewViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class EditStepsPreviewViewController: UIViewController {
             tableView.dataSource = self
         }
     }
+
+    let storage = Storage.storage()
 
     var viewModel: EditViewModel?
 

@@ -49,6 +49,11 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
         textViewDescription.text = step.description
     }
 
+    func setImage(with image: UIImage) {
+
+        imageViewUploadedImage.image = image
+    }
+
     private func setupTapGesture() {
 
         let gesture = UITapGestureRecognizer(target: self, action: #selector(openImageUploadMenu))
@@ -59,8 +64,6 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
     }
 
     @objc func openImageUploadMenu() {
-
-        print("Open Image upload menu")
 
         // open imageUpload Menu
         onUploadedImageTapped?()
