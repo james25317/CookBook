@@ -31,9 +31,13 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
 
     var onDescriptionChanged: ((String) -> Void)?
 
+    var onUploadedImageTapped: (() -> Void)?
+
     override func awakeFromNib() {
 
         super.awakeFromNib()
+
+        setupTapGesture()
     }
 
     func setupCell(with step: Step, at index: Int) {
@@ -43,6 +47,23 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
         imageViewUploadedImage.loadImage(step.image)
 
         textViewDescription.text = step.description
+    }
+
+    private func setupTapGesture() {
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(openImageUploadMenu))
+
+        imageViewUploadedImage.isUserInteractionEnabled = true
+
+        imageViewUploadedImage.addGestureRecognizer(gesture)
+    }
+
+    @objc func openImageUploadMenu() {
+
+        print("Open Image upload menu")
+
+        // open imageUpload Menu
+        onUploadedImageTapped?()
     }
 }
 

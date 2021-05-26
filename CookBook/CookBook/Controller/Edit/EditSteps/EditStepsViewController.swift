@@ -43,19 +43,15 @@ class EditStepsViewController: UIViewController {
         }
     }
 
+    var imagePicker = UIImagePickerController()
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
+        imagePicker.delegate = self
+
         setupCollecitonViewFlowLayout()
-
-        if steps == nil {
-
-            steps?.append(Step(
-                description: "",
-                image: "初始化描述"
-            ))
-        }
     }
 
     @IBAction func leave(_ sender: Any) {
@@ -77,6 +73,57 @@ class EditStepsViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 32, bottom: 0, right: 32)
 
         snapCollectionFlowLayout.scrollDirection = .horizontal
+    }
+
+    private func openUploadMenu() {
+
+        let controller = UIAlertController(
+            title: "上傳圖片",
+            message: "可選擇照相或是相簿照片上傳",
+            preferredStyle: .actionSheet
+        )
+
+        let cameraAction = UIAlertAction(
+            title: "拍照",
+            style: .default) { _ in
+
+            // 開啟相機
+            self.openCamera()
+        }
+
+        let libraryAction = UIAlertAction(
+            title: "相簿照片",
+            style: .default) { _ in
+
+            // 開啟相簿
+            self.openLibrary()
+        }
+
+        let cancelAction = UIAlertAction(
+            title: "取消",
+            style: .cancel)
+
+        controller.addAction(cameraAction)
+
+        controller.addAction(libraryAction)
+
+        controller.addAction(cancelAction)
+
+        present(controller, animated: true)
+    }
+
+    private func openCamera() {
+
+        imagePicker.sourceType = .camera
+
+        present(imagePicker, animated: true)
+    }
+
+    private func openLibrary() {
+
+        imagePicker.sourceType = .photoLibrary
+
+        present(imagePicker, animated: true)
     }
 }
 
@@ -109,8 +156,16 @@ extension EditStepsViewController: UICollectionViewDataSource {
         // 定義 onDescriptionChanged closure 行為
         stepsCell.onDescriptionChanged = { [weak self] description in
 
+
             self?.steps?[indexPath.row].description = description
         }
+
+        stepsCell.onUploadedImageTapped = { [weak self] in
+
+            // upload menu open
+            self?.openUploadMenu()
+        }
+
 
         return stepsCell
     }
@@ -118,5 +173,12 @@ extension EditStepsViewController: UICollectionViewDataSource {
 
 extension EditStepsViewController: UICollectionViewDelegate {
 
+}
+
+extension EditStepsViewController: UIImagePickerControllerDelegate {
+
+}
+
+extension EditStepsViewController: UINavigationControllerDelegate {
 
 }

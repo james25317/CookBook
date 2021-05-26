@@ -57,6 +57,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Access Camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Rreserve Photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access Photo</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
