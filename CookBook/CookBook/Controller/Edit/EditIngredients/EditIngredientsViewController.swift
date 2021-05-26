@@ -97,8 +97,6 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onIngredientNameChanged(_ sender: UITextField) {
 
-        // guard sender.text?.isEmpty == false else { return }
-
         guard let name = sender.text, let viewModel = viewModel else { return }
 
         viewModel.onIngredientNameChanged(text: name)
@@ -106,16 +104,12 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func onAmountChanged(_ sender: UITextField) {
 
-        // guard sender.text?.isEmpty == false else { return }
-
         guard let amount = sender.text, let viewModel = viewModel else { return }
 
         viewModel.onAmountChanged(text: Int(amount) ?? 0)
     }
 
     @IBAction func onUnitChanged(_ sender: UITextField) {
-
-        // guard sender.text?.isEmpty == false else { return }
 
         guard let unit = sender.text, let viewModel = viewModel else { return }
 

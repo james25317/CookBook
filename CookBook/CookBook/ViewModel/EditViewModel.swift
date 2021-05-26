@@ -30,7 +30,6 @@ class EditViewModel {
         steps: []
     )
 
-    // 來自 EditIngredientsVM
     // init Ingredient
     var ingredient = Ingredient(
         amount: 0,
@@ -38,12 +37,18 @@ class EditViewModel {
         unit: ""
     )
 
+    // init Step
+    var step = Step(
+        description: "",
+        image: ""
+    )
+
     func onNameChanged(text name: String) {
 
         self.recipe.name = name
     }
 
-    func onDescriptionChanged(text description: String) {
+    func onIngredientsDescriptionChanged(text description: String) {
 
         self.recipe.description = description
     }
@@ -64,6 +69,11 @@ class EditViewModel {
     func onUnitChanged(text unit: String) {
 
         self.ingredient.unit = unit
+    }
+
+    func onStepsDescriptionChanged(text description: String) {
+
+        self.step.description = description
     }
 
     // 來自 EditIngredientsVM

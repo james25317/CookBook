@@ -88,7 +88,7 @@ extension EditViewController: UITextViewDelegate {
 
         guard let description = textView.text else { return }
 
-        viewModel.onDescriptionChanged(text: description)
+        viewModel.onIngredientsDescriptionChanged(text: description)
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
