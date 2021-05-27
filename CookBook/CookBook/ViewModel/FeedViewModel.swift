@@ -36,7 +36,7 @@ class FeedViewModel {
     var id: String {
 
         get {
-            return feed.id
+            return feed.id!
         }
     }
 

@@ -7,12 +7,13 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
-struct Feed: Codable {
+struct Feed: Identifiable, Codable {
 
+    @DocumentID public var id: String?
     var challenger: String
     var createdTime: Int64
-    var id: String
     var isChallenged: Bool
     var mainImage: String
     var name: String
@@ -25,7 +26,6 @@ struct Feed: Codable {
         return [
             "challenger": challenger as Any,
             "createdTime": createdTime as Any,
-            "id": id as Any,
             "isChallenged": isChallenged as Any,
             "mainImage": mainImage as Any,
             "name": name as Any,
