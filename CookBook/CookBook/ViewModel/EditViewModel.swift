@@ -56,6 +56,20 @@ class EditViewModel {
         image: "https://loremflickr.com/320/240/food"
     )
 
+    // init Feed
+    var feed = Feed(
+        id: "",
+        challenger: "",
+        createdTime: Date().millisecondsSince1970,
+        isChallenged: false,
+        mainImage: "",
+        name: "",
+        ownerId: "",
+        portrait: "",
+        recipeId: "",
+        recipeName: ""
+    )
+
     func onNameChanged(text name: String) {
 
         self.recipe.name = name
@@ -154,7 +168,6 @@ class EditViewModel {
             case .success:
 
                 print("Steps updated, success")
-
             case .failure(let error):
 
                 print("Updated fail, failure: \(error)")
@@ -180,6 +193,27 @@ class EditViewModel {
                 print("Create fail, failure: \(error)")
             }
         }
+        print(recipe)
+    }
+
+    func createFeed(with feed: inout Feed) {
+
+//        DataManager.shared.createRecipe(feed: &Feed) { result in
+//
+//            switch result {
+//
+//            case .success(let documentId):
+//
+//                print("ID: \(documentId) CookBook Created")
+//
+//                // 用回傳的 documentId 再去發一次請求
+//                self.fetchRecipe(documentId: documentId)
+//
+//            case .failure(let error):
+//
+//                print("Create fail, failure: \(error)")
+//            }
+//        }
     }
 
     func fetchRecipe(documentId: String) {
@@ -203,6 +237,7 @@ class EditViewModel {
 
     func setRecipe(_ recipe: Recipe) {
 
+        // 接回有了 documentId 的 recipe
         recipeViewModel.value = convertRecipeToViewModel(from: recipe)
     }
 
@@ -212,4 +247,20 @@ class EditViewModel {
 
         return viewModel
     }
+
+//    func convertViewModelToFeed(from viewModel: RecipeViewModel) -> Feed {
+//
+//        let feed = Feed(
+//            id: viewModel.id,
+//            challenger: "",
+//            createdTime: Date().millisecondsSince1970,
+//            isChallenged: false,
+//            mainImage: String(describing: viewModel.mainImage),
+//            name: <#T##String#>,
+//            ownerId: <#T##String#>,
+//            portrait: <#T##String#>,
+//            recipeId: <#T##String#>,
+//            recipeName: <#T##String#>
+//        )
+//    }
 }

@@ -16,6 +16,8 @@ class EditDoneViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
+    var viewModel: EditViewModel?
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -29,6 +31,9 @@ class EditDoneViewController: UIViewController {
     }
 
     @IBAction func shareFeedAndLeave(_ sender: Any) {
+
+        // 這邊寫上傳Feed
+        // let viewModel = viewModel?.recipeViewModel.value
 
         // share on feed logic
         navigationController?.popToRootViewController(animated: true)

@@ -38,18 +38,16 @@ class HomeViewModel {
         for feed in feeds {
 
             let viewModel = FeedViewModel(model: feed)
-            viewModels.append(viewModel)
 
+            viewModels.append(viewModel)
         }
 
         return viewModels
-
     }
 
     func setFeeds(_ feeds: [Feed]) {
 
         // 傳轉換好的值 (viewModels) 給 VM.value，使 listener 帶值給所有綁定 的 View 顯示資料
         feedViewModels.value = convertFeedsToViewModels(from: feeds)
-
     }
 }

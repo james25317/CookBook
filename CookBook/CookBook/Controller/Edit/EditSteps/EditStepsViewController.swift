@@ -41,6 +41,9 @@ class EditStepsViewController: UIViewController {
 
             // reload data
             collectionView.reloadData()
+
+            // steps 值變動，更替 mainImage 資料
+
         }
     }
 

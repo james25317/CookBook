@@ -151,6 +151,8 @@ class DataManager {
 
                             recipe.id = documentId
 
+                            // 寫入 userId
+
                             completion(.success(recipe))
                         }
                     } catch {
@@ -185,7 +187,7 @@ class DataManager {
 
     func updateSteps(documentId: String, steps: [Step], completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫更新(覆寫) Ingredient 欄位
+        // 這邊寫更新(覆寫) Step 欄位
         let ref = db.collection(Collections.recipe.rawValue).document(documentId)
 
         let dicArray = steps.compactMap { step in
@@ -207,11 +209,32 @@ class DataManager {
 
     func createRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
 
+        let ref = db.collection(Collections.recipe.rawValue).document()
+
+        recipe.id = ref.documentID
+
+        try? ref.setData(from: recipe) { error in
+
+            if let error = error {
+
+                print("Error adding document: \(error)")
+
+                completion(.failure(error))
+            } else {
+
+                print("Document added with ID: \(String(describing: ref.documentID))")
+
+                // 回傳新產生的 DocumentId
+                completion(.success(ref.documentID))
+            }
+        }
+    }
+
+    func createFeed(feed: inout Feed, completion: @escaping (Result<String, Error>) -> Void) {
+
         var ref: DocumentReference?
 
-        recipe.id = ref?.documentID
-
-        ref = try? db.collection(Collections.recipe.rawValue).addDocument(from: recipe) { error in
+        ref = try? db.collection(Collections.feed.rawValue).addDocument(from: feed) { error in
 
             if let error = error {
 
@@ -222,7 +245,7 @@ class DataManager {
 
                 print("Document added with ID: \(String(describing: ref!.documentID))")
 
-                // 回傳產生的 DocumentId
+                // 回傳新產生的 DocumentId
                 completion(.success(ref!.documentID))
             }
         }

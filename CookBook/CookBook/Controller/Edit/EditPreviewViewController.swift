@@ -84,14 +84,23 @@ class EditPreviewViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 
+    // MARK: go EditDone Page and pass data
     @IBAction func goEditDonePage(_ sender: Any) {
 
-        guard let editVC = UIStoryboard.editDone
+        guard let editDoneVC = UIStoryboard.editDone
             .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
 
-        navigationController?.pushViewController(editVC, animated: true)
+        navigationController?.pushViewController(editDoneVC, animated: true)
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        // pass final data to EditDone
+        editDoneVC.viewModel = viewModel
+
+        guard let value = viewModel?.recipeViewModel.value,
+              let mainImage = value.recipe.steps.last?.image else { return }
+
+        viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
     }
 
     @IBAction func onChangeSections(_ sender: UIButton) {

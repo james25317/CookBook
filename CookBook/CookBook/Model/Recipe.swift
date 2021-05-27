@@ -49,7 +49,7 @@ struct Recipe: Identifiable, Codable {
             "likes": likes as Any,
             "mainImage": mainImage as Any,
             "name": name as Any,
-            "ownerId        ": ownerId as Any,
+            "ownerId": ownerId as Any,
             "steps": steps as Any
         ]
     }
