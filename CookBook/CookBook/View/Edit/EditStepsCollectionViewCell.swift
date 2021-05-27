@@ -24,12 +24,13 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var buttondelete: UIButton!
 
     @IBAction func deleteImage(_ sender: Any) {
-        
+
+        onDeleteStep?()
     }
-
-    var viewModel: EditViewModel?
-
+    
     var onDescriptionChanged: ((String) -> Void)?
+
+    var onDeleteStep: (() -> Void)?
 
     var onUploadedImageTapped: (() -> Void)?
 
@@ -49,7 +50,7 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
         textViewDescription.text = step.description
     }
 
-    func setImage(with image: UIImage) {
+    func setImage(with image: UIImage, at: Int) {
 
         imageViewUploadedImage.image = image
     }
@@ -72,7 +73,7 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
 
 extension EditStepsCollectionViewCell: UITextViewDelegate {
 
-    func textViewDidChange(_ textView: UITextView) {
+    func textViewDidEndEditing(_ textView: UITextView) {
 
         guard let description = textView.text else { return }
 

@@ -64,16 +64,31 @@ class EditStepsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func saveAndLeave(_ sender: Any) {
+    @IBAction func addNewStep(_ sender: Any) {
+
+        guard let step = viewModel?.step else { return }
+
+        steps?.append(step)
+
+        guard let cell = self.collectionView.visibleCells.first,
+              let indexpath = self.collectionView.indexPath(for: cell) else { return }
+
+        collectionView.scrollToItem(at: indexpath, at: .right, animated: true)
+    }
+
+    @IBAction func toTapSave(_ sender: Any) {
 
         // uplaod before leave logic
+        guard let viewModel = viewModel, let steps = steps else { return }
+        
+        viewModel.updateSteps(with: steps)
 
         dismiss(animated: true, completion: nil)
     }
 
     private func setupCollecitonViewFlowLayout() {
 
-        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 32, bottom: 0, right: 32)
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 40, bottom: 0, right: 40)
 
         snapCollectionFlowLayout.scrollDirection = .horizontal
     }
@@ -119,7 +134,7 @@ class EditStepsViewController: UIViewController {
 
         imagePicker.sourceType = .camera
 
-        imagePicker.allowsEditing = true
+        // imagePicker.allowsEditing = true
 
         present(imagePicker, animated: true)
     }
@@ -128,7 +143,7 @@ class EditStepsViewController: UIViewController {
 
         imagePicker.sourceType = .savedPhotosAlbum
 
-        imagePicker.allowsEditing = true
+        // imagePicker.allowsEditing = true
 
         present(imagePicker, animated: true)
     }
@@ -164,6 +179,12 @@ extension EditStepsViewController: UICollectionViewDataSource {
             self?.steps?[indexPath.row].description = description
         }
 
+        stepCell.onDeleteStep = { [weak self] in
+
+            // delete cell
+            self?.steps?.remove(at: indexPath.row)
+        }
+
         stepCell.onUploadedImageTapped = { [weak self] in
 
             // upload menu open
@@ -185,7 +206,7 @@ extension EditStepsViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
 
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
 
             // upload function
             viewModel?.uploadImagePickerImage(with: image) { [weak self] result in
@@ -201,18 +222,20 @@ extension EditStepsViewController: UIImagePickerControllerDelegate {
                     print("Image upload success!, downloadUrl: \(downloadUrl)")
 
                     // located current indexPath of collectionViewCell
-                    guard let cell = self?.collectionView.visibleCells[0],
+//                    guard let cell = self?.collectionView.visibleCells.first,
+//                          let indexpath = self?.collectionView.indexPath(for: cell) else { return }
+
+                    guard let cell = self?.stepImageViewCell,
                           let indexpath = self?.collectionView.indexPath(for: cell) else { return }
+
+                    // replace cell's image with pickerImgae
+                    // self?.stepImageViewCell?.imageViewUploadedImage.loadImage(self?.steps?[indexpath.row].image)
+                    self?.stepImageViewCell?.setImage(with: image, at: indexpath.row)
 
                     // write in steps data
                     self?.steps?[indexpath.row].image = downloadUrl
                 }
             }
-
-            // replace cell's image with pickerImgae
-            stepImageViewCell?.setImage(with: image)
-
-            // UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
 
         dismiss(animated: true)

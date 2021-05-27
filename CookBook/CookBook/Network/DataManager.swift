@@ -73,7 +73,7 @@ class DataManager {
 
     func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
 
-        // where 篩出 appleId
+        // 可以用 where 篩出 appleId
 
         db.collection(Collections.user.rawValue)
             .document("SADUxqR04ihqg1XUgDHn")
@@ -179,6 +179,28 @@ class DataManager {
             } else {
 
                 print("Ingredients successfully updated")
+            }
+        }
+    }
+
+    func updateSteps(documentId: String, steps: [Step], completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新(覆寫) Ingredient 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        let dicArray = steps.compactMap { step in
+
+            step.toDict
+        }
+
+        ref.updateData(["steps": dicArray]) { error in
+
+            if let error = error {
+
+                print("Error updating steps: \(error)")
+            } else {
+
+                print("Steps successfully updated")
             }
         }
     }

@@ -22,9 +22,9 @@ class EditViewModel {
 
         ingredients: [
             Ingredient(
-            amount: 0,
-            name: "食材名稱",
-            unit: "食材單位"
+            amount: 1,
+            name: "名稱",
+            unit: "單位"
             )
         ],
 
@@ -37,23 +37,23 @@ class EditViewModel {
 
         steps: [
             Step(
-            description: "步驟描述",
-            image: "https://loremflickr.com/320/240/dish"
+            description: "請輸入步驟的描述",
+            image: "https://loremflickr.com/320/240/food"
             )
         ]
     )
 
     // init Ingredient
     var ingredient = Ingredient(
-        amount: 0,
-        name: "",
-        unit: ""
+        amount: 1,
+        name: "名稱",
+        unit: "單位"
     )
 
     // init Step
     var step = Step(
-        description: "",
-        image: ""
+        description: "請輸入步驟的描述",
+        image: "https://loremflickr.com/320/240/food"
     )
 
     func onNameChanged(text name: String) {
@@ -66,19 +66,16 @@ class EditViewModel {
         self.recipe.description = description
     }
 
-    // 來自 EditIngredientsVM
     func onIngredientNameChanged(text name: String) {
 
         self.ingredient.name = name
     }
 
-    // 來自 EditIngredientsVM
     func onAmountChanged(text amount: Int) {
 
         self.ingredient.amount = amount
     }
 
-    // 來自 EditIngredientsVM
     func onUnitChanged(text unit: String) {
 
         self.ingredient.unit = unit
@@ -126,7 +123,7 @@ class EditViewModel {
         }
     }
 
-    // 來自 EditIngredientsVM
+
     func updateIngredients(with ingredients: [Ingredient]) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
@@ -137,7 +134,26 @@ class EditViewModel {
 
             case .success:
 
-                print("Ingredient updated, success")
+                print("Ingredients updated, success")
+
+            case .failure(let error):
+
+                print("Updated fail, failure: \(error)")
+            }
+        }
+    }
+
+    func updateSteps(with steps: [Step]) {
+
+        guard let documentId = recipeViewModel.value?.recipe.id else { return }
+
+        DataManager.shared.updateSteps(documentId: documentId, steps: steps) { result in
+
+            switch result {
+
+            case .success:
+
+                print("Steps updated, success")
 
             case .failure(let error):
 
