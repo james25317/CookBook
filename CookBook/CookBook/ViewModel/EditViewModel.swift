@@ -33,7 +33,7 @@ class EditViewModel {
         likes: 0,
         mainImage: "",
         name: "",
-        owner: "",
+        ownerId: "",
 
         steps: [
             Step(

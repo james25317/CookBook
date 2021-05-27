@@ -21,7 +21,7 @@ struct Recipe: Identifiable, Codable {
     var likes: Int
     var mainImage: String
     var name: String
-    var owner: String
+    var ownerId: String
     var steps: [Step]
 
     enum CodingKeys: String, CodingKey {
@@ -34,7 +34,7 @@ struct Recipe: Identifiable, Codable {
              likes,
              mainImage,
              name,
-             owner,
+             ownerId,
              steps
     }
 
@@ -49,7 +49,7 @@ struct Recipe: Identifiable, Codable {
             "likes": likes as Any,
             "mainImage": mainImage as Any,
             "name": name as Any,
-            "owner": owner as Any,
+            "ownerId        ": ownerId as Any,
             "steps": steps as Any
         ]
     }
