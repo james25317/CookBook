@@ -32,28 +32,36 @@ class EditDoneViewController: UIViewController {
 
     @IBAction func shareFeedAndLeave(_ sender: Any) {
 
-        guard let viewModel = viewModel else { return }
-
+        // share on feed logic
         // convert recipe data to feed
-        guard let recipe = viewModel.recipeViewModel.value?.recipe else { return }
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipeViewModel.value?.recipe else { return }
 
         // VM's convert function
-        var feed = viewModel.convertRecipeToFeed(from: recipe)
+        var feed = viewModel.convertRecipeToFeed(from: recipe, challengeOn: false)
 
         // VM's create Feed function
         viewModel.createFeed(with: &feed)
 
-        // share on feed logic
         navigationController?.popToRootViewController(animated: true)
     }
 
     @IBAction func shareFeedChallengeAndLeave(_ sender: Any) {
 
         // share on feed with challenge logic
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipeViewModel.value?.recipe else { return }
+
+        var feed = viewModel.convertRecipeToFeed(from: recipe, challengeOn: true)
+
+        viewModel.createFeed(with: &feed)
+
         navigationController?.popToRootViewController(animated: true)
     }
 
     @IBAction func backToHome(_ sender: Any) {
+
+        // share nothing, save to profile
 
         // Try this way
         navigationController?.popToRootViewController(animated: true)

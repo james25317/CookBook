@@ -248,13 +248,13 @@ class EditViewModel {
         return viewModel
     }
 
-    func convertRecipeToFeed(from recipe: Recipe) -> Feed {
+    func convertRecipeToFeed(from recipe: Recipe, challengeOn: Bool) -> Feed {
 
         let feed = Feed(
             id: "FeedDocumentId",
             challenger: "",
             createdTime: Date().millisecondsSince1970,
-            isChallenged: false,
+            isChallenged: !challengeOn,
             mainImage: recipe.mainImage,
             name: "UserName",
             ownerId: "UserDocumentId",
