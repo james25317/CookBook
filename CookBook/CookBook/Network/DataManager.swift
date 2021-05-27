@@ -211,6 +211,7 @@ class DataManager {
 
         let ref = db.collection(Collections.recipe.rawValue).document()
 
+        // inout 屬性讓可以先 assign
         recipe.id = ref.documentID
 
         try? ref.setData(from: recipe) { error in
@@ -232,9 +233,12 @@ class DataManager {
 
     func createFeed(feed: inout Feed, completion: @escaping (Result<String, Error>) -> Void) {
 
-        var ref: DocumentReference?
+        let ref = db.collection(Collections.feed.rawValue).document()
 
-        ref = try? db.collection(Collections.feed.rawValue).addDocument(from: feed) { error in
+        // inout 屬性讓可以先 assign
+        feed.id = ref.documentID
+
+        try? ref.setData(from: feed) { error in
 
             if let error = error {
 
@@ -243,10 +247,10 @@ class DataManager {
                 completion(.failure(error))
             } else {
 
-                print("Document added with ID: \(String(describing: ref!.documentID))")
+                print("Document added with ID: \(String(describing: ref.documentID))")
 
                 // 回傳新產生的 DocumentId
-                completion(.success(ref!.documentID))
+                completion(.success(ref.documentID))
             }
         }
     }
