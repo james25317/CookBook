@@ -70,10 +70,13 @@ class EditStepsViewController: UIViewController {
 
         steps?.append(step)
 
-        guard let cell = self.collectionView.visibleCells.first,
-              let indexpath = self.collectionView.indexPath(for: cell) else { return }
+        // move to latest cell's position
+        if let steps = steps {
 
-        collectionView.scrollToItem(at: indexpath, at: .right, animated: true)
+            let numberOfRowCounts = steps.count - 1
+
+            scrollToItem(to: numberOfRowCounts)
+        }
     }
 
     @IBAction func toTapSave(_ sender: Any) {
@@ -147,6 +150,15 @@ class EditStepsViewController: UIViewController {
 
         present(imagePicker, animated: true)
     }
+
+    private func scrollToItem(to index: Int) {
+
+        collectionView.scrollToItem(
+            at: IndexPath(row: index, section: 0),
+            at: .centeredHorizontally,
+            animated: true
+        )
+    }
 }
 
 extension EditStepsViewController: UICollectionViewDataSource {
@@ -179,19 +191,19 @@ extension EditStepsViewController: UICollectionViewDataSource {
             self?.steps?[indexPath.row].description = description
         }
 
-        stepCell.onDeleteStep = { [weak self] in
-
-            // delete cell
-            self?.steps?.remove(at: indexPath.row)
-        }
-
         stepCell.onUploadedImageTapped = { [weak self] in
 
             // upload menu open
             self?.setupUploadMenu()
 
-            // callback to know which cell is it
+            // check: callback to know which cell is it
             self?.stepImageViewCell = stepCell
+        }
+
+        stepCell.onDeleteStep = { [weak self] in
+
+            // delete cell
+            self?.steps?.remove(at: indexPath.row)
         }
 
         return stepCell
@@ -221,15 +233,11 @@ extension EditStepsViewController: UIImagePickerControllerDelegate {
 
                     print("Image upload success!, downloadUrl: \(downloadUrl)")
 
-                    // located current indexPath of collectionViewCell
-//                    guard let cell = self?.collectionView.visibleCells.first,
-//                          let indexpath = self?.collectionView.indexPath(for: cell) else { return }
-
+                    // locate indexpath from cell with pickerImgae
                     guard let cell = self?.stepImageViewCell,
                           let indexpath = self?.collectionView.indexPath(for: cell) else { return }
 
                     // replace cell's image with pickerImgae
-                    // self?.stepImageViewCell?.imageViewUploadedImage.loadImage(self?.steps?[indexpath.row].image)
                     self?.stepImageViewCell?.setImage(with: image, at: indexpath.row)
 
                     // write in steps data
