@@ -193,27 +193,27 @@ class EditViewModel {
                 print("Create fail, failure: \(error)")
             }
         }
-        print(recipe)
+
+        print("Initial recipe: \(recipe)")
     }
 
     func createFeed(with feed: inout Feed) {
 
-//        DataManager.shared.createRecipe(feed: &Feed) { result in
-//
-//            switch result {
-//
-//            case .success(let documentId):
-//
-//                print("ID: \(documentId) CookBook Created")
-//
-//                // 用回傳的 documentId 再去發一次請求
-//                self.fetchRecipe(documentId: documentId)
-//
-//            case .failure(let error):
-//
-//                print("Create fail, failure: \(error)")
-//            }
-//        }
+        DataManager.shared.createFeed(feed: &feed) { result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("ID: \(documentId) Feed Created")
+
+            case .failure(let error):
+
+                print("Create fail, failure: \(error)")
+            }
+        }
+
+        print("Initial recipe: \(feed)")
     }
 
     func fetchRecipe(documentId: String) {
@@ -248,19 +248,21 @@ class EditViewModel {
         return viewModel
     }
 
-//    func convertViewModelToFeed(from viewModel: RecipeViewModel) -> Feed {
-//
-//        let feed = Feed(
-//            id: viewModel.id,
-//            challenger: "",
-//            createdTime: Date().millisecondsSince1970,
-//            isChallenged: false,
-//            mainImage: String(describing: viewModel.mainImage),
-//            name: <#T##String#>,
-//            ownerId: <#T##String#>,
-//            portrait: <#T##String#>,
-//            recipeId: <#T##String#>,
-//            recipeName: <#T##String#>
-//        )
-//    }
+    func convertRecipeToFeed(from recipe: Recipe) -> Feed {
+
+        let feed = Feed(
+            id: "FeedDocumentId",
+            challenger: "",
+            createdTime: Date().millisecondsSince1970,
+            isChallenged: false,
+            mainImage: recipe.mainImage,
+            name: "UserName",
+            ownerId: "UserDocumentId",
+            portrait: "UserPortrait",
+            recipeId: recipe.id!,
+            recipeName: recipe.name
+        )
+
+        return feed
+    }
 }

@@ -32,8 +32,16 @@ class EditDoneViewController: UIViewController {
 
     @IBAction func shareFeedAndLeave(_ sender: Any) {
 
-        // 這邊寫上傳Feed
-        // let viewModel = viewModel?.recipeViewModel.value
+        guard let viewModel = viewModel else { return }
+
+        // convert recipe data to feed
+        guard let recipe = viewModel.recipeViewModel.value?.recipe else { return }
+
+        // VM's convert function
+        var feed = viewModel.convertRecipeToFeed(from: recipe)
+
+        // VM's create Feed function
+        viewModel.createFeed(with: &feed)
 
         // share on feed logic
         navigationController?.popToRootViewController(animated: true)

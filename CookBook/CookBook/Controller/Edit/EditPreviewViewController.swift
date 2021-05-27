@@ -93,14 +93,15 @@ class EditPreviewViewController: UIViewController {
         navigationController?.pushViewController(editDoneVC, animated: true)
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        // pass final data to EditDone
-        editDoneVC.viewModel = viewModel
 
+        // assign latest mainImage data
         guard let value = viewModel?.recipeViewModel.value,
               let mainImage = value.recipe.steps.last?.image else { return }
 
         viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
+
+        // pass latest recipe data to EditDone
+        editDoneVC.viewModel = viewModel
     }
 
     @IBAction func onChangeSections(_ sender: UIButton) {
