@@ -78,7 +78,7 @@
                                 <rect key="frame" x="229.33333333333334" y="726.66666666666663" width="20" height="22"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="goReadMode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E7W-Mg-S97"/>
+                                    <action selector="goReadModePage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E7W-Mg-S97"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">

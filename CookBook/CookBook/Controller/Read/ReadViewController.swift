@@ -30,10 +30,15 @@ class ReadViewController: UIViewController {
         setupRecipePreview()
     }
 
-    @IBAction func goReadMode(_ sender: Any) {
+    @IBAction func goReadModePage(_ sender: Any) {
 
         guard let readModeVC = storyboard?
             .instantiateViewController(withIdentifier: "ReadMode") as? ReadModeViewController else { return }
+
+        guard let recipe = recipe else { return }
+
+        // pass data to ReadModePage
+        readModeVC.recipe = recipe
 
         present(readModeVC, animated: true, completion: nil)
     }

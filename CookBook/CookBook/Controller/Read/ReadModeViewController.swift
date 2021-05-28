@@ -21,6 +21,8 @@ class ReadModeViewController: UIViewController {
     // CustomFlow Layout Outlet
     @IBOutlet weak var snapCollectionFlowLayout: SnapCollectionFlowLayout!
 
+    var recipe: Recipe?
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -62,7 +64,10 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 6
+        guard let recipe = recipe else { return 1 }
+
+        // total counts = steps counts + ingredients count
+        return recipe.steps.count + 1
     }
 
 

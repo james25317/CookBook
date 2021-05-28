@@ -11,20 +11,20 @@ import Firebase
 class ReadViewModel {
 
     // init Recipe
-    var recipe = Recipe(
-        id: "recipeDocumentId",
-        createdTime: Timestamp.init(),
-        description: "",
-        favoritesUserId: [],
-        ingredients: [],
-        isEditDone: Bool.init(),
-        likedUserId: [],
-        likes: 0,
-        mainImage: "",
-        name: "",
-        ownerId: "",
-        steps: []
-    )
+//    var recipe = Recipe(
+//        id: "recipeDocumentId",
+//        createdTime: Timestamp.init(),
+//        description: "",
+//        favoritesUserId: [],
+//        ingredients: [],
+//        isEditDone: Bool.init(),
+//        likedUserId: [],
+//        likes: 0,
+//        mainImage: "",
+//        name: "",
+//        ownerId: "",
+//        steps: []
+//    )
 
     // var recipe: Recipe?
 
