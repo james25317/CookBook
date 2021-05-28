@@ -12,6 +12,8 @@ class HomeViewModel {
     // 這邊 Sign 進 Box 的事 FeedVM 初始值 (也就是一開始View會接到的值)
     let feedViewModels = Box([FeedViewModel]())
 
+    var recipe: Recipe?
+
     func fetchFeedsData() {
 
         DataManager.shared.fetchFeeds { [weak self] result in
@@ -27,6 +29,46 @@ class HomeViewModel {
             case .failure(let error):
 
                 print("\(error)")
+            }
+        }
+    }
+
+//    func fetchRecipe(reciepeId: String) {
+//
+//        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
+//
+//            switch result {
+//
+//            case .success(let recipe):
+//
+//                print("Fetch recipe success!")
+//
+//                self?.recipe = recipe
+//
+//            case .failure(let error):
+//
+//                print("fetchData.failure: \(error)")
+//            }
+//        }
+//    }
+
+    func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
+
+        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
+
+            switch result {
+
+            case .success(let recipe):
+
+                print("Fetch recipe success!")
+
+                completion(.success(recipe))
+
+            case .failure(let error):
+
+                print("fetchData.failure: \(error)")
+
+                completion(.failure(error))
             }
         }
     }

@@ -149,8 +149,29 @@ extension HomeViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
 
         guard let readVC = UIStoryboard.read
-                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
-        navigationController?.pushViewController(readVC, animated: true)
+        // 拿 recipeId(feed.recipeId)
+        let selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+
+        let recipeId = selectedFeed.recipeId
+
+        // 去拿 Recipe 資料回傳
+        viewModel.fetchRecipe(reciepeId: recipeId) { [weak self] result in
+
+            switch result {
+
+            case .failure(let error):
+
+                print("Error: \(error)")
+
+            case .success(let recipe):
+
+                // 拿回傳的資料傳過去
+                readVC.recipe = recipe
+
+                self?.navigationController?.pushViewController(readVC, animated: true)
+            }
+        }
     }
 }

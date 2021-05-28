@@ -35,6 +35,7 @@
 		7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */; };
 		7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1BA93264E4C9200B8ED13 /* ProfileCollectionViewCell.swift */; };
 		7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA97264E678000B8ED13 /* Read.storyboard */; };
+		7FC23EBB265FED1B00522ED4 /* ReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */; };
 		7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE21429264E769100208667 /* ReadStepsCollectionViewCell.swift */; };
 		7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */; };
 		7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */; };
@@ -106,6 +107,7 @@
 		7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		7FA1BA93264E4C9200B8ED13 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FA1BA97264E678000B8ED13 /* Read.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
+		7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModel.swift; sourceTree = "<group>"; };
 		7FE21429264E769100208667 /* ReadStepsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadStepsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadStepsCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIngredientsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				7F13B1662656AD3E0042F3EC /* ProfileViewModel.swift */,
 				7F13B15E265688D10042F3EC /* RecipeViewModel.swift */,
 				7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */,
+				7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -315,13 +318,13 @@
 		7FA1BA81264CC84200B8ED13 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				7F7C736A265DDE2A00D1AFD4 /* Edit */,
+				7FFCF08C2654B70D0082ED8E /* Challenge.storyboard */,
 				7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */,
 				7FA1BA83264CD1A900B8ED13 /* Main.storyboard */,
 				7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */,
 				7FA1BA97264E678000B8ED13 /* Read.storyboard */,
 				7F284C31264BC19C001A0B4E /* Today.storyboard */,
-				7FFCF08C2654B70D0082ED8E /* Challenge.storyboard */,
+				7F7C736A265DDE2A00D1AFD4 /* Edit */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
 				7F13B161265689330042F3EC /* Recipe.swift in Sources */,
 				7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */,
+				7FC23EBB265FED1B00522ED4 /* ReadViewModel.swift in Sources */,
 				7FFCF07E26526C7F0082ED8E /* EditPreviewViewController.swift in Sources */,
 				7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */,
 				7F7C7365265D341100D1AFD4 /* EditStepsCollectionViewCell.swift in Sources */,

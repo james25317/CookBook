@@ -9,6 +9,8 @@ import UIKit
 
 class ReadViewController: UIViewController {
 
+    var recipe: Recipe?
+
     override func viewDidLoad() {
 
         super.viewDidLoad()

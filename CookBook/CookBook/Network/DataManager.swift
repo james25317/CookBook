@@ -147,11 +147,7 @@ class DataManager {
 
                     do {
 
-                        if var recipe = try document.data(as: Recipe.self) {
-
-                            recipe.id = documentId
-
-                            // 寫入 userId
+                        if let recipe = try document.data(as: Recipe.self) {
 
                             completion(.success(recipe))
                         }
