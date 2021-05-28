@@ -66,8 +66,10 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         guard let recipe = recipe else { return 1 }
 
-        // total counts = steps counts + ingredients count
-        return recipe.steps.count + 1
+        // total counts = steps counts + ingredients count(not yet)
+        // return recipe.steps.count + 1
+
+        return 1
     }
 
 
@@ -78,9 +80,15 @@ extension ReadModeViewController: UICollectionViewDataSource {
             for: indexPath
         )
 
-        guard let readCell = cell as? ReadStepsCollectionViewCell else { return cell }
+        // guard let readStepCell = cell as? ReadStepsCollectionViewCell else { return cell }
 
-        return readCell
+        guard let readIngredientCell = cell as? ReadIngredientsCollectionViewCell else { return cell }
+
+        guard let recipe = recipe else { return cell }
+
+        // readStepCell.setupCell(with: recipe.steps[indexPath.row], at: indexPath.row, total: recipe.steps.count + 1)
+
+        return readIngredientCell
     }
 }
 

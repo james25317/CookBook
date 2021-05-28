@@ -37,11 +37,11 @@
                                 <rect key="frame" x="370" y="851" width="20" height="22"/>
                                 <state key="normal" image="arrow.right" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
                                 <rect key="frame" x="24" y="598.33333333333337" width="366" height="237.33333333333337"/>
                                 <string key="text">Heat the remaining tablespoon of oil in the pan over a high heat. Add the onion and pepper, then season with salt and pepper. Fry for 2 minutes, then add the garlic and ginger, if using, and fry for a further minute.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -83,6 +83,11 @@
                 <constraint firstAttribute="bottom" secondItem="w8O-FW-BT3" secondAttribute="bottom" id="lsS-Wm-Bbn"/>
                 <constraint firstAttribute="trailing" secondItem="w8O-FW-BT3" secondAttribute="trailing" id="tyd-SD-KrN"/>
             </constraints>
+            <connections>
+                <outlet property="imageViewStepImage" destination="tTS-Jc-8Mn" id="OYJ-l0-006"/>
+                <outlet property="labelStepCounts" destination="VLb-CQ-LbS" id="lmk-Fw-C1Q"/>
+                <outlet property="textViewStepDescription" destination="XRy-Rs-eqJ" id="uld-K4-pKg"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </collectionViewCell>
     </objects>

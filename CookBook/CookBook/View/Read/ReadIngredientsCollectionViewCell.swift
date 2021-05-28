@@ -10,8 +10,8 @@ import UIKit
 class ReadIngredientsCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
+
         super.awakeFromNib()
-        // Initialization code
     }
 
 }
