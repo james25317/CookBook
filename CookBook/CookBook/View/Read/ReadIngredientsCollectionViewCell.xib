@@ -27,19 +27,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-og-zFn">
-                                <rect key="frame" x="24" y="24" width="366" height="717"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="717"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WHL-og-zFn" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" constant="24" id="3QF-iB-wnA"/>
+                            <constraint firstItem="WHL-og-zFn" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" id="3QF-iB-wnA"/>
                             <constraint firstItem="Bca-3e-xFI" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" constant="24" id="3r1-FM-hUo"/>
                             <constraint firstItem="WHL-og-zFn" firstAttribute="height" secondItem="W2J-NS-pUL" secondAttribute="height" multiplier="0.8" id="BRn-3m-tiV"/>
                             <constraint firstAttribute="trailing" secondItem="Bca-3e-xFI" secondAttribute="trailing" constant="24" id="Cvn-8O-RZb"/>
                             <constraint firstAttribute="bottom" secondItem="Bca-3e-xFI" secondAttribute="bottom" constant="72" id="Ha8-l2-5fY"/>
-                            <constraint firstAttribute="trailing" secondItem="WHL-og-zFn" secondAttribute="trailing" constant="24" id="U6G-MU-mkV"/>
-                            <constraint firstItem="WHL-og-zFn" firstAttribute="top" secondItem="W2J-NS-pUL" secondAttribute="top" constant="24" id="lUp-lb-ZiU"/>
+                            <constraint firstAttribute="trailing" secondItem="WHL-og-zFn" secondAttribute="trailing" id="U6G-MU-mkV"/>
+                            <constraint firstItem="WHL-og-zFn" firstAttribute="top" secondItem="W2J-NS-pUL" secondAttribute="top" id="lUp-lb-ZiU"/>
                             <constraint firstItem="Bca-3e-xFI" firstAttribute="centerX" secondItem="W2J-NS-pUL" secondAttribute="centerX" id="seh-Rj-UJG"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

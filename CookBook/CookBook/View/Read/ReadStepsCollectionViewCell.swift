@@ -20,7 +20,7 @@ class ReadStepsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func setupCell(with step: Step, at index: Int, total: Int) {
+    func layoutCell(with step: Step, at index: Int, total: Int) {
 
         imageViewStepImage.loadImage(step.image)
 

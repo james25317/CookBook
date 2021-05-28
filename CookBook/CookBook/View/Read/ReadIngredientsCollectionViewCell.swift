@@ -11,6 +11,8 @@ class ReadIngredientsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var viewModel: ReadViewModel?
+
     override func awakeFromNib() {
 
         super.awakeFromNib()
@@ -29,7 +31,10 @@ class ReadIngredientsCollectionViewCell: UICollectionViewCell {
 extension ReadIngredientsCollectionViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 6
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipe else { return 1 }
+
+        return recipe.ingredients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,6 +45,13 @@ extension ReadIngredientsCollectionViewCell: UITableViewDataSource {
         )
 
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
+
+        guard let viewModel = viewModel,
+              let recipe = viewModel.recipe else { return cell }
+
+        ingredientCell.buttonDelete.isHidden = true
+
+        ingredientCell.layoutCell(with: recipe.ingredients[indexPath.row])
 
         return ingredientCell
     }

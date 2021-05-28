@@ -68,19 +68,25 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         // guard let recipe = recipe else { return 1 }
 
-        guard let viewModel = viewModel else { return 1 }
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipe else { return 1 }
 
         // total counts = steps counts + ingredients count(not yet)
         // return recipe.steps.count + 1
 
-        return viewModel.recipe?.steps.count ?? 1
+        return 1
     }
 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+//        let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
+//            for: indexPath
+//        )
+
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
+            withReuseIdentifier: String(describing: ReadIngredientsCollectionViewCell.self),
             for: indexPath
         )
 
@@ -88,9 +94,12 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         guard let readIngredientCell = cell as? ReadIngredientsCollectionViewCell else { return cell }
 
-        guard let recipe = viewModel?.recipe else { return cell }
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipe else { return cell }
 
-        // readStepCell.setupCell(with: recipe.steps[indexPath.row], at: indexPath.row, total: recipe.steps.count + 1)
+        readIngredientCell.viewModel = viewModel
+
+        // readStepCell.layoutCell(with: recipe.steps[indexPath.row], at: indexPath.row, total: recipe.steps.count + 1)
 
         return readIngredientCell
     }
