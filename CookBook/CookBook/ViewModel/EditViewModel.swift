@@ -168,9 +168,33 @@ class EditViewModel {
             case .success:
 
                 print("Steps updated, success")
+                
             case .failure(let error):
 
                 print("Updated fail, failure: \(error)")
+            }
+        }
+    }
+
+    func updateMainImage(with mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        guard let documentId = recipeViewModel.value?.recipe.id else { return }
+
+        DataManager.shared.updateMainImage(documentId: documentId, mainImage: mainImage) { result in
+
+            switch result {
+
+            case .success(let mainImage):
+
+                print("MainImage updated, success")
+
+                completion(.success(mainImage))
+
+            case .failure(let error):
+
+                print("Updated fail, failure: \(error)")
+
+                completion(.failure(error))
             }
         }
     }
@@ -237,7 +261,7 @@ class EditViewModel {
 
     func setRecipe(_ recipe: Recipe) {
 
-        // 接回有了 documentId 的 recipe
+        // 接回有了 documentId 的 recipe 至 revipeViewModel.value (this is why.)
         recipeViewModel.value = convertRecipeToViewModel(from: recipe)
     }
 

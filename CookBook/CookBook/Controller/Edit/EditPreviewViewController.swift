@@ -88,9 +88,7 @@ class EditPreviewViewController: UIViewController {
     @IBAction func goEditDonePage(_ sender: Any) {
 
         guard let editDoneVC = UIStoryboard.editDone
-            .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
-
-        navigationController?.pushViewController(editDoneVC, animated: true)
+                .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -98,10 +96,29 @@ class EditPreviewViewController: UIViewController {
         guard let value = viewModel?.recipeViewModel.value,
               let mainImage = value.recipe.steps.last?.image else { return }
 
+        // assign 本地 mainImage 資料
         viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
 
-        // pass latest recipe data to EditDone
-        editDoneVC.viewModel = viewModel
+        // update MainImage
+        viewModel?.updateMainImage(with: mainImage) { [weak self] result in
+
+            switch result {
+
+            case .failure(let error):
+
+                print("updated error: \(error)")
+
+            case .success(let mainImage):
+
+                print("MainImage: \(mainImage) updated")
+
+                // pass latest recipe data to EditDone
+                editDoneVC.viewModel = self?.viewModel
+
+                self?.navigationController?.pushViewController(editDoneVC, animated: true)
+            }
+
+        }
     }
 
     @IBAction func onChangeSections(_ sender: UIButton) {

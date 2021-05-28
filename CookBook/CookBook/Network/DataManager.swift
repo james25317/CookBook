@@ -149,7 +149,7 @@ class DataManager {
 
                         if var recipe = try document.data(as: Recipe.self) {
 
-                            // important assaign (dont know why)
+                            // assign 
                             recipe.id = documentId
 
                             completion(.success(recipe))
@@ -202,6 +202,28 @@ class DataManager {
             } else {
 
                 print("Steps successfully updated")
+            }
+        }
+    }
+
+    func updateMainImage(documentId: String, mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新(覆寫) MainImage 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(["mainImage": mainImage]) { error in
+
+            if let error = error {
+
+                print("Error updating mainImage: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("MainImage successfully updated")
+
+                completion(.success(mainImage))
             }
         }
     }

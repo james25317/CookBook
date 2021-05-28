@@ -114,7 +114,7 @@
                             <constraint firstItem="wwE-mM-LJ2" firstAttribute="leading" secondItem="Xch-ag-hyF" secondAttribute="leading" constant="24" id="ihU-ww-TUB"/>
                             <constraint firstItem="Xch-ag-hyF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jhn-xm-cgq"/>
                             <constraint firstItem="Mdj-cb-a4k" firstAttribute="centerX" secondItem="oj6-xC-JfX" secondAttribute="centerX" id="jwt-8X-ASb"/>
-                            <constraint firstItem="1g5-u7-m5U" firstAttribute="firstBaseline" secondItem="avX-UU-qSw" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="koC-Oi-vNL"/>
+                            <constraint firstItem="1g5-u7-m5U" firstAttribute="firstBaseline" secondItem="avX-UU-qSw" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="koC-Oi-vNL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mIV-j4-Pse" secondAttribute="trailing" constant="16" id="kst-FH-r2d"/>
                             <constraint firstItem="hwQ-Qb-8D5" firstAttribute="centerX" secondItem="Z1G-rR-Ivp" secondAttribute="centerX" id="oHi-nv-7jh"/>
                             <constraint firstItem="3LF-bt-PYP" firstAttribute="firstBaseline" secondItem="1g5-u7-m5U" secondAttribute="baseline" constant="80" id="okG-yr-Afm"/>
@@ -123,6 +123,14 @@
                             <constraint firstItem="avX-UU-qSw" firstAttribute="firstBaseline" secondItem="hwQ-Qb-8D5" secondAttribute="firstBaseline" id="tRt-tw-OIP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewRecipeMainImage" destination="Xch-ag-hyF" id="LvM-Kb-4dW"/>
+                        <outlet property="labelIngredientsCounts" destination="avX-UU-qSw" id="0gR-ZC-501"/>
+                        <outlet property="labelLikesCounts" destination="Mdj-cb-a4k" id="wpR-Ij-by3"/>
+                        <outlet property="labelRecipeDescription" destination="du9-Z2-9Xi" id="T84-9c-dP8"/>
+                        <outlet property="labelRecipeName" destination="wwE-mM-LJ2" id="CQT-o9-jRU"/>
+                        <outlet property="labelStepsCounts" destination="hwQ-Qb-8D5" id="wiK-2m-g12"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
