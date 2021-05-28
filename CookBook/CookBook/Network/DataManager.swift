@@ -147,7 +147,10 @@ class DataManager {
 
                     do {
 
-                        if let recipe = try document.data(as: Recipe.self) {
+                        if var recipe = try document.data(as: Recipe.self) {
+
+                            // important assaign (dont know why)
+                            recipe.id = documentId
 
                             completion(.success(recipe))
                         }
