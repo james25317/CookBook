@@ -168,7 +168,9 @@ extension HomeViewController: UITableViewDelegate {
             case .success(let recipe):
 
                 // 拿回傳的資料傳過去
-                readVC.recipe = recipe
+                // readVC.recipe = recipe
+
+                readVC.viewModel.recipe = recipe
 
                 self?.navigationController?.pushViewController(readVC, animated: true)
             }

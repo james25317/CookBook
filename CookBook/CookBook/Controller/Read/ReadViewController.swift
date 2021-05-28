@@ -21,7 +21,9 @@ class ReadViewController: UIViewController {
 
     @IBOutlet weak var labelStepsCounts: UILabel!
 
-    var recipe: Recipe?
+    let viewModel = ReadViewModel()
+
+    // var recipe: Recipe?
 
     override func viewDidLoad() {
 
@@ -35,17 +37,17 @@ class ReadViewController: UIViewController {
         guard let readModeVC = storyboard?
             .instantiateViewController(withIdentifier: "ReadMode") as? ReadModeViewController else { return }
 
-        guard let recipe = recipe else { return }
+        // guard let recipe = viewModel.recipe else { return }
 
         // pass data to ReadModePage
-        readModeVC.recipe = recipe
+        readModeVC.viewModel = viewModel
 
         present(readModeVC, animated: true, completion: nil)
     }
 
     private func setupRecipePreview() {
 
-        guard let recipe = recipe else { return }
+        guard let recipe = viewModel.recipe else { return }
 
         imageViewRecipeMainImage.loadImage(recipe.mainImage)
 
