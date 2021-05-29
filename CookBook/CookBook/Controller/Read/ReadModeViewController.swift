@@ -39,8 +39,6 @@ class ReadModeViewController: UIViewController {
 
     @IBAction func returnToFirstPage(_ sender: Any) {
 
-        print("return button tapped")
-
         // scroll on top
         collectionView.scrollToItem(
             at: IndexPath(row: 0, section: 0),
@@ -51,15 +49,16 @@ class ReadModeViewController: UIViewController {
 
     @IBAction func saveToFavorites(_ sender: Any) {
 
-        print("save button tapped")
+        // 1. prevent double likes logic (with UserDocumentId check)
+
+        // "UserDocumentId" after sign in with store
+        // In ProfilePage's Favorites sections, query Fb for Recipe that has my "UserDocumentId"
 
         guard let viewModel = viewModel,
               let recipe = viewModel.recipe,
               let documentId = recipe.id else { return }
 
-        // prevent double likes logic (with UserDocumentId check)
-
-        // update +1 in "likes" table
+        // 2. update +1 to "likes" table
         viewModel.updateLikes(with: documentId) { [weak self] result in
 
             switch result {
@@ -74,8 +73,7 @@ class ReadModeViewController: UIViewController {
             }
         }
 
-        // update favoritesUserId
-        // "UserDocumentId" after sign in with store
+        // 3. update favoritesUserId
         viewModel.updatefavoritesUserId(with: documentId, favoritesUserId: "UserDocumentId") { result in
 
             switch result {
@@ -130,7 +128,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         if indexPath.row == 0 {
 
-            // goes readStepCell
+            // go readStepCell
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: String(describing: ReadIngredientsCollectionViewCell.self),
                 for: indexPath
@@ -149,7 +147,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         } else {
 
-            // goes readIngredientCell
+            // go readIngredientCell
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
                 for: indexPath
