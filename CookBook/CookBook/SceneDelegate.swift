@@ -39,6 +39,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+
+        // 以暫存的 uuid 作爲登入判斷
+        // 1. 沒有登入過，顯示登入頁面
+
+        // 2. 有登入過，顯示今日頁面
+        let storyboard = UIStoryboard.today
+
+        window?.rootViewController = storyboard.instantiateInitialViewController()
+
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
