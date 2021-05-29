@@ -208,7 +208,7 @@
                                             <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium"/>
                                         </state>
                                         <connections>
-                                            <action selector="saveToFavorites:" destination="NTn-6P-TAi" eventType="touchUpInside" id="Ft5-Ag-ptA"/>
+                                            <action selector="saveToFavorites:" destination="NTn-6P-TAi" eventType="touchUpInside" id="YYI-qQ-eRn"/>
                                         </connections>
                                     </button>
                                 </subviews>

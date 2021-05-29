@@ -42,7 +42,7 @@ class ReadViewController: UIViewController {
         // pass data to ReadModePage
         readModeVC.viewModel = viewModel
 
-        present(readModeVC, animated: true, completion: nil)
+        self.present(readModeVC, animated: true, completion: nil)
     }
 
     private func setupRecipePreview() {

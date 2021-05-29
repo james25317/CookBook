@@ -18,7 +18,7 @@ struct Recipe: Identifiable, Codable {
     var ingredients: [Ingredient]
     var isEditDone: Bool
     var likedUserId: [String]
-    var likes: Int
+    var likes: Int64
     var mainImage: String
     var name: String
     var ownerId: String

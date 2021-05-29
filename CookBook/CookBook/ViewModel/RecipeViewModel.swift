@@ -61,7 +61,7 @@ class RecipeViewModel {
         }
     }
     
-    var likes: Int {
+    var likes: Int64 {
         get {
             return recipe.likes
         }

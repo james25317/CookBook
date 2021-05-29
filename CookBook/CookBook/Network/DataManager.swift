@@ -228,6 +228,54 @@ class DataManager {
         }
     }
 
+    func updateLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 likes 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(
+            ["likes": FieldValue.increment(Int64(1))]
+        ) { error in
+
+            if let error = error {
+
+                print("Error increase likes: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("\(documentId): Likes successfully increased!")
+
+                completion(.success(documentId))
+            }
+        }
+    }
+
+    func updatefavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 favoritesUserId 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(
+            ["favoritesUserId": FieldValue.arrayUnion([favoritesUserId])]
+        ) { error in
+
+            if let error = error {
+
+                print("Error update favoritesUserId: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("\(documentId): favoritesUserId successfully updated!")
+
+                completion(.success(documentId))
+            }
+        }
+    }
+
     func createRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = db.collection(Collections.recipe.rawValue).document()

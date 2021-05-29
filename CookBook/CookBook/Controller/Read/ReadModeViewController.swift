@@ -50,7 +50,41 @@ class ReadModeViewController: UIViewController {
 
         print("save button tapped")
 
+        guard let viewModel = viewModel,
+              let recipe = viewModel.recipe,
+              let documentId = recipe.id else { return }
+
         // update +1 in "likes" table
+        viewModel.updateLikes(with: documentId) { [weak self] result in
+
+            switch result {
+
+            case .success(_):
+
+                print("Likes increased!")
+
+            case .failure(let error):
+
+                print(error)
+            }
+        }
+
+        // update favoritesUserId
+        // "UserDocumentId" after sign in with store
+//        viewModel.updatefavoritesUserId(with: documentId, favoritesUserId: "UserDocumentId") { result in
+//
+//            switch result {
+//
+//            case .success(_):
+//
+//                print("FavoritesUserId updated!")
+//
+//            case .failure(let error):
+//
+//                print(error)
+//            }
+//        }
+
         // prevent double likes
     }
 
