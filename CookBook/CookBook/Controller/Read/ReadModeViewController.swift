@@ -71,21 +71,22 @@ class ReadModeViewController: UIViewController {
 
         // update favoritesUserId
         // "UserDocumentId" after sign in with store
-//        viewModel.updatefavoritesUserId(with: documentId, favoritesUserId: "UserDocumentId") { result in
-//
-//            switch result {
-//
-//            case .success(_):
-//
-//                print("FavoritesUserId updated!")
-//
-//            case .failure(let error):
-//
-//                print(error)
-//            }
-//        }
+        viewModel.updatefavoritesUserId(with: documentId, favoritesUserId: "UserDocumentId") { result in
+
+            switch result {
+
+            case .success(_):
+
+                print("FavoritesUserId updated!")
+
+            case .failure(let error):
+
+                print(error)
+            }
+        }
 
         // prevent double likes
+        
     }
 
     private func setupCollecitonView() {
