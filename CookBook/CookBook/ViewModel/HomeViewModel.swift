@@ -33,25 +33,6 @@ class HomeViewModel {
         }
     }
 
-//    func fetchRecipe(reciepeId: String) {
-//
-//        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
-//
-//            switch result {
-//
-//            case .success(let recipe):
-//
-//                print("Fetch recipe success!")
-//
-//                self?.recipe = recipe
-//
-//            case .failure(let error):
-//
-//                print("fetchData.failure: \(error)")
-//            }
-//        }
-//    }
-
     func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in

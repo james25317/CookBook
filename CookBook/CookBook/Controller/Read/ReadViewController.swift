@@ -29,12 +29,10 @@ class ReadViewController: UIViewController {
 
             guard let recipeId = recipeId else { return }
 
-            // fetch Recipe(with snapshotListener)
+            // fetch Recipe (snapshotListener 實時更新)
             fetchRecipe(with: recipeId)
         }
     }
-
-    // var recipe: Recipe?
 
     override func viewDidLoad() {
 
@@ -46,8 +44,6 @@ class ReadViewController: UIViewController {
         guard let readModeVC = storyboard?
             .instantiateViewController(withIdentifier: "ReadMode") as? ReadModeViewController else { return }
 
-        // guard let recipe = viewModel.recipe else { return }
-
         // pass data to ReadModePage
         readModeVC.viewModel = viewModel
 
@@ -56,7 +52,7 @@ class ReadViewController: UIViewController {
 
     private func fetchRecipe(with recipeId: String) {
 
-        // 去拿 Recipe
+        // 拿 Recipe
         viewModel.fetchRecipe(reciepeId: recipeId) { [weak self] result in
 
             switch result {
@@ -67,19 +63,16 @@ class ReadViewController: UIViewController {
 
             case .success(let recipe):
 
-                // 拿回傳的資料傳過去
-                // readVC.recipe = recipe
-
+                // 監聽值變動，回傳並賦值 recipe
                 self?.viewModel.recipe = recipe
 
+                // 監聽值變動，更新資料
                 self?.setupRecipePreview(with: recipe)
             }
         }
     }
 
     private func setupRecipePreview(with recipe: Recipe) {
-
-        // guard let recipe = viewModel.recipe else { return }
 
         imageViewRecipeMainImage.loadImage(recipe.mainImage)
 
