@@ -23,13 +23,22 @@ class ReadViewController: UIViewController {
 
     let viewModel = ReadViewModel()
 
+    var recipeId: String? {
+
+        didSet {
+
+            guard let recipeId = recipeId else { return }
+
+            // fetch Recipe(with snapshotListener)
+            fetchRecipe(with: recipeId)
+        }
+    }
+
     // var recipe: Recipe?
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
-        setupRecipePreview()
     }
 
     @IBAction func goReadModePage(_ sender: Any) {
@@ -45,9 +54,32 @@ class ReadViewController: UIViewController {
         self.present(readModeVC, animated: true, completion: nil)
     }
 
-    private func setupRecipePreview() {
+    private func fetchRecipe(with recipeId: String) {
 
-        guard let recipe = viewModel.recipe else { return }
+        // 去拿 Recipe
+        viewModel.fetchRecipe(reciepeId: recipeId) { [weak self] result in
+
+            switch result {
+
+            case .failure(let error):
+
+                print("Error: \(error)")
+
+            case .success(let recipe):
+
+                // 拿回傳的資料傳過去
+                // readVC.recipe = recipe
+
+                self?.viewModel.recipe = recipe
+
+                self?.setupRecipePreview(with: recipe)
+            }
+        }
+    }
+
+    private func setupRecipePreview(with recipe: Recipe) {
+
+        // guard let recipe = viewModel.recipe else { return }
 
         imageViewRecipeMainImage.loadImage(recipe.mainImage)
 
