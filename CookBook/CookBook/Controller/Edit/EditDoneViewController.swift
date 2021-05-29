@@ -43,7 +43,11 @@ class EditDoneViewController: UIViewController {
         // VM's create Feed function
         viewModel.createFeed(with: &feed)
 
-        navigationController?.popToRootViewController(animated: true)
+        // go back to HomeVC by checking HomeVC is in NC or not
+        guard let navigationController = navigationController,
+            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+
+        navigationController.popToViewController(homeVC, animated: true)
     }
 
     @IBAction func shareFeedChallengeAndLeave(_ sender: Any) {
@@ -56,7 +60,10 @@ class EditDoneViewController: UIViewController {
 
         viewModel.createFeed(with: &feed)
 
-        navigationController?.popToRootViewController(animated: true)
+        guard let navigationController = navigationController,
+            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+
+        navigationController.popToViewController(homeVC, animated: true)
     }
 
     @IBAction func backToHome(_ sender: Any) {
@@ -64,11 +71,9 @@ class EditDoneViewController: UIViewController {
         // share nothing, save to profile
 
         // Try this way
-        navigationController?.popToRootViewController(animated: true)
+        guard let navigationController = navigationController,
+            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
 
-        // or this way
-        // guard let homeVC = UIStoryboard.main.instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
-
-        // navigationController?.pushViewController(homeVC, animated: true)
+        navigationController.popToViewController(homeVC, animated: true)
     }
 }
