@@ -23,8 +23,6 @@ class ReadModeViewController: UIViewController {
 
     var viewModel: ReadViewModel?
 
-    // var recipe: Recipe?
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -43,7 +41,12 @@ class ReadModeViewController: UIViewController {
 
         print("return button tapped")
 
-        // scroll on top?
+        // scroll on top
+        collectionView.scrollToItem(
+            at: IndexPath(row: 0, section: 0),
+            at: .centeredHorizontally,
+            animated: true
+        )
     }
 
     @IBAction func saveToFavorites(_ sender: Any) {
@@ -53,6 +56,8 @@ class ReadModeViewController: UIViewController {
         guard let viewModel = viewModel,
               let recipe = viewModel.recipe,
               let documentId = recipe.id else { return }
+
+        // prevent double likes logic (with UserDocumentId check)
 
         // update +1 in "likes" table
         viewModel.updateLikes(with: documentId) { [weak self] result in
@@ -84,9 +89,6 @@ class ReadModeViewController: UIViewController {
                 print(error)
             }
         }
-
-        // prevent double likes
-        
     }
 
     private func setupCollecitonView() {
@@ -119,10 +121,8 @@ extension ReadModeViewController: UICollectionViewDataSource {
         guard let viewModel = viewModel,
               let recipe = viewModel.recipe else { return 1 }
 
-        // total counts = steps counts + ingredients count(not yet)
+        // total counts = steps counts + ingredients count
         return recipe.steps.count + 1
-
-        // return 1
     }
 
 
