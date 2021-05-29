@@ -40,8 +40,6 @@
 		7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */; };
 		7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */; };
 		7FE21430264E819F00208667 /* ReadIngredientsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */; };
-		7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE21431264E868700208667 /* ReadIngredientsTableViewCell.swift */; };
-		7FE21434264E868700208667 /* ReadIngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE21432264E868700208667 /* ReadIngredientsTableViewCell.xib */; };
 		7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE21436264F948F00208667 /* EditIngredientsTableViewCell.swift */; };
 		7FE21439264F948F00208667 /* EditIngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE21437264F948F00208667 /* EditIngredientsTableViewCell.xib */; };
 		7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */; };
@@ -112,8 +110,6 @@
 		7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadStepsCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIngredientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadIngredientsCollectionViewCell.xib; sourceTree = "<group>"; };
-		7FE21431264E868700208667 /* ReadIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIngredientsTableViewCell.swift; sourceTree = "<group>"; };
-		7FE21432264E868700208667 /* ReadIngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadIngredientsTableViewCell.xib; sourceTree = "<group>"; };
 		7FE21436264F948F00208667 /* EditIngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		7FE21437264F948F00208667 /* EditIngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditIngredientsTableViewCell.xib; sourceTree = "<group>"; };
 		7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsTableViewCell.swift; sourceTree = "<group>"; };
@@ -361,8 +357,6 @@
 			children = (
 				7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */,
 				7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */,
-				7FE21431264E868700208667 /* ReadIngredientsTableViewCell.swift */,
-				7FE21432264E868700208667 /* ReadIngredientsTableViewCell.xib */,
 				7FE21429264E769100208667 /* ReadStepsCollectionViewCell.swift */,
 				7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */,
 			);
@@ -495,7 +489,6 @@
 				7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */,
 				7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */,
 				7FFCF08D2654B70D0082ED8E /* Challenge.storyboard in Resources */,
-				7FE21434264E868700208667 /* ReadIngredientsTableViewCell.xib in Resources */,
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,
 				7FE21439264F948F00208667 /* EditIngredientsTableViewCell.xib in Resources */,
 				7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */,
@@ -581,7 +574,6 @@
 				7FFCF06B2650CED80082ED8E /* Feed.swift in Sources */,
 				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
 				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,
-				7FE21433264E868700208667 /* ReadIngredientsTableViewCell.swift in Sources */,
 				7F7C7363265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift in Sources */,
 				7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,

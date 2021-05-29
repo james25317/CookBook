@@ -180,6 +180,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="arrow.uturn.backward" catalog="system" symbolScale="medium"/>
                                         </state>
+                                        <connections>
+                                            <action selector="returnToFirstPage:" destination="NTn-6P-TAi" eventType="touchUpInside" id="C0h-tb-JIj"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P39-iZ-bcj" userLabel="Speaker Button">
                                         <rect key="frame" x="58.333333333333343" y="0.0" width="36" height="36"/>
@@ -204,6 +207,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveToFavorites:" destination="NTn-6P-TAi" eventType="touchUpInside" id="Ft5-Ag-ptA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -39,6 +39,21 @@ class ReadModeViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func returnToFirstPage(_ sender: Any) {
+
+        print("return button tapped")
+
+        // scroll on top?
+    }
+
+    @IBAction func saveToFavorites(_ sender: Any) {
+
+        print("save button tapped")
+
+        // update +1 in "likes" table
+        // prevent double likes
+    }
+
     private func setupCollecitonView() {
 
         collectionView.registerCellWithNib(
@@ -66,42 +81,58 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        // guard let recipe = recipe else { return 1 }
-
         guard let viewModel = viewModel,
-            let recipe = viewModel.recipe else { return 1 }
+              let recipe = viewModel.recipe else { return 1 }
 
         // total counts = steps counts + ingredients count(not yet)
-        // return recipe.steps.count + 1
+        return recipe.steps.count + 1
 
-        return 1
+        // return 1
     }
 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-//        let cell = collectionView.dequeueReusableCell(
-//            withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
-//            for: indexPath
-//        )
+        if indexPath.row == 0 {
 
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: String(describing: ReadIngredientsCollectionViewCell.self),
-            for: indexPath
-        )
+            // goes readStepCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: String(describing: ReadIngredientsCollectionViewCell.self),
+                for: indexPath
+            )
 
-        // guard let readStepCell = cell as? ReadStepsCollectionViewCell else { return cell }
+            guard let readIngredientCell = cell as? ReadIngredientsCollectionViewCell else { return cell }
 
-        guard let readIngredientCell = cell as? ReadIngredientsCollectionViewCell else { return cell }
+            guard let viewModel = viewModel,
+                let recipe = viewModel.recipe else { return cell }
 
-        guard let viewModel = viewModel,
-            let recipe = viewModel.recipe else { return cell }
+            readIngredientCell.viewModel = viewModel
 
-        readIngredientCell.viewModel = viewModel
+            readIngredientCell.layoutCell(with: recipe)
 
-        // readStepCell.layoutCell(with: recipe.steps[indexPath.row], at: indexPath.row, total: recipe.steps.count + 1)
+            return readIngredientCell
 
-        return readIngredientCell
+        } else {
+
+            // goes readIngredientCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
+                for: indexPath
+            )
+
+            guard let readStepCell = cell as? ReadStepsCollectionViewCell else { return cell }
+
+            guard let viewModel = viewModel,
+                  let recipe = viewModel.recipe else { return cell }
+
+            readStepCell.layoutCell(
+                with: recipe.steps[indexPath.row - 1],
+                at: indexPath.row,
+                total: recipe.steps.count
+            )
+
+            return readStepCell
+        }
     }
 }
 

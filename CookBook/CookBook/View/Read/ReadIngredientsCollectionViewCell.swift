@@ -11,11 +11,18 @@ class ReadIngredientsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var labelRecipeName: UILabel!
+
     var viewModel: ReadViewModel?
 
     override func awakeFromNib() {
 
         super.awakeFromNib()
+
+        setupTableView()
+    }
+
+    private func setupTableView() {
 
         tableView.delegate = self
 
@@ -25,6 +32,11 @@ class ReadIngredientsCollectionViewCell: UICollectionViewCell {
             identifier: String(describing: EditIngredientsTableViewCell.self),
             bundle: nil
         )
+    }
+
+    func layoutCell(with recipe: Recipe) {
+
+        labelRecipeName.text = recipe.name
     }
 }
 
@@ -47,7 +59,7 @@ extension ReadIngredientsCollectionViewCell: UITableViewDataSource {
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipe else { return cell }
+            let recipe = viewModel.recipe else { return cell }
 
         ingredientCell.buttonDelete.isHidden = true
 
@@ -55,8 +67,6 @@ extension ReadIngredientsCollectionViewCell: UITableViewDataSource {
 
         return ingredientCell
     }
-
-    
 }
 
 extension ReadIngredientsCollectionViewCell: UITableViewDelegate {

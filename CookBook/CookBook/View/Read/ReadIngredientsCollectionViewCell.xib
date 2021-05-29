@@ -21,26 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-3e-xFI">
-                                <rect key="frame" x="24" y="803" width="366" height="21"/>
+                                <rect key="frame" x="24" y="851" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-og-zFn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="717"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="717"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8z-CT-RGc">
+                                <rect key="frame" x="24" y="48" width="366" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="I8z-CT-RGc" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" constant="24" id="0jh-x1-MYU"/>
                             <constraint firstItem="WHL-og-zFn" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" id="3QF-iB-wnA"/>
+                            <constraint firstItem="I8z-CT-RGc" firstAttribute="top" secondItem="W2J-NS-pUL" secondAttribute="top" constant="48" id="3kz-7g-WcH"/>
                             <constraint firstItem="Bca-3e-xFI" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" constant="24" id="3r1-FM-hUo"/>
+                            <constraint firstItem="WHL-og-zFn" firstAttribute="top" secondItem="I8z-CT-RGc" secondAttribute="bottom" constant="24" id="8Zu-He-fwf"/>
+                            <constraint firstItem="I8z-CT-RGc" firstAttribute="centerX" secondItem="W2J-NS-pUL" secondAttribute="centerX" id="AOc-5v-Rs2"/>
                             <constraint firstItem="WHL-og-zFn" firstAttribute="height" secondItem="W2J-NS-pUL" secondAttribute="height" multiplier="0.8" id="BRn-3m-tiV"/>
                             <constraint firstAttribute="trailing" secondItem="Bca-3e-xFI" secondAttribute="trailing" constant="24" id="Cvn-8O-RZb"/>
-                            <constraint firstAttribute="bottom" secondItem="Bca-3e-xFI" secondAttribute="bottom" constant="72" id="Ha8-l2-5fY"/>
+                            <constraint firstAttribute="bottom" secondItem="Bca-3e-xFI" secondAttribute="bottom" constant="24" id="Ha8-l2-5fY"/>
                             <constraint firstAttribute="trailing" secondItem="WHL-og-zFn" secondAttribute="trailing" id="U6G-MU-mkV"/>
-                            <constraint firstItem="WHL-og-zFn" firstAttribute="top" secondItem="W2J-NS-pUL" secondAttribute="top" id="lUp-lb-ZiU"/>
                             <constraint firstItem="Bca-3e-xFI" firstAttribute="centerX" secondItem="W2J-NS-pUL" secondAttribute="centerX" id="seh-Rj-UJG"/>
+                            <constraint firstAttribute="trailing" secondItem="I8z-CT-RGc" secondAttribute="trailing" constant="24" id="usa-t0-oW8"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -64,6 +74,7 @@
                 <constraint firstItem="W2J-NS-pUL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kDz-7e-FAK"/>
             </constraints>
             <connections>
+                <outlet property="labelRecipeName" destination="I8z-CT-RGc" id="E6P-NW-xCG"/>
                 <outlet property="tableView" destination="WHL-og-zFn" id="nK8-ve-l5Z"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
