@@ -13,6 +13,8 @@ class TodayViewController: UIViewController {
 
     @IBOutlet weak var imageViewRecipeVideo: UIImageView!
 
+    let viewModel = TodayViewModel()
+
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
@@ -28,7 +30,15 @@ class TodayViewController: UIViewController {
 
         super.viewDidLoad()
 
-        // fetch 今日的資料
+        viewModel.todayRecipeViewModel.bind { [weak self] todayRecipe in
+
+            // 資料更新後的行為
+        }
+
+        // fetch video 資料回 VM.value
+        viewModel.fetchTodayRecipeData()
+
+        // query recipe 資料
 
         setupTodayRecipeTapGesture()
 
@@ -83,10 +93,13 @@ class TodayViewController: UIViewController {
         guard let todayVideoVC = storyboard?
                 .instantiateViewController(withIdentifier: "TodayVideo") as? TodayVideoViewController else { return }
 
-        navigationController?.pushViewController(todayVideoVC, animated: true)
-
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         navigationItem.backBarButtonItem?.tintColor = .white
+
+        // fetch 資料到資料後，傳 VM 過去
+        todayVideoVC.viewModel = viewModel
+
+        navigationController?.pushViewController(todayVideoVC, animated: true)
     }
 }

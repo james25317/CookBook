@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
-struct Video: Identifiable, Codable {
+struct TodayRecipe: Identifiable, Codable {
 
     @DocumentID public var id: String?
     var videoId: String

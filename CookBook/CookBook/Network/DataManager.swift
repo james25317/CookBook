@@ -16,6 +16,13 @@ enum Collections: String {
     case user = "User"
 
     case recipe = "Recipe"
+
+    case today = "Today"
+}
+
+enum Document: String {
+
+    case todayRecipe = "TodayRecipe"
 }
 
 // What's this?
@@ -34,6 +41,7 @@ class DataManager {
 
     lazy var db = Firestore.firestore()
 
+    // MARK: Feeds
     func fetchFeeds(completion: @escaping (Result<[Feed], Error>) -> Void) {
 
         db.collection(Collections.feed.rawValue)
@@ -61,7 +69,6 @@ class DataManager {
                         } catch {
 
                             completion(.failure(error))
-                            // completion(.failure(FirebaseError.documentError))
                         }
                     }
 
@@ -71,6 +78,7 @@ class DataManager {
             }
     }
 
+    // MARK: User
     func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
 
         // 可以用 where 篩出 appleId
@@ -99,6 +107,7 @@ class DataManager {
             })
     }
 
+    // MARK: Recipes
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
@@ -132,6 +141,7 @@ class DataManager {
             }
     }
 
+    // MARK: Recipe
     func fetchRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
@@ -162,6 +172,37 @@ class DataManager {
             })
     }
 
+    // MARK: TodayRecipe
+    func fetchTodayRecipe(completion: @escaping (Result<TodayRecipe, Error>) -> Void) {
+
+        db.collection(Collections.today.rawValue)
+            .document(Document.todayRecipe.rawValue)
+            .addSnapshotListener { documentSnapshot, error in
+
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    guard let document = documentSnapshot else { return }
+
+                    do {
+
+                        if var todayRecipe = try document.data(as: TodayRecipe.self) {
+
+                            todayRecipe.id = document.documentID
+
+                            completion(.success(todayRecipe))
+                        }
+                    } catch {
+
+                        completion(.failure(error))
+                    }
+                }
+            }
+    }
+
+    // MARK: Ingredients (update)
     func updateIngredients(documentId: String, ingredients: [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Ingredient 欄位
@@ -184,6 +225,7 @@ class DataManager {
         }
     }
 
+    // MARK: Steps (update)
     func updateSteps(documentId: String, steps: [Step], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Step 欄位
@@ -206,6 +248,7 @@ class DataManager {
         }
     }
 
+    // MARK: MainImage (update)
     func updateMainImage(documentId: String, mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) MainImage 欄位
@@ -228,6 +271,7 @@ class DataManager {
         }
     }
 
+    // MARK: Likes (update)
     func updateLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
@@ -252,6 +296,7 @@ class DataManager {
         }
     }
 
+    // MARK: FavoritesUserId (update)
     func updatefavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 favoritesUserId 欄位
@@ -276,6 +321,7 @@ class DataManager {
         }
     }
 
+    // MARK: Recipe (Add)
     func createRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = db.collection(Collections.recipe.rawValue).document()
@@ -300,6 +346,7 @@ class DataManager {
         }
     }
 
+    // MARK: Feed (Add)
     func createFeed(feed: inout Feed, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = db.collection(Collections.feed.rawValue).document()

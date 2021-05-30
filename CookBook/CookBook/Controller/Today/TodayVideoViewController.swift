@@ -12,6 +12,8 @@ class TodayVideoViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
 
+    var viewModel: TodayViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,13 +23,15 @@ class TodayVideoViewController: UIViewController {
     private func loadWebView() {
 
         // load videoId data from Fb
+        guard let viewModel = viewModel,
+              let value = viewModel.todayRecipeViewModel.value else { return }
 
-        let videoId = "-PsVtCdEwlI"
+        let videoId = value.videoId
 
         guard let url = URL(
             string: "https://www.youtube.com/embed/" + String(describing: videoId)
         ) else { return }
-
+        
         webView.load(URLRequest(url: url))
 
         webView.allowsBackForwardNavigationGestures = true

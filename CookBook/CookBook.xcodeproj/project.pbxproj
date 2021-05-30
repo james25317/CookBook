@@ -45,7 +45,9 @@
 		7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */; };
 		7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */; };
 		7FE2C2082663746600FCEAE3 /* TodayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C2072663746600FCEAE3 /* TodayVideoViewController.swift */; };
-		7FE2C20B266390D500FCEAE3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20A266390D500FCEAE3 /* Video.swift */; };
+		7FE2C20B266390D500FCEAE3 /* TodayRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20A266390D500FCEAE3 /* TodayRecipe.swift */; };
+		7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */; };
+		7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */; };
 		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
 		7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */; };
 		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
@@ -117,7 +119,9 @@
 		7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsTableViewCell.swift; sourceTree = "<group>"; };
 		7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditStepsTableViewCell.xib; sourceTree = "<group>"; };
 		7FE2C2072663746600FCEAE3 /* TodayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVideoViewController.swift; sourceTree = "<group>"; };
-		7FE2C20A266390D500FCEAE3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		7FE2C20A266390D500FCEAE3 /* TodayRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipe.swift; sourceTree = "<group>"; };
+		7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
+		7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipeViewModel.swift; sourceTree = "<group>"; };
 		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
@@ -276,7 +280,7 @@
 				7F13B160265689330042F3EC /* Recipe.swift */,
 				7F13B16426568BB90042F3EC /* Step.swift */,
 				7F7C735C26589CED00D1AFD4 /* User.swift */,
-				7FE2C20A266390D500FCEAE3 /* Video.swift */,
+				7FE2C20A266390D500FCEAE3 /* TodayRecipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +295,8 @@
 				7F13B15E265688D10042F3EC /* RecipeViewModel.swift */,
 				7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */,
 				7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */,
+				7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */,
+				7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -599,6 +605,7 @@
 				7F7C7365265D341100D1AFD4 /* EditStepsCollectionViewCell.swift in Sources */,
 				7F13B16526568BB90042F3EC /* Step.swift in Sources */,
 				7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */,
+				7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7F7C735D26589CED00D1AFD4 /* User.swift in Sources */,
 				7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */,
@@ -615,12 +622,13 @@
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,
-				7FE2C20B266390D500FCEAE3 /* Video.swift in Sources */,
+				7FE2C20B266390D500FCEAE3 /* TodayRecipe.swift in Sources */,
 				7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,
 				7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */,
 				7FFCF0922654E8C70082ED8E /* SnapCollectionFlowLayout.swift in Sources */,
 				7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */,
+				7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */,
 				7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */,
 				7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */,
 				7FFCF07A26523C000082ED8E /* EditViewController.swift in Sources */,
