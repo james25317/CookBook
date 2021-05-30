@@ -11,6 +11,8 @@ class TodayViewModel {
 
     let todayRecipeViewModel: Box<TodayRecipeViewModel?> = Box(nil)
 
+    var recipe: Recipe?
+
     // fetch collection("Today").document("TodayRecipe")
     func fetchTodayRecipeData() {
 
@@ -21,6 +23,25 @@ class TodayViewModel {
             case .success(let todayRecipe):
 
                 self?.setTodayRecipe(todayRecipe)
+
+            case .failure(let error):
+
+                print("fetchData failure: \(error)")
+            }
+        }
+    }
+
+    // query collection("Recipe").whereField("ownerId", isEqualTo: "official")
+    func fetchOfficialRecipeData() {
+
+        DataManager.shared.fetchOfficialRecipe { [weak self] result in
+
+            switch result {
+
+            case .success(let officialRecipe):
+
+                // assign official recipe data
+                self?.recipe = officialRecipe
 
             case .failure(let error):
 

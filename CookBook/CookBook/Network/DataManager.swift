@@ -202,6 +202,45 @@ class DataManager {
             }
     }
 
+    // MARK: OfficialRecipe (Query)
+    func fetchOfficialRecipe(completion: @escaping (Result<Recipe, Error>) -> Void) {
+
+        db.collection(Collections.recipe.rawValue)
+            .whereField("ownerId", isEqualTo: "official")
+            .getDocuments { querySnapshot, error in
+
+                if let error = error {
+
+                    print("Error getting documents: \(error)")
+
+                    completion(.failure(error))
+                } else {
+
+                    guard let querySnapshot = querySnapshot else { return }
+
+                    for document in querySnapshot.documents {
+
+                        print("\(document.documentID) => \(document.data())")
+
+                    }
+
+                    do {
+
+                        // there is only one "official" recipe
+                        if var officialRecipe = try querySnapshot.documents.first?.data(as: Recipe.self) {
+
+                            officialRecipe.id = querySnapshot.documents.first?.documentID
+
+                            completion(.success(officialRecipe))
+                        }
+                    } catch {
+
+                        completion(.failure(error))
+                    }
+                }
+            }
+    }
+
     // MARK: Ingredients (update)
     func updateIngredients(documentId: String, ingredients: [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 

@@ -39,6 +39,7 @@ class TodayViewController: UIViewController {
         viewModel.fetchTodayRecipeData()
 
         // query recipe 資料
+        viewModel.fetchOfficialRecipeData()
 
         setupTodayRecipeTapGesture()
 
@@ -81,9 +82,14 @@ class TodayViewController: UIViewController {
         guard let readVC = UIStoryboard.read
                 .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
-        navigationController?.pushViewController(readVC, animated: true)
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        // fetch 到資料後，傳 recipeId 過去
+        guard let recipe = self.viewModel.recipe else { return }
+
+        readVC.recipeId = recipe.id
+
+        navigationController?.pushViewController(readVC, animated: true)
     }
 
     @objc func goTodayRecipeVideo() {
@@ -97,7 +103,7 @@ class TodayViewController: UIViewController {
 
         navigationItem.backBarButtonItem?.tintColor = .white
 
-        // fetch 資料到資料後，傳 VM 過去
+        // fetch 到資料後，傳 VM 過去
         todayVideoVC.viewModel = viewModel
 
         navigationController?.pushViewController(todayVideoVC, animated: true)
