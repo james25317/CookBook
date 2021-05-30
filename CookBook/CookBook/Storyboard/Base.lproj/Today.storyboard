@@ -50,6 +50,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-VT-5um" userLabel="VideoView">
                                 <rect key="frame" x="24" y="472" width="366" height="180"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-Z5-oU4">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Video Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50T-64-6Gd">
                                         <rect key="frame" x="8" y="149" width="350" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
@@ -59,9 +63,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iAN-Z5-oU4" secondAttribute="trailing" id="5XM-LZ-S4A"/>
+                                    <constraint firstItem="iAN-Z5-oU4" firstAttribute="top" secondItem="ppZ-VT-5um" secondAttribute="top" id="BgE-Tc-4gT"/>
+                                    <constraint firstAttribute="bottom" secondItem="iAN-Z5-oU4" secondAttribute="bottom" id="Ea0-Fn-G2r"/>
                                     <constraint firstAttribute="height" constant="180" id="GXj-2R-2fM"/>
                                     <constraint firstAttribute="trailing" secondItem="50T-64-6Gd" secondAttribute="trailing" constant="8" id="TKa-z9-udo"/>
                                     <constraint firstAttribute="bottom" secondItem="50T-64-6Gd" secondAttribute="bottom" constant="8" id="Z6M-Mx-0El"/>
+                                    <constraint firstItem="iAN-Z5-oU4" firstAttribute="leading" secondItem="ppZ-VT-5um" secondAttribute="leading" id="bCx-jB-IYy"/>
                                     <constraint firstItem="50T-64-6Gd" firstAttribute="leading" secondItem="ppZ-VT-5um" secondAttribute="leading" constant="8" id="erF-Y3-7F1"/>
                                 </constraints>
                             </view>
@@ -100,12 +108,47 @@
                     <navigationItem key="navigationItem" id="dE9-b7-IgP"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="recipeImageView" destination="BCZ-ez-t4f" id="uJK-at-uiG"/>
+                        <outlet property="imageViewRecipeVideo" destination="iAN-Z5-oU4" id="83s-1o-mmm"/>
+                        <outlet property="imageViewTodayRecipe" destination="BCZ-ez-t4f" id="uJK-at-uiG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="113.83928571428571"/>
+        </scene>
+        <!--Today Video View Controller-->
+        <scene sceneID="BP5-I1-aAv">
+            <objects>
+                <viewController storyboardIdentifier="TodayVideo" id="OlT-ST-KV1" customClass="TodayVideoViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98I-4L-HCo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zB-Kh-fhF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gBa-0V-Qf7"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8zB-Kh-fhF" firstAttribute="top" secondItem="gBa-0V-Qf7" secondAttribute="top" id="aZx-ou-Okb"/>
+                            <constraint firstItem="gBa-0V-Qf7" firstAttribute="bottom" secondItem="8zB-Kh-fhF" secondAttribute="bottom" id="cHg-Kk-v9s"/>
+                            <constraint firstItem="8zB-Kh-fhF" firstAttribute="leading" secondItem="gBa-0V-Qf7" secondAttribute="leading" id="iUs-bN-KBG"/>
+                            <constraint firstItem="gBa-0V-Qf7" firstAttribute="trailing" secondItem="8zB-Kh-fhF" secondAttribute="trailing" id="vi5-j0-WVR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="8zB-Kh-fhF" id="yls-jk-M3r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76p-pm-ZdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I5G-zs-fdU">

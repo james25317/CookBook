@@ -54,7 +54,7 @@ class EditViewController: UIViewController {
 
         // go EditPreview Page
         guard let previewVC = storyboard?
-                .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+            .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
 
         navigationController?.pushViewController(previewVC, animated: true)
 
