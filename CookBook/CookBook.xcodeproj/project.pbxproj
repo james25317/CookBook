@@ -45,6 +45,7 @@
 		7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */; };
 		7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */; };
 		7FE2C2082663746600FCEAE3 /* TodayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C2072663746600FCEAE3 /* TodayVideoViewController.swift */; };
+		7FE2C20B266390D500FCEAE3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20A266390D500FCEAE3 /* Video.swift */; };
 		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
 		7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */; };
 		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
@@ -116,6 +117,7 @@
 		7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStepsTableViewCell.swift; sourceTree = "<group>"; };
 		7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditStepsTableViewCell.xib; sourceTree = "<group>"; };
 		7FE2C2072663746600FCEAE3 /* TodayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVideoViewController.swift; sourceTree = "<group>"; };
+		7FE2C20A266390D500FCEAE3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
@@ -270,10 +272,11 @@
 			isa = PBXGroup;
 			children = (
 				7FFCF06A2650CED80082ED8E /* Feed.swift */,
-				7F13B160265689330042F3EC /* Recipe.swift */,
 				7F13B16226568AFA0042F3EC /* Ingredient.swift */,
+				7F13B160265689330042F3EC /* Recipe.swift */,
 				7F13B16426568BB90042F3EC /* Step.swift */,
 				7F7C735C26589CED00D1AFD4 /* User.swift */,
+				7FE2C20A266390D500FCEAE3 /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,
+				7FE2C20B266390D500FCEAE3 /* Video.swift in Sources */,
 				7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,
 				7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */,
