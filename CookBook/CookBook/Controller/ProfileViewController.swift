@@ -11,14 +11,6 @@ import FirebaseFirestoreSwift
 
 class ProfileViewController: UIViewController {
 
-    private var type: ProfileViewModel.SortType = .recipes {
-
-        didSet {
-
-            collectionView.reloadData()
-        }
-    }
-
     @IBOutlet var profileView: UIView!
 
     @IBOutlet weak var imageViewUserPortrait: UIImageView!
@@ -51,6 +43,15 @@ class ProfileViewController: UIViewController {
 
     let viewModel = ProfileViewModel()
 
+    // 一旦根據按鈕的 type 被按到，type 賦值觸發 reloadData()
+    private var type: ProfileViewModel.SortType = .recipes {
+
+        didSet {
+
+            collectionView.reloadData()
+        }
+    }
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -71,8 +72,6 @@ class ProfileViewController: UIViewController {
         // UserDocumentId -> Sign In Data
         let ownerId = "UserDocumentId"
 
-        // viewModel.fetchRecipesData()
-
         viewModel.fetchOwnerRecipesData(with: ownerId)
 
         viewModel.fetchFavoritesRecipesData(with: ownerId)
@@ -84,8 +83,6 @@ class ProfileViewController: UIViewController {
         setupProfileInfo()
 
         setupCollectionView()
-
-        // sortButtons[ProfileViewModel.SortType.recipes.rawValue].isSelected = true
 
         sortButtons.first!.isSelected = true
 
@@ -103,6 +100,7 @@ class ProfileViewController: UIViewController {
 
         moveIndicatorView(reference: sender)
 
+        // 根據 button.tag 決定 ViewModel 資料切換的 type
         guard let type = ProfileViewModel.SortType(rawValue: sender.tag) else { return }
 
         self.type = type
@@ -208,7 +206,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return viewModel.filterSection(sortType: type).count
+        return viewModel.switchSection(sortType: type).count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -220,14 +218,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
-        let cellViewModel = self.viewModel.filterSection(sortType: type)[indexPath.row]
-
-        cellViewModel.onFetch = { [weak self] in
-
-            print("onFetch was activated")
-
-            self?.viewModel.fetchRecipesData()
-        }
+        let cellViewModel = self.viewModel.switchSection(sortType: type)[indexPath.row]
 
         recipeCell.setup(viewModel: cellViewModel)
 
@@ -251,9 +242,7 @@ extension ProfileViewController: UICollectionViewDelegate {
 
         // 傳 Id
         readVC.recipeId = recipeId
-
-        // readVC.setupRecipePreview(with: selectedRecipe)
-
+        
         self.navigationController?.pushViewController(readVC, animated: true)
     }
 }

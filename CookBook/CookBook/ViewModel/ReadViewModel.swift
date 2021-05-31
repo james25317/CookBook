@@ -11,9 +11,7 @@ import Firebase
 class ReadViewModel {
 
     let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
-
-    // var recipe: Recipe?
-
+    
     func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void = { _ in }) {
 
         DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
@@ -24,6 +22,7 @@ class ReadViewModel {
 
                 print("Fetch recipe success!")
 
+                // 回傳的 Recipe 至 Box<RecipeViewModel?> 監聽
                 self?.recipeViewModel.value = RecipeViewModel(model: recipe)
 
                 completion(.success(recipe))

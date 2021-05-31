@@ -52,18 +52,22 @@ class EditViewController: UIViewController {
 
         // 創立使用者後，以 UserVM 裡的資料提供
         let ownerId = "UserDocumentId"
+        let mockUser = "SADUxqR04ihqg1XUgDHn"
 
         // create Recipe, get documentId then fetch Recipe with it
         viewModel.createRecipeData(with: &viewModel.recipe, with: ownerId)
+
+        // Increased Recipes counts
+        viewModel.updateRecipesCounts(with: mockUser)
 
         // go EditPreview Page
         guard let previewVC = storyboard?
             .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
 
-        navigationController?.pushViewController(previewVC, animated: true)
-
         // pass VM
         previewVC.viewModel = viewModel
+
+        navigationController?.pushViewController(previewVC, animated: true)
     }
 
     @IBAction func closePage(_ sender: Any) {

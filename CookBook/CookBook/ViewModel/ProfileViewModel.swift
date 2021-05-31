@@ -41,8 +41,10 @@ class ProfileViewModel {
         }
     }
 
-    func filterSection(sortType: SortType) -> [RecipeViewModel] {
+    // 根據 button.tag 切換資料內容（利用 filter 出資料）
+    func switchSection(sortType: SortType) -> [RecipeViewModel] {
 
+        // UserDocumentId 登入後再賦予
         switch sortType {
 
         case .recipes:
@@ -63,7 +65,7 @@ class ProfileViewModel {
 
             return recipeViewModels.value.filter { recipeViewModel in
 
-                recipeViewModel.recipe.challenger.contains("UserDocumentId")
+                recipeViewModel.recipe.challenger == "UserDocumentId"
             }
         }
     }

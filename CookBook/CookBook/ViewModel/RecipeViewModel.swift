@@ -16,9 +16,7 @@ class RecipeViewModel {
 
         self.recipe = recipe
     }
-
-    var onFetch: (() -> Void)?
-
+    
     var id: String {
         get {
             return recipe.id ?? ""

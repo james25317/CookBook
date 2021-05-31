@@ -201,6 +201,24 @@ class EditViewModel {
         }
     }
 
+    func updateRecipesCounts(with userDocumentId: String) {
+
+        DataManager.shared.updateRecipesCounts(userDocumentId: userDocumentId) { result in
+
+            switch result {
+
+            case .success(let userDocumentId):
+
+                print("\(userDocumentId): RecipesCounts increase 1")
+
+            case .failure(let error):
+
+                print(error)
+            }
+
+        }
+    }
+
     func createRecipeData(with recipe: inout Recipe, with ownerId: String) {
 
         DataManager.shared.createRecipe(recipe: &recipe, ownerId: ownerId) { result in

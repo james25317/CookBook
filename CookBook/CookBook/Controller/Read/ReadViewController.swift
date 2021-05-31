@@ -25,15 +25,6 @@ class ReadViewController: UIViewController {
 
     var recipeId: String?
 
-//        didSet {
-//
-//            guard let recipeId = recipeId else { return }
-//
-//            // fetch Recipe (snapshotListener 實時更新)
-//             fetchRecipe(with: recipeId)
-//        }
-//    }
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -69,44 +60,5 @@ class ReadViewController: UIViewController {
         readModeVC.viewModel = viewModel
 
         self.present(readModeVC, animated: true, completion: nil)
-    }
-
-//    private func fetchRecipe(with recipeId: String) {
-//
-//        // 拿 Recipe
-//        viewModel.fetchRecipe(reciepeId: recipeId) { [weak self] result in
-//
-//            switch result {
-//
-//            case .failure(let error):
-//
-//                print("Error: \(error)")
-//
-//            case .success(let recipe):
-//
-//                // 監聽值變動，回傳並賦值 recipe
-//                self?.viewModel.recipe = recipe
-//
-//                // 監聽值變動，更新資料
-//                // self?.setupRecipePreview(with: recipe)
-//            }
-//        }
-//    }
-
-    func setupRecipePreview(with recipe: Recipe) {
-
-        guard let imageViewRecipeMainImage = imageViewRecipeMainImage else { return }
-
-        imageViewRecipeMainImage.loadImage(recipe.mainImage)
-
-        labelRecipeName.text = recipe.name
-
-        labelRecipeDescription.text = recipe.description
-
-        labelLikesCounts.text = String(describing: recipe.likes)
-
-        labelIngredientsCounts.text = String(describing: recipe.ingredients.count)
-
-        labelStepsCounts.text = String(describing: recipe.steps.count)
     }
 }
