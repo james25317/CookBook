@@ -37,6 +37,7 @@ class EditViewController: UIViewController {
 
         setupTextView()
 
+        // for testing, disable for now
         // setupNextEntrance()
     }
     
@@ -49,8 +50,11 @@ class EditViewController: UIViewController {
 
     @IBAction func createCookBook(_ sender: Any) {
 
+        // 創立使用者後，以 UserVM 裡的資料提供
+        let ownerId = "UserDocumentId"
+
         // create Recipe, get documentId then fetch Recipe with it
-        viewModel.createRecipe(with: &viewModel.recipe)
+        viewModel.createRecipeData(with: &viewModel.recipe, with: ownerId)
 
         // go EditPreview Page
         guard let previewVC = storyboard?

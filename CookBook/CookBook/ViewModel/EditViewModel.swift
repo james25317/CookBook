@@ -199,9 +199,9 @@ class EditViewModel {
         }
     }
 
-    func createRecipe(with recipe: inout Recipe) {
+    func createRecipeData(with recipe: inout Recipe, with ownerId: String) {
 
-        DataManager.shared.createRecipe(recipe: &recipe) { result in
+        DataManager.shared.createRecipe(recipe: &recipe, ownerId: ownerId) { result in
 
             switch result {
 

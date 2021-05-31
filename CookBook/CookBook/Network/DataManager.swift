@@ -361,23 +361,26 @@ class DataManager {
     }
 
     // MARK: Recipe (Add)
-    func createRecipe(recipe: inout Recipe, completion: @escaping (Result<String, Error>) -> Void) {
+    func createRecipe(recipe: inout Recipe, ownerId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = db.collection(Collections.recipe.rawValue).document()
 
         // inout 屬性讓可以先 assign
         recipe.id = ref.documentID
 
+        // 寫入該帳號使用者的 Id (UserDocumentId, appleId?)
+        recipe.ownerId = ownerId
+
         try? ref.setData(from: recipe) { error in
 
             if let error = error {
 
-                print("Error adding document: \(error)")
+                // print("Error adding document: \(error)")
 
                 completion(.failure(error))
             } else {
 
-                print("Document added with ID: \(String(describing: ref.documentID))")
+                // print("Document added with ID: \(String(describing: ref.documentID))")
 
                 // 回傳新產生的 DocumentId
                 completion(.success(ref.documentID))
