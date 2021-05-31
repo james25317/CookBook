@@ -51,6 +51,25 @@ class ProfileViewModel {
         }
     }
 
+    func fetchOwnerRecipesData(with ownerId: String) {
+
+        DataManager.shared.fetchOwnerRecipes(ownerId: ownerId) { [weak self] result in
+
+            switch result {
+
+            case .success(let recipes):
+
+                print("Fetch \(ownerId) recipes success!")
+
+                self?.setRecipes(recipes)
+
+            case .failure(let error):
+
+                print("Fetch fail: \(error)")
+            }
+        }
+    }
+
     func convertUserToViewModel(from user: User) -> UserViewModel {
 
         let viewModel = UserViewModel(model: user)
@@ -77,8 +96,8 @@ class ProfileViewModel {
         userViewModel.value = convertUserToViewModel(from: user)
     }
 
-    func setRecipes(_ articles: [Recipe]) {
+    func setRecipes(_ recipes: [Recipe]) {
 
-        recipeViewModels.value = convertRecipesToViewModels(from: articles)
+        recipeViewModels.value = convertRecipesToViewModels(from: recipes)
     }
 }

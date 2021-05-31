@@ -68,9 +68,16 @@ class ProfileViewController: UIViewController {
             self?.setupProfileInfo()
         }
 
+        // fetch 資料
+        // 該 UserDocumentId
+
+        let ownerId = "UserDocumentId"
+
+        viewModel.fetchOwnerRecipesData(with: ownerId)
+
         viewModel.fetchUserData()
 
-        viewModel.fetchRecipesData()
+        //viewModel.fetchRecipesData()
 
         setupProfileInfo()
 

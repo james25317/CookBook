@@ -25,13 +25,30 @@ enum Document: String {
     case todayRecipe = "TodayRecipe"
 }
 
+enum Field: String {
+
+    case owner = "ownerId"
+
+    case favoritesUser = "favoritesUserId"
+
+    case likedUser = "likedUserId"
+
+    case challenge = "isChallenged"
+
+    case edit = "isEditDone"
+
+    case time = "createdTime"
+}
+
 // What's this?
 enum FirebaseError: Error {
+
     case documentError
 }
 
 // What's this?
 enum MainError: Error {
+
     case youKnowNothingError(String)
 }
 
@@ -121,13 +138,53 @@ class DataManager {
 
                     var recipes: [Recipe] = []
 
-                    for document in querySnapshot!.documents {
+                    guard let querySnapshot = querySnapshot else { return }
+
+                    for document in querySnapshot.documents {
 
                         print("\(document.documentID) => \(document.data())")
 
                         do {
 
                             if let recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+                                recipes.append(recipe)
+                            }
+                        } catch {
+
+                            completion(.failure(error))
+                        }
+                    }
+
+                    completion(.success(recipes))
+                }
+            }
+    }
+
+    // MARK: Recipes (by ownerId)
+    func fetchOwnerRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
+
+        db.collection(Collections.recipe.rawValue)
+            .whereField(Field.owner.rawValue, isEqualTo: ownerId)
+            .order(by: Field.time.rawValue, descending: true)
+            .getDocuments { querySnapshot, error in
+
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    var recipes: [Recipe] = []
+
+                    guard let querySnapshot = querySnapshot else { return }
+
+                    for document in querySnapshot.documents {
+
+                        print("\(document.documentID) => \(document.data())")
+
+                        do {
+
+                            if let recipe = try document.data(as: Recipe.self) {
+
                                 recipes.append(recipe)
                             }
                         } catch {
