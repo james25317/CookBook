@@ -90,4 +90,10 @@ class RecipeViewModel {
             return recipe.steps
         }
     }
+
+    var challenger: String {
+        get {
+            return recipe.challenger
+        }
+    }
 }

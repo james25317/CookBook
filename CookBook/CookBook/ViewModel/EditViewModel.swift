@@ -40,7 +40,9 @@ class EditViewModel {
             description: "請輸入步驟的描述",
             image: "https://loremflickr.com/320/240/food"
             )
-        ]
+        ],
+
+        challenger: ""
     )
 
     // init Ingredient

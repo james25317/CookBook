@@ -23,6 +23,7 @@ struct Recipe: Identifiable, Codable {
     var name: String
     var ownerId: String
     var steps: [Step]
+    var challenger: String
 
     enum CodingKeys: String, CodingKey {
         case createdTime,
@@ -35,7 +36,8 @@ struct Recipe: Identifiable, Codable {
              mainImage,
              name,
              ownerId,
-             steps
+             steps,
+             challenger
     }
 
     var toDict: [String: Any] {
@@ -50,7 +52,8 @@ struct Recipe: Identifiable, Codable {
             "mainImage": mainImage as Any,
             "name": name as Any,
             "ownerId": ownerId as Any,
-            "steps": steps as Any
+            "steps": steps as Any,
+            "challenger": challenger as Any
         ]
     }
 
