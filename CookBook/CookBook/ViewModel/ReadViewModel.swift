@@ -58,7 +58,25 @@ class ReadViewModel {
         }
     }
 
-    func updatefavoritesUserId(with documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateFavoritesCounts(with userDocumentId: String) {
+
+        DataManager.shared.updateFavoritesCounts(userDocumentId: userDocumentId) { result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("\(documentId): FavoritesCounts increase 1")
+
+            case .failure(let error):
+
+                print(error)
+            }
+
+        }
+    }
+
+    func updateFavoritesUserId(to documentId: String, with favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         DataManager.shared.updatefavoritesUserId(documentId: documentId, favoritesUserId: favoritesUserId) { [weak self] result in
 

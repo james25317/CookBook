@@ -53,12 +53,14 @@ class ReadModeViewController: UIViewController {
 
         // "UserDocumentId" after sign in with store
         // In ProfilePage's Favorites sections, query Fb for Recipe that has my "UserDocumentId"
+        let userDocumentId = "UserDocumentId"
+        let mockUserId = "SADUxqR04ihqg1XUgDHn"
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipeViewModel.value else { return }
+            let recipe = viewModel.recipeViewModel.value else { return }
 
         // 2. update +1 to "likes" table
-        viewModel.updateLikes(with: recipe.id) { [weak self] result in
+        viewModel.updateLikes(with: recipe.id) { result in
 
             switch result {
 
@@ -73,7 +75,7 @@ class ReadModeViewController: UIViewController {
         }
 
         // 3. update favoritesUserId
-        viewModel.updatefavoritesUserId(with: recipe.id, favoritesUserId: "UserDocumentId") { result in
+        viewModel.updateFavoritesUserId(to: recipe.id, with: userDocumentId) { result in
 
             switch result {
 
@@ -86,6 +88,9 @@ class ReadModeViewController: UIViewController {
                 print(error)
             }
         }
+
+        // 4. update favoritesCounts
+        viewModel.updateFavoritesCounts(with: mockUserId)
     }
 
     private func setupCollecitonView() {

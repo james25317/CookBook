@@ -480,6 +480,31 @@ class DataManager {
         }
     }
 
+    // MARK: FavoritesCounts (update)
+    func updateFavoritesCounts(userDocumentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 likes 欄位
+        let ref = db.collection(Collections.user.rawValue).document(userDocumentId)
+
+        ref.updateData(
+            ["favoritesCounts": FieldValue.increment(Int64(1))]
+        ) { error in
+
+            if let error = error {
+
+                print("Error increase favoritesCounts: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("\(userDocumentId): FavoritesCounts successfully increased!")
+
+                completion(.success(userDocumentId))
+            }
+        }
+    }
+
     // MARK: Likes (update)
     func updateLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
