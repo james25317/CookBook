@@ -9,7 +9,7 @@ import UIKit
 
 class ReadViewController: UIViewController {
 
-    @IBOutlet weak var imageViewRecipeMainImage: UIImageView!
+    @IBOutlet weak var imageViewRecipeMainImage: UIImageView?
 
     @IBOutlet weak var labelRecipeName: UILabel!
 
@@ -72,7 +72,9 @@ class ReadViewController: UIViewController {
         }
     }
 
-    private func setupRecipePreview(with recipe: Recipe) {
+    func setupRecipePreview(with recipe: Recipe) {
+
+        guard let imageViewRecipeMainImage = imageViewRecipeMainImage else { return }
 
         imageViewRecipeMainImage.loadImage(recipe.mainImage)
 

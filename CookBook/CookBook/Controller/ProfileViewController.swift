@@ -76,9 +76,9 @@ class ProfileViewController: UIViewController {
 
         viewModel.fetchOwnerRecipesData(with: ownerId)
 
-        // viewModel.fetchFavoritesRecipesData(with: ownerId)
+        viewModel.fetchFavoritesRecipesData(with: ownerId)
 
-        // viewModel.fetchChallengesRecipesData(with: ownerId)
+        viewModel.fetchChallengesRecipesData(with: ownerId)
 
         viewModel.fetchUserData()
 
@@ -194,7 +194,7 @@ class ProfileViewController: UIViewController {
         indicatorCenterXConstraint = indicatorView.centerXAnchor.constraint(equalTo: reference.centerXAnchor)
 
         indicatorCenterXConstraint.isActive = true
-
+        
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
 
             self?.view.layoutIfNeeded()
@@ -240,4 +240,23 @@ extension ProfileViewController: UICollectionViewDataSource {
 
 extension ProfileViewController: UICollectionViewDelegate {
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        collectionView.deselectItem(at: indexPath, animated: false)
+
+        guard let readVC = UIStoryboard.read
+                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+        // 取 recipeId (recipe.id)
+        let selectedItem = viewModel.recipeViewModels.value[indexPath.row].recipe
+
+        let recipeId = selectedItem.id
+
+        // 傳 Id
+        readVC.recipeId = recipeId
+
+        // readVC.setupRecipePreview(with: selectedRecipe)
+
+        self.navigationController?.pushViewController(readVC, animated: true)
+    }
 }

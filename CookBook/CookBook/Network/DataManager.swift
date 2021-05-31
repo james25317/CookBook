@@ -149,6 +149,7 @@ class DataManager {
                         do {
 
                             if let recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+
                                 recipes.append(recipe)
                             }
                         } catch {
@@ -185,7 +186,10 @@ class DataManager {
 
                         do {
 
-                            if let recipe = try document.data(as: Recipe.self) {
+                            if var recipe = try document.data(as: Recipe.self) {
+
+                                // assign documentId to each recipe
+                                recipe.id = document.documentID
 
                                 recipes.append(recipe)
                             }
@@ -200,11 +204,10 @@ class DataManager {
             }
     }
 
-    // MARK: Recipes (by ownerId, favoritesUserId)
+    // MARK: Recipes (by favoritesUserId)
     func fetchFavoritesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
-            .whereField(Field.owner.rawValue, isEqualTo: ownerId)
             .whereField(Field.favorites.rawValue, arrayContains: ownerId)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
@@ -224,7 +227,10 @@ class DataManager {
 
                         do {
 
-                            if let recipe = try document.data(as: Recipe.self) {
+                            if var recipe = try document.data(as: Recipe.self) {
+
+                                // assign documentId to each recipe
+                                recipe.id = document.documentID
 
                                 recipes.append(recipe)
                             }
@@ -239,11 +245,10 @@ class DataManager {
             }
     }
 
-    // MARK: Recipes (by ownerId, challenger)
+    // MARK: Recipes (by challenger)
     func fetchChallengesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
-            .whereField(Field.owner.rawValue, isEqualTo: ownerId)
             .whereField(Field.challenges.rawValue, isEqualTo: ownerId)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
@@ -263,7 +268,10 @@ class DataManager {
 
                         do {
 
-                            if let recipe = try document.data(as: Recipe.self) {
+                            if var recipe = try document.data(as: Recipe.self) {
+
+                                // assign documentId to each recipe
+                                recipe.id = document.documentID
 
                                 recipes.append(recipe)
                             }

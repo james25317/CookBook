@@ -30,16 +30,16 @@ class TodayViewController: UIViewController {
 
         super.viewDidLoad()
 
-        viewModel.todayRecipeViewModel.bind { [weak self] todayRecipe in
-
-            // 資料更新後的行為
-        }
-
         // fetch video 資料回 VM.value
         viewModel.fetchTodayRecipeData()
 
         // query recipe 資料
         viewModel.fetchOfficialRecipeData()
+
+        viewModel.todayRecipeViewModel.bind { [weak self] todayRecipe in
+
+            // 資料更新後的行為
+        }
 
         setupTodayRecipeTapGesture()
 

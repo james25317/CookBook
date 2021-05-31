@@ -33,26 +33,26 @@ class HomeViewModel {
         }
     }
 
-    func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
-
-        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
-
-            switch result {
-
-            case .success(let recipe):
-
-                print("Fetch recipe success!")
-
-                completion(.success(recipe))
-
-            case .failure(let error):
-
-                print("fetchData.failure: \(error)")
-
-                completion(.failure(error))
-            }
-        }
-    }
+//    func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
+//
+//        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
+//
+//            switch result {
+//
+//            case .success(let recipe):
+//
+//                print("Fetch recipe success!")
+//
+//                completion(.success(recipe))
+//
+//            case .failure(let error):
+//
+//                print("fetchData.failure: \(error)")
+//
+//                completion(.failure(error))
+//            }
+//        }
+//    }
 
     func convertFeedsToViewModels(from feeds: [Feed]) -> [FeedViewModel] {
 
