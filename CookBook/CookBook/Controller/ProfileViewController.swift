@@ -56,11 +56,13 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
+        // 綁定 Fb Recipes 資料
         viewModel.recipeViewModels.bind { [weak self] recipes in
 
             self?.collectionView.reloadData()
         }
 
+        // 綁定 Fb User 資料
         viewModel.userViewModel.bind { [weak self] user in
 
             self?.setupProfileInfo()
