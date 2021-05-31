@@ -55,11 +55,10 @@ class ReadModeViewController: UIViewController {
         // In ProfilePage's Favorites sections, query Fb for Recipe that has my "UserDocumentId"
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipe,
-              let documentId = recipe.id else { return }
+              let recipe = viewModel.recipeViewModel.value else { return }
 
         // 2. update +1 to "likes" table
-        viewModel.updateLikes(with: documentId) { [weak self] result in
+        viewModel.updateLikes(with: recipe.id) { [weak self] result in
 
             switch result {
 
@@ -74,7 +73,7 @@ class ReadModeViewController: UIViewController {
         }
 
         // 3. update favoritesUserId
-        viewModel.updatefavoritesUserId(with: documentId, favoritesUserId: "UserDocumentId") { result in
+        viewModel.updatefavoritesUserId(with: recipe.id, favoritesUserId: "UserDocumentId") { result in
 
             switch result {
 
@@ -117,7 +116,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipe else { return 1 }
+              let recipe = viewModel.recipeViewModel.value else { return 1 }
 
         // total counts = steps counts + ingredients count
         return recipe.steps.count + 1
@@ -137,11 +136,11 @@ extension ReadModeViewController: UICollectionViewDataSource {
             guard let readIngredientCell = cell as? ReadIngredientsCollectionViewCell else { return cell }
 
             guard let viewModel = viewModel,
-                let recipe = viewModel.recipe else { return cell }
+                  let recipe = viewModel.recipeViewModel.value else { return cell }
 
             readIngredientCell.viewModel = viewModel
 
-            readIngredientCell.layoutCell(with: recipe)
+            readIngredientCell.layoutCell(with: recipe.recipe)
 
             return readIngredientCell
 
@@ -156,7 +155,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
             guard let readStepCell = cell as? ReadStepsCollectionViewCell else { return cell }
 
             guard let viewModel = viewModel,
-                  let recipe = viewModel.recipe else { return cell }
+                  let recipe = viewModel.recipeViewModel.value else { return cell }
 
             readStepCell.layoutCell(
                 with: recipe.steps[indexPath.row - 1],

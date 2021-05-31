@@ -10,9 +10,11 @@ import Firebase
 
 class ReadViewModel {
 
-    var recipe: Recipe?
+    let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
 
-    func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
+    // var recipe: Recipe?
+
+    func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void = { _ in }) {
 
         DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
 
@@ -21,6 +23,8 @@ class ReadViewModel {
             case .success(let recipe):
 
                 print("Fetch recipe success!")
+
+                self?.recipeViewModel.value = RecipeViewModel(model: recipe)
 
                 completion(.success(recipe))
 

@@ -9,6 +9,15 @@ import Foundation
 
 class ProfileViewModel {
 
+    public enum SortType: Int {
+
+        case recipes = 0
+
+        case favorites = 1
+
+        case challenges = 2
+    }
+
     let userViewModel: Box<UserViewModel?> = Box(nil)
     
     let recipeViewModels: Box<[RecipeViewModel]> = Box([])
@@ -28,6 +37,33 @@ class ProfileViewModel {
             case .failure(let error):
 
                 print("fetchData.failure: \(error)")
+            }
+        }
+    }
+
+    func filterSection(sortType: SortType) -> [RecipeViewModel] {
+
+        switch sortType {
+
+        case .recipes:
+
+            return recipeViewModels.value.filter { recipeViewModel in
+
+                recipeViewModel.recipe.ownerId == "UserDocumentId"
+            }
+
+        case .favorites:
+
+            return recipeViewModels.value.filter { recipeViewModel in
+
+                recipeViewModel.recipe.favoritesUserId.contains("UserDocumentId")
+            }
+
+        case .challenges:
+
+            return recipeViewModels.value.filter { recipeViewModel in
+
+                recipeViewModel.recipe.challenger.contains("UserDocumentId")
             }
         }
     }

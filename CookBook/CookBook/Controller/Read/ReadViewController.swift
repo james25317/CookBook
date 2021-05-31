@@ -9,7 +9,7 @@ import UIKit
 
 class ReadViewController: UIViewController {
 
-    @IBOutlet weak var imageViewRecipeMainImage: UIImageView?
+    @IBOutlet weak var imageViewRecipeMainImage: UIImageView!
 
     @IBOutlet weak var labelRecipeName: UILabel!
 
@@ -23,20 +23,41 @@ class ReadViewController: UIViewController {
 
     let viewModel = ReadViewModel()
 
-    var recipeId: String? {
+    var recipeId: String?
 
-        didSet {
-
-            guard let recipeId = recipeId else { return }
-
-            // fetch Recipe (snapshotListener 實時更新)
-            fetchRecipe(with: recipeId)
-        }
-    }
+//        didSet {
+//
+//            guard let recipeId = recipeId else { return }
+//
+//            // fetch Recipe (snapshotListener 實時更新)
+//             fetchRecipe(with: recipeId)
+//        }
+//    }
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        viewModel.recipeViewModel.bind { [weak self] recipeViewModel in
+
+            guard let recipeViewModel = recipeViewModel else { return }
+
+            self?.imageViewRecipeMainImage.loadImage(recipeViewModel.recipe.mainImage)
+
+            self?.labelRecipeName.text = recipeViewModel.recipe.name
+
+            self?.labelRecipeDescription.text = recipeViewModel.recipe.description
+
+            self?.labelLikesCounts.text = String(describing: recipeViewModel.recipe.likes)
+
+            self?.labelIngredientsCounts.text = String(describing: recipeViewModel.recipe.ingredients.count)
+
+            self?.labelStepsCounts.text = String(describing: recipeViewModel.recipe.steps.count)
+        }
+
+        guard let recipeId = recipeId else { return }
+
+        viewModel.fetchRecipe(reciepeId: recipeId)
     }
 
     @IBAction func goReadModePage(_ sender: Any) {
@@ -50,27 +71,27 @@ class ReadViewController: UIViewController {
         self.present(readModeVC, animated: true, completion: nil)
     }
 
-    private func fetchRecipe(with recipeId: String) {
-
-        // 拿 Recipe
-        viewModel.fetchRecipe(reciepeId: recipeId) { [weak self] result in
-
-            switch result {
-
-            case .failure(let error):
-
-                print("Error: \(error)")
-
-            case .success(let recipe):
-
-                // 監聽值變動，回傳並賦值 recipe
-                self?.viewModel.recipe = recipe
-
-                // 監聽值變動，更新資料
-                self?.setupRecipePreview(with: recipe)
-            }
-        }
-    }
+//    private func fetchRecipe(with recipeId: String) {
+//
+//        // 拿 Recipe
+//        viewModel.fetchRecipe(reciepeId: recipeId) { [weak self] result in
+//
+//            switch result {
+//
+//            case .failure(let error):
+//
+//                print("Error: \(error)")
+//
+//            case .success(let recipe):
+//
+//                // 監聽值變動，回傳並賦值 recipe
+//                self?.viewModel.recipe = recipe
+//
+//                // 監聽值變動，更新資料
+//                // self?.setupRecipePreview(with: recipe)
+//            }
+//        }
+//    }
 
     func setupRecipePreview(with recipe: Recipe) {
 

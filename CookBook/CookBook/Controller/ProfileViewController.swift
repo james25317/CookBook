@@ -11,13 +11,12 @@ import FirebaseFirestoreSwift
 
 class ProfileViewController: UIViewController {
 
-    private enum SortType: Int {
+    private var type: ProfileViewModel.SortType = .recipes {
 
-        case recipes = 0
+        didSet {
 
-        case favorites = 1
-
-        case challenges = 2
+            collectionView.reloadData()
+        }
     }
 
     @IBOutlet var profileView: UIView!
@@ -69,7 +68,7 @@ class ProfileViewController: UIViewController {
         }
 
         // fetch 資料
-        // 該 UserDocumentId
+        // UserDocumentId -> Sign In Data
         let ownerId = "UserDocumentId"
 
         // viewModel.fetchRecipesData()
@@ -86,7 +85,10 @@ class ProfileViewController: UIViewController {
 
         setupCollectionView()
 
-        sortButtons[SortType.recipes.rawValue].isSelected = true
+        // sortButtons[ProfileViewModel.SortType.recipes.rawValue].isSelected = true
+
+        sortButtons.first!.isSelected = true
+
     }
 
 
@@ -101,9 +103,9 @@ class ProfileViewController: UIViewController {
 
         moveIndicatorView(reference: sender)
 
-        guard let type = SortType(rawValue: sender.tag) else { return }
+        guard let type = ProfileViewModel.SortType(rawValue: sender.tag) else { return }
 
-        updateCollectionView(type: type)
+        self.type = type
     }
 
     private func setupProfileInfo() {
@@ -200,18 +202,13 @@ class ProfileViewController: UIViewController {
             self?.view.layoutIfNeeded()
         })
     }
-
-    private func updateCollectionView(type: SortType) {
-
-        // 根據點擊的按鈕來源判斷向哪個 Collection 叫資料（？）
-    }
 }
 
 extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return viewModel.recipeViewModels.value.count
+        return viewModel.filterSection(sortType: type).count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -223,7 +220,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
-        let cellViewModel = self.viewModel.recipeViewModels.value[indexPath.item]
+        let cellViewModel = self.viewModel.filterSection(sortType: type)[indexPath.row]
 
         cellViewModel.onFetch = { [weak self] in
 

@@ -76,7 +76,6 @@ class TodayViewController: UIViewController {
         imageViewRecipeVideo.addGestureRecognizer(gesture)
     }
 
-
     @objc func goTodayReadPage() {
 
         guard let readVC = UIStoryboard.read
@@ -84,14 +83,15 @@ class TodayViewController: UIViewController {
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
+        navigationController?.pushViewController(readVC, animated: true)
+
         // fetch 到資料後，傳 recipeId 過去
         guard let recipe = self.viewModel.recipe else { return }
 
         readVC.recipeId = recipe.id
 
-        navigationController?.pushViewController(readVC, animated: true)
     }
-
+    
     @objc func goTodayRecipeVideo() {
 
         print("video start")
