@@ -29,11 +29,11 @@ enum Field: String {
 
     case owner = "ownerId"
 
-    case favoritesUser = "favoritesUserId"
+    case favorites = "favoritesUserId"
 
-    case likedUser = "likedUserId"
+    case challenges = "isChallenged"
 
-    case challenge = "isChallenged"
+    case liked = "likedUserId"
 
     case edit = "isEditDone"
 
@@ -165,6 +165,45 @@ class DataManager {
 
         db.collection(Collections.recipe.rawValue)
             .whereField(Field.owner.rawValue, isEqualTo: ownerId)
+            .order(by: Field.time.rawValue, descending: true)
+            .getDocuments { querySnapshot, error in
+
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    var recipes: [Recipe] = []
+
+                    guard let querySnapshot = querySnapshot else { return }
+
+                    for document in querySnapshot.documents {
+
+                        print("\(document.documentID) => \(document.data())")
+
+                        do {
+
+                            if let recipe = try document.data(as: Recipe.self) {
+
+                                recipes.append(recipe)
+                            }
+                        } catch {
+
+                            completion(.failure(error))
+                        }
+                    }
+
+                    completion(.success(recipes))
+                }
+            }
+    }
+
+    // MARK: Recipes (by ownerId, favoritesUserId)
+    func fetchFavoritesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
+
+        db.collection(Collections.recipe.rawValue)
+            .whereField(Field.owner.rawValue, isEqualTo: ownerId)
+            .whereField(Field.favorites.rawValue, arrayContains: ownerId)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
 

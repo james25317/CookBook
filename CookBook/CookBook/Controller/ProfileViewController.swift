@@ -70,14 +70,16 @@ class ProfileViewController: UIViewController {
 
         // fetch 資料
         // 該 UserDocumentId
-
         let ownerId = "UserDocumentId"
 
-        viewModel.fetchOwnerRecipesData(with: ownerId)
+        // viewModel.fetchRecipesData()
+
+        // viewModel.fetchOwnerRecipesData(with: ownerId)
+
+        // viewModel.fetchFavoritesRecipesData(with: ownerId)
 
         viewModel.fetchUserData()
 
-        //viewModel.fetchRecipesData()
 
         setupProfileInfo()
 

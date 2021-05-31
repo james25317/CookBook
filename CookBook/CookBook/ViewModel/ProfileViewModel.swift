@@ -70,6 +70,25 @@ class ProfileViewModel {
         }
     }
 
+    func fetchFavoritesRecipesData(with ownerId: String) {
+
+        DataManager.shared.fetchFavoritesRecipes(ownerId: ownerId) { [weak self] result in
+
+            switch result {
+
+            case .success(let recipes):
+
+                print("Fetch \(ownerId) favorites recipes success!")
+
+                self?.setRecipes(recipes)
+
+            case .failure(let error):
+
+                print("Fetch fail: \(error)")
+            }
+        }
+    }
+
     func convertUserToViewModel(from user: User) -> UserViewModel {
 
         let viewModel = UserViewModel(model: user)
