@@ -74,12 +74,13 @@ class ProfileViewController: UIViewController {
 
         // viewModel.fetchRecipesData()
 
-        // viewModel.fetchOwnerRecipesData(with: ownerId)
+        viewModel.fetchOwnerRecipesData(with: ownerId)
 
         // viewModel.fetchFavoritesRecipesData(with: ownerId)
 
-        viewModel.fetchUserData()
+        // viewModel.fetchChallengesRecipesData(with: ownerId)
 
+        viewModel.fetchUserData()
 
         setupProfileInfo()
 
