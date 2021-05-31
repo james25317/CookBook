@@ -221,7 +221,7 @@ class EditViewModel {
         print("Initial recipe: \(recipe)")
     }
 
-    func createFeed(with feed: inout Feed) {
+    func createFeedData(with feed: inout Feed) {
 
         DataManager.shared.createFeed(feed: &feed) { result in
 
@@ -281,7 +281,7 @@ class EditViewModel {
             isChallenged: !challengeOn,
             mainImage: recipe.mainImage,
             name: "UserName",
-            ownerId: "UserDocumentId",
+            ownerId: recipe.ownerId,
             portrait: "UserPortrait",
             recipeId: recipe.id!,
             recipeName: recipe.name

@@ -400,12 +400,12 @@ class DataManager {
 
             if let error = error {
 
-                print("Error adding document: \(error)")
+                // print("Error adding document: \(error)")
 
                 completion(.failure(error))
             } else {
 
-                print("Document added with ID: \(String(describing: ref.documentID))")
+                // print("Document added with ID: \(String(describing: ref.documentID))")
 
                 // 回傳新產生的 DocumentId
                 completion(.success(ref.documentID))

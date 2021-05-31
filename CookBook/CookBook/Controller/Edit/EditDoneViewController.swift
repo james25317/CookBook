@@ -37,11 +37,11 @@ class EditDoneViewController: UIViewController {
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value?.recipe else { return }
 
-        // VM's convert function
+        // convert Recipe to Feed (VM's convert function)
         var feed = viewModel.convertRecipeToFeed(from: recipe, challengeOn: false)
 
-        // VM's create Feed function
-        viewModel.createFeed(with: &feed)
+        // create a Feed (VM's create Feed function)
+        viewModel.createFeedData(with: &feed)
 
         // go back to HomeVC by checking HomeVC is in NC or not
         guard let navigationController = navigationController,
@@ -58,7 +58,7 @@ class EditDoneViewController: UIViewController {
 
         var feed = viewModel.convertRecipeToFeed(from: recipe, challengeOn: true)
 
-        viewModel.createFeed(with: &feed)
+        viewModel.createFeedData(with: &feed)
 
         guard let navigationController = navigationController,
             let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
