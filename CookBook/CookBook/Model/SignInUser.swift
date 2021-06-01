@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AuthenticationServices
 
 struct SignInUser {
 
@@ -13,6 +14,13 @@ struct SignInUser {
     let firstName: String
     let lastName: String
     let email: String
+
+    init(credentials: ASAuthorizationAppleIDCredential) {
+        self.id = credentials.user
+        self.firstName = credentials.fullName?.givenName ?? ""
+        self.lastName = credentials.fullName?.familyName ?? ""
+        self.email = credentials.email ?? ""
+    }
 }
 
 extension SignInUser: CustomDebugStringConvertible {
