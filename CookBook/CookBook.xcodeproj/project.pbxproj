@@ -21,6 +21,7 @@
 		7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */; };
 		7F5256702665C315005A2DB9 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F52566F2665C315005A2DB9 /* SignIn.storyboard */; };
 		7F5256722665C392005A2DB9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256712665C392005A2DB9 /* SignInViewController.swift */; };
+		7F5256742665E2AC005A2DB9 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */; };
 		7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */; };
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
@@ -99,6 +100,7 @@
 		7F52566E266553C4005A2DB9 /* CookBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookBook.entitlements; sourceTree = "<group>"; };
 		7F52566F2665C315005A2DB9 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		7F5256712665C392005A2DB9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditIngredients.storyboard; sourceTree = "<group>"; };
 		7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditSteps.storyboard; sourceTree = "<group>"; };
 		7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				7FFCF077265233820082ED8E /* UIStoryboard+Extension.swift */,
 				7FFCF0932654EB9F0082ED8E /* UICollectionView+Extension.swift */,
 				7F13B15C265557980042F3EC /* UIView+Extension.swift */,
+				7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				7FFCF06B2650CED80082ED8E /* Feed.swift in Sources */,
 				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
 				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,
+				7F5256742665E2AC005A2DB9 /* UserDefaults+Extension.swift in Sources */,
 				7F5256722665C392005A2DB9 /* SignInViewController.swift in Sources */,
 				7F7C7363265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift in Sources */,
 				7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */,

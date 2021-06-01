@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import FirebaseAuth
 import AuthenticationServices
+import CryptoKit
 
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var buttonView: UIView!
+
+    fileprivate var currentNonce: String?
+
+    var uid: String?
+
+    var name: String?
+
+    var email: String?
 
     override func viewDidLoad() {
 
@@ -48,6 +58,13 @@ class SignInViewController: UIViewController {
 
         request.requestedScopes = [.fullName, .email]
 
+        // SHA 字串上 Fb
+        let nonce = randomNonceString()
+
+        currentNonce = nonce
+
+        request.nonce = sha256(nonce)
+
         // SignIn popup menu
         let controller = ASAuthorizationController(authorizationRequests: [request])
 
@@ -72,36 +89,137 @@ class SignInViewController: UIViewController {
 
         authorizationController.performRequests()
     }
+
+    private func randomNonceString(length: Int = 32) -> String {
+        precondition(length > 0)
+        let charset: Array<Character> =
+            Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+        var result = ""
+        var remainingLength = length
+
+        while remainingLength > 0 {
+            let randoms: [UInt8] = (0 ..< 16).map { _ in
+                var random: UInt8 = 0
+                let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+                if errorCode != errSecSuccess {
+                    fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
+                }
+                return random
+            }
+
+            randoms.forEach { random in
+                if remainingLength == 0 {
+                    return
+                }
+
+                if random < charset.count {
+                    result.append(charset[Int(random)])
+                    remainingLength -= 1
+                }
+            }
+        }
+
+        return result
+    }
+
+    @available(iOS 13, *)
+    private func sha256(_ input: String) -> String {
+        let inputData = Data(input.utf8)
+        let hashedData = SHA256.hash(data: inputData)
+        let hashString = hashedData.compactMap {
+            return String(format: "%02x", $0)
+        }.joined()
+
+        return hashString
+    }
 }
 
+@available(iOS 13.0, *)
 extension SignInViewController: ASAuthorizationControllerDelegate {
+
+    //    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    //
+    //        // Firebase appleSignin handler
+    //
+    //        switch authorization.credential {
+    //
+    //        case let credentials as ASAuthorizationAppleIDCredential:
+    //
+    //            // ASAuthorizationAppleIDCredential -> UserInfo Object
+    //            // 登入完成的回傳資料
+    //            let signInUser = SignInUser(credentials: credentials)
+    //
+    //            // 回傳資料後的行為
+    //            // UserVM 儲存
+    //
+    //            guard let todayVC = UIStoryboard.today
+    //                    .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+    //
+    //            navigationController?.pushViewController(todayVC, animated: true)
+    //
+    //        default:
+    //
+    //            break
+    //        }
+    //    }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
 
-        switch authorization.credential {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
 
-        case let credentials as ASAuthorizationAppleIDCredential:
+            guard let nonce = currentNonce else {
 
-            // ASAuthorizationAppleIDCredential -> UserInfo Object
-            // 登入完成的回傳資料
-            let signInUser = SignInUser(credentials: credentials)
+                fatalError("Invalid state: A login callback was received, but no login request was sent.")
+            }
 
-            // 回傳資料後的行為
+            guard let appleIDToken = appleIDCredential.identityToken else {
 
-//            guard let todayVC = UIStoryboard.today
-//                    .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
-//
-//            navigationController?.pushViewController(todayVC, animated: true)
+                print("Unable to fetch identity token")
 
-        default:
+                return
+            }
 
-            break
+            guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+
+                print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+
+                return
+            }
+
+            // Initialize a Firebase credential.
+            let credential = OAuthProvider.credential(
+                withProviderID: "apple.com",
+                idToken: idTokenString,
+                rawNonce: nonce
+            )
+
+            // Sign in with Firebase.
+            Auth.auth().signIn(with: credential) { authResult, error in
+
+                if let error = error {
+
+                    // Error. If error.code == .MissingOrInvalidNonce, make sure
+                    // you're sending the SHA256-hashed nonce as a hex string with
+                    // your request to Apple.
+
+                    print(error.localizedDescription)
+
+                    return
+                } else {
+
+                    print(authResult?.user)
+                }
+
+                // User is signed in to Firebase with Apple.
+                // ...
+            }
         }
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
 
-        print("Apple signIn fail, \(error)")
+        // Handle error.
+        print("Sign in with Apple errored: \(error)")
     }
 }
 
