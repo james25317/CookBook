@@ -14,6 +14,8 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var buttonView: UIView!
 
+    // let viewModel = SignInViewModel()
+
     fileprivate var currentNonce: String?
 
     var uid: String?
@@ -255,7 +257,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                         user.email,
                         forKey: UserDefaults.Keys.email.rawValue
                     )
-
+                    
                     // 儲存 Firebase uid 至 UserVM
 
 

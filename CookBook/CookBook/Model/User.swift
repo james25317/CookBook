@@ -15,14 +15,14 @@ struct User: Identifiable, Codable {
     var appleId: String
     var name: String
     var portrait: String
-    var bio: String
+    var email: String
     var challengesCounts: Int
     var favoritesCounts: Int
     var recipesCounts: Int
 
     enum CodingKeys: String, CodingKey {
         case appleId,
-             bio,
+             email,
              challengesCounts,
              favoritesCounts,
              name,

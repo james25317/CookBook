@@ -8,12 +8,13 @@
 import UIKit
 
 class UserViewModel {
-
+    
     var user: User
 
     var onDelete: (() -> Void)?
 
     init(model user: User) {
+
         self.user = user
     }
 
@@ -35,9 +36,9 @@ class UserViewModel {
         }
     }
 
-    var bio: String {
+    var email: String {
         get {
-            return user.bio
+            return user.email
         }
     }
 
