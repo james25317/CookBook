@@ -14,6 +14,8 @@ extension UserDefaults {
 
         case uid
 
+        case displayName
+
         case email
     }
 

@@ -58,7 +58,7 @@ class SignInViewController: UIViewController {
 
         request.requestedScopes = [.fullName, .email]
 
-        // SHA 字串上 Fb
+        // 將 request.nonce 套上 SHA 字串
         let nonce = randomNonceString()
 
         currentNonce = nonce
@@ -91,29 +91,43 @@ class SignInViewController: UIViewController {
     }
 
     private func randomNonceString(length: Int = 32) -> String {
+
         precondition(length > 0)
+
         let charset: Array<Character> =
             Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+
         var result = ""
+
         var remainingLength = length
 
         while remainingLength > 0 {
+
             let randoms: [UInt8] = (0 ..< 16).map { _ in
+
                 var random: UInt8 = 0
+
                 let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+
                 if errorCode != errSecSuccess {
+
                     fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
                 }
+
                 return random
             }
 
             randoms.forEach { random in
+
                 if remainingLength == 0 {
+
                     return
                 }
 
                 if random < charset.count {
+
                     result.append(charset[Int(random)])
+
                     remainingLength -= 1
                 }
             }
@@ -124,10 +138,15 @@ class SignInViewController: UIViewController {
 
     @available(iOS 13, *)
     private func sha256(_ input: String) -> String {
+
         let inputData = Data(input.utf8)
+
         let hashedData = SHA256.hash(data: inputData)
+
         let hashString = hashedData.compactMap {
+
             return String(format: "%02x", $0)
+
         }.joined()
 
         return hashString
@@ -167,6 +186,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
 
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
 
+            // appleId callback data
             guard let nonce = currentNonce else {
 
                 fatalError("Invalid state: A login callback was received, but no login request was sent.")
@@ -186,7 +206,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                 return
             }
 
-            // Initialize a Firebase credential.
+            // Initialize a Firebase credential.（from appleId callback）
             let credential = OAuthProvider.credential(
                 withProviderID: "apple.com",
                 idToken: idTokenString,
@@ -205,13 +225,43 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                     print(error.localizedDescription)
 
                     return
+
                 } else {
 
-                    print(authResult?.user)
+                    // Firebase 回傳的 uid 用來作為生成新 User 的 DocumentId
+                    guard let uid = Auth.auth().currentUser?.uid,
+                        let user = authResult?.user else { return }
+
+                    print("\(user): \(uid)")
+
+                    // self.name = user.displayName
+
+                    // self.email = user.email
+
+                    // self.uid = user.uid
+
+                    // 儲存 Firebase uid 至 UserDefault
+                    UserDefaults.standard.setValue(
+                        user.uid,
+                        forKey: UserDefaults.Keys.uid.rawValue
+                    )
+
+                    UserDefaults.standard.setValue(
+                        user.displayName,
+                        forKey: UserDefaults.Keys.displayName.rawValue
+                    )
+
+                    UserDefaults.standard.setValue(
+                        user.email,
+                        forKey: UserDefaults.Keys.email.rawValue
+                    )
+
+                    // 儲存 Firebase uid 至 UserVM
+
+
+                    // 創建新 User 上 Firebase
                 }
 
-                // User is signed in to Firebase with Apple.
-                // ...
             }
         }
     }
