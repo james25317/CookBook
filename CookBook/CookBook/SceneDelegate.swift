@@ -42,13 +42,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // 以暫存的 uuid 作爲登入判斷
         // 1. 沒有登入過，顯示登入頁面
-
-        // 2. 有登入過，顯示今日頁面
-        let storyboard = UIStoryboard.today
+        let storyboard = UIStoryboard.signIn
 
         window?.rootViewController = storyboard.instantiateInitialViewController()
 
         window?.makeKeyAndVisible()
+
+        // 2. 有登入過，顯示今日頁面
+//        let storyboard = UIStoryboard.today
+//
+//        window?.rootViewController = storyboard.instantiateInitialViewController()
+//
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
