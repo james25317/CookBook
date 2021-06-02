@@ -97,8 +97,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-nR-Vdz">
-                                <rect key="frame" x="313" y="112" width="53" height="30"/>
-                                <state key="normal" title="Signout"/>
+                                <rect key="frame" x="320" y="210.33333333333334" width="46" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <state key="normal" title="SignOut">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
                                 <connections>
                                     <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EiG-Me-EGx"/>
                                 </connections>
@@ -114,20 +117,20 @@
                             <constraint firstItem="1d3-cN-dfR" firstAttribute="leading" secondItem="7sz-LL-7xV" secondAttribute="trailing" constant="4" id="L3m-BU-PKC"/>
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NuN-Il-KlX"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="top" secondItem="BCZ-ez-t4f" secondAttribute="bottom" constant="24" id="P1o-wm-Xd6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ynw-nR-Vdz" secondAttribute="trailing" constant="24" id="U4N-uN-Ozp"/>
-                            <constraint firstItem="ynw-nR-Vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="UVm-5w-8Wi"/>
+                            <constraint firstItem="ynw-nR-Vdz" firstAttribute="trailing" secondItem="BCZ-ez-t4f" secondAttribute="trailing" id="UJg-5R-J7B"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="leading" secondItem="BCZ-ez-t4f" secondAttribute="leading" id="XMT-6X-kRl"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="height" secondItem="BCZ-ez-t4f" secondAttribute="height" multiplier="0.5" id="YrB-9C-oQb"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ZvC-OT-IzU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ze-wo-bjs" secondAttribute="trailing" constant="24" id="aFb-Wq-Gq5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7sz-LL-7xV" secondAttribute="bottom" constant="96" id="dZg-Qs-bEm"/>
+                            <constraint firstItem="BCZ-ez-t4f" firstAttribute="top" secondItem="ynw-nR-Vdz" secondAttribute="bottom" constant="16" id="jL3-vN-At5"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="veJ-gP-xgy"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="top" secondItem="KLd-Np-qs4" secondAttribute="bottom" constant="16" id="w8N-0C-Jye"/>
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yI7-55-65K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dE9-b7-IgP"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="imageViewRecipeVideo" destination="iAN-Z5-oU4" id="83s-1o-mmm"/>
                         <outlet property="imageViewTodayRecipe" destination="BCZ-ez-t4f" id="uJK-at-uiG"/>

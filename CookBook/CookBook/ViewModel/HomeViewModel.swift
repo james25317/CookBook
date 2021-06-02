@@ -9,10 +9,10 @@ import Foundation
 
 class HomeViewModel {
 
-    // 這邊 Sign 進 Box 的事 FeedVM 初始值 (也就是一開始View會接到的值)
+    // [FeedViewModel] 初始化
     let feedViewModels = Box([FeedViewModel]())
 
-    var recipe: Recipe?
+    // var recipe: Recipe?
 
     func fetchFeedsData() {
 

@@ -45,23 +45,24 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // 向 HomeVM 綁定 Box 觀察資料變化(fetch成功後的值)，VC 這邊要做的事情
-        viewModel.feedViewModels.bind { [weak self] feeds in
+        viewModel.feedViewModels.bind { [weak self] _ in
 
             self?.tableView.reloadData()
         }
 
-        // 向 HomeVM 要資料，回傳結果至 Box.value 給其他被綁定的 V
+        // 要 Feeds 資料
         viewModel.fetchFeedsData()
 
         setupTableView()
 
-        setupSearchBar()
+        // 搜尋欄 - 暫時屏蔽
+        // setupSearchBar()
     }
 
     @IBAction func goTodayPage(_ sender: Any) {
         
         guard let todayVC = UIStoryboard.today
-                .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
         navigationController?.pushViewController(todayVC, animated: true)
     }
@@ -69,7 +70,7 @@ class HomeViewController: UIViewController {
     @IBAction func goEditPage(_ sender: Any) {
 
         guard let editVC = UIStoryboard.edit
-                .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+            .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
 
         navigationController?.pushViewController(editVC, animated: true)
     }
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController {
     @IBAction func goProfilePage(_ sender: Any) {
 
         guard let profileVC = UIStoryboard.profile
-                .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
+            .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
 
         navigationController?.pushViewController(profileVC, animated: true)
     }
@@ -123,20 +124,16 @@ extension HomeViewController: UITableViewDataSource {
             withIdentifier: String(describing: FeedTableViewCell.self),
             for: indexPath
         )
+
+        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.item]
+
+//        if let cellFeed = self.viewModel.feedViewModels.value[indexPath.item].isChallenged == false {
+//
+//            // 生成 ChallengeFeeds
+//        }
         
         guard let feedCell = cell as? FeedTableViewCell else { return cell }
 
-        // 匯入VM資料至Cell
-        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.item]
-
-        // 這邊定義了 onDead: closure 的觸發行為，當 _ 觸發時，啟動對應行為
-        cellViewModel.onDead = { [weak self] in
-
-            print("onDead was activated")
-
-            self?.viewModel.fetchFeedsData()
-        }
-        
         feedCell.setup(viewModel: cellViewModel)
 
         return feedCell

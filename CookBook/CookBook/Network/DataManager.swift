@@ -62,11 +62,11 @@ class DataManager {
 
     lazy var db = Firestore.firestore()
 
-    // MARK: Feeds
+    // MARK: Feeds (fetch)
     func fetchFeeds(completion: @escaping (Result<[Feed], Error>) -> Void) {
 
         db.collection(Collections.feed.rawValue)
-            .order(by: "createdTime", descending: true)
+            .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
 
                 if let error = error {
@@ -80,11 +80,12 @@ class DataManager {
 
                     for document in documents {
 
-                        print("\(document.documentID) => \(document.data())")
+                        // print("\(document.documentID) => \(document.data())")
 
                         do {
 
                             if let feed = try document.data(as: Feed.self, decoder: Firestore.Decoder()) {
+
                                 feeds.append(feed)
                             }
                         } catch {
@@ -93,7 +94,6 @@ class DataManager {
                         }
                     }
 
-                    // 獲取資料成功，escaping completion
                     completion(.success(feeds))
                 }
             }

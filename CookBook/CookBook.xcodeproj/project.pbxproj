@@ -329,10 +329,10 @@
 				7FFCF08E2654C4A60082ED8E /* ChallengeViewController.swift */,
 				7F284C2F264BC19C001A0B4E /* HomeViewController.swift */,
 				7FFCF07B265266BB0082ED8E /* ProfileViewController.swift */,
+				7F5256712665C392005A2DB9 /* SignInViewController.swift */,
 				7F7C7368265D374200D1AFD4 /* Edit */,
 				7F7C7369265D376300D1AFD4 /* Read */,
 				7FE2C2092663746F00FCEAE3 /* Today */,
-				7F5256712665C392005A2DB9 /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
