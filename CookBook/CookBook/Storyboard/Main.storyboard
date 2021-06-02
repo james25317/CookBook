@@ -21,31 +21,31 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" id="cQA-pv-DBD" customClass="FeedTableViewCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="224"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cQA-pv-DBD" id="ht4-dn-WQo">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy5-OA-4Ku" userLabel="Bg View">
-                                                    <rect key="frame" x="24" y="8" width="342" height="208"/>
+                                                    <rect key="frame" x="24" y="8" width="342" height="200"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-Bm-BTl">
-                                                            <rect key="frame" x="7.9999999999999964" y="15.999999999999996" width="54.666666666666657" height="54.666666666666657"/>
-                                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                            <rect key="frame" x="16" y="16" width="41" height="41"/>
+                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="3eH-Bm-BTl" secondAttribute="height" multiplier="1:1" id="ved-Vf-Wd8"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish2" translatesAutoresizingMaskIntoConstraints="NO" id="sT4-cB-smn">
-                                                            <rect key="frame" x="0.0" y="86.666666666666686" width="342" height="121.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="73" width="342" height="127"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-ur-FdL" userLabel="Txt Bg View">
-                                                            <rect key="frame" x="0.0" y="179" width="342" height="29"/>
+                                                            <rect key="frame" x="0.0" y="169.66666666666666" width="342" height="30.333333333333343"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-lS-Sgv">
-                                                                    <rect key="frame" x="8" y="2.3333333333333428" width="326" height="24"/>
+                                                                    <rect key="frame" x="16" y="3" width="310" height="24"/>
                                                                     <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                                                     <color key="textColor" systemColor="systemGray6Color"/>
                                                                     <nil key="highlightedColor"/>
@@ -53,18 +53,18 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="Tu3-lS-Sgv" secondAttribute="trailing" constant="8" id="4jm-MI-Kid"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Tu3-lS-Sgv" secondAttribute="trailing" constant="16" id="4jm-MI-Kid"/>
                                                                 <constraint firstItem="Tu3-lS-Sgv" firstAttribute="centerY" secondItem="dQu-ur-FdL" secondAttribute="centerY" id="P0n-gD-CXI"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookUserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPQ-Iu-psg">
-                                                            <rect key="frame" x="70.666666666666686" y="27.333333333333336" width="145" height="21"/>
+                                                            <rect key="frame" x="65" y="20.666666666666668" width="261" height="21.000000000000004"/>
                                                             <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CreatedTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI9-y0-28y">
-                                                            <rect key="frame" x="70.666666666666671" y="43.666666666666664" width="72.000000000000014" height="17"/>
+                                                            <rect key="frame" x="65" y="37" width="261" height="17"/>
                                                             <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
@@ -73,12 +73,12 @@
                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="sT4-cB-smn" secondAttribute="bottom" id="7i4-Hu-ch4"/>
-                                                        <constraint firstAttribute="height" constant="208" id="8KK-D1-i8w"/>
+                                                        <constraint firstAttribute="height" constant="200" id="8KK-D1-i8w"/>
                                                         <constraint firstItem="cI9-y0-28y" firstAttribute="firstBaseline" secondItem="rPQ-Iu-psg" secondAttribute="bottom" constant="8" id="GhK-7X-pMm"/>
                                                         <constraint firstItem="3eH-Bm-BTl" firstAttribute="top" secondItem="hy5-OA-4Ku" secondAttribute="top" constant="16" id="KYe-xR-VKT"/>
                                                         <constraint firstAttribute="trailing" secondItem="dQu-ur-FdL" secondAttribute="trailing" id="Ku9-Hb-BbA"/>
                                                         <constraint firstItem="rPQ-Iu-psg" firstAttribute="firstBaseline" secondItem="3eH-Bm-BTl" secondAttribute="centerY" id="QUt-ro-NS7"/>
-                                                        <constraint firstItem="3eH-Bm-BTl" firstAttribute="width" secondItem="hy5-OA-4Ku" secondAttribute="width" multiplier="0.16" id="Ss6-6M-AXX"/>
+                                                        <constraint firstItem="3eH-Bm-BTl" firstAttribute="width" secondItem="hy5-OA-4Ku" secondAttribute="width" multiplier="0.12" id="Ss6-6M-AXX"/>
                                                         <constraint firstItem="Tu3-lS-Sgv" firstAttribute="leading" secondItem="3eH-Bm-BTl" secondAttribute="leading" id="WZz-4O-hoM"/>
                                                         <constraint firstItem="dQu-ur-FdL" firstAttribute="leading" secondItem="hy5-OA-4Ku" secondAttribute="leading" id="Y5i-DB-Rzg"/>
                                                         <constraint firstItem="sT4-cB-smn" firstAttribute="top" secondItem="3eH-Bm-BTl" secondAttribute="bottom" constant="16" id="YaL-N4-5Ft"/>
@@ -86,9 +86,11 @@
                                                         <constraint firstItem="rPQ-Iu-psg" firstAttribute="leading" secondItem="3eH-Bm-BTl" secondAttribute="trailing" constant="8" id="fit-gg-Iab"/>
                                                         <constraint firstItem="sT4-cB-smn" firstAttribute="leading" secondItem="hy5-OA-4Ku" secondAttribute="leading" id="i6i-8d-bgB"/>
                                                         <constraint firstItem="cI9-y0-28y" firstAttribute="leading" secondItem="rPQ-Iu-psg" secondAttribute="leading" id="iAE-Ox-hFj"/>
-                                                        <constraint firstItem="3eH-Bm-BTl" firstAttribute="leading" secondItem="hy5-OA-4Ku" secondAttribute="leading" constant="8" id="ncm-Bd-Xn7"/>
+                                                        <constraint firstItem="3eH-Bm-BTl" firstAttribute="leading" secondItem="hy5-OA-4Ku" secondAttribute="leading" constant="16" id="ncm-Bd-Xn7"/>
                                                         <constraint firstAttribute="trailing" secondItem="sT4-cB-smn" secondAttribute="trailing" id="pKl-bo-hH5"/>
+                                                        <constraint firstItem="cI9-y0-28y" firstAttribute="trailing" secondItem="rPQ-Iu-psg" secondAttribute="trailing" id="ssF-5f-XLh"/>
                                                         <constraint firstAttribute="bottom" secondItem="dQu-ur-FdL" secondAttribute="bottom" id="ud6-6K-tNw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rPQ-Iu-psg" secondAttribute="trailing" constant="16" id="wuP-af-QPJ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -151,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.6923076923076" y="113.74407582938387"/>
+            <point key="canvasLocation" x="1047.65625" y="113.32357247437774"/>
         </scene>
     </scenes>
     <resources>
@@ -161,6 +163,9 @@
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
