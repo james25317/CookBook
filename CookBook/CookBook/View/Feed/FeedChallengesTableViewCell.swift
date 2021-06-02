@@ -22,14 +22,31 @@ class FeedChallengesTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewChallengeRecipe: UIImageView!
 
     @IBOutlet weak var labelChallengeRecipeName: UILabel!
-    
+
+    var viewModel: FeedViewModel?
+
     override func awakeFromNib() {
 
         super.awakeFromNib()
 
         roundedImageView()
+    }
+
+    func setup(viewModel: FeedViewModel) {
+
+        self.viewModel = viewModel
+
+        layoutCell()
+    }
+
+    private func layoutCell() {
+
+        labelUserName.text = viewModel?.name
+
+        labelCreatedTime.text = viewModel?.createdTime
+
+        imageViewPortrait.loadImage(viewModel?.portrait)
         
-        // Initialization code
     }
 
     private func roundedImageView() {
