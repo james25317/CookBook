@@ -119,25 +119,35 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // Adding challengeFeedCall logic later on
+        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.row]
 
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: String(describing: FeedTableViewCell.self),
-            for: indexPath
-        )
+        if cellViewModel.isChallenged == false {
 
-        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.item]
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: String(describing: FeedChallengesTableViewCell.self),
+                for: indexPath
+            )
 
-//        if let cellFeed = self.viewModel.feedViewModels.value[indexPath.item].isChallenged == false {
-//
-//            // 生成 ChallengeFeeds
-//        }
+            // 生成 ChallengeFeeds
+            guard let feedChallengeCell = cell as? FeedChallengesTableViewCell else { return cell }
 
-        guard let feedCell = cell as? FeedTableViewCell else { return cell }
+            feedChallengeCell.setup(viewModel: cellViewModel)
 
-        feedCell.setup(viewModel: cellViewModel)
+            return feedChallengeCell
+        } else {
 
-        return feedCell
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: String(describing: FeedTableViewCell.self),
+                for: indexPath
+            )
+
+            // 生成 NormalFeeds
+            guard let feedCell = cell as? FeedTableViewCell else { return cell }
+
+            feedCell.setup(viewModel: cellViewModel)
+
+            return feedCell
+        }
     }
 }
 

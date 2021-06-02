@@ -46,7 +46,16 @@ class FeedChallengesTableViewCell: UITableViewCell {
         labelCreatedTime.text = viewModel?.createdTime
 
         imageViewPortrait.loadImage(viewModel?.portrait)
-        
+
+        imageViewOwnerRecipe.loadImage(viewModel?.mainImage)
+
+        labelOwnerRecipeName.text = viewModel?.name
+
+        // 加載挑戰成功後（Feed 發布後上傳的 mainImage）
+        imageViewChallengeRecipe.loadImage("")
+
+        // 加載挑戰成功後（Feed 發布後上傳的 name）
+        labelChallengeRecipeName.text = "Try it!"
     }
 
     private func roundedImageView() {
