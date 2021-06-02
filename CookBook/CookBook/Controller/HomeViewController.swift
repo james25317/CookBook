@@ -157,17 +157,26 @@ extension HomeViewController: UITableViewDelegate {
 
         tableView.deselectRow(at: indexPath, animated: false)
 
-        guard let readVC = UIStoryboard.read
-            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
-        
-        // 取 recipeId (feed.recipeId)
-        let selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.row]
 
-        let recipeId = selectedFeed.recipeId
+        // 判斷是否為 ChallengeCell
+        if cellViewModel.isChallenged == false {
 
-        // 傳 Id
-        readVC.recipeId = recipeId
+            return
+        } else {
 
-        self.navigationController?.pushViewController(readVC, animated: true)
+            guard let readVC = UIStoryboard.read
+                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+            // 取 recipeId (feed.recipeId)
+            let selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+
+            let recipeId = selectedFeed.recipeId
+
+            // 傳 Id
+            readVC.recipeId = recipeId
+
+            self.navigationController?.pushViewController(readVC, animated: true)
+        }
     }
 }

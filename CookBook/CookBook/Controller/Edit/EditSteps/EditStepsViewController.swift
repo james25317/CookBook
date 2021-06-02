@@ -43,7 +43,6 @@ class EditStepsViewController: UIViewController {
             collectionView.reloadData()
 
             // steps 值變動，更替 mainImage 資料
-
         }
     }
 
@@ -241,7 +240,7 @@ extension EditStepsViewController: UIImagePickerControllerDelegate {
                           let indexpath = self?.collectionView.indexPath(for: cell) else { return }
 
                     // replace cell's image with pickerImgae
-                    self?.stepImageViewCell?.setImage(with: image, at: indexpath.row)
+                    self?.stepImageViewCell?.setImage(with: image)
 
                     // write in steps data
                     self?.steps?[indexpath.row].image = downloadUrl

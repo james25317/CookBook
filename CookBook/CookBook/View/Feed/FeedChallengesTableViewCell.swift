@@ -29,6 +29,8 @@ class FeedChallengesTableViewCell: UITableViewCell {
 
         super.awakeFromNib()
 
+        self.selectionStyle = .none
+        
         roundedImageView()
     }
 
