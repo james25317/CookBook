@@ -19,9 +19,9 @@ class FeedChallengesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelOwnerRecipeName: UILabel!
 
-    @IBOutlet weak var imageViewChallengeRecipe: UIImageView!
+    @IBOutlet weak var imageViewChallengerRecipe: UIImageView!
 
-    @IBOutlet weak var labelChallengeRecipeName: UILabel!
+    @IBOutlet weak var labelChallengerRecipeName: UILabel!
 
     var viewModel: FeedViewModel?
 
@@ -30,8 +30,6 @@ class FeedChallengesTableViewCell: UITableViewCell {
         super.awakeFromNib()
 
         self.selectionStyle = .none
-        
-        roundedImageView()
     }
 
     func setup(viewModel: FeedViewModel) {
@@ -39,6 +37,10 @@ class FeedChallengesTableViewCell: UITableViewCell {
         self.viewModel = viewModel
 
         layoutCell()
+
+        roundedImageView()
+
+        setupTapGesture()
     }
 
     private func layoutCell() {
@@ -54,14 +56,41 @@ class FeedChallengesTableViewCell: UITableViewCell {
         labelOwnerRecipeName.text = viewModel?.name
 
         // 加載挑戰成功後（Feed 發布後上傳的 mainImage）
-        imageViewChallengeRecipe.loadImage("")
+        imageViewChallengerRecipe.loadImage("")
 
         // 加載挑戰成功後（Feed 發布後上傳的 name）
-        labelChallengeRecipeName.text = "Try it!"
+        labelChallengerRecipeName.text = "Try it!"
     }
 
     private func roundedImageView() {
 
         imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
+    }
+
+    private func setupTapGesture() {
+
+        let ownerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goReadPage))
+
+        let challengerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goEditPage))
+
+        imageViewOwnerRecipe.isUserInteractionEnabled = true
+
+        imageViewOwnerRecipe.addGestureRecognizer(ownerRecipeGesture)
+
+        imageViewChallengerRecipe.addGestureRecognizer(challengerRecipeGesture)
+    }
+
+    @objc func goReadPage() {
+
+        print("OwnerRecipe tapped")
+
+        // go ReadPage
+    }
+
+    @objc func goEditPage() {
+
+        print("ChallengerRecipe tapped")
+
+        // go EditPage
     }
 }

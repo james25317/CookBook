@@ -169,7 +169,7 @@
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Xt-maU">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Xt-maU">
                                                             <rect key="frame" x="179" y="73" width="147" height="111"/>
                                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                             <userDefinedRuntimeAttributes>
@@ -240,10 +240,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageViewChallengeRecipe" destination="3W2-Xt-maU" id="o7X-8j-LWE"/>
+                                            <outlet property="imageViewChallengerRecipe" destination="3W2-Xt-maU" id="o7X-8j-LWE"/>
                                             <outlet property="imageViewOwnerRecipe" destination="IEa-kE-mAh" id="Wdg-ZW-Rrq"/>
                                             <outlet property="imageViewPortrait" destination="uoF-BU-Fy7" id="wah-8H-Zwg"/>
-                                            <outlet property="labelChallengeRecipeName" destination="oWh-aG-zGo" id="MuQ-nt-gKU"/>
+                                            <outlet property="labelChallengerRecipeName" destination="oWh-aG-zGo" id="MuQ-nt-gKU"/>
                                             <outlet property="labelCreatedTime" destination="B8L-Dv-lG6" id="Ukw-AY-5zy"/>
                                             <outlet property="labelOwnerRecipeName" destination="Al2-1T-Byj" id="tqm-UE-GTL"/>
                                             <outlet property="labelUserName" destination="zU5-kN-mlj" id="Pus-WY-dRc"/>
@@ -292,6 +292,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="demodish" width="1080" height="1080"/>
         <image name="demodish2" width="640" height="640"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
