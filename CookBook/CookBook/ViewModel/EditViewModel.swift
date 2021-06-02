@@ -201,15 +201,33 @@ class EditViewModel {
         }
     }
 
-    func updateRecipesCounts(with userDocumentId: String) {
+    func updateRecipesCounts(with uid: String) {
 
-        DataManager.shared.updateRecipesCounts(userDocumentId: userDocumentId) { result in
+        DataManager.shared.updateRecipesCounts(uid: uid) { result in
 
             switch result {
 
             case .success(let userDocumentId):
 
                 print("\(userDocumentId): RecipesCounts increase 1")
+
+            case .failure(let error):
+
+                print(error)
+            }
+
+        }
+    }
+
+    func updateChallengesCounts(with uid: String) {
+
+        DataManager.shared.updateChallengesCounts(uid: uid) { result in
+
+            switch result {
+
+            case .success(let userDocumentId):
+
+                print("\(userDocumentId): ChallengesCounts increase 1")
 
             case .failure(let error):
 

@@ -239,11 +239,13 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                     )
 
                     // 初始 User 資料
-                    var newUser = UserManager.shared.user
+                    var userManager = UserManager.shared
 
-                    newUser.email = user.email ?? ""
+                    userManager.uid = user.uid
 
-                    self.viewModel.createUserData(user: newUser, uid: user.uid)
+                    userManager.user.email = user.email ?? ""
+
+                    self.viewModel.createUserData(user: userManager.user, uid: user.uid)
                 }
 
             }

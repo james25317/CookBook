@@ -15,6 +15,8 @@ class UserManager {
 
     lazy var db = Firestore.firestore()
 
+    var uid = ""
+
     // init user
     var user = User(
         id: "",

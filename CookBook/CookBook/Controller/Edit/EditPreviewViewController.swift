@@ -79,9 +79,13 @@ class EditPreviewViewController: UIViewController {
     @IBAction func leave(_ sender: Any) {
 
         // save draft before leave goes here
+        guard let navigationController = navigationController,
+            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+
+        navigationController.popToViewController(homeVC, animated: true)
 
         // leave directly goes here
-        navigationController?.popToRootViewController(animated: true)
+        // navigationController?.popToRootViewController(animated: true)
     }
 
     // MARK: go EditDone Page and pass data

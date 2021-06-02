@@ -458,10 +458,10 @@ class DataManager {
     }
 
     // MARK: RecipesCounts (update)
-    func updateRecipesCounts(userDocumentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateRecipesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.user.rawValue).document(userDocumentId)
+        let ref = db.collection(Collections.user.rawValue).document(uid)
 
         ref.updateData(
             ["recipesCounts": FieldValue.increment(Int64(1))]
@@ -475,9 +475,9 @@ class DataManager {
 
             } else {
 
-                print("\(userDocumentId): RecipesCounts successfully increased!")
+                print("\(uid): RecipesCounts successfully increased!")
 
-                completion(.success(userDocumentId))
+                completion(.success(uid))
             }
         }
     }
@@ -503,6 +503,31 @@ class DataManager {
                 print("\(userDocumentId): FavoritesCounts successfully increased!")
 
                 completion(.success(userDocumentId))
+            }
+        }
+    }
+
+    // MARK: ChallengesCounts (update)
+    func updateChallengesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 ChallengesCounts 欄位
+        let ref = db.collection(Collections.user.rawValue).document(uid)
+
+        ref.updateData(
+            ["challengesCounts": FieldValue.increment(Int64(1))]
+        ) { error in
+
+            if let error = error {
+
+                print("Error increase challengesCounts: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("\(uid): ChallengesCounts successfully increased!")
+
+                completion(.success(uid))
             }
         }
     }
