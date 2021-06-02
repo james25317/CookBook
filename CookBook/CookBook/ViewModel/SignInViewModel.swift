@@ -15,9 +15,9 @@ class SignInViewModel {
     // init user
     var user = User(
         id: "",
-        name: UserDefaults.standard.string(forKey: UserDefaults.Keys.displayName.rawValue) ?? "CookBookUser",
-        portrait: UserDefaults.standard.string(forKey: UserDefaults.Keys.portrait.rawValue) ?? "",
-        email: UserDefaults.standard.string(forKey: UserDefaults.Keys.email.rawValue) ?? "",
+        name: "CookBookUser",
+        portrait: "",
+        email: "",
         challengesCounts: 0,
         favoritesCounts: 0,
         recipesCounts: 0

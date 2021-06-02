@@ -558,7 +558,7 @@ class DataManager {
     }
 
     // MARK: Recipe (Add)
-    func createRecipe(recipe: inout Recipe, ownerId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func createRecipe(recipe: inout Recipe, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = db.collection(Collections.recipe.rawValue).document()
 
@@ -566,7 +566,7 @@ class DataManager {
         recipe.id = ref.documentID
 
         // 寫入該帳號使用者的 Id (Fbuid)
-        recipe.ownerId = ownerId
+        recipe.ownerId = uid
 
         try? ref.setData(from: recipe) { error in
 

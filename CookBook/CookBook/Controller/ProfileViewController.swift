@@ -119,7 +119,7 @@ class ProfileViewController: UIViewController {
 
         imageViewUserPortrait.loadImage(value.portrait)
 
-        labelUserId.text = value.user.id
+        labelUserId.text = value.user.email
 
         labelRecipesCounts.text = String(describing: value.recipesCounts)
 
@@ -213,7 +213,9 @@ extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return viewModel.switchSection(sortType: type).count
+        guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return 0 }
+
+        return viewModel.switchSection(with: uid, sortType: type).count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -225,8 +227,10 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
+        guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return cell }
+        
         // 根據按鈕來源切換不同section的資料生成
-        let cellViewModel = self.viewModel.switchSection(sortType: type)[indexPath.row]
+        let cellViewModel = self.viewModel.switchSection(with: uid, sortType: type)[indexPath.row]
 
         recipeCell.setup(viewModel: cellViewModel)
 

@@ -51,14 +51,15 @@ class EditViewController: UIViewController {
     @IBAction func createCookBook(_ sender: Any) {
 
         // 創立使用者後，以 UserVM 裡的資料提供
-        let ownerId = "UserDocumentId"
-        let mockUser = "SADUxqR04ihqg1XUgDHn"
+        // let ownerId = "UserDocumentId"
+        // let mockUser = "SADUxqR04ihqg1XUgDHn"
+        guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return }
 
         // create Recipe, get documentId then fetch Recipe with it
-        viewModel.createRecipeData(with: &viewModel.recipe, with: ownerId)
+        viewModel.createRecipeData(with: &viewModel.recipe, with: uid)
 
         // Increased Recipes counts
-        viewModel.updateRecipesCounts(with: mockUser)
+        viewModel.updateRecipesCounts(with: uid)
 
         // go EditPreview Page
         guard let previewVC = storyboard?

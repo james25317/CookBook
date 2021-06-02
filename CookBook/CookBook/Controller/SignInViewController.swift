@@ -221,10 +221,9 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                 } else {
 
                     // Firebase 回傳的 uid 用來作為生成新 User 的 DocumentId
-                    guard let uid = Auth.auth().currentUser?.uid,
-                          let user = authResult?.user else { return }
+                    guard let  user = Auth.auth().currentUser else { return }
 
-                    print("FirebaseUID: \(uid)")
+                    print("FirebaseUID: \(user.uid)")
 
                     print("UIDUser:\(user)")
 
@@ -235,26 +234,16 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                     )
 
                     UserDefaults.standard.setValue(
-                        user.displayName,
-                        forKey: UserDefaults.Keys.displayName.rawValue
-                    )
-
-                    UserDefaults.standard.setValue(
                         user.email,
                         forKey: UserDefaults.Keys.email.rawValue
                     )
 
-                    UserDefaults.standard.setValue(
-                        user.photoURL,
-                        forKey: UserDefaults.Keys.portrait.rawValue
-                    )
-
                     // 初始 User 資料
-                    let newUser = self.viewModel.user
+                    var newUser = UserManager.shared.user
 
-                    let newUid = user.uid
+                    newUser.email = user.email ?? ""
 
-                    self.viewModel.createUserData(user: newUser, uid: newUid)
+                    self.viewModel.createUserData(user: newUser, uid: user.uid)
                 }
 
             }

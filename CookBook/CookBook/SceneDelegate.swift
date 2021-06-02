@@ -111,18 +111,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             )
 
             UserDefaults.standard.setValue(
-                user.displayName,
-                forKey: UserDefaults.Keys.displayName.rawValue
-            )
-
-            UserDefaults.standard.setValue(
                 user.email,
                 forKey: UserDefaults.Keys.email.rawValue
-            )
-
-            UserDefaults.standard.setValue(
-                user.photoURL,
-                forKey: UserDefaults.Keys.portrait.rawValue
             )
 
             window?.rootViewController = storyboard.instantiateInitialViewController()

@@ -14,8 +14,6 @@ extension UserDefaults {
 
         case uid
 
-        case appleId
-
         case displayName
 
         case email

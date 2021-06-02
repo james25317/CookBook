@@ -15,7 +15,16 @@ class UserManager {
 
     lazy var db = Firestore.firestore()
 
-    // var user: User?
+    // init user
+    var user = User(
+        id: "",
+        name: "CookBookUser",
+        portrait: "",
+        email: "",
+        challengesCounts: 0,
+        favoritesCounts: 0,
+        recipesCounts: 0
+    )
 
     // MARK: User (Fetch)
     func fetchUser(uid: String, completion: @escaping (Result<User, Error>) -> Void) {

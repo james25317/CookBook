@@ -219,9 +219,9 @@ class EditViewModel {
         }
     }
 
-    func createRecipeData(with recipe: inout Recipe, with ownerId: String) {
+    func createRecipeData(with recipe: inout Recipe, with uid: String) {
 
-        DataManager.shared.createRecipe(recipe: &recipe, ownerId: ownerId) { result in
+        DataManager.shared.createRecipe(recipe: &recipe, uid: uid) { result in
 
             switch result {
 
@@ -300,9 +300,9 @@ class EditViewModel {
             createdTime: Date().millisecondsSince1970,
             isChallenged: !challengeOn,
             mainImage: recipe.mainImage,
-            name: "UserName",
+            name: UserManager.shared.user.name,
             ownerId: recipe.ownerId,
-            portrait: "UserPortrait",
+            portrait: UserManager.shared.user.portrait,
             recipeId: recipe.id!,
             recipeName: recipe.name
         )

@@ -22,6 +22,8 @@ class ProfileViewModel {
     
     let recipeViewModels: Box<[RecipeViewModel]> = Box([])
 
+    // let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue)
+
     func fetchUserData(uid: String) {
 
         UserManager.shared.fetchUser(uid: uid) { [weak self] result in
@@ -42,30 +44,29 @@ class ProfileViewModel {
     }
 
     // 根據 button.tag 切換資料內容（利用 filter 出資料）
-    func switchSection(sortType: SortType) -> [RecipeViewModel] {
+    func switchSection(with uid: String, sortType: SortType) -> [RecipeViewModel] {
 
-        // UserDocumentId 登入後再賦予
         switch sortType {
 
         case .recipes:
 
             return recipeViewModels.value.filter { recipeViewModel in
 
-                recipeViewModel.recipe.ownerId == "UserDocumentId"
+                recipeViewModel.recipe.ownerId == uid
             }
 
         case .favorites:
 
             return recipeViewModels.value.filter { recipeViewModel in
 
-                recipeViewModel.recipe.favoritesUserId.contains("UserDocumentId")
+                recipeViewModel.recipe.favoritesUserId.contains(uid)
             }
 
         case .challenges:
 
             return recipeViewModels.value.filter { recipeViewModel in
 
-                recipeViewModel.recipe.challenger == "UserDocumentId"
+                recipeViewModel.recipe.challenger == uid
             }
         }
     }
