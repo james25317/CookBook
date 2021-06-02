@@ -11,19 +11,25 @@ class UserViewModel {
     
     var user: User
 
-    var onDelete: (() -> Void)?
+    // var onDelete: (() -> Void)?
 
     init(model user: User) {
 
         self.user = user
     }
 
-    var appleId: String {
+//    var uid: String {
+//        get {
+//            return user.uid
+//        }
+//    }
+
+    var id: String {
         get {
-            return user.appleId
+            return user.id ?? ""
         }
     }
-
+    
     var name: String {
         get {
             return user.name

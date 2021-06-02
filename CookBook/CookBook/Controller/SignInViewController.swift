@@ -14,23 +14,32 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var buttonView: UIView!
 
-    // let viewModel = SignInViewModel()
+    let viewModel = SignInViewModel()
 
-    fileprivate var currentNonce: String?
-
-    var uid: String?
-
-    var name: String?
-
-    var email: String?
+    private var currentNonce: String?
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
-        setupSignInButton()
+        viewModel.onGranteed = { [weak self] () in
 
-        // performExistingAccountSetupFlows()
+            // 定義 SignIn 成功行為
+            guard let todayVC = UIStoryboard.today
+                .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+
+            self?.navigationController?.pushViewController(todayVC, animated: true)
+        }
+
+        setupSignInButton()
+    }
+
+    @IBAction func skipSignIn(_ sender: Any) {
+
+        guard let todayVC = UIStoryboard.today
+                .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+
+        self.navigationController?.pushViewController(todayVC, animated: true)
     }
 
     func setupSignInButton() {
@@ -75,21 +84,6 @@ class SignInViewController: UIViewController {
         controller.presentationContextProvider = self
 
         controller.performRequests()
-    }
-
-    private func performExistingAccountSetupFlows() {
-
-        // Prepare requests for both Apple ID and password providers.
-        let requests = [ASAuthorizationAppleIDProvider().createRequest(), ASAuthorizationPasswordProvider().createRequest()]
-
-        // Create an authorization controller with the given requests.
-        let authorizationController = ASAuthorizationController(authorizationRequests: requests)
-
-        authorizationController.delegate = self
-
-        authorizationController.presentationContextProvider = self
-
-        authorizationController.performRequests()
     }
 
     private func randomNonceString(length: Int = 32) -> String {
@@ -145,11 +139,7 @@ class SignInViewController: UIViewController {
 
         let hashedData = SHA256.hash(data: inputData)
 
-        let hashString = hashedData.compactMap {
-
-            return String(format: "%02x", $0)
-
-        }.joined()
+        let hashString = hashedData.compactMap { return String(format: "%02x", $0) } .joined()
 
         return hashString
     }
@@ -232,15 +222,11 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
 
                     // Firebase 回傳的 uid 用來作為生成新 User 的 DocumentId
                     guard let uid = Auth.auth().currentUser?.uid,
-                        let user = authResult?.user else { return }
+                          let user = authResult?.user else { return }
 
-                    print("\(user): \(uid)")
+                    print("FirebaseUID: \(uid)")
 
-                    // self.name = user.displayName
-
-                    // self.email = user.email
-
-                    // self.uid = user.uid
+                    print("UIDUser:\(user)")
 
                     // 儲存 Firebase uid 至 UserDefault
                     UserDefaults.standard.setValue(
@@ -257,11 +243,18 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                         user.email,
                         forKey: UserDefaults.Keys.email.rawValue
                     )
-                    
-                    // 儲存 Firebase uid 至 UserVM
 
+                    UserDefaults.standard.setValue(
+                        user.photoURL,
+                        forKey: UserDefaults.Keys.portrait.rawValue
+                    )
 
-                    // 創建新 User 上 Firebase
+                    // 初始 User 資料
+                    let newUser = self.viewModel.user
+
+                    let newUid = user.uid
+
+                    self.viewModel.createUserData(user: newUser, uid: newUid)
                 }
 
             }

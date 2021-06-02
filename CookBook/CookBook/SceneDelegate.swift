@@ -7,6 +7,7 @@
 // swiftlint:disable line_length
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -41,19 +42,101 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to undo the changes made on entering the background.
 
         // 以暫存的 uuid 作爲登入判斷
-        // 1. 沒有登入過，顯示登入頁面
-//        let storyboard = UIStoryboard.signIn
-//
-//        window?.rootViewController = storyboard.instantiateInitialViewController()
-//
-//        window?.makeKeyAndVisible()
+        //        #if targetEnvironment(simulator)
+        //
+        //        UserDefaults.standard.setValue(
+        //            "mockAppleId",
+        //            forKey: UserDefaults.Keys.uid.rawValue
+        //        )
+        //
+        //        UserDefaults.standard.setValue(
+        //            "CookBookUser",
+        //            forKey: UserDefaults.Keys.displayName.rawValue
+        //        )
+        //
+        //        UserDefaults.standard.setValue(
+        //            "testUser@.com",
+        //            forKey: UserDefaults.Keys.email.rawValue
+        //        )
+        //
+        //        if let todayVC = UIStoryboard.today.instantiateViewController(withIdentifier: "Today") as? TodayViewController {
+        //
+        //            window?.rootViewController = todayVC
+        //        } else {
+        //
+        //            print("Can't initial today viewController")
+        //        }
+        //
+        //        #else
 
-        // 2. 有登入過，顯示今日頁面
-        let storyboard = UIStoryboard.today
+        //        if let window = window?.rootViewController as? SignInViewController {
+        //
+        //            if let user = Auth.auth().currentUser {
+        //
+        //                UserDefaults.standard.setValue(
+        //                    user.uid,
+        //                    forKey: UserDefaults.Keys.uid.rawValue
+        //                )
+        //
+        //                UserDefaults.standard.setValue(
+        //                    user.displayName,
+        //                    forKey: UserDefaults.Keys.displayName.rawValue
+        //                )
+        //
+        //                UserDefaults.standard.setValue(
+        //                    user.email,
+        //                    forKey: UserDefaults.Keys.email.rawValue
+        //                )
+        //
+        //                if let todayVC = UIStoryboard.today.instantiateInitialViewController(withIdentifier: "Today") as? TodayViewController {
+        //
+        //                    window?.rootViewController = todayVC
+        //                } else {
+        //
+        //                    print("Can't initial today viewController")
+        //                }
+        //            }
+        //        }
 
-        window?.rootViewController = storyboard.instantiateInitialViewController()
+        //        #endif
 
-        window?.makeKeyAndVisible()
+        if let user = Auth.auth().currentUser {
+
+            // user 存在 -> 進版頁
+            let storyboard = UIStoryboard.today
+
+            UserDefaults.standard.setValue(
+                user.uid,
+                forKey: UserDefaults.Keys.uid.rawValue
+            )
+
+            UserDefaults.standard.setValue(
+                user.displayName,
+                forKey: UserDefaults.Keys.displayName.rawValue
+            )
+
+            UserDefaults.standard.setValue(
+                user.email,
+                forKey: UserDefaults.Keys.email.rawValue
+            )
+
+            UserDefaults.standard.setValue(
+                user.photoURL,
+                forKey: UserDefaults.Keys.portrait.rawValue
+            )
+
+            window?.rootViewController = storyboard.instantiateInitialViewController()
+
+            window?.makeKeyAndVisible()
+        } else {
+
+            // user 不存在 -> 登入頁
+            let storyboard = UIStoryboard.signIn
+
+            window?.rootViewController = storyboard.instantiateInitialViewController()
+
+            window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

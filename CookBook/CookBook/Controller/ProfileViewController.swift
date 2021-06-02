@@ -69,17 +69,8 @@ class ProfileViewController: UIViewController {
         }
 
         // fetch 資料
-        // UserDocumentId -> Sign In Data
-        let ownerId = "UserDocumentId"
-
-        viewModel.fetchOwnerRecipesData(with: ownerId)
-
-        viewModel.fetchFavoritesRecipesData(with: ownerId)
-
-        viewModel.fetchChallengesRecipesData(with: ownerId)
-
-        viewModel.fetchUserData()
-
+        fetchProfileData()
+        
         setupProfileInfo()
 
         setupCollectionView()
@@ -106,19 +97,35 @@ class ProfileViewController: UIViewController {
         self.type = type
     }
 
+    private func fetchProfileData() {
+
+        // Fbuid -> DocumentId
+        // userdefault 來取
+        if let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) {
+
+            viewModel.fetchOwnerRecipesData(with: uid)
+
+            viewModel.fetchFavoritesRecipesData(with: uid)
+
+            viewModel.fetchChallengesRecipesData(with: uid)
+
+            viewModel.fetchUserData(uid: uid)
+        }
+    }
+
     private func setupProfileInfo() {
 
-        guard let data = viewModel.userViewModel.value else { return }
+        guard let value = viewModel.userViewModel.value else { return }
 
-        imageViewUserPortrait.loadImage(data.portrait)
+        imageViewUserPortrait.loadImage(value.portrait)
 
-        labelUserId.text = data.appleId
+        labelUserId.text = value.user.id
 
-        labelRecipesCounts.text = String(describing: data.recipesCounts)
+        labelRecipesCounts.text = String(describing: value.recipesCounts)
 
-        labelFavoritesCounts.text = String(describing: data.favoritesCounts)
+        labelFavoritesCounts.text = String(describing: value.favoritesCounts)
 
-        labelChallengeCounts.text = String(describing: data.challengesCounts)
+        labelChallengeCounts.text = String(describing: value.challengesCounts)
 
         roundedPortrait()
     }
@@ -218,6 +225,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
+        // 根據按鈕來源切換不同section的資料生成
         let cellViewModel = self.viewModel.switchSection(sortType: type)[indexPath.row]
 
         recipeCell.setup(viewModel: cellViewModel)

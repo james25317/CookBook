@@ -96,6 +96,13 @@
                                     <action selector="skipThisPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyw-SH-tc8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-nR-Vdz">
+                                <rect key="frame" x="313" y="112" width="53" height="30"/>
+                                <state key="normal" title="Signout"/>
+                                <connections>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EiG-Me-EGx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -107,6 +114,8 @@
                             <constraint firstItem="1d3-cN-dfR" firstAttribute="leading" secondItem="7sz-LL-7xV" secondAttribute="trailing" constant="4" id="L3m-BU-PKC"/>
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NuN-Il-KlX"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="top" secondItem="BCZ-ez-t4f" secondAttribute="bottom" constant="24" id="P1o-wm-Xd6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ynw-nR-Vdz" secondAttribute="trailing" constant="24" id="U4N-uN-Ozp"/>
+                            <constraint firstItem="ynw-nR-Vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="UVm-5w-8Wi"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="leading" secondItem="BCZ-ez-t4f" secondAttribute="leading" id="XMT-6X-kRl"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="height" secondItem="BCZ-ez-t4f" secondAttribute="height" multiplier="0.5" id="YrB-9C-oQb"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ZvC-OT-IzU"/>
@@ -179,7 +188,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33Y-7W-aky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="114"/>
+            <point key="canvasLocation" x="1103" y="114"/>
         </scene>
     </scenes>
     <resources>

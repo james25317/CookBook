@@ -22,6 +22,8 @@
 		7F5256702665C315005A2DB9 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F52566F2665C315005A2DB9 /* SignIn.storyboard */; };
 		7F5256722665C392005A2DB9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256712665C392005A2DB9 /* SignInViewController.swift */; };
 		7F5256742665E2AC005A2DB9 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */; };
+		7F5256762666740B005A2DB9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256752666740B005A2DB9 /* SignInViewModel.swift */; };
+		7F52567826667938005A2DB9 /* UserManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52567726667938005A2DB9 /* UserManger.swift */; };
 		7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */; };
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
@@ -51,7 +53,6 @@
 		7FE2C20B266390D500FCEAE3 /* TodayRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20A266390D500FCEAE3 /* TodayRecipe.swift */; };
 		7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */; };
 		7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */; };
-		7FE2C21126654E3500FCEAE3 /* SignInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C21026654E3500FCEAE3 /* SignInUser.swift */; };
 		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
 		7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */; };
 		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
@@ -101,6 +102,8 @@
 		7F52566F2665C315005A2DB9 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		7F5256712665C392005A2DB9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		7F5256752666740B005A2DB9 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		7F52567726667938005A2DB9 /* UserManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManger.swift; sourceTree = "<group>"; };
 		7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditIngredients.storyboard; sourceTree = "<group>"; };
 		7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditSteps.storyboard; sourceTree = "<group>"; };
 		7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -130,7 +133,6 @@
 		7FE2C20A266390D500FCEAE3 /* TodayRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipe.swift; sourceTree = "<group>"; };
 		7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipeViewModel.swift; sourceTree = "<group>"; };
-		7FE2C21026654E3500FCEAE3 /* SignInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUser.swift; sourceTree = "<group>"; };
 		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengesTableViewCell.swift; sourceTree = "<group>"; };
 		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
@@ -291,7 +293,6 @@
 				7F13B16426568BB90042F3EC /* Step.swift */,
 				7F7C735C26589CED00D1AFD4 /* User.swift */,
 				7FE2C20A266390D500FCEAE3 /* TodayRecipe.swift */,
-				7FE2C21026654E3500FCEAE3 /* SignInUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +309,7 @@
 				7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */,
 				7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */,
 				7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */,
+				7F5256752666740B005A2DB9 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				7FFCF06F2650F73C0082ED8E /* DataManager.swift */,
+				7F52567726667938005A2DB9 /* UserManger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				7FFCF0692650C8420082ED8E /* FeedViewModel.swift in Sources */,
 				7FFCF072265104EE0082ED8E /* HomeViewModel.swift in Sources */,
 				7F7C736126594C5F00D1AFD4 /* EditViewModel.swift in Sources */,
+				7F5256762666740B005A2DB9 /* SignInViewModel.swift in Sources */,
 				7FFCF074265105F00082ED8E /* Box.swift in Sources */,
 				7FFCF06B2650CED80082ED8E /* Feed.swift in Sources */,
 				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
@@ -623,6 +627,7 @@
 				7F13B16526568BB90042F3EC /* Step.swift in Sources */,
 				7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */,
 				7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */,
+				7F52567826667938005A2DB9 /* UserManger.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7F7C735D26589CED00D1AFD4 /* User.swift in Sources */,
 				7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */,
@@ -646,7 +651,6 @@
 				7FFCF0922654E8C70082ED8E /* SnapCollectionFlowLayout.swift in Sources */,
 				7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */,
 				7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */,
-				7FE2C21126654E3500FCEAE3 /* SignInUser.swift in Sources */,
 				7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */,
 				7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */,
 				7FFCF07A26523C000082ED8E /* EditViewController.swift in Sources */,

@@ -22,15 +22,15 @@ class ProfileViewModel {
     
     let recipeViewModels: Box<[RecipeViewModel]> = Box([])
 
-    func fetchUserData() {
+    func fetchUserData(uid: String) {
 
-        DataManager.shared.fetchUser { [weak self] result in
+        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
 
             switch result {
 
             case .success(let user):
 
-                print("Fetch user success!")
+                print("Fetch user success: \(user)")
 
                 self?.setUser(user)
 

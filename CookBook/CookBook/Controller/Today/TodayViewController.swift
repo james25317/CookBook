@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TodayViewController: UIViewController {
 
@@ -45,7 +46,21 @@ class TodayViewController: UIViewController {
 
         setupRecipeVideoTapGesture()
     }
-    
+
+    // 臨時 SignOut
+    @IBAction func signOut(_ sender: Any) {
+
+        print("SignOut button tapped!")
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+
+        } catch let signOutError as NSError {
+            
+          print ("Error signing out: %@", signOutError)
+        }
+    }
+
     @IBAction func skipThisPage(_ sender: UIButton) {
 
         // comes from HomePage goes here

@@ -14,9 +14,13 @@ extension UserDefaults {
 
         case uid
 
+        case appleId
+
         case displayName
 
         case email
+
+        case portrait
     }
 
     func getString(key: Keys) -> String? {
