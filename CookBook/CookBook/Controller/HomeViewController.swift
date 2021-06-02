@@ -53,7 +53,8 @@ class HomeViewController: UIViewController {
         // 要 Feeds 資料
         viewModel.fetchFeedsData()
 
-        setupTableView()
+        // Nib - 暫時屏蔽
+        //setupTableView()
 
         // 搜尋欄 - 暫時屏蔽
         // setupSearchBar()
@@ -131,7 +132,7 @@ extension HomeViewController: UITableViewDataSource {
 //
 //            // 生成 ChallengeFeeds
 //        }
-        
+
         guard let feedCell = cell as? FeedTableViewCell else { return cell }
 
         feedCell.setup(viewModel: cellViewModel)

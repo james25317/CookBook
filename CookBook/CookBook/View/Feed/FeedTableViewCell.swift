@@ -22,20 +22,20 @@ class FeedTableViewCell: UITableViewCell {
     var viewModel: FeedViewModel?
 
     // 複寫外框初始值設定達到內縮效果
-    override var frame: CGRect {
-
-        get {
-            return super.frame
-        }
-        set {
-            var frame = newValue
-            frame.origin.x += 16
-            frame.size.width -= 2 * 16
-            frame.origin.y += 24
-            // frame.size.height -= 2 * 16
-            super.frame = frame
-        }
-    }
+//    override var frame: CGRect {
+//
+//        get {
+//            return super.frame
+//        }
+//        set {
+//            var frame = newValue
+//            frame.origin.x += 16
+//            frame.size.width -= 2 * 16
+//            frame.origin.y += 24
+//            // frame.size.height -= 2 * 16
+//            super.frame = frame
+//        }
+//    }
 
     override func awakeFromNib() {
 
