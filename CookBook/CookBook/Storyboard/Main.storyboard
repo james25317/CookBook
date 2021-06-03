@@ -50,8 +50,8 @@
                                                             <rect key="frame" x="0.0" y="169.66666666666666" width="342" height="30.333333333333343"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-lS-Sgv">
-                                                                    <rect key="frame" x="16" y="3" width="310" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
+                                                                    <rect key="frame" x="16" y="5.3333333333333428" width="310" height="19.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="14"/>
                                                                     <color key="textColor" systemColor="systemGray6Color"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>

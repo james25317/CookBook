@@ -186,15 +186,13 @@ extension HomeViewController: UITableViewDelegate {
             guard let challengeVC = UIStoryboard.challenge
                 .instantiateViewController(withIdentifier: "Challenge") as? ChallengeViewController else { return }
 
-            // 取 recipeId (feed.recipeId)
-            let selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
-
-            let recipeId = selectedFeed.recipeId
-
             // 傳 Id
-            challengeVC.recipeId = recipeId
+            challengeVC.recipeId = viewModel.feedViewModels.value[indexPath.row].feed.recipeId
 
-            self.present(challengeVC, animated: true, completion: nil)
+            // 傳 Feed
+            challengeVC.selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+
+            self.navigationController?.pushViewController(challengeVC, animated: true)
         } else {
 
             // NormalCell

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJf-xc-PgY">
-                                <rect key="frame" x="24" y="254.66666666666663" width="64" height="64"/>
+                                <rect key="frame" x="24" y="276.66666666666669" width="64" height="64"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YJf-xc-PgY" secondAttribute="height" multiplier="1:1" id="N3c-9H-25c"/>
@@ -25,39 +25,39 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Challenge" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qec-SI-0F4">
-                                <rect key="frame" x="24" y="163.33333333333334" width="171" height="67.333333333333343"/>
+                                <rect key="frame" x="24" y="185.33333333333334" width="171" height="67.333333333333343"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChallengeHostName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BU-I6-ePh">
-                                <rect key="frame" x="95.999999999999986" y="270.66666666666669" width="141.66666666666663" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                <rect key="frame" x="96.000000000000014" y="290.66666666666669" width="160.33333333333337" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Host" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm0-pO-Ttu">
-                                <rect key="frame" x="96" y="290" width="85" height="17"/>
+                                <rect key="frame" x="96" y="312" width="85" height="17"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-Ne-nAF">
-                                <rect key="frame" x="336" y="290" width="22" height="17"/>
+                                <rect key="frame" x="336" y="312" width="22" height="17"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TIf-Bj-jHT">
-                                <rect key="frame" x="304" y="286" width="24" height="23.666666666666657"/>
+                                <rect key="frame" x="304" y="308" width="24" height="23.666666666666657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TIf-Bj-jHT" secondAttribute="height" multiplier="1:1" id="8j6-58-nrF"/>
                                     <constraint firstAttribute="height" constant="24" id="jHE-eB-foA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-3P-5E1">
-                                <rect key="frame" x="330" y="60" width="36" height="36"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-3P-5E1">
+                                <rect key="frame" x="330" y="104" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="FqP-co-36U"/>
                                     <constraint firstAttribute="width" constant="36" id="P3v-0e-JiR"/>
@@ -70,24 +70,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's try It!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trx-KZ-Rsq">
-                                <rect key="frame" x="136.66666666666666" y="591.33333333333337" width="85" height="21"/>
+                                <rect key="frame" x="136.66666666666666" y="613.33333333333337" width="85" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-tn-qbd">
-                                <rect key="frame" x="221.66666666666666" y="586" width="32" height="32"/>
+                                <rect key="frame" x="221.66666666666666" y="608" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="1kA-c2-nZd"/>
                                     <constraint firstAttribute="width" secondItem="vFW-tn-qbd" secondAttribute="height" multiplier="1:1" id="bsZ-Gt-4OB"/>
                                 </constraints>
                                 <state key="normal" image="arrow.right" catalog="system"/>
                                 <connections>
-                                    <action selector="goEditRecipe:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S10-kF-PQC"/>
+                                    <action selector="goEditRecipe:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rQ4-mL-hdb"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-ud-TKw" userLabel="Image Bg View">
-                                <rect key="frame" x="24" y="342.66666666666669" width="342" height="168.66666666666669"/>
+                                <rect key="frame" x="24" y="364.66666666666669" width="342" height="168.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-7P-wDe">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="168.66666666666666"/>
@@ -104,7 +104,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChallengeRecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-zp-kyu">
                                                 <rect key="frame" x="8" y="9.6666666666666856" width="326" height="21"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="systemGray6Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -168,11 +168,12 @@
                             <constraint firstItem="vFW-tn-qbd" firstAttribute="leading" secondItem="Trx-KZ-Rsq" secondAttribute="trailing" id="wDb-4H-0yI"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="imageViewHostPortrait" destination="YJf-xc-PgY" id="szE-s7-lZo"/>
+                        <outlet property="imageViewPortrait" destination="YJf-xc-PgY" id="szE-s7-lZo"/>
                         <outlet property="imageViewRecipeMainImage" destination="bhh-7P-wDe" id="avY-eX-pIE"/>
-                        <outlet property="labelHostName" destination="8BU-I6-ePh" id="nvp-NH-O1s"/>
                         <outlet property="labelLikesCounts" destination="J9h-Ne-nAF" id="HCO-P0-S2u"/>
+                        <outlet property="labelOwnerName" destination="8BU-I6-ePh" id="nvp-NH-O1s"/>
                         <outlet property="labelRecipeName" destination="BNf-zp-kyu" id="oHY-Ng-Sbe"/>
                     </connections>
                 </viewController>
@@ -193,6 +194,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

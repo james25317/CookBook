@@ -129,8 +129,10 @@
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yI7-55-65K"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dE9-b7-IgP"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="dE9-b7-IgP">
+                        <barButtonItem key="backBarButtonItem" title=" " id="IAr-Ln-2Ak"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="imageViewRecipeVideo" destination="iAN-Z5-oU4" id="83s-1o-mmm"/>
                         <outlet property="imageViewTodayRecipe" destination="BCZ-ez-t4f" id="uJK-at-uiG"/>
