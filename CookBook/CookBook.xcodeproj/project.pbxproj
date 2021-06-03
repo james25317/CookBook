@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F12F8D82668B919007ADB8B /* FeedChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12F8D72668B919007ADB8B /* FeedChallengeTableViewCell.swift */; };
+		7F12F8DA2668DEBD007ADB8B /* EditChallengeDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12F8D92668DEBD007ADB8B /* EditChallengeDoneViewController.swift */; };
 		7F13B15D265557980042F3EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B15C265557980042F3EC /* UIView+Extension.swift */; };
 		7F13B15F265688D10042F3EC /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B15E265688D10042F3EC /* RecipeViewModel.swift */; };
 		7F13B161265689330042F3EC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B160265689330042F3EC /* Recipe.swift */; };
@@ -86,6 +87,7 @@
 		0DAE1C997DAE8278848C0706 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F12F8D72668B919007ADB8B /* FeedChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedChallengeTableViewCell.swift; sourceTree = "<group>"; };
+		7F12F8D92668DEBD007ADB8B /* EditChallengeDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChallengeDoneViewController.swift; sourceTree = "<group>"; };
 		7F13B15C265557980042F3EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7F13B15E265688D10042F3EC /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		7F13B160265689330042F3EC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		7F7C7368265D374200D1AFD4 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				7F12F8D92668DEBD007ADB8B /* EditChallengeDoneViewController.swift */,
 				7FFCF088265409BC0082ED8E /* EditDoneViewController.swift */,
 				7FFCF07D26526C7F0082ED8E /* EditPreviewViewController.swift */,
 				7FFCF07926523C000082ED8E /* EditViewController.swift */,
@@ -613,6 +616,7 @@
 				7F7C736126594C5F00D1AFD4 /* EditViewModel.swift in Sources */,
 				7F5256762666740B005A2DB9 /* SignInViewModel.swift in Sources */,
 				7FFCF074265105F00082ED8E /* Box.swift in Sources */,
+				7F12F8DA2668DEBD007ADB8B /* EditChallengeDoneViewController.swift in Sources */,
 				7FFCF06B2650CED80082ED8E /* Feed.swift in Sources */,
 				7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */,
 				7FE21438264F948F00208667 /* EditIngredientsTableViewCell.swift in Sources */,

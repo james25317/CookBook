@@ -92,13 +92,13 @@ class EditPreviewViewController: UIViewController {
     @IBAction func goEditDonePage(_ sender: Any) {
 
         guard let editDoneVC = UIStoryboard.editDone
-                .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
+            .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         // assign latest mainImage data
         guard let value = viewModel?.recipeViewModel.value,
-              let mainImage = value.recipe.steps.last?.image else { return }
+            let mainImage = value.recipe.steps.last?.image else { return }
 
         // assign 本地 mainImage 資料
         viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage

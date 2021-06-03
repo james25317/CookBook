@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookCreated!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp8-vz-cHU">
-                                <rect key="frame" x="24" y="146" width="342" height="35"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="25"/>
+                                <rect key="frame" x="86.666666666666686" y="146" width="217" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now, maybe you want to ... ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beN-Ct-p98">
-                                <rect key="frame" x="24" y="284.66666666666669" width="342" height="21"/>
+                                <rect key="frame" x="24" y="289.66666666666669" width="342" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -61,13 +61,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do3-Xp-VC7">
-                                <rect key="frame" x="161.33333333333334" y="707" width="99.666666666666657" height="21"/>
+                                <rect key="frame" x="161.33333333333334" y="714" width="99.666666666666657" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-av-4uK">
-                                <rect key="frame" x="129.33333333333334" y="705.33333333333337" width="24" height="24"/>
+                                <rect key="frame" x="129.33333333333334" y="712.66666666666663" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Odb-an-cYM"/>
                                     <constraint firstAttribute="width" secondItem="L67-av-4uK" secondAttribute="height" multiplier="1:1" id="rgy-4n-kAa"/>
@@ -81,7 +81,6 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Do3-Xp-VC7" firstAttribute="firstBaseline" secondItem="G1Q-9x-J3E" secondAttribute="baseline" constant="256" id="0Bs-Od-zc5"/>
                             <constraint firstItem="Lp8-vz-cHU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3wg-ZM-LEj"/>
                             <constraint firstItem="Lp8-vz-cHU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="102" id="4gz-MB-ndr"/>
                             <constraint firstItem="Do3-Xp-VC7" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" constant="16" id="E4b-2R-p1c"/>
@@ -93,11 +92,10 @@
                             <constraint firstItem="NlN-Un-yHo" firstAttribute="top" secondItem="lQV-OK-bpe" secondAttribute="bottom" constant="24" id="Lvx-hM-Mqi"/>
                             <constraint firstItem="NlN-Un-yHo" firstAttribute="leading" secondItem="lQV-OK-bpe" secondAttribute="leading" id="O2X-tk-aXc"/>
                             <constraint firstItem="lQV-OK-bpe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="UT7-uv-XaA"/>
-                            <constraint firstItem="Lp8-vz-cHU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="VhU-Jl-z2I"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lp8-vz-cHU" secondAttribute="trailing" constant="24" id="Yjn-cL-C4M"/>
                             <constraint firstItem="NlN-Un-yHo" firstAttribute="trailing" secondItem="lQV-OK-bpe" secondAttribute="trailing" id="aeZ-mZ-ydK"/>
-                            <constraint firstItem="lQV-OK-bpe" firstAttribute="top" secondItem="beN-Ct-p98" secondAttribute="bottom" constant="24" id="bpH-0k-PgO"/>
+                            <constraint firstItem="lQV-OK-bpe" firstAttribute="top" secondItem="beN-Ct-p98" secondAttribute="baseline" constant="24" id="bpH-0k-PgO"/>
                             <constraint firstItem="beN-Ct-p98" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="cTU-Ax-C4j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Do3-Xp-VC7" secondAttribute="baseline" constant="80" id="cWR-mG-Her"/>
                             <constraint firstItem="G1Q-9x-J3E" firstAttribute="top" secondItem="NlN-Un-yHo" secondAttribute="bottom" constant="24" id="frS-np-AQJ"/>
                             <constraint firstItem="L67-av-4uK" firstAttribute="centerY" secondItem="Do3-Xp-VC7" secondAttribute="centerY" id="rSq-DM-Y8j"/>
                             <constraint firstItem="Do3-Xp-VC7" firstAttribute="leading" secondItem="L67-av-4uK" secondAttribute="trailing" constant="8" id="twR-Ys-XgM"/>
@@ -108,20 +106,60 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Challenge Done View Controller-->
         <scene sceneID="TA9-g5-w12">
             <objects>
-                <viewController storyboardIdentifier="EditChallengeDone" id="V6T-d6-RL4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditChallengeDone" id="V6T-d6-RL4" customClass="EditChallengeDoneViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ku8-jt-CFG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! You did great!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-uP-bMn">
+                                <rect key="frame" x="88" y="140" width="214" height="67.333333333333314"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIJ-7w-lRb">
+                                <rect key="frame" x="24" y="648" width="342" height="42"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="vNn-pm-XRm"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareBackToFeed:" destination="V6T-d6-RL4" eventType="touchUpInside" id="GaZ-5V-5pC"/>
+                                    <action selector="shareFeedAndLeave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tGl-iN-GSC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your result with CookBook!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55D-sI-q3Z">
+                                <rect key="frame" x="77.666666666666671" y="706" width="234.66666666666663" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KN3-S2-IdB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KN3-S2-IdB" firstAttribute="trailing" secondItem="mz4-uP-bMn" secondAttribute="trailing" constant="88" id="5cH-Cb-sUu"/>
+                            <constraint firstItem="RIJ-7w-lRb" firstAttribute="leading" secondItem="KN3-S2-IdB" secondAttribute="leading" constant="24" id="7CK-zS-21L"/>
+                            <constraint firstItem="mz4-uP-bMn" firstAttribute="centerX" secondItem="KN3-S2-IdB" secondAttribute="centerX" id="VbS-y5-zDl"/>
+                            <constraint firstItem="55D-sI-q3Z" firstAttribute="firstBaseline" secondItem="RIJ-7w-lRb" secondAttribute="bottom" constant="32" id="XhN-TO-87t"/>
+                            <constraint firstItem="RIJ-7w-lRb" firstAttribute="centerX" secondItem="mz4-uP-bMn" secondAttribute="centerX" id="c2O-YD-KAq"/>
+                            <constraint firstItem="mz4-uP-bMn" firstAttribute="top" secondItem="KN3-S2-IdB" secondAttribute="top" constant="96" id="gev-Ar-XqA"/>
+                            <constraint firstItem="mz4-uP-bMn" firstAttribute="leading" secondItem="KN3-S2-IdB" secondAttribute="leading" constant="88" id="gx5-wq-Fdq"/>
+                            <constraint firstItem="55D-sI-q3Z" firstAttribute="centerX" secondItem="mz4-uP-bMn" secondAttribute="centerX" id="l4c-N0-K67"/>
+                            <constraint firstItem="KN3-S2-IdB" firstAttribute="bottom" secondItem="RIJ-7w-lRb" secondAttribute="bottom" constant="120" id="ltL-nm-PTG"/>
+                            <constraint firstItem="KN3-S2-IdB" firstAttribute="trailing" secondItem="RIJ-7w-lRb" secondAttribute="trailing" constant="24" id="zgv-ac-kG9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRI-JW-Yfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="69"/>
+            <point key="canvasLocation" x="1024.6153846153845" y="68.957345971563981"/>
         </scene>
     </scenes>
     <resources>
