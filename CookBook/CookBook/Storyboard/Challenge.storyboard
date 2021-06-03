@@ -11,7 +11,7 @@
         <!--Challenge View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ChallengeViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Challenge" id="Y6W-OH-hqX" customClass="ChallengeViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,15 +23,6 @@
                                     <constraint firstAttribute="width" secondItem="YJf-xc-PgY" secondAttribute="height" multiplier="1:1" id="N3c-9H-25c"/>
                                     <constraint firstAttribute="height" constant="64" id="hw7-TF-15g"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-7P-wDe">
-                                <rect key="frame" x="24" y="342.66666666666669" width="342" height="168.66666666666669"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Challenge" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qec-SI-0F4">
                                 <rect key="frame" x="24" y="163.33333333333334" width="171" height="67.333333333333343"/>
@@ -79,13 +70,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's try It!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trx-KZ-Rsq">
-                                <rect key="frame" x="136.66666666666666" y="575.33333333333337" width="85" height="21"/>
+                                <rect key="frame" x="136.66666666666666" y="591.33333333333337" width="85" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-tn-qbd">
-                                <rect key="frame" x="221.66666666666666" y="570" width="32" height="32"/>
+                                <rect key="frame" x="221.66666666666666" y="586" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="1kA-c2-nZd"/>
                                     <constraint firstAttribute="width" secondItem="vFW-tn-qbd" secondAttribute="height" multiplier="1:1" id="bsZ-Gt-4OB"/>
@@ -95,49 +86,85 @@
                                     <action selector="goEditRecipe:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S10-kF-PQC"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3q-EL-Q3u">
-                                <rect key="frame" x="24" y="471" width="342" height="40.333333333333314"/>
-                                <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-ud-TKw" userLabel="Image Bg View">
+                                <rect key="frame" x="24" y="342.66666666666669" width="342" height="168.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-7P-wDe">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="168.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3q-EL-Q3u" userLabel="Txt Bg View">
+                                        <rect key="frame" x="0.0" y="128.33333333333331" width="342" height="40.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChallengeRecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-zp-kyu">
+                                                <rect key="frame" x="8" y="9.6666666666666856" width="326" height="21"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="BNf-zp-kyu" firstAttribute="leading" secondItem="q3q-EL-Q3u" secondAttribute="leading" constant="8" id="3NR-bT-hp2"/>
+                                            <constraint firstItem="BNf-zp-kyu" firstAttribute="centerY" secondItem="q3q-EL-Q3u" secondAttribute="centerY" id="UE5-dA-Dde"/>
+                                            <constraint firstAttribute="trailing" secondItem="BNf-zp-kyu" secondAttribute="trailing" constant="8" id="dtQ-0R-YYa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="q3q-EL-Q3u" firstAttribute="height" secondItem="Ovp-ud-TKw" secondAttribute="height" multiplier="0.24" id="AjC-h8-hmx"/>
+                                    <constraint firstAttribute="trailing" secondItem="bhh-7P-wDe" secondAttribute="trailing" id="BEk-AG-Z0K"/>
+                                    <constraint firstItem="q3q-EL-Q3u" firstAttribute="leading" secondItem="Ovp-ud-TKw" secondAttribute="leading" id="GWC-QK-wO8"/>
+                                    <constraint firstAttribute="bottom" secondItem="q3q-EL-Q3u" secondAttribute="bottom" id="HNG-WN-Vln"/>
+                                    <constraint firstAttribute="trailing" secondItem="q3q-EL-Q3u" secondAttribute="trailing" id="LZf-V4-UVl"/>
+                                    <constraint firstItem="bhh-7P-wDe" firstAttribute="top" secondItem="Ovp-ud-TKw" secondAttribute="top" id="MYd-Wc-67Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="bhh-7P-wDe" secondAttribute="bottom" id="QaN-mT-vOI"/>
+                                    <constraint firstItem="bhh-7P-wDe" firstAttribute="leading" secondItem="Ovp-ud-TKw" secondAttribute="leading" id="Z6Q-Oc-hOK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChallengeRecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-zp-kyu">
-                                <rect key="frame" x="32" y="480.66666666666669" width="321" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bhh-7P-wDe" firstAttribute="trailing" secondItem="q3q-EL-Q3u" secondAttribute="trailing" id="0I8-zy-x6G"/>
-                            <constraint firstItem="bhh-7P-wDe" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="2az-S5-vT4"/>
-                            <constraint firstItem="q3q-EL-Q3u" firstAttribute="height" secondItem="bhh-7P-wDe" secondAttribute="height" multiplier="0.24" id="2se-qT-SRQ"/>
-                            <constraint firstItem="BNf-zp-kyu" firstAttribute="leading" secondItem="q3q-EL-Q3u" secondAttribute="leading" constant="8" id="816-yy-Brn"/>
-                            <constraint firstItem="bhh-7P-wDe" firstAttribute="bottom" secondItem="q3q-EL-Q3u" secondAttribute="bottom" id="88p-X5-gmz"/>
+                            <constraint firstItem="Ovp-ud-TKw" firstAttribute="top" secondItem="YJf-xc-PgY" secondAttribute="bottom" constant="24" id="76y-od-ybR"/>
                             <constraint firstItem="YJf-xc-PgY" firstAttribute="leading" secondItem="Qec-SI-0F4" secondAttribute="leading" id="8O4-gT-LMs"/>
-                            <constraint firstItem="J9h-Ne-nAF" firstAttribute="trailing" secondItem="bhh-7P-wDe" secondAttribute="trailing" constant="-8" id="B4l-wp-oZy"/>
+                            <constraint firstItem="Ovp-ud-TKw" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.2" id="Av9-Jp-4Iy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oLg-3P-5E1" secondAttribute="trailing" constant="24" id="CPo-sp-Rvj"/>
-                            <constraint firstItem="bhh-7P-wDe" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.2" id="Cco-kI-p8Z"/>
-                            <constraint firstItem="q3q-EL-Q3u" firstAttribute="leading" secondItem="bhh-7P-wDe" secondAttribute="leading" id="DcN-tk-IVc"/>
-                            <constraint firstItem="bhh-7P-wDe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="E43-Cg-Cwt"/>
                             <constraint firstItem="J9h-Ne-nAF" firstAttribute="firstBaseline" secondItem="lm0-pO-Ttu" secondAttribute="firstBaseline" id="GPe-eQ-nc6"/>
                             <constraint firstItem="Qec-SI-0F4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="HFO-WD-uRg"/>
                             <constraint firstItem="8BU-I6-ePh" firstAttribute="firstBaseline" secondItem="YJf-xc-PgY" secondAttribute="centerY" id="K5d-17-RNc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ovp-ud-TKw" secondAttribute="trailing" constant="24" id="Kiz-BG-q18"/>
                             <constraint firstItem="J9h-Ne-nAF" firstAttribute="leading" secondItem="TIf-Bj-jHT" secondAttribute="trailing" constant="8" id="Mx7-0d-uMz"/>
                             <constraint firstItem="YJf-xc-PgY" firstAttribute="top" secondItem="Qec-SI-0F4" secondAttribute="bottom" constant="24" id="OEf-oc-cg0"/>
-                            <constraint firstItem="BNf-zp-kyu" firstAttribute="trailing" secondItem="q3q-EL-Q3u" secondAttribute="trailing" constant="-13" id="R2x-WA-PS4"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bhh-7P-wDe" secondAttribute="trailing" constant="24" id="RgY-1x-AYX"/>
+                            <constraint firstItem="Ovp-ud-TKw" firstAttribute="leading" secondItem="YJf-xc-PgY" secondAttribute="leading" id="ONE-xe-8r1"/>
+                            <constraint firstItem="Ovp-ud-TKw" firstAttribute="trailing" secondItem="J9h-Ne-nAF" secondAttribute="trailing" constant="8" id="PS4-1j-yUF"/>
                             <constraint firstItem="TIf-Bj-jHT" firstAttribute="centerY" secondItem="J9h-Ne-nAF" secondAttribute="centerY" id="TBN-Fh-zCt"/>
                             <constraint firstItem="Trx-KZ-Rsq" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" constant="-16" id="Tbg-lS-dyi"/>
                             <constraint firstItem="lm0-pO-Ttu" firstAttribute="leading" secondItem="8BU-I6-ePh" secondAttribute="leading" id="VMU-NY-Ora"/>
                             <constraint firstItem="oLg-3P-5E1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Wfm-Vc-MlK"/>
-                            <constraint firstItem="Trx-KZ-Rsq" firstAttribute="top" secondItem="bhh-7P-wDe" secondAttribute="bottom" constant="64" id="eRs-en-cwN"/>
                             <constraint firstItem="lm0-pO-Ttu" firstAttribute="firstBaseline" secondItem="8BU-I6-ePh" secondAttribute="baseline" constant="16" id="gnf-yf-oJ4"/>
-                            <constraint firstItem="BNf-zp-kyu" firstAttribute="centerY" secondItem="q3q-EL-Q3u" secondAttribute="centerY" id="kqj-AX-xCr"/>
-                            <constraint firstItem="bhh-7P-wDe" firstAttribute="top" secondItem="YJf-xc-PgY" secondAttribute="bottom" constant="24" id="nx4-gH-tyt"/>
+                            <constraint firstItem="Trx-KZ-Rsq" firstAttribute="firstBaseline" secondItem="Ovp-ud-TKw" secondAttribute="baseline" constant="96" id="koT-dU-A2q"/>
                             <constraint firstItem="Qec-SI-0F4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="oEK-YX-zed"/>
                             <constraint firstItem="8BU-I6-ePh" firstAttribute="leading" secondItem="YJf-xc-PgY" secondAttribute="trailing" constant="8" id="oKC-wC-Cb4"/>
+                            <constraint firstItem="Ovp-ud-TKw" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="pVS-6g-48v"/>
                             <constraint firstItem="vFW-tn-qbd" firstAttribute="centerY" secondItem="Trx-KZ-Rsq" secondAttribute="centerY" id="q2b-7J-BFO"/>
+                            <constraint firstItem="Ovp-ud-TKw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="vZH-Hx-aad"/>
                             <constraint firstItem="vFW-tn-qbd" firstAttribute="leading" secondItem="Trx-KZ-Rsq" secondAttribute="trailing" id="wDb-4H-0yI"/>
                         </constraints>
                     </view>

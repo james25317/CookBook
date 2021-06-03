@@ -19,6 +19,10 @@ class ChallengeViewController: UIViewController {
     
     @IBOutlet weak var labelRecipeName: UILabel!
 
+    let viewModel = ReadViewModel()
+    
+    var recipeId: String?
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()

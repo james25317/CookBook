@@ -19,6 +19,8 @@ private struct StoryboardCategory {
 
     static let editDone = "EditDone"
 
+    static let challenge = "Challenge"
+
     static let profile = "Profile"
 
     static let read = "Read"
@@ -35,6 +37,8 @@ extension UIStoryboard {
     static var edit: UIStoryboard { return storyBoard(name: StoryboardCategory.edit) }
 
     static var editDone: UIStoryboard { return storyBoard(name: StoryboardCategory.editDone) }
+
+    static var challenge: UIStoryboard { return storyBoard(name: StoryboardCategory.challenge) }
 
     static var profile: UIStoryboard { return storyBoard(name: StoryboardCategory.profile) }
 

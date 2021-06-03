@@ -171,13 +171,34 @@ extension HomeViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
 
         let cellViewModel = self.viewModel.feedViewModels.value[indexPath.row]
-
-        // 判斷 Challenge, ChallengeDone
+        
         if !cellViewModel.challenger.isEmpty {
 
             // ChallengeDoneCell
+            print("ChallengeDoneCell tapped")
+
             return
+        } else if cellViewModel.isChallenged == false {
+
+            // ChallengeCell
+            print("ChallengeCell tapped")
+
+            guard let challengeVC = UIStoryboard.challenge
+                .instantiateViewController(withIdentifier: "Challenge") as? ChallengeViewController else { return }
+
+            // 取 recipeId (feed.recipeId)
+            let selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+
+            let recipeId = selectedFeed.recipeId
+
+            // 傳 Id
+            challengeVC.recipeId = recipeId
+
+            self.present(challengeVC, animated: true, completion: nil)
         } else {
+
+            // NormalCell
+            print("NormalCell tapped")
 
             guard let readVC = UIStoryboard.read
                 .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
