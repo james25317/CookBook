@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedChallengesTableViewCell: UITableViewCell {
+class FeedChallengeDoneTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageViewPortrait: UIImageView!
 
@@ -71,11 +71,13 @@ class FeedChallengesTableViewCell: UITableViewCell {
 
         let ownerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goReadPage))
 
-        let challengerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goEditPage))
-
         imageViewOwnerRecipe.isUserInteractionEnabled = true
 
         imageViewOwnerRecipe.addGestureRecognizer(ownerRecipeGesture)
+        
+        let challengerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goEditPage))
+
+        imageViewChallengerRecipe.isUserInteractionEnabled = true
 
         imageViewChallengerRecipe.addGestureRecognizer(challengerRecipeGesture)
     }

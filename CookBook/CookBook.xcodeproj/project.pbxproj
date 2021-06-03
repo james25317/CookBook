@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F12F8D82668B919007ADB8B /* FeedChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12F8D72668B919007ADB8B /* FeedChallengeTableViewCell.swift */; };
 		7F13B15D265557980042F3EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B15C265557980042F3EC /* UIView+Extension.swift */; };
 		7F13B15F265688D10042F3EC /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B15E265688D10042F3EC /* RecipeViewModel.swift */; };
 		7F13B161265689330042F3EC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B160265689330042F3EC /* Recipe.swift */; };
@@ -54,7 +55,7 @@
 		7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */; };
 		7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */; };
 		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
-		7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */; };
+		7FFCF0622650148D0082ED8E /* FeedChallengeDoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */; };
 		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
 		7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0662650C4AC0082ED8E /* KingFisherWrapper.swift */; };
 		7FFCF0692650C8420082ED8E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0682650C8420082ED8E /* FeedViewModel.swift */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		0DAE1C997DAE8278848C0706 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F12F8D72668B919007ADB8B /* FeedChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		7F13B15C265557980042F3EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7F13B15E265688D10042F3EC /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		7F13B160265689330042F3EC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 		7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipeViewModel.swift; sourceTree = "<group>"; };
 		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengesTableViewCell.swift; sourceTree = "<group>"; };
+		7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengeDoneTableViewCell.swift; sourceTree = "<group>"; };
 		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
 		7FFCF0662650C4AC0082ED8E /* KingFisherWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherWrapper.swift; sourceTree = "<group>"; };
 		7FFCF0682650C8420082ED8E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -363,9 +365,10 @@
 		7FA1BA8F264E4C3900B8ED13 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				7FFCF0602650148C0082ED8E /* FeedChallengesTableViewCell.swift */,
-				7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */,
+				7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */,
+				7F12F8D72668B919007ADB8B /* FeedChallengeTableViewCell.swift */,
 				7FA1BA8B264CFC9D00B8ED13 /* FeedTableViewCell.swift */,
+				7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */,
 				7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */,
 			);
 			path = Feed;
@@ -631,6 +634,7 @@
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7F7C735D26589CED00D1AFD4 /* User.swift in Sources */,
 				7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */,
+				7F12F8D82668B919007ADB8B /* FeedChallengeTableViewCell.swift in Sources */,
 				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
 				7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */,
 				7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */,
@@ -652,7 +656,7 @@
 				7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */,
 				7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */,
 				7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */,
-				7FFCF0622650148D0082ED8E /* FeedChallengesTableViewCell.swift in Sources */,
+				7FFCF0622650148D0082ED8E /* FeedChallengeDoneTableViewCell.swift in Sources */,
 				7FFCF07A26523C000082ED8E /* EditViewController.swift in Sources */,
 				7FE2C2082663746600FCEAE3 /* TodayVideoViewController.swift in Sources */,
 				7FFCF078265233820082ED8E /* UIStoryboard+Extension.swift in Sources */,

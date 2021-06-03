@@ -94,7 +94,7 @@ class HomeViewController: UIViewController {
 
         tableView.registerCellWithNib(
 
-            identifier: String(describing: FeedChallengesTableViewCell.self),
+            identifier: String(describing: FeedChallengeDoneTableViewCell.self),
             bundle: nil)
     }
 
@@ -123,25 +123,38 @@ extension HomeViewController: UITableViewDataSource {
 
         if cellViewModel.isChallenged == false {
 
+            // 挑戰 Feed
             let cell = tableView.dequeueReusableCell(
-                withIdentifier: String(describing: FeedChallengesTableViewCell.self),
+                withIdentifier: String(describing: FeedChallengeTableViewCell.self),
                 for: indexPath
             )
 
-            // 生成 ChallengeFeeds
-            guard let feedChallengeCell = cell as? FeedChallengesTableViewCell else { return cell }
+            guard let feedChallengeCell = cell as? FeedChallengeTableViewCell else { return cell }
 
             feedChallengeCell.setup(viewModel: cellViewModel)
 
             return feedChallengeCell
+        } else if !cellViewModel.challenger.isEmpty {
+
+            // 挑戰完成 Feed
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: String(describing: FeedChallengeDoneTableViewCell.self),
+                for: indexPath
+            )
+
+            guard let feedChallengeDoneCell = cell as? FeedChallengeDoneTableViewCell else { return cell }
+
+            feedChallengeDoneCell.setup(viewModel: cellViewModel)
+
+            return feedChallengeDoneCell
         } else {
 
+            // 一般 Feed
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: String(describing: FeedTableViewCell.self),
                 for: indexPath
             )
 
-            // 生成 NormalFeeds
             guard let feedCell = cell as? FeedTableViewCell else { return cell }
 
             feedCell.setup(viewModel: cellViewModel)
@@ -159,9 +172,10 @@ extension HomeViewController: UITableViewDelegate {
 
         let cellViewModel = self.viewModel.feedViewModels.value[indexPath.row]
 
-        // 判斷是否為 ChallengeCell
-        if cellViewModel.isChallenged == false {
+        // 判斷 Challenge, ChallengeDone
+        if !cellViewModel.challenger.isEmpty {
 
+            // ChallengeDoneCell
             return
         } else {
 
