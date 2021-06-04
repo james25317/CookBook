@@ -36,7 +36,7 @@ class ChallengeViewController: UIViewController {
                 let selectedFeed = self?.selectedFeed,
                 let feedId = selectedFeed.id else { return }
 
-            // let uid = UserManager.shared.uid
+            // mockuid
             let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
             // updateFeed
@@ -48,13 +48,13 @@ class ChallengeViewController: UIViewController {
             print("Challenge assigned")
 
             // 再去 fetch 一次最新的 recipe
-            self?.viewModel.fetchRecipe(reciepeId: recipeId)
-
-            // 等 fetch 成功後，再給信號到下個頁面（＆傳資料）
+            // self?.viewModel.fetchRecipe(reciepeId: recipeId)
 
             // go create Recipe
             guard let editVC = UIStoryboard.edit
                 .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+
+            editVC.viewModel.recipe.challenger = uid
             
             self?.navigationController?.pushViewController(editVC, animated: true)
         }
