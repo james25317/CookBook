@@ -211,7 +211,10 @@ extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return 0 }
+        // guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return 0 }
+
+        // mockuid
+        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
         return viewModel.switchSection(with: uid, sortType: type).count
     }
@@ -225,8 +228,11 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
-        guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return cell }
-        
+        // guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return cell }
+
+        // mockuid
+        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
         // 根據按鈕來源切換不同section的資料生成
         let cellViewModel = self.viewModel.switchSection(with: uid, sortType: type)[indexPath.row]
 
