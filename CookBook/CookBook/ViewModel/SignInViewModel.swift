@@ -26,33 +26,33 @@ class SignInViewModel {
     // 到下一頁
     var onGranteed: (() -> Void)?
 
-    func fetchUserData(with uid: String) {
-
-        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
-
-            switch result {
-
-            case .success(let user):
-
-                // fetch 成功，有此位使用者，assign 資料
-                // self?.setUser(user)
-
-                // 可去進版頁
-                // self?.onGranteed?()
-
-                break
-            case .failure(let error):
-
-                print("\(error), fetch user fail, creating new user now")
-
-                // 創新 User
-                guard let userViewModel = self?.userViewModel,
-                      let user = userViewModel.value?.user else { return }
-
-                self?.createUserData(user: user, uid: uid)
-            }
-        }
-    }
+//    func fetchUserData(with uid: String) {
+//
+//        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
+//
+//            switch result {
+//
+//            case .success(let user):
+//
+//                // fetch 成功，有此位使用者，assign 資料
+//                // self?.setUser(user)
+//
+//                // 可去進版頁
+//                // self?.onGranteed?()
+//
+//                break
+//            case .failure(let error):
+//
+//                print("\(error), fetch user fail, creating new user now")
+//
+//                // 創新 User
+//                guard let userViewModel = self?.userViewModel,
+//                    let user = userViewModel.value?.user else { return }
+//
+//                self?.createUserData(user: user, uid: uid)
+//            }
+//        }
+//    }
     
     func createUserData(user: User, uid: String) {
 

@@ -100,33 +100,33 @@ class DataManager {
     }
 
     // MARK: User
-//    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
-//
-//        // 可以用 where 篩出 appleId
-//
-//        db.collection(Collections.user.rawValue)
-//            .document("SADUxqR04ihqg1XUgDHn")
-//            .addSnapshotListener({ documentSnapshot, error in
-//                if let error = error {
-//
-//                    completion(.failure(error))
-//                } else {
-//
-//                    guard let document = documentSnapshot else { return }
-//
-//                    do {
-//
-//                        if let user = try document.data(as: User.self) {
-//
-//                            completion(.success(user))
-//                        }
-//                    } catch {
-//
-//                        completion(.failure(error))
-//                    }
-//                }
-//            })
-//    }
+    //    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
+    //
+    //        // 可以用 where 篩出 appleId
+    //
+    //        db.collection(Collections.user.rawValue)
+    //            .document("SADUxqR04ihqg1XUgDHn")
+    //            .addSnapshotListener({ documentSnapshot, error in
+    //                if let error = error {
+    //
+    //                    completion(.failure(error))
+    //                } else {
+    //
+    //                    guard let document = documentSnapshot else { return }
+    //
+    //                    do {
+    //
+    //                        if let user = try document.data(as: User.self) {
+    //
+    //                            completion(.success(user))
+    //                        }
+    //                    } catch {
+    //
+    //                        completion(.failure(error))
+    //                    }
+    //                }
+    //            })
+    //    }
 
     // MARK: Recipes
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
@@ -483,10 +483,10 @@ class DataManager {
     }
 
     // MARK: FavoritesCounts (update)
-    func updateFavoritesCounts(userDocumentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateFavoritesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.user.rawValue).document(userDocumentId)
+        let ref = db.collection(Collections.user.rawValue).document(uid)
 
         ref.updateData(
             ["favoritesCounts": FieldValue.increment(Int64(1))]
@@ -500,9 +500,9 @@ class DataManager {
 
             } else {
 
-                print("\(userDocumentId): FavoritesCounts successfully increased!")
+                print("\(uid): FavoritesCounts successfully increased!")
 
-                completion(.success(userDocumentId))
+                completion(.success(uid))
             }
         }
     }
@@ -576,6 +576,31 @@ class DataManager {
             } else {
 
                 print("\(documentId): favoritesUserId successfully updated!")
+
+                completion(.success(documentId))
+            }
+        }
+    }
+
+    // MARK: Challenger (update)
+    func updateChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 favoritesUserId 欄位
+        let ref = db.collection(Collections.feed.rawValue).document(documentId)
+
+        ref.updateData(
+            ["challenger": uid, "isChallenged": true]
+        ) { error in
+
+            if let error = error {
+
+                print("Error update challenger: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("\(documentId): challenger successfully updated!")
 
                 completion(.success(documentId))
             }

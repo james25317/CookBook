@@ -29,6 +29,46 @@ class ChallengeViewController: UIViewController {
 
         super.viewDidLoad()
 
+        viewModel.onGranteed = { [weak self] () in
+
+            print("Challenge assigned")
+
+            // 更新 挑戰者狀態
+            guard let recipeId = self?.recipeId,
+                  let selectedFeed = self?.selectedFeed,
+                  let feedId = selectedFeed.id else { return }
+
+            // let uid = UserManager.shared.uid
+            let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
+            self?.viewModel.updateChallenger(feedId: feedId, uid: uid)
+
+            // go create Recipe
+            guard let editVC = UIStoryboard.edit
+                .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+
+            self?.navigationController?.pushViewController(editVC, animated: true)
+        }
+
+        viewModel.onDenied = { [weak self] () in
+
+            // alert 提示
+            print("Challenger has been assigned")
+        }
+
+        viewModel.onReturned = { [weak self] () in
+
+            print("Redirect to homeVC")
+
+            // back to homeVC and reloadData()
+            guard let navigationController = self?.navigationController,
+                let homeVC = navigationController.viewControllers.first(
+                    where: { $0 is HomeViewController }
+                ) else { return }
+
+            navigationController.popToViewController(homeVC, animated: true)
+        }
+
         viewModel.recipeViewModel.bind { [weak self] recipeViewModel in
 
             guard let recipeViewModel = recipeViewModel else { return }
@@ -56,13 +96,23 @@ class ChallengeViewController: UIViewController {
 
     @IBAction func goEditRecipe(_ sender: Any) {
 
-        // fetch this recipe for checking is challenger field is empty, if not, alert sign pops (and go back).
-        
-        // go create Recipe
-        guard let editVC = UIStoryboard.edit
-            .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+        // let uid = UserManager.shared.uid
+        // let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
-        navigationController?.pushViewController(editVC, animated: true)
+        // fetch this recipe for checking is challenger field is empty, if not, alert sign pops (and go back).
+        guard let recipeId = self.recipeId else { return }
+
+        viewModel.checkRecipeValue(reciepeId: recipeId)
+
+        // if it was empty, sign uid(recipe.ownerId) to its recipe
+        // guard let selectedFeed = selectedFeed else { return }
+
+        // viewModel.updateChallenger(documentId: selectedFeed.recipeId, uid: uid)
+
+        // go create Recipe
+        // guard let editVC = UIStoryboard.edit.instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
+
+        // navigationController?.pushViewController(editVC, animated: true)
     }
 
     private func setupTapGesture() {

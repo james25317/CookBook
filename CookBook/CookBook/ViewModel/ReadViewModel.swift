@@ -11,6 +11,12 @@ import Firebase
 class ReadViewModel {
 
     let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
+
+    var onDenied: (() -> Void)?
+
+    var onReturned: (() -> Void)?
+
+    var onGranteed: (() -> Void)?
     
     func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void = { _ in }) {
 
@@ -29,9 +35,46 @@ class ReadViewModel {
 
             case .failure(let error):
 
-                print("fetchData.failure: \(error)")
+                print("Fetch failure: \(error)")
 
                 completion(.failure(error))
+            }
+        }
+    }
+
+    func checkRecipeValue(reciepeId: String) {
+
+        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
+
+            switch result {
+
+            case .success(let recipe):
+
+                print("Fetch recipe success!")
+
+                if !recipe.challenger.isEmpty {
+
+                    // challenger 已經有值:
+                    // 顯示提示＆返回主頁
+
+                    // 提示彈窗
+                    self?.onDenied?()
+
+                    // 返回主頁
+                    self?.onReturned?()
+                } else {
+
+                    // challenger 無值:
+                    // 1. 上傳當前 uid 為 challenger
+                    // 2. 更新 isChallenged = true
+                    // 3. create Recipe
+
+                    self?.onGranteed?()
+                }
+
+            case .failure(let error):
+
+                print("Fetch failure: \(error)")
             }
         }
     }
@@ -58,9 +101,9 @@ class ReadViewModel {
         }
     }
 
-    func updateFavoritesCounts(with userDocumentId: String) {
+    func updateFavoritesCounts(with uid: String) {
 
-        DataManager.shared.updateFavoritesCounts(userDocumentId: userDocumentId) { result in
+        DataManager.shared.updateFavoritesCounts(uid: uid) { result in
 
             switch result {
 
@@ -78,7 +121,9 @@ class ReadViewModel {
 
     func updateFavoritesUserId(to documentId: String, with favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        DataManager.shared.updatefavoritesUserId(documentId: documentId, favoritesUserId: favoritesUserId) { [weak self] result in
+        DataManager.shared.updatefavoritesUserId(
+            documentId: documentId,
+            favoritesUserId: favoritesUserId) { [weak self] result in
 
             switch result {
 
@@ -95,6 +140,25 @@ class ReadViewModel {
                 completion(.failure(error))
             }
 
+        }
+    }
+
+    func updateChallenger(feedId documentId: String, uid: String) {
+
+        DataManager.shared.updateChallengeStatus(
+            documentId: documentId,
+            uid: uid) { [weak self] result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("\(documentId): challenger \(uid) added")
+
+            case .failure(let error):
+
+                print(error)
+            }
         }
     }
 }
