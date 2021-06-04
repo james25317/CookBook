@@ -247,7 +247,7 @@ class EditViewModel {
 
                 print("ID: \(documentId) CookBook Created")
 
-                // 用回傳的 documentId 再去發一次請求
+                // 用回傳的 documentId 再去發一次請求，同步這個最新創的食譜
                 self.fetchRecipe(documentId: documentId)
 
             case .failure(let error):

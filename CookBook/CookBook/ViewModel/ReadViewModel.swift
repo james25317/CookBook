@@ -44,16 +44,17 @@ class ReadViewModel {
 
     func checkRecipeValue(reciepeId: String) {
 
-        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
+        DataManager.shared.checkRecipe(documentId: reciepeId) { [weak self] result in
 
             switch result {
 
             case .success(let recipe):
 
-                print("Fetch recipe success!")
+                print("Check recipe success!")
 
                 if !recipe.challenger.isEmpty {
 
+                    print("Challenger is not empty")
                     // challenger 已經有值:
                     // 顯示提示＆返回主頁
 
@@ -64,8 +65,9 @@ class ReadViewModel {
                     self?.onReturned?()
                 } else {
 
+                    print("Challenger is empty")
                     // challenger 無值:
-                    // 1. 上傳當前 uid 為 challenger
+                    // 1. 更新 uid 為 challenger (Feed & Recipe)
                     // 2. 更新 isChallenged = true
                     // 3. create Recipe
 
@@ -143,9 +145,9 @@ class ReadViewModel {
         }
     }
 
-    func updateChallenger(feedId documentId: String, uid: String) {
+    func updateFeedStatus(feedId documentId: String, uid: String) {
 
-        DataManager.shared.updateChallengeStatus(
+        DataManager.shared.updateFeedChallengeStatus(
             documentId: documentId,
             uid: uid) { [weak self] result in
 
@@ -153,7 +155,26 @@ class ReadViewModel {
 
             case .success(let documentId):
 
-                print("\(documentId): challenger \(uid) added")
+                print("Feed \(documentId): challenge status \(uid) updated")
+
+            case .failure(let error):
+
+                print(error)
+            }
+        }
+    }
+
+    func updateRecipeStatus(recipeId documentId: String, uid: String) {
+
+        DataManager.shared.updateRecipeChallengeStatus(
+            documentId: documentId,
+            uid: uid) { [weak self] result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("Recipe \(documentId): challenger \(uid) updated")
 
             case .failure(let error):
 

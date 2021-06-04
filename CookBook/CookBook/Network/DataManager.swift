@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 enum Collections: String {
@@ -288,7 +289,35 @@ class DataManager {
             }
     }
 
-    // MARK: Recipe
+    // MARK: Recipe (by challenge status)
+    func checkRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
+
+        db.collection(Collections.recipe.rawValue)
+            .document(documentId)
+            .getDocument { documentSnapshot, error in
+
+                if let error = error {
+
+                    completion(.failure(error))
+                } else {
+
+                    guard let document = documentSnapshot else { return }
+
+                    do {
+
+                        if let recipe = try document.data(as: Recipe.self) {
+
+                            completion(.success(recipe))
+                        }
+                    } catch {
+
+                        completion(.failure(error))
+                    }
+                }
+            }
+    }
+
+    // MARK: Recipe (snapshotListener)
     func fetchRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
@@ -582,10 +611,10 @@ class DataManager {
         }
     }
 
-    // MARK: Challenger (update)
-    func updateChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+    // MARK: FeedChallenger (update)
+    func updateFeedChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫更新 favoritesUserId 欄位
+        // 這邊寫更新 Challenger, isChallenged 欄位
         let ref = db.collection(Collections.feed.rawValue).document(documentId)
 
         ref.updateData(
@@ -594,14 +623,29 @@ class DataManager {
 
             if let error = error {
 
-                print("Error update challenger: \(error)")
-
                 completion(.failure(error))
-
             } else {
 
-                print("\(documentId): challenger successfully updated!")
+                completion(.success(documentId))
+            }
+        }
+    }
 
+    // MARK: RecipeChallenger (update)
+    func updateRecipeChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 Challenger 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(
+            ["challenger": uid]
+        ) { error in
+
+            if let error = error {
+
+                completion(.failure(error))
+            } else {
+                
                 completion(.success(documentId))
             }
         }

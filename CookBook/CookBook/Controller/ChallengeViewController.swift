@@ -30,18 +30,22 @@ class ChallengeViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.onGranteed = { [weak self] () in
-
-            print("Challenge assigned")
-
+            
             // 更新 挑戰者狀態
             guard let recipeId = self?.recipeId,
-                  let selectedFeed = self?.selectedFeed,
-                  let feedId = selectedFeed.id else { return }
+                let selectedFeed = self?.selectedFeed,
+                let feedId = selectedFeed.id else { return }
 
             // let uid = UserManager.shared.uid
             let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
-            self?.viewModel.updateChallenger(feedId: feedId, uid: uid)
+            // updateFeed
+            self?.viewModel.updateFeedStatus(feedId: feedId, uid: uid)
+
+            // updateRecipe
+            self?.viewModel.updateRecipeStatus(recipeId: recipeId, uid: uid)
+
+            print("Challenge assigned")
 
             // go create Recipe
             guard let editVC = UIStoryboard.edit
