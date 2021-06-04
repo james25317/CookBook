@@ -123,7 +123,7 @@ extension HomeViewController: UITableViewDataSource {
 
         if cellViewModel.isChallenged == false {
 
-            // 挑戰 Feed
+            // challenge Feed
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: String(describing: FeedChallengeTableViewCell.self),
                 for: indexPath
@@ -136,7 +136,7 @@ extension HomeViewController: UITableViewDataSource {
             return feedChallengeCell
         } else if !cellViewModel.challenger.isEmpty {
 
-            // 挑戰完成 Feed
+            // challengeDone Feed
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: String(describing: FeedChallengeDoneTableViewCell.self),
                 for: indexPath

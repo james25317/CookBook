@@ -147,7 +147,7 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IEa-kE-mAh">
                                                                     <rect key="frame" x="0.0" y="0.0" width="147" height="111"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 </imageView>
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-dA-xjo" userLabel="Txt Bg View">
                                                                     <rect key="frame" x="0.0" y="84.333333333333343" width="147" height="26.666666666666671"/>
