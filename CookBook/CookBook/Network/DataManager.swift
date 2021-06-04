@@ -590,6 +590,26 @@ class DataManager {
         }
     }
 
+    // MARK: FeedChallengeDone (update)
+    func updateFeedChallengeDoneStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 Challenger, isChallenged 欄位
+        let ref = db.collection(Collections.feed.rawValue).document(documentId)
+
+        ref.updateData(
+            ["challengerRecipeId": recipeId, "challengerRecipeMainImage": mainImage, "challengerRecipeName": recipeName]
+        ) { error in
+
+            if let error = error {
+
+                completion(.failure(error))
+            } else {
+
+                completion(.success(documentId))
+            }
+        }
+    }
+
     // MARK: RecipeChallenger (update)
     func updateRecipeChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 

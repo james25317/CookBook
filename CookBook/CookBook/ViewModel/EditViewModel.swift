@@ -59,9 +59,12 @@ class EditViewModel {
     )
 
     // init Feed
-    //var feed = Feed(
+//    var feed = Feed(
 //        id: "",
 //        challenger: "",
+//        challengerRecipeId: "",
+//        challengerRecipeName: "",
+//        challengerRecipeMainImage: "",
 //        createdTime: Date().millisecondsSince1970,
 //        isChallenged: false,
 //        mainImage: "",
@@ -72,21 +75,17 @@ class EditViewModel {
 //        recipeName: ""
 //    )
 
-    var feed = Feed(
-        id: "",
-        challenger: "",
-        challengerRecipeId: "",
-        challengerRecipeName: "",
-        challengerRecipeMainImage: "",
-        createdTime: Date().millisecondsSince1970,
-        isChallenged: false,
-        mainImage: "",
-        name: "",
-        ownerId: "",
-        portrait: "",
-        recipeId: "",
-        recipeName: ""
-    )
+    // var feed: Feed?
+
+    var feedId: String?
+
+    var challenger: String?
+
+    var challengerRecipeId: String?
+
+    var challengerRecipeName: String?
+
+    var challengerRecipeMainImage: String?
 
     func onNameChanged(text name: String) {
 
@@ -249,7 +248,28 @@ class EditViewModel {
 
                 print(error)
             }
+        }
+    }
 
+    func updateFeedChallengeDoneStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String) {
+
+        DataManager.shared.updateFeedChallengeDoneStatus(
+            documentId: documentId,
+            recipeId: recipeId,
+            mainImage: mainImage,
+            recipeName: recipeName
+        ) { result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("\(documentId): FeedChallengeDoneStatus updated")
+
+            case .failure(let error):
+
+                print(error)
+            }
         }
     }
 

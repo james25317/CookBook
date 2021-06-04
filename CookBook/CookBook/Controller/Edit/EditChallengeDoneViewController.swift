@@ -33,7 +33,17 @@ class EditChallengeDoneViewController: UIViewController {
 
     @IBAction func shareBackToFeed(_ sender: Any) {
         
-        // update Feed's data (recipeId)
+        // update challenge Feed's data
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipeViewModel.value?.recipe,
+            let feedId = viewModel.feedId, let recipeId = recipe.id else { return }
+
+        viewModel.updateFeedChallengeDoneStatus(
+            documentId: feedId,
+            recipeId: recipeId,
+            mainImage: recipe.mainImage,
+            recipeName: recipe.name
+        )
 
         // back to homeFeed
         guard let navigationController = navigationController,

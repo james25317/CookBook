@@ -98,14 +98,41 @@ class EditPreviewViewController: UIViewController {
         if !value.recipe.challenger.isEmpty {
 
             // go challengeDonePage
-            guard let editDoneVC = UIStoryboard.editDone
+            guard let editChallengeDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
                     withIdentifier: "EditChallengeDone"
                 ) as? EditChallengeDoneViewController else { return }
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            navigationController?.pushViewController(editDoneVC, animated: true)
+            // assign 本地 mainImage 資料
+            viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
+
+            // update MainImage
+            viewModel?.updateMainImage(with: mainImage) { [weak self] result in
+
+                switch result {
+
+                case .failure(let error):
+
+                    print("updated error: \(error)")
+
+                case .success(let mainImage):
+
+                    print("MainImage: \(mainImage) updated")
+
+                    // pass latest recipe data to EditDone
+                    editChallengeDoneVC.viewModel = self?.viewModel
+
+                    // editChallengeDoneVC.viewModel?.challengerRecipeId = self?.viewModel?.recipeViewModel.value?.id
+
+                    // editChallengeDoneVC.viewModel?.challengerRecipeName = self?.viewModel?.recipeViewModel.value?.name
+
+                    // editChallengeDoneVC.viewModel?.challengerRecipeMainImage = mainImage
+
+                    self?.navigationController?.pushViewController(editChallengeDoneVC, animated: true)
+                }
+            }
         } else {
 
             // go editDonePage

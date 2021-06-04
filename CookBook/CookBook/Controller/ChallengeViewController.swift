@@ -55,6 +55,8 @@ class ChallengeViewController: UIViewController {
                 .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
 
             editVC.viewModel.recipe.challenger = uid
+
+            editVC.viewModel.feedId = feedId
             
             self?.navigationController?.pushViewController(editVC, animated: true)
         }
