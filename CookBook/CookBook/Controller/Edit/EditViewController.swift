@@ -29,7 +29,7 @@ class EditViewController: UIViewController {
 
     @IBOutlet weak var buttonNext: UIButton!
 
-    let viewModel = EditViewModel()
+    var viewModel = EditViewModel()
 
     override func viewDidLoad() {
 

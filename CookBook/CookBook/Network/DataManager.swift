@@ -45,18 +45,6 @@ enum Field: String {
     case id = "uid"
 }
 
-// What's this?
-enum FirebaseError: Error {
-
-    case documentError
-}
-
-// What's this?
-enum MainError: Error {
-
-    case youKnowNothingError(String)
-}
-
 class DataManager {
 
     static let shared = DataManager()
@@ -99,36 +87,7 @@ class DataManager {
                 }
             }
     }
-
-    // MARK: User
-    //    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
-    //
-    //        // 可以用 where 篩出 appleId
-    //
-    //        db.collection(Collections.user.rawValue)
-    //            .document("SADUxqR04ihqg1XUgDHn")
-    //            .addSnapshotListener({ documentSnapshot, error in
-    //                if let error = error {
-    //
-    //                    completion(.failure(error))
-    //                } else {
-    //
-    //                    guard let document = documentSnapshot else { return }
-    //
-    //                    do {
-    //
-    //                        if let user = try document.data(as: User.self) {
-    //
-    //                            completion(.success(user))
-    //                        }
-    //                    } catch {
-    //
-    //                        completion(.failure(error))
-    //                    }
-    //                }
-    //            })
-    //    }
-
+    
     // MARK: Recipes
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
 

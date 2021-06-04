@@ -90,37 +90,52 @@ class EditPreviewViewController: UIViewController {
     // MARK: go EditDone Page and pass data
     @IBAction func goEditDonePage(_ sender: Any) {
 
-        guard let editDoneVC = UIStoryboard.editDone
-            .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
-
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
+        // 判斷_資料屬性
         // assign latest mainImage data
         guard let value = viewModel?.recipeViewModel.value,
             let mainImage = value.recipe.steps.last?.image else { return }
 
-        // assign 本地 mainImage 資料
-        viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
+        if !value.recipe.challenger.isEmpty {
 
-        // update MainImage
-        viewModel?.updateMainImage(with: mainImage) { [weak self] result in
+            // go challengeDonePage
+            guard let editDoneVC = UIStoryboard.editDone
+                .instantiateViewController(
+                    withIdentifier: "EditChallengeDone"
+                ) as? EditChallengeDoneViewController else { return }
 
-            switch result {
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            case .failure(let error):
+            navigationController?.pushViewController(editDoneVC, animated: true)
+        } else {
 
-                print("updated error: \(error)")
+            // go editDonePage
+            guard let editDoneVC = UIStoryboard.editDone
+                .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
 
-            case .success(let mainImage):
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-                print("MainImage: \(mainImage) updated")
+            // assign 本地 mainImage 資料
+            viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
 
-                // pass latest recipe data to EditDone
-                editDoneVC.viewModel = self?.viewModel
+            // update MainImage
+            viewModel?.updateMainImage(with: mainImage) { [weak self] result in
 
-                self?.navigationController?.pushViewController(editDoneVC, animated: true)
+                switch result {
+
+                case .failure(let error):
+
+                    print("updated error: \(error)")
+
+                case .success(let mainImage):
+
+                    print("MainImage: \(mainImage) updated")
+
+                    // pass latest recipe data to EditDone
+                    editDoneVC.viewModel = self?.viewModel
+
+                    self?.navigationController?.pushViewController(editDoneVC, animated: true)
+                }
             }
-
         }
     }
 

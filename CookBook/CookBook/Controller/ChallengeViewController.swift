@@ -44,13 +44,18 @@ class ChallengeViewController: UIViewController {
 
             // updateRecipe
             self?.viewModel.updateRecipeStatus(recipeId: recipeId, uid: uid)
-
+            
             print("Challenge assigned")
+
+            // 再去 fetch 一次最新的 recipe
+            self?.viewModel.fetchRecipe(reciepeId: recipeId)
+
+            // 等 fetch 成功後，再給信號到下個頁面（＆傳資料）
 
             // go create Recipe
             guard let editVC = UIStoryboard.edit
                 .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
-
+            
             self?.navigationController?.pushViewController(editVC, animated: true)
         }
 

@@ -11,7 +11,7 @@ import FirebaseStorage
 
 class EditViewModel {
 
-    let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
+    var recipeViewModel: Box<RecipeViewModel?> = Box(nil)
 
     // init Recipe
     var recipe = Recipe(
