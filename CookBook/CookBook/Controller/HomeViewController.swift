@@ -144,6 +144,28 @@ extension HomeViewController: UITableViewDataSource {
 
             guard let feedChallengeDoneCell = cell as? FeedChallengeDoneTableViewCell else { return cell }
 
+            feedChallengeDoneCell.onOwnerTapped = { [weak self] () in
+
+                guard let readVC = UIStoryboard.read
+                    .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+                // 傳 Id
+                readVC.recipeId = cellViewModel.recipeId
+
+                self?.navigationController?.pushViewController(readVC, animated: true)
+            }
+
+            feedChallengeDoneCell.onChallengerTapped = { [weak self] () in
+                
+                guard let readVC = UIStoryboard.read
+                    .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+                // 傳 Id
+                readVC.recipeId = cellViewModel.challengerRecipeId
+
+                self?.navigationController?.pushViewController(readVC, animated: true)
+            }
+
             feedChallengeDoneCell.setup(viewModel: cellViewModel)
 
             return feedChallengeDoneCell

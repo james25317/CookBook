@@ -25,6 +25,10 @@ class FeedChallengeDoneTableViewCell: UITableViewCell {
 
     var viewModel: FeedViewModel?
 
+    var onOwnerTapped: (() -> Void)?
+
+    var onChallengerTapped: (() -> Void)?
+
     override func awakeFromNib() {
 
         super.awakeFromNib()
@@ -55,10 +59,8 @@ class FeedChallengeDoneTableViewCell: UITableViewCell {
 
         labelOwnerRecipeName.text = viewModel?.recipeName
 
-        // 加載挑戰成功後（Feed 發布後上傳的 mainImage）
         imageViewChallengerRecipe.loadImage(viewModel?.challengerRecipeMainImage)
 
-        // 加載挑戰成功後（Feed 發布後上傳的 name）
         labelChallengerRecipeName.text = viewModel?.challengerRecipeName
     }
 
@@ -69,30 +71,30 @@ class FeedChallengeDoneTableViewCell: UITableViewCell {
 
     private func setupTapGesture() {
 
-        let ownerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goReadPage))
+        let ownerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goOwnerReadPage))
 
         imageViewOwnerRecipe.isUserInteractionEnabled = true
 
         imageViewOwnerRecipe.addGestureRecognizer(ownerRecipeGesture)
         
-        let challengerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goEditPage))
+        let challengerRecipeGesture = UITapGestureRecognizer(target: self, action: #selector(goChallengerReadPage))
 
         imageViewChallengerRecipe.isUserInteractionEnabled = true
 
         imageViewChallengerRecipe.addGestureRecognizer(challengerRecipeGesture)
     }
 
-    @objc func goReadPage() {
+    @objc func goOwnerReadPage() {
 
         print("OwnerRecipe tapped")
-
-        // go ReadPage
+        
+        onOwnerTapped?()
     }
 
-    @objc func goEditPage() {
+    @objc func goChallengerReadPage() {
 
         print("ChallengerRecipe tapped")
 
-        // go EditPage
+        onChallengerTapped?()
     }
 }
