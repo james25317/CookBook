@@ -24,6 +24,27 @@ class FeedViewModel {
         }
     }
 
+    var challengerRecipeId: String {
+
+        get {
+            return feed.challengerRecipeId
+        }
+    }
+
+    var challengerRecipeName: String {
+
+        get {
+            return feed.challengerRecipeName
+        }
+    }
+
+    var challengerRecipeMainImage: String {
+
+        get {
+            return feed.challengerRecipeMainImage
+        }
+    }
+
     var createdTime: String {
 
         get {

@@ -59,9 +59,25 @@ class EditViewModel {
     )
 
     // init Feed
+    //var feed = Feed(
+//        id: "",
+//        challenger: "",
+//        createdTime: Date().millisecondsSince1970,
+//        isChallenged: false,
+//        mainImage: "",
+//        name: "",
+//        ownerId: "",
+//        portrait: "",
+//        recipeId: "",
+//        recipeName: ""
+//    )
+
     var feed = Feed(
         id: "",
         challenger: "",
+        challengerRecipeId: "",
+        challengerRecipeName: "",
+        challengerRecipeMainImage: "",
         createdTime: Date().millisecondsSince1970,
         isChallenged: false,
         mainImage: "",
@@ -315,6 +331,9 @@ class EditViewModel {
         let feed = Feed(
             id: "FeedDocumentId",
             challenger: "",
+            challengerRecipeId: "",
+            challengerRecipeName: "",
+            challengerRecipeMainImage: "",
             createdTime: Date().millisecondsSince1970,
             isChallenged: !challengeOn,
             mainImage: recipe.mainImage,

@@ -43,6 +43,9 @@ class ProfileViewController: UIViewController {
 
     let viewModel = ProfileViewModel()
 
+    // mockuid
+    let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
     // 一旦根據按鈕的 type 被按到，type 賦值觸發 reloadData()
     private var type: ProfileViewModel.SortType = .recipes {
 
@@ -56,6 +59,9 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
+        // fetch profile
+        fetchProfileData(uid: uid)
+
         // 綁定 Fb Recipes 資料
         viewModel.recipeViewModels.bind { [weak self] recipes in
 
@@ -67,9 +73,6 @@ class ProfileViewController: UIViewController {
 
             self?.setupProfileInfo()
         }
-
-        // fetch 資料
-        fetchProfileData()
         
         setupProfileInfo()
 
@@ -97,20 +100,15 @@ class ProfileViewController: UIViewController {
         self.type = type
     }
 
-    private func fetchProfileData() {
+    private func fetchProfileData(uid: String) {
 
-        // Fbuid -> DocumentId
-        // userdefault 來取
-        if let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) {
+        viewModel.fetchOwnerRecipesData(with: uid)
 
-            viewModel.fetchOwnerRecipesData(with: uid)
+        viewModel.fetchFavoritesRecipesData(with: uid)
 
-            viewModel.fetchFavoritesRecipesData(with: uid)
+        viewModel.fetchChallengesRecipesData(with: uid)
 
-            viewModel.fetchChallengesRecipesData(with: uid)
-
-            viewModel.fetchUserData(uid: uid)
-        }
+        viewModel.fetchUserData(uid: uid)
     }
 
     private func setupProfileInfo() {

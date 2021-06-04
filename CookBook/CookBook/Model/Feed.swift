@@ -13,6 +13,9 @@ struct Feed: Identifiable, Codable {
 
     @DocumentID public var id: String?
     var challenger: String
+    var challengerRecipeId: String
+    var challengerRecipeName: String
+    var challengerRecipeMainImage: String
     var createdTime: Int64
     var isChallenged: Bool
     var mainImage: String
@@ -25,6 +28,9 @@ struct Feed: Identifiable, Codable {
     var toDict: [String: Any] {
         return [
             "challenger": challenger as Any,
+            "challengerRecipeId": challengerRecipeId as Any,
+            "challengerRecipeName": challengerRecipeName as Any,
+            "challengerRecipeMainImage": challengerRecipeMainImage as Any,
             "createdTime": createdTime as Any,
             "isChallenged": isChallenged as Any,
             "mainImage": mainImage as Any,
