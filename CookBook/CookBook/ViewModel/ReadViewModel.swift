@@ -20,6 +20,8 @@ class ReadViewModel {
 
     var onReturned: (() -> Void)?
 
+    var onBlocked: (() -> Void)?
+
     var onGranteed: (() -> Void)?
 
     var onRefreshed: (() -> Void)?
@@ -156,6 +158,9 @@ class ReadViewModel {
             case .success(_):
 
                 print("BlockList update success")
+
+                // goHomeVC after blocked
+                self?.onBlocked?()
 
             case.failure(let error):
 

@@ -59,6 +59,6 @@ class ReadViewController: UIViewController {
         // pass data to ReadModePage
         readModeVC.viewModel = viewModel
 
-        self.present(readModeVC, animated: true, completion: nil)
+        navigationController?.pushViewController(readModeVC, animated: true)
     }
 }

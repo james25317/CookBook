@@ -27,6 +27,16 @@ class ReadModeViewController: UIViewController {
 
         super.viewDidLoad()
 
+        viewModel?.onBlocked = { [weak self] () in
+
+            guard let navigationController = self?.navigationController,
+                let homeVC = navigationController.viewControllers.first(
+                    where: { $0 is HomeViewController }
+                ) else { return }
+
+            navigationController.popToViewController(homeVC, animated: true)
+        }
+
         setupCollecitonView()
 
         setupCollecitonViewFlowLayout()
@@ -126,12 +136,24 @@ class ReadModeViewController: UIViewController {
 
         // mockuid
         let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-
+        
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value else { return }
 
+//        if recipe.ownerId == uid {
+//
+//            print("You can not banned your own recipe")
+//
+//            return
+//        } else {
+//
+//            // 上傳此 RecipeId 至 User(uid) 的 blockList
+//            viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
+//        }
+
         // 上傳此 RecipeId 至 User(uid) 的 blockList
         viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
+
     }
 }
 
@@ -140,7 +162,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipeViewModel.value else { return 1 }
+            let recipe = viewModel.recipeViewModel.value else { return 1 }
 
         // total counts = steps counts + ingredients count
         return recipe.steps.count + 1

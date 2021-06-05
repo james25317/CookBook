@@ -147,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
-                                <rect key="frame" x="0.0" y="112" width="390" height="548.66666666666663"/>
+                                <rect key="frame" x="0.0" y="92" width="390" height="548.66666666666663"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mpa-Jj-7xj" customClass="SnapCollectionFlowLayout" customModule="CookBook" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -156,7 +156,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-iX-c3n" userLabel="Cancel Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-iX-c3n" userLabel="Cancel Button">
                                 <rect key="frame" x="330" y="60" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="YQn-tL-jCw"/>
@@ -169,7 +169,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="li5-pk-8Ww">
-                                <rect key="frame" x="99" y="702" width="192" height="36"/>
+                                <rect key="frame" x="99" y="718" width="192" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-QQ-vXg" userLabel="Return Button">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
@@ -239,9 +239,9 @@
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="trailing" secondItem="crC-Tx-FzY" secondAttribute="trailing" id="9bG-0c-tUy"/>
                             <constraint firstItem="crC-Tx-FzY" firstAttribute="trailing" secondItem="0MR-iX-c3n" secondAttribute="trailing" constant="24" id="iOl-il-M8q"/>
                             <constraint firstItem="2w8-3R-TAF" firstAttribute="leading" secondItem="crC-Tx-FzY" secondAttribute="leading" id="pit-oC-C48"/>
-                            <constraint firstItem="2w8-3R-TAF" firstAttribute="top" secondItem="0MR-iX-c3n" secondAttribute="bottom" constant="16" id="qbc-zc-2mm"/>
+                            <constraint firstItem="2w8-3R-TAF" firstAttribute="top" secondItem="crC-Tx-FzY" secondAttribute="top" constant="48" id="qbc-zc-2mm"/>
                             <constraint firstItem="li5-pk-8Ww" firstAttribute="centerX" secondItem="crC-Tx-FzY" secondAttribute="centerX" id="vdm-i5-Xva"/>
-                            <constraint firstItem="crC-Tx-FzY" firstAttribute="bottom" secondItem="li5-pk-8Ww" secondAttribute="bottom" constant="72" id="yFP-5J-XFX"/>
+                            <constraint firstItem="crC-Tx-FzY" firstAttribute="bottom" secondItem="li5-pk-8Ww" secondAttribute="bottom" constant="56" id="yFP-5J-XFX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ESS-oY-OfX"/>
