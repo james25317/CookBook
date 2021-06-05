@@ -61,6 +61,11 @@ class HomeViewController: UIViewController {
             }
         }
 
+        viewModel.scrollToTop = { [weak self] () in
+
+            self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        }
+
         // 要 Feeds 資料
         viewModel.fetchFeedsData()
 
@@ -126,6 +131,8 @@ class HomeViewController: UIViewController {
     private func setupRefresher() {
 
         self.tableView.refresh.header = RefreshHeader(delegate: self)
+
+        tableView.refresh.header.setTitle("loading...", for: .refreshing)
 
         tableView.refresh.header.addRefreshClosure { [weak self] in
 
@@ -268,5 +275,7 @@ extension HomeViewController: RefreshDelegate {
 
         // behavior after refreshed
         print("Home Feed Refreshed.")
+
+        viewModel.onScrollToTop()
     }
 }

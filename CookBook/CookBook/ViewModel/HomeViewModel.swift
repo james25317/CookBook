@@ -16,7 +16,9 @@ class HomeViewModel {
 
     // var onRefresh: (() -> Void)?
 
-    var refreshView: (()->())?
+    var refreshView: (() -> Void)?
+
+    var scrollToTop: (() -> Void)?
 
     func fetchFeedsData() {
 
@@ -60,8 +62,12 @@ class HomeViewModel {
 
     func onRefresh() {
 
-        // maybe do something
         self.refreshView?()
+    }
+
+    func onScrollToTop() {
+
+        self.scrollToTop?()
     }
 
     func convertFeedsToViewModels(from feeds: [Feed]) -> [FeedViewModel] {
