@@ -42,8 +42,8 @@ class HomeViewController: UIViewController {
 
         DispatchQueue.main.async {
 
-            // sutoRefresh (senfback from challenge denied)
-            self.refreshView()
+            // sutoRefresh (sendback from challenge denied)
+            // self.refreshView()
         }
     }
 

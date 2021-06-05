@@ -471,10 +471,10 @@ class DataManager {
     }
 
     // MARK: FavoritesCounts (update)
-    func updateFavoritesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateFavoritesCounts(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.user.rawValue).document(uid)
+        let ref = db.collection(Collections.user.rawValue).document(documentId)
 
         ref.updateData(
             ["favoritesCounts": FieldValue.increment(Int64(1))]
@@ -488,9 +488,9 @@ class DataManager {
 
             } else {
 
-                print("\(uid): FavoritesCounts successfully increased!")
+                print("\(documentId): FavoritesCounts successfully increased!")
 
-                completion(.success(uid))
+                completion(.success(documentId))
             }
         }
     }
@@ -566,6 +566,31 @@ class DataManager {
                 print("\(documentId): favoritesUserId successfully updated!")
 
                 completion(.success(documentId))
+            }
+        }
+    }
+
+    // MARK: BlockList (update)
+    func updateBlockList(uid: String, recipeId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 favoritesUserId 欄位
+        let ref = db.collection(Collections.user.rawValue).document(uid)
+
+        ref.updateData(
+            ["blockList": FieldValue.arrayUnion([recipeId])]
+        ) { error in
+
+            if let error = error {
+
+                print("Error update blockList: \(error)")
+
+                completion(.failure(error))
+
+            } else {
+
+                print("RecipeId \(recipeId) update to User: \(uid) blockList successfully")
+
+                completion(.success(recipeId))
             }
         }
     }

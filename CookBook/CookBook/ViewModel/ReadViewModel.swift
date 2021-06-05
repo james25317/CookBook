@@ -87,7 +87,7 @@ class ReadViewModel {
         }
     }
 
-    func updateLikes(with documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateLikes(documentId: String) {
 
         DataManager.shared.updateLikes(documentId: documentId) { [weak self] result in
 
@@ -96,22 +96,18 @@ class ReadViewModel {
             case .success(let documentId):
 
                 print("\(documentId): Likes increase 1")
-
-                completion(.success(documentId))
-
+                
             case .failure(let error):
 
                 print(error)
-
-                completion(.failure(error))
             }
             
         }
     }
 
-    func updateFavoritesCounts(uid: String) {
+    func updateFavoritesCounts(documentId: String) {
 
-        DataManager.shared.updateFavoritesCounts(uid: uid) { result in
+        DataManager.shared.updateFavoritesCounts(documentId: documentId) { result in
 
             switch result {
 
@@ -127,11 +123,12 @@ class ReadViewModel {
         }
     }
 
-    func updateFavoritesUserId(recipeId documentId: String, uid favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateFavoritesUserId(documentId: String, favoritesUserId: String) {
 
         DataManager.shared.updatefavoritesUserId(
             documentId: documentId,
-            favoritesUserId: favoritesUserId) { [weak self] result in
+            favoritesUserId: favoritesUserId
+        ) { [weak self] result in
 
             switch result {
 
@@ -139,15 +136,31 @@ class ReadViewModel {
 
                 print("\(documentId): \(favoritesUserId) added")
 
-                completion(.success(documentId))
-
             case .failure(let error):
 
                 print(error)
-
-                completion(.failure(error))
             }
 
+        }
+    }
+
+    func updateBlockList(uid: String, recipeId: String) {
+
+        DataManager.shared.updateBlockList(
+            uid: uid,
+            recipeId: recipeId
+        ) { [weak self] result in
+
+            switch result {
+
+            case .success(_):
+
+                print("BlockList update success")
+
+            case.failure(let error):
+
+                print(error)
+            }
         }
     }
 
@@ -155,7 +168,8 @@ class ReadViewModel {
 
         DataManager.shared.updateFeedChallengeStatus(
             documentId: documentId,
-            uid: uid) { [weak self] result in
+            uid: uid
+        ) { [weak self] result in
 
             switch result {
 

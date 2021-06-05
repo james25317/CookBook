@@ -21,61 +21,61 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="506.33333333333331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-mM-LJ2">
-                                <rect key="frame" x="24" y="521" width="342" height="28"/>
+                                <rect key="frame" x="24" y="517" width="342" height="28"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du9-Z2-9Xi">
-                                <rect key="frame" x="24" y="550.33333333333337" width="342" height="21"/>
+                                <rect key="frame" x="24" y="546.33333333333337" width="342" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g5-u7-m5U">
-                                <rect key="frame" x="159" y="646" width="72" height="19.666666666666629"/>
+                                <rect key="frame" x="159" y="667" width="72" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-xC-JfX">
-                                <rect key="frame" x="75.666666666666671" y="646" width="35" height="19.666666666666629"/>
+                                <rect key="frame" x="75.666666666666671" y="667" width="35" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1G-rR-Ivp">
-                                <rect key="frame" x="278.66666666666669" y="646" width="37" height="19.666666666666629"/>
+                                <rect key="frame" x="278.66666666666669" y="667" width="37" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avX-UU-qSw">
-                                <rect key="frame" x="190" y="619" width="10.333333333333343" height="24"/>
+                                <rect key="frame" x="190" y="640" width="10.333333333333343" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwQ-Qb-8D5">
-                                <rect key="frame" x="292" y="619" width="10.333333333333314" height="24"/>
+                                <rect key="frame" x="292" y="640" width="10.333333333333314" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-cb-a4k">
-                                <rect key="frame" x="88" y="619" width="10.333333333333329" height="24"/>
+                                <rect key="frame" x="88" y="640" width="10.333333333333329" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Cook!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-bt-PYP">
-                                <rect key="frame" x="146" y="725" width="82" height="21"/>
+                                <rect key="frame" x="146" y="730" width="82" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-qj-X8S">
-                                <rect key="frame" x="232" y="724.66666666666663" width="20" height="22"/>
+                                <rect key="frame" x="232" y="729.66666666666663" width="20" height="22"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
                                 <connections>
@@ -99,11 +99,11 @@
                             <constraint firstItem="mIV-j4-Pse" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="B0i-9y-154"/>
                             <constraint firstItem="du9-Z2-9Xi" firstAttribute="firstBaseline" secondItem="wwE-mM-LJ2" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="COK-sN-gw8"/>
                             <constraint firstItem="du9-Z2-9Xi" firstAttribute="leading" secondItem="wwE-mM-LJ2" secondAttribute="leading" id="D8L-B8-cUe"/>
-                            <constraint firstItem="wwE-mM-LJ2" firstAttribute="firstBaseline" secondItem="Xch-ag-hyF" secondAttribute="baseline" constant="36" id="DNu-7g-hJb"/>
+                            <constraint firstItem="wwE-mM-LJ2" firstAttribute="firstBaseline" secondItem="Xch-ag-hyF" secondAttribute="baseline" constant="32" id="DNu-7g-hJb"/>
                             <constraint firstItem="rRj-qj-X8S" firstAttribute="leading" secondItem="3LF-bt-PYP" secondAttribute="trailing" constant="4" id="Hyt-01-GLk"/>
                             <constraint firstItem="rRj-qj-X8S" firstAttribute="centerY" secondItem="3LF-bt-PYP" secondAttribute="centerY" id="MSe-5H-COC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="du9-Z2-9Xi" secondAttribute="trailing" constant="24" id="REh-ez-Q2c"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3LF-bt-PYP" secondAttribute="bottom" constant="64" id="SFz-z3-kUk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3LF-bt-PYP" secondAttribute="baseline" constant="64" id="SFz-z3-kUk"/>
                             <constraint firstItem="1g5-u7-m5U" firstAttribute="centerX" secondItem="oj6-xC-JfX" secondAttribute="centerX" constant="102" id="Tzg-b8-YdE"/>
                             <constraint firstItem="avX-UU-qSw" firstAttribute="centerX" secondItem="1g5-u7-m5U" secondAttribute="centerX" id="UpV-6t-rkL"/>
                             <constraint firstItem="avX-UU-qSw" firstAttribute="firstBaseline" secondItem="Mdj-cb-a4k" secondAttribute="firstBaseline" id="Vdc-g8-rIw"/>
@@ -118,10 +118,11 @@
                             <constraint firstItem="1g5-u7-m5U" firstAttribute="firstBaseline" secondItem="avX-UU-qSw" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="koC-Oi-vNL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mIV-j4-Pse" secondAttribute="trailing" constant="16" id="kst-FH-r2d"/>
                             <constraint firstItem="hwQ-Qb-8D5" firstAttribute="centerX" secondItem="Z1G-rR-Ivp" secondAttribute="centerX" id="oHi-nv-7jh"/>
-                            <constraint firstItem="3LF-bt-PYP" firstAttribute="firstBaseline" secondItem="1g5-u7-m5U" secondAttribute="baseline" constant="80" id="okG-yr-Afm"/>
+                            <constraint firstItem="3LF-bt-PYP" firstAttribute="firstBaseline" secondItem="1g5-u7-m5U" secondAttribute="baseline" constant="64" id="okG-yr-Afm"/>
                             <constraint firstAttribute="trailing" secondItem="Xch-ag-hyF" secondAttribute="trailing" id="ryz-7V-ovW"/>
                             <constraint firstItem="Z1G-rR-Ivp" firstAttribute="centerX" secondItem="1g5-u7-m5U" secondAttribute="centerX" constant="102" id="sFR-h2-e1G"/>
                             <constraint firstItem="avX-UU-qSw" firstAttribute="firstBaseline" secondItem="hwQ-Qb-8D5" secondAttribute="firstBaseline" id="tRt-tw-OIP"/>
+                            <constraint firstItem="Mdj-cb-a4k" firstAttribute="top" relation="greaterThanOrEqual" secondItem="du9-Z2-9Xi" secondAttribute="bottom" constant="8" id="yEp-pg-f4y"/>
                         </constraints>
                     </view>
                     <connections>

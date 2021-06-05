@@ -58,37 +58,13 @@ class ReadModeViewController: UIViewController {
             let recipe = viewModel.recipeViewModel.value else { return }
 
         // 2. update +1 to "likes" table
-        viewModel.updateLikes(with: recipe.id) { result in
-
-            switch result {
-
-            case .success(_):
-
-                print("Likes increased!")
-
-            case .failure(let error):
-
-                print(error)
-            }
-        }
+        viewModel.updateLikes(documentId: recipe.id)
 
         // 3. update favoritesUserId
-        viewModel.updateFavoritesUserId(recipeId: recipe.id, uid: uid) { result in
-
-            switch result {
-
-            case .success(_):
-
-                print("FavoritesUserId updated!")
-
-            case .failure(let error):
-
-                print(error)
-            }
-        }
+        viewModel.updateFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
 
         // 4. update favoritesCounts
-        viewModel.updateFavoritesCounts(uid: uid)
+        viewModel.updateFavoritesCounts(documentId: uid)
     }
 
     @IBAction func goOptionMenu(_ sender: Any) {
@@ -131,8 +107,8 @@ class ReadModeViewController: UIViewController {
             title: "檢舉並封鎖",
             style: .destructive) { _ in
 
-            // 開啟相機
-            // self.openCamera()
+            // update to blockList
+            self.addToBlockList()
         }
 
         let cancelAction = UIAlertAction(
@@ -144,6 +120,18 @@ class ReadModeViewController: UIViewController {
         controller.addAction(cancelAction)
 
         present(controller, animated: true)
+    }
+
+    private func addToBlockList() {
+
+        // mockuid
+        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
+        guard let viewModel = viewModel,
+            let recipe = viewModel.recipeViewModel.value else { return }
+
+        // 上傳此 RecipeId 至 User(uid) 的 blockList
+        viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
     }
 }
 
