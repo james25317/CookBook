@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EasyRefresher
 
 class HomeViewController: UIViewController {
 
@@ -48,16 +49,29 @@ class HomeViewController: UIViewController {
         viewModel.feedViewModels.bind { [weak self] _ in
 
             self?.tableView.reloadData()
+
+            self?.viewModel.onRefresh()
+        }
+
+        viewModel.refreshView = { [weak self] () in
+
+            DispatchQueue.main.async {
+
+                self?.tableView.reloadData()
+            }
         }
 
         // 要 Feeds 資料
         viewModel.fetchFeedsData()
 
         // Nib - 暫時屏蔽
-        //setupTableView()
+        // setupTableView()
 
         // 搜尋欄 - 暫時屏蔽
         // setupSearchBar()
+
+        // refresher
+        setupRefresher()
     }
 
     @IBAction func goTodayPage(_ sender: Any) {
@@ -107,6 +121,18 @@ class HomeViewController: UIViewController {
         let leftNavBarButton = UIBarButtonItem(customView: searchBar)
 
         self.navigationItem.leftBarButtonItem = leftNavBarButton
+    }
+
+    private func setupRefresher() {
+
+        self.tableView.refresh.header = RefreshHeader(delegate: self)
+
+        tableView.refresh.header.addRefreshClosure { [weak self] in
+
+            self?.viewModel.fetchFeedsData()
+
+            self?.tableView.refresh.header.endRefreshing()
+        }
     }
 }
 
@@ -233,5 +259,14 @@ extension HomeViewController: UITableViewDelegate {
 
             self.navigationController?.pushViewController(readVC, animated: true)
         }
+    }
+}
+
+extension HomeViewController: RefreshDelegate {
+
+    func refresherDidRefresh(_ refresher: Refresher) {
+
+        // behavior after refreshed
+        print("Home Feed Refreshed.")
     }
 }

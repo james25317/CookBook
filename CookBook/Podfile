@@ -12,5 +12,6 @@ target 'CookBook' do
   pod 'Firebase/Storage'
   pod 'Kingfisher', '~> 6.0'
   pod 'Firebase/Auth'
+  pod 'EasyRefresher'
 
 end

@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-CookBook/Pods-CookBook-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
+${BUILT_PRODUCTS_DIR}/EasyRefresher/EasyRefresher.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
 ${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework

@@ -14,6 +14,10 @@ class HomeViewModel {
 
     // var recipe: Recipe?
 
+    // var onRefresh: (() -> Void)?
+
+    var refreshView: (()->())?
+
     func fetchFeedsData() {
 
         DataManager.shared.fetchFeeds { [weak self] result in
@@ -53,6 +57,12 @@ class HomeViewModel {
 //            }
 //        }
 //    }
+
+    func onRefresh() {
+
+        // maybe do something
+        self.refreshView?()
+    }
 
     func convertFeedsToViewModels(from feeds: [Feed]) -> [FeedViewModel] {
 
