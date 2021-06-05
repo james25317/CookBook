@@ -65,4 +65,10 @@ class UserViewModel {
             return user.recipesCounts
         }
     }
+
+    var blockList: [String] {
+        get {
+            return user.blockList
+        }
+    }
 }

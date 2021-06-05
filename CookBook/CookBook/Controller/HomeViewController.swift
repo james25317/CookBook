@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
         // 搜尋欄 - 暫時屏蔽
         // setupSearchBar()
 
-        // refresher
+        // EasyRefresher
         setupRefresher()
     }
 

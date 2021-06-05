@@ -166,15 +166,14 @@
                                     <action selector="leave:" destination="NTn-6P-TAi" eventType="touchUpInside" id="XhG-nW-Whu"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="li5-pk-8Ww">
-                                <rect key="frame" x="136.66666666666666" y="702" width="117" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="li5-pk-8Ww">
+                                <rect key="frame" x="99" y="702" width="192" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-QQ-vXg" userLabel="Return Button">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="MEm-EH-QLG"/>
-                                            <constraint firstAttribute="width" constant="36" id="U6U-h1-Jrg"/>
                                             <constraint firstAttribute="width" secondItem="Rej-QQ-vXg" secondAttribute="height" multiplier="1:1" id="lkM-XD-Mqk"/>
                                         </constraints>
                                         <state key="normal">
@@ -185,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P39-iZ-bcj" userLabel="Speaker Button">
-                                        <rect key="frame" x="58.333333333333343" y="0.0" width="36" height="36"/>
+                                        <rect key="frame" x="57" y="0.0" width="36" height="36"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="MyA-xb-woC"/>
@@ -197,18 +196,31 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-GT-z1x" userLabel="Star Button">
-                                        <rect key="frame" x="81" y="0.0" width="36" height="36"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                        <rect key="frame" x="78" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1lT-GT-z1x" secondAttribute="height" multiplier="1:1" id="O2f-Nw-zEC"/>
                                             <constraint firstAttribute="height" constant="36" id="e5L-ad-4xb"/>
-                                            <constraint firstAttribute="width" constant="36" id="uRJ-fW-er7"/>
                                         </constraints>
                                         <state key="normal">
                                             <imageReference key="image" image="star.fill" catalog="system" symbolScale="medium"/>
                                         </state>
                                         <connections>
                                             <action selector="saveToFavorites:" destination="NTn-6P-TAi" eventType="touchUpInside" id="YYI-qQ-eRn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-qI-UOk" userLabel="Star Button">
+                                        <rect key="frame" x="156" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="RMZ-g0-hPo"/>
+                                            <constraint firstAttribute="width" secondItem="xFS-qI-UOk" secondAttribute="height" multiplier="1:1" id="qTR-vh-Gzw"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <imageReference key="image" image="ellipsis" catalog="system" symbolScale="medium"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveToFavorites:" destination="NTn-6P-TAi" eventType="touchUpInside" id="52n-0X-neD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -242,6 +254,7 @@
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
         <image name="demodish" width="1080" height="1080"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="speaker.slash" catalog="system" width="124" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

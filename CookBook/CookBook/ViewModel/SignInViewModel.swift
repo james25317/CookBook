@@ -20,7 +20,8 @@ class SignInViewModel {
         email: "",
         challengesCounts: 0,
         favoritesCounts: 0,
-        recipesCounts: 0
+        recipesCounts: 0,
+        blockList: []
     )
 
     // 到下一頁

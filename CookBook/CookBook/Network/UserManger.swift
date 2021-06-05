@@ -26,7 +26,8 @@ class UserManager {
         email: "",
         challengesCounts: 0,
         favoritesCounts: 0,
-        recipesCounts: 0
+        recipesCounts: 0,
+        blockList: []
     )
 
     // MARK: User (Fetch)

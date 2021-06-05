@@ -20,6 +20,7 @@ struct User: Identifiable, Codable {
     var challengesCounts: Int
     var favoritesCounts: Int
     var recipesCounts: Int
+    var blockList: [String]
 
     enum CodingKeys: String, CodingKey {
         case email,
@@ -27,6 +28,7 @@ struct User: Identifiable, Codable {
              favoritesCounts,
              name,
              portrait,
-             recipesCounts
+             recipesCounts,
+             blockList
     }
 }
