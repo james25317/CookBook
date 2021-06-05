@@ -29,13 +29,13 @@
                                 <state key="normal" title="隱私權政策連結"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="當您按下 Sign-In 按鈕 代表同意以下隱私權政策" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-NG-Pt1">
-                                <rect key="frame" x="32" y="739.66666666666663" width="326" height="15"/>
+                                <rect key="frame" x="32" y="741.33333333333337" width="326" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAB-v2-MOY">
-                                <rect key="frame" x="32" y="595.66666666666663" width="326" height="48"/>
+                                <rect key="frame" x="32" y="645.33333333333337" width="326" height="48"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Ehv-4a-mWJ"/>
@@ -45,9 +45,9 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fon-oy-MzM" firstAttribute="top" secondItem="GDN-NG-Pt1" secondAttribute="firstBaseline" constant="8" id="1MB-TK-64n"/>
+                            <constraint firstItem="Fon-oy-MzM" firstAttribute="firstBaseline" secondItem="GDN-NG-Pt1" secondAttribute="firstBaseline" constant="24" id="1MB-TK-64n"/>
                             <constraint firstItem="gAB-v2-MOY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="8KO-M9-9Iq"/>
-                            <constraint firstItem="GDN-NG-Pt1" firstAttribute="top" secondItem="gAB-v2-MOY" secondAttribute="bottom" constant="96" id="DKd-Yb-RMg"/>
+                            <constraint firstItem="GDN-NG-Pt1" firstAttribute="top" secondItem="gAB-v2-MOY" secondAttribute="bottom" constant="48" id="DKd-Yb-RMg"/>
                             <constraint firstItem="Fon-oy-MzM" firstAttribute="centerX" secondItem="GDN-NG-Pt1" secondAttribute="centerX" id="ENE-FX-PL6"/>
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="leading" secondItem="gAB-v2-MOY" secondAttribute="leading" id="JPP-lM-IQ3"/>
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="trailing" secondItem="gAB-v2-MOY" secondAttribute="trailing" id="WCM-S4-B6c"/>
