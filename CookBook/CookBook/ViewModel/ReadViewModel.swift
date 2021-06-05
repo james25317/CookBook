@@ -12,11 +12,17 @@ class ReadViewModel {
 
     let recipeViewModel: Box<RecipeViewModel?> = Box(nil)
 
+    var recipeId: String?
+
+    var selectedFeed: Feed?
+
     var onDenied: (() -> Void)?
 
     var onReturned: (() -> Void)?
 
     var onGranteed: (() -> Void)?
+
+    var onRefreshed: (() -> Void)?
     
     func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void = { _ in }) {
 

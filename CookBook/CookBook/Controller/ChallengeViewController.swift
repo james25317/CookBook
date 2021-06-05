@@ -21,9 +21,9 @@ class ChallengeViewController: UIViewController {
 
     let viewModel = ReadViewModel()
     
-    var recipeId: String?
+    // var recipeId: String?
 
-    var selectedFeed: Feed?
+    // var selectedFeed: Feed?
     
     override func viewDidLoad() {
 
@@ -32,8 +32,8 @@ class ChallengeViewController: UIViewController {
         viewModel.onGranteed = { [weak self] () in
             
             // 更新 挑戰者狀態
-            guard let recipeId = self?.recipeId,
-                let selectedFeed = self?.selectedFeed,
+            guard let recipeId = self?.viewModel.recipeId,
+                let selectedFeed = self?.viewModel.selectedFeed,
                 let feedId = selectedFeed.id else { return }
 
             // mockuid
@@ -91,7 +91,7 @@ class ChallengeViewController: UIViewController {
             self?.labelLikesCounts.text = String(describing: recipeViewModel.recipe.likes)
         }
 
-        guard let recipeId = recipeId else { return }
+        guard let recipeId = self.viewModel.recipeId else { return }
 
         viewModel.fetchRecipe(reciepeId: recipeId)
 
@@ -106,24 +106,11 @@ class ChallengeViewController: UIViewController {
     }
 
     @IBAction func goEditRecipe(_ sender: Any) {
-
-        // let uid = UserManager.shared.uid
-        // let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-
+        
         // fetch this recipe for checking is challenger field is empty, if not, alert sign pops (and go back).
-        guard let recipeId = self.recipeId else { return }
+        guard let recipeId = self.viewModel.recipeId else { return }
 
         viewModel.checkRecipeValue(reciepeId: recipeId)
-
-        // if it was empty, sign uid(recipe.ownerId) to its recipe
-        // guard let selectedFeed = selectedFeed else { return }
-
-        // viewModel.updateChallenger(documentId: selectedFeed.recipeId, uid: uid)
-
-        // go create Recipe
-        // guard let editVC = UIStoryboard.edit.instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
-
-        // navigationController?.pushViewController(editVC, animated: true)
     }
 
     private func setupTapGesture() {
@@ -137,9 +124,9 @@ class ChallengeViewController: UIViewController {
 
     func layoutOwnerInfo() {
 
-        imageViewPortrait.loadImage(self.selectedFeed?.portrait)
+        imageViewPortrait.loadImage(self.viewModel.selectedFeed?.portrait)
 
-        labelOwnerName.text = self.selectedFeed?.name
+        labelOwnerName.text = self.viewModel.selectedFeed?.name
 
         roundedImageView()
     }
@@ -158,7 +145,7 @@ class ChallengeViewController: UIViewController {
             .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
         // 取 recipeId (feed.recipeId)
-        let recipeId = recipeId
+        let recipeId = self.viewModel.recipeId
 
         // 傳 Id
         readVC.recipeId = recipeId

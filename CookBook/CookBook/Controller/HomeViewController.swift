@@ -209,10 +209,10 @@ extension HomeViewController: UITableViewDelegate {
                 .instantiateViewController(withIdentifier: "Challenge") as? ChallengeViewController else { return }
 
             // 傳 Id
-            challengeVC.recipeId = viewModel.feedViewModels.value[indexPath.row].feed.recipeId
+            challengeVC.viewModel.recipeId = viewModel.feedViewModels.value[indexPath.row].feed.recipeId
 
             // 傳 Feed
-            challengeVC.selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+            challengeVC.viewModel.selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
 
             self.navigationController?.pushViewController(challengeVC, animated: true)
         } else {
