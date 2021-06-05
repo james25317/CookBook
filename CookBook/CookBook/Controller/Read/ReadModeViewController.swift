@@ -51,10 +51,8 @@ class ReadModeViewController: UIViewController {
 
         // 1. prevent double likes logic (with UserDocumentId check)
 
-        // "UserDocumentId" after sign in with store
-        // In ProfilePage's Favorites sections, query Fb for Recipe that has my "UserDocumentId"
-        let userDocumentId = "UserDocumentId"
-        let mockUserId = "SADUxqR04ihqg1XUgDHn"
+        // mockuid
+        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value else { return }
@@ -75,7 +73,7 @@ class ReadModeViewController: UIViewController {
         }
 
         // 3. update favoritesUserId
-        viewModel.updateFavoritesUserId(to: recipe.id, with: userDocumentId) { result in
+        viewModel.updateFavoritesUserId(recipeId: recipe.id, uid: uid) { result in
 
             switch result {
 
@@ -90,7 +88,13 @@ class ReadModeViewController: UIViewController {
         }
 
         // 4. update favoritesCounts
-        viewModel.updateFavoritesCounts(with: mockUserId)
+        viewModel.updateFavoritesCounts(uid: uid)
+    }
+
+    @IBAction func goOptionMenu(_ sender: Any) {
+
+        // 打開選單欄位
+        setupOptionMenu()
     }
 
     private func setupCollecitonView() {
@@ -113,6 +117,33 @@ class ReadModeViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 32, bottom: 0, right: 32)
 
         snapCollectionFlowLayout.scrollDirection = .horizontal
+    }
+
+    private func setupOptionMenu() {
+
+        let controller = UIAlertController(
+            title: "選單",
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+
+        let blockAction = UIAlertAction(
+            title: "檢舉並封鎖",
+            style: .destructive) { _ in
+
+            // 開啟相機
+            // self.openCamera()
+        }
+
+        let cancelAction = UIAlertAction(
+            title: "取消",
+            style: .cancel)
+
+        controller.addAction(blockAction)
+
+        controller.addAction(cancelAction)
+
+        present(controller, animated: true)
     }
 }
 

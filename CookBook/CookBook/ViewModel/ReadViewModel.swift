@@ -109,7 +109,7 @@ class ReadViewModel {
         }
     }
 
-    func updateFavoritesCounts(with uid: String) {
+    func updateFavoritesCounts(uid: String) {
 
         DataManager.shared.updateFavoritesCounts(uid: uid) { result in
 
@@ -127,7 +127,7 @@ class ReadViewModel {
         }
     }
 
-    func updateFavoritesUserId(to documentId: String, with favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateFavoritesUserId(recipeId documentId: String, uid favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         DataManager.shared.updatefavoritesUserId(
             documentId: documentId,
