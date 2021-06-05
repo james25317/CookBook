@@ -47,9 +47,6 @@ class ChallengeViewController: UIViewController {
             
             print("Challenge assigned")
 
-            // 再去 fetch 一次最新的 recipe
-            // self?.viewModel.fetchRecipe(reciepeId: recipeId)
-
             // go create Recipe
             guard let editVC = UIStoryboard.edit
                 .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }

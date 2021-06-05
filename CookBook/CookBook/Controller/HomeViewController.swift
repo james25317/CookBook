@@ -39,6 +39,12 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
 
         self.navigationController?.navigationBar.shadowImage = image
+
+        DispatchQueue.main.async {
+
+            // sutoRefresh (senfback from challenge denied)
+            self.refreshView()
+        }
     }
 
     override func viewDidLoad() {
@@ -138,8 +144,18 @@ class HomeViewController: UIViewController {
 
             self?.viewModel.fetchFeedsData()
 
+            self?.viewModel.onScrollToTop()
+
             self?.tableView.refresh.header.endRefreshing()
         }
+    }
+
+    func refreshView() {
+
+        // unused.
+        print("Refreshing")
+
+        self.tableView.refresh.header.beginRefreshing()
     }
 }
 
@@ -276,6 +292,6 @@ extension HomeViewController: RefreshDelegate {
         // behavior after refreshed
         print("Home Feed Refreshed.")
 
-        viewModel.onScrollToTop()
+        // viewModel.onScrollToTop()
     }
 }
