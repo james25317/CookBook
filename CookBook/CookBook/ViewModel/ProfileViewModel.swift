@@ -36,6 +36,9 @@ class ProfileViewModel {
 
                 self?.setUser(user)
 
+                // fetch 最新資料至 UserManager
+                UserManager.shared.user = user
+
             case .failure(let error):
 
                 print("fetchData.failure: \(error)")

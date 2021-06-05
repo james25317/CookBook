@@ -12,6 +12,26 @@ class TodayViewModel {
     let todayRecipeViewModel: Box<TodayRecipeViewModel?> = Box(nil)
 
     var recipe: Recipe?
+    
+    func fetchUserData(uid: String) {
+
+        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
+
+            switch result {
+
+            case .success(let user):
+
+                print("Fetch user success: \(user)")
+
+                // fetch 最新資料至 UserManager
+                UserManager.shared.user = user
+
+            case .failure(let error):
+
+                print("fetchData.failure: \(error)")
+            }
+        }
+    }
 
     // fetch collection("Today").document("TodayRecipe")
     func fetchTodayRecipeData() {

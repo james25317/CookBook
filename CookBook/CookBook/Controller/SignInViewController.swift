@@ -243,6 +243,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
 
                     UserManager.shared.user.email = user.email ?? ""
 
+                    // 以最新初始化的 User 與 uid 創建新 document
                     self.viewModel.createUserData(user: UserManager.shared.user, uid: user.uid)
                 }
 

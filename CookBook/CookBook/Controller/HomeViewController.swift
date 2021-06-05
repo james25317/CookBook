@@ -163,12 +163,12 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return self.viewModel.feedViewModels.value.count
+        return self.viewModel.filteredFeeds().count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.row]
+        let cellViewModel = self.viewModel.filteredFeeds()[indexPath.row]
 
         if cellViewModel.isChallenged == false {
 
@@ -241,7 +241,7 @@ extension HomeViewController: UITableViewDelegate {
 
         tableView.deselectRow(at: indexPath, animated: false)
 
-        let cellViewModel = self.viewModel.feedViewModels.value[indexPath.row]
+        let cellViewModel = self.viewModel.filteredFeeds()[indexPath.row]
         
         if !cellViewModel.challenger.isEmpty {
 
@@ -258,10 +258,10 @@ extension HomeViewController: UITableViewDelegate {
                 .instantiateViewController(withIdentifier: "Challenge") as? ChallengeViewController else { return }
 
             // 傳 Id
-            challengeVC.viewModel.recipeId = viewModel.feedViewModels.value[indexPath.row].feed.recipeId
+            challengeVC.viewModel.recipeId = cellViewModel.feed.recipeId
 
             // 傳 Feed
-            challengeVC.viewModel.selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+            challengeVC.viewModel.selectedFeed = cellViewModel.feed
 
             self.navigationController?.pushViewController(challengeVC, animated: true)
         } else {
@@ -273,7 +273,7 @@ extension HomeViewController: UITableViewDelegate {
                 .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
             // 取 recipeId (feed.recipeId)
-            let selectedFeed = viewModel.feedViewModels.value[indexPath.row].feed
+            let selectedFeed = cellViewModel.feed
 
             let recipeId = selectedFeed.recipeId
 

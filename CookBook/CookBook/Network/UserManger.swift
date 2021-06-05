@@ -35,7 +35,7 @@ class UserManager {
 
         db.collection(Collections.user.rawValue)
             .document(uid)
-            .getDocument { documentSnapshot, error in
+            .addSnapshotListener { documentSnapshot, error in
 
                 if let error = error {
 

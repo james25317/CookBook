@@ -89,4 +89,16 @@ class HomeViewModel {
         // 傳轉換好的值 (viewModels) 給 VM.value，使 listener 帶值給所有綁定 的 View 顯示資料
         feedViewModels.value = convertFeedsToViewModels(from: feeds)
     }
+
+    func filteredFeeds() -> [FeedViewModel] {
+
+        // 是否回傳 optional?
+
+        // filter 含有 blockList 裡的 recipeId
+        return feedViewModels.value.filter { viewModel in
+
+            return !UserManager.shared.user.blockList.contains(viewModel.recipeId) &&
+                !UserManager.shared.user.blockList.contains(viewModel.challengerRecipeId)
+        }
+    }
 }

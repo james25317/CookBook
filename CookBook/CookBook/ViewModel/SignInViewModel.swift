@@ -61,7 +61,9 @@ class SignInViewModel {
 
             switch result {
 
-            case .success(_):
+            case .success(let documentId):
+
+                print("User: \(documentId) created")
 
                 // 可去進版頁
                 self?.onGranteed?()

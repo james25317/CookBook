@@ -31,6 +31,14 @@ class TodayViewController: UIViewController {
 
         super.viewDidLoad()
 
+        // 初始化面，fetch 最新的 User
+
+        // let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue)
+        // mockuid
+        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
+        viewModel.fetchUserData(uid: uid)
+
         // fetch video 資料回 VM.value
         viewModel.fetchTodayRecipeData()
 
