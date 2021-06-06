@@ -125,7 +125,7 @@ class ChallengeViewController: UIViewController {
 
         labelOwnerName.text = self.viewModel.selectedFeed?.name
 
-        roundedImageView()
+        // roundedImageView()
     }
 
     private func roundedImageView() {

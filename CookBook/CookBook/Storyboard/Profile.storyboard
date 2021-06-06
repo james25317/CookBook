@@ -36,7 +36,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="Yam-Ha-ztM" userLabel="Recipe Image View Recipe">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 </imageView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akE-zf-zgY">
                                                     <rect key="frame" x="44.666666666666671" y="54.000000000000007" width="38.666666666666671" height="20.333333333333336"/>
@@ -184,7 +184,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <constraints>
                                 <constraint firstItem="zmi-ST-xNI" firstAttribute="centerX" secondItem="cO2-Ok-HlR" secondAttribute="centerX" id="3CY-Tm-ODw"/>
                                 <constraint firstItem="cO2-Ok-HlR" firstAttribute="firstBaseline" secondItem="GZ0-1h-6CA" secondAttribute="centerY" constant="32" id="4EG-kZ-aex"/>
@@ -203,7 +203,7 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="24"/>
+                                    <real key="value" value="32"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
@@ -253,7 +253,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <constraints>
                                 <constraint firstItem="wza-PK-Oad" firstAttribute="height" secondItem="Rhk-5L-drT" secondAttribute="height" id="2h1-kl-jIm"/>
                                 <constraint firstItem="zRp-gs-Yiy" firstAttribute="height" secondItem="Rhk-5L-drT" secondAttribute="height" id="GH8-VY-cxR"/>
@@ -284,13 +284,13 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="20"/>
+                                    <real key="value" value="24"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </imageView>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="nA0-KB-An1"/>
-                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="nA0-KB-An1" firstAttribute="trailing" secondItem="eCi-YV-0Mo" secondAttribute="trailing" id="3Vo-0D-6g6"/>
                         <constraint firstItem="GZ0-1h-6CA" firstAttribute="trailing" secondItem="nA0-KB-An1" secondAttribute="trailing" id="82Z-GP-1qE"/>
