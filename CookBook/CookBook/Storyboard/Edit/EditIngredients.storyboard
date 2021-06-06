@@ -85,7 +85,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onTapSave:" destination="RvM-aT-hMS" eventType="touchUpInside" id="s03-DL-NI9"/>
-                                    <action selector="saveAndLeave:" destination="RvM-aT-hMS" eventType="touchUpInside" id="ZYm-mU-kvt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta8-Be-IW1">

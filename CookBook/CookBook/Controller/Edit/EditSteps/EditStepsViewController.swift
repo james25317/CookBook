@@ -88,6 +88,8 @@ class EditStepsViewController: UIViewController {
         
         viewModel.updateSteps(with: steps)
 
+        CBProgressHUD.showSuccess(text: "Steps Added")
+
         dismiss(animated: true, completion: nil)
     }
 

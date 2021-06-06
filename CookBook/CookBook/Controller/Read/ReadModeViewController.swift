@@ -34,6 +34,8 @@ class ReadModeViewController: UIViewController {
                     where: { $0 is HomeViewController }
                 ) else { return }
 
+            CBProgressHUD.showText(text: "CookBook Blocked")
+
             navigationController.popToViewController(homeVC, animated: true)
         }
 
@@ -75,6 +77,8 @@ class ReadModeViewController: UIViewController {
 
         // 4. update favoritesCounts
         viewModel.updateFavoritesCounts(documentId: uid)
+
+        CBProgressHUD.showSuccess(text: "CookBook Saved")
     }
 
     @IBAction func goOptionMenu(_ sender: Any) {
@@ -140,6 +144,7 @@ class ReadModeViewController: UIViewController {
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value else { return }
 
+        // cannot block its self logic
 //        if recipe.ownerId == uid {
 //
 //            print("You can not banned your own recipe")
@@ -153,7 +158,6 @@ class ReadModeViewController: UIViewController {
 
         // 上傳此 RecipeId 至 User(uid) 的 blockList
         viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
-
     }
 }
 

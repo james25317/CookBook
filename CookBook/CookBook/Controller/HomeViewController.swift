@@ -45,6 +45,9 @@ class HomeViewController: UIViewController {
             // sutoRefresh (sendback from challenge denied)
             // self.refreshView()
         }
+
+        // fetch the latest Feeds data, trigger reloadData()
+        viewModel.fetchFeedsData()
     }
 
     override func viewDidLoad() {
@@ -56,7 +59,7 @@ class HomeViewController: UIViewController {
 
             self?.tableView.reloadData()
 
-            self?.viewModel.onRefresh()
+            // self?.viewModel.onRefresh()
         }
 
         viewModel.refreshView = { [weak self] () in

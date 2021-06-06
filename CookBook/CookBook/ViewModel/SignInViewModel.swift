@@ -71,6 +71,8 @@ class SignInViewModel {
             case .failure(let error):
 
                 print("\(error), create user fail")
+
+                CBProgressHUD.showFailure(text: "SignIn Fail")
             }
         }
     }

@@ -123,12 +123,8 @@ class EditPreviewViewController: UIViewController {
 
                     // pass latest recipe data to EditDone
                     editChallengeDoneVC.viewModel = self?.viewModel
-
-                    // editChallengeDoneVC.viewModel?.challengerRecipeId = self?.viewModel?.recipeViewModel.value?.id
-
-                    // editChallengeDoneVC.viewModel?.challengerRecipeName = self?.viewModel?.recipeViewModel.value?.name
-
-                    // editChallengeDoneVC.viewModel?.challengerRecipeMainImage = mainImage
+                    
+                    CBProgressHUD.showSuccess(text: "Challenge CookBook Created")
 
                     self?.navigationController?.pushViewController(editChallengeDoneVC, animated: true)
                 }
@@ -159,6 +155,8 @@ class EditPreviewViewController: UIViewController {
 
                     // pass latest recipe data to EditDone
                     editDoneVC.viewModel = self?.viewModel
+
+                    CBProgressHUD.showSuccess(text: "CookBook Created")
 
                     self?.navigationController?.pushViewController(editDoneVC, animated: true)
                 }

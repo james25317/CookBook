@@ -24,7 +24,9 @@ class CBProgressHUD {
 
     var view: UIView {
 
-        return AppDelegate.shared.window!.rootViewController!.view
+        // return AppDelegate.shared.window!.rootViewController!.view
+
+        return (SceneDelegate.shared?.window?.rootViewController?.view)!
     }
 
     static func show(type: HUDType) {
@@ -39,6 +41,26 @@ class CBProgressHUD {
 
             showFailure(text: text)
         }
+    }
+
+    static func showText(text: String) {
+
+        if !Thread.isMainThread {
+
+            DispatchQueue.main.async {
+                showText(text: text)
+            }
+
+            return
+        }
+
+        shared.hud.textLabel.text = text
+
+        shared.hud.indicatorView = nil
+
+        shared.hud.show(in: shared.view)
+
+        shared.hud.dismiss(afterDelay: 1.0)
     }
 
     static func showSuccess(text: String = "success") {
@@ -58,7 +80,7 @@ class CBProgressHUD {
 
         shared.hud.show(in: shared.view)
 
-        shared.hud.dismiss(afterDelay: 1.5)
+        shared.hud.dismiss(afterDelay: 1.0)
     }
 
     static func showFailure(text: String = "Failure") {
@@ -78,7 +100,7 @@ class CBProgressHUD {
 
         shared.hud.show(in: shared.view)
 
-        shared.hud.dismiss(afterDelay: 1.5)
+        shared.hud.dismiss(afterDelay: 1.0)
     }
 
     static func show() {

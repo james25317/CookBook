@@ -88,13 +88,6 @@ class EditIngredientsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func saveAndLeave(_ sender: Any) {
-        
-        // uplaod before leave logic
-
-        dismiss(animated: true, completion: nil)
-    }
-
     @IBAction func onIngredientNameChanged(_ sender: UITextField) {
 
         guard let name = sender.text, let viewModel = viewModel else { return }
@@ -134,6 +127,10 @@ class EditIngredientsViewController: UIViewController {
 
         // update local Ingredient struct
         viewModel.updateIngredients(with: ingredients)
+
+        CBProgressHUD.showSuccess(text: "Ingredients Added")
+
+        dismiss(animated: true, completion: nil)
     }
 
     private func setupTableView() {

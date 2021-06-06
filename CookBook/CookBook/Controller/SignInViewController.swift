@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import AuthenticationServices
 import CryptoKit
+import JGProgressHUD
 
 class SignInViewController: UIViewController {
 
@@ -28,6 +29,8 @@ class SignInViewController: UIViewController {
             guard let todayVC = UIStoryboard.today
                 .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
+            CBProgressHUD.showSuccess(text: "SignIn Success")
+
             self?.navigationController?.pushViewController(todayVC, animated: true)
         }
 
@@ -37,7 +40,15 @@ class SignInViewController: UIViewController {
     @IBAction func skipSignIn(_ sender: Any) {
 
         guard let todayVC = UIStoryboard.today
-                .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+
+        CBProgressHUD.showSuccess(text: "Welcome Back")
+
+//        let hud = JGProgressHUD(style: .extraLight)
+//        hud.textLabel.text = "Welcome Back"
+//        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+//        hud.show(in: (self.view.window?.rootViewController?.view)!)
+//        hud.dismiss(afterDelay: 1.0)
 
         self.navigationController?.pushViewController(todayVC, animated: true)
     }

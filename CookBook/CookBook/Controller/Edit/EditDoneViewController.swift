@@ -47,6 +47,8 @@ class EditDoneViewController: UIViewController {
         guard let navigationController = navigationController,
             let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
 
+        CBProgressHUD.showSuccess(text: "CookBook Shared")
+
         navigationController.popToViewController(homeVC, animated: true)
     }
 
@@ -64,6 +66,8 @@ class EditDoneViewController: UIViewController {
 
         guard let navigationController = navigationController,
             let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+
+        CBProgressHUD.showSuccess(text: "CookBook Shared")
 
         navigationController.popToViewController(homeVC, animated: true)
     }

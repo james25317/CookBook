@@ -11,6 +11,8 @@ import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    private(set) static var shared: SceneDelegate?
+
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -18,6 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard (scene as? UIWindowScene) != nil else { return }
+
+        // 1. there is only one scene delegate.
+        // 2. There is only one scene and one window.
+        // 3. All view controllers in the app are all part of that one scene and its window.
+        Self.shared = self
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -41,65 +48,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
 
-        // 以暫存的 uuid 作爲登入判斷
-        //        #if targetEnvironment(simulator)
-        //
-        //        UserDefaults.standard.setValue(
-        //            "mockAppleId",
-        //            forKey: UserDefaults.Keys.uid.rawValue
-        //        )
-        //
-        //        UserDefaults.standard.setValue(
-        //            "CookBookUser",
-        //            forKey: UserDefaults.Keys.displayName.rawValue
-        //        )
-        //
-        //        UserDefaults.standard.setValue(
-        //            "testUser@.com",
-        //            forKey: UserDefaults.Keys.email.rawValue
-        //        )
-        //
-        //        if let todayVC = UIStoryboard.today.instantiateViewController(withIdentifier: "Today") as? TodayViewController {
-        //
-        //            window?.rootViewController = todayVC
-        //        } else {
-        //
-        //            print("Can't initial today viewController")
-        //        }
-        //
-        //        #else
-
-        //        if let window = window?.rootViewController as? SignInViewController {
-        //
-        //            if let user = Auth.auth().currentUser {
-        //
-        //                UserDefaults.standard.setValue(
-        //                    user.uid,
-        //                    forKey: UserDefaults.Keys.uid.rawValue
-        //                )
-        //
-        //                UserDefaults.standard.setValue(
-        //                    user.displayName,
-        //                    forKey: UserDefaults.Keys.displayName.rawValue
-        //                )
-        //
-        //                UserDefaults.standard.setValue(
-        //                    user.email,
-        //                    forKey: UserDefaults.Keys.email.rawValue
-        //                )
-        //
-        //                if let todayVC = UIStoryboard.today.instantiateInitialViewController(withIdentifier: "Today") as? TodayViewController {
-        //
-        //                    window?.rootViewController = todayVC
-        //                } else {
-        //
-        //                    print("Can't initial today viewController")
-        //                }
-        //            }
-        //        }
-
-        //        #endif
-
         if let user = Auth.auth().currentUser {
 
             // user 存在 -> 進版頁
@@ -114,6 +62,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 user.email,
                 forKey: UserDefaults.Keys.email.rawValue
             )
+
+            CBProgressHUD.showSuccess(text: "Welcome Back")
 
             window?.rootViewController = storyboard.instantiateInitialViewController()
 

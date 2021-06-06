@@ -4,7 +4,6 @@
 //
 //  Created by James Hung on 2021/5/12.
 //
-// swiftlint:disable line_length
 
 import UIKit
 import Firebase
@@ -12,8 +11,10 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // swiftlint:disable force_cast
     static let shared = UIApplication.shared.delegate as! AppDelegate
-
+    // swiftlint:enable force_cast
+    
     var window: UIWindow?
 
     func application(
