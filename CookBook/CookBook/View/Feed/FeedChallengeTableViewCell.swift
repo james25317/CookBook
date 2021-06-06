@@ -47,7 +47,7 @@ class FeedChallengeTableViewCell: UITableViewCell {
 
         imageViewOwnerRecipe.loadImage(viewModel?.mainImage)
 
-        labelOwnerRecipeName.text = viewModel?.name
+        labelOwnerRecipeName.text = viewModel?.recipeName
     }
 
     private func roundedImageView() {

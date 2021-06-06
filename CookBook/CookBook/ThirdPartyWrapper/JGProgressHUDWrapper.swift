@@ -116,7 +116,7 @@ class CBProgressHUD {
 
         shared.hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
 
-        shared.hud.textLabel.text = "Loading"
+        shared.hud.textLabel.text = nil
 
         shared.hud.show(in: shared.view)
     }

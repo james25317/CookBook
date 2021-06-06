@@ -40,11 +40,7 @@ class HomeViewController: UIViewController {
 
         self.navigationController?.navigationBar.shadowImage = image
 
-        DispatchQueue.main.async {
-
-            // sutoRefresh (sendback from challenge denied)
-            // self.refreshView()
-        }
+        CBProgressHUD.show()
 
         // fetch the latest Feeds data, trigger reloadData()
         viewModel.fetchFeedsData()
@@ -60,6 +56,8 @@ class HomeViewController: UIViewController {
             self?.tableView.reloadData()
 
             // self?.viewModel.onRefresh()
+
+            CBProgressHUD.dismiss()
         }
 
         viewModel.refreshView = { [weak self] () in
