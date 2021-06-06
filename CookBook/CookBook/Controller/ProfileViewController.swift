@@ -135,7 +135,7 @@ class ProfileViewController: UIViewController {
 
     private func setupCollectionView() {
 
-        collectionView.backgroundColor = UIColor.white
+        // collectionView.backgroundColor = UIColor.white
 
         setupCollectionViewLayout()
 

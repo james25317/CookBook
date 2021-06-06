@@ -19,7 +19,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-u4-Ucl">
                                 <rect key="frame" x="0.0" y="88" width="390" height="756"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YoU-fv-pMf">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -262,11 +262,16 @@
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnm-cV-ttB" userLabel="Indicator View">
-                            <rect key="frame" x="0.3333333333333286" y="297" width="127.99999999999999" height="2"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="frame" x="51.333333333333343" y="289.66666666666669" width="26" height="4"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="2" id="H7J-Xr-DUQ"/>
+                                <constraint firstAttribute="height" constant="4" id="H7J-Xr-DUQ"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCi-YV-0Mo" userLabel="Divide View">
                             <rect key="frame" x="0.0" y="251" width="390" height="1"/>
@@ -299,12 +304,12 @@
                         <constraint firstItem="GZ0-1h-6CA" firstAttribute="leading" secondItem="nA0-KB-An1" secondAttribute="leading" id="CVk-aE-m8g"/>
                         <constraint firstItem="pnm-cV-ttB" firstAttribute="centerX" secondItem="wza-PK-Oad" secondAttribute="centerX" id="Fh3-EE-HOY"/>
                         <constraint firstItem="GZ0-1h-6CA" firstAttribute="height" secondItem="NIF-T7-c0R" secondAttribute="height" multiplier="0.7" id="HVq-Fl-dV4"/>
-                        <constraint firstItem="pnm-cV-ttB" firstAttribute="width" secondItem="wza-PK-Oad" secondAttribute="width" multiplier="0.992674" id="KqT-on-sHZ"/>
-                        <constraint firstItem="e4J-sq-pKR" firstAttribute="firstBaseline" secondItem="4qg-sC-vMF" secondAttribute="baseline" constant="25" symbolType="layoutAnchor" id="R8e-Jr-GNJ"/>
+                        <constraint firstItem="pnm-cV-ttB" firstAttribute="width" secondItem="wza-PK-Oad" secondAttribute="width" multiplier="0.2" id="KqT-on-sHZ"/>
+                        <constraint firstItem="e4J-sq-pKR" firstAttribute="firstBaseline" secondItem="4qg-sC-vMF" secondAttribute="baseline" constant="29.333333333333332" symbolType="layoutAnchor" id="R8e-Jr-GNJ"/>
                         <constraint firstItem="GZ0-1h-6CA" firstAttribute="bottom" secondItem="nA0-KB-An1" secondAttribute="bottom" id="SUL-wu-XnK"/>
                         <constraint firstItem="eCi-YV-0Mo" firstAttribute="leading" secondItem="nA0-KB-An1" secondAttribute="leading" id="Uyo-RT-iYw"/>
+                        <constraint firstItem="pnm-cV-ttB" firstAttribute="firstBaseline" secondItem="wza-PK-Oad" secondAttribute="baseline" constant="8" id="XKC-Yk-zu1"/>
                         <constraint firstItem="4qg-sC-vMF" firstAttribute="centerX" secondItem="NIF-T7-c0R" secondAttribute="centerX" id="ZeQ-41-q66"/>
-                        <constraint firstItem="pnm-cV-ttB" firstAttribute="bottom" secondItem="Rhk-5L-drT" secondAttribute="bottom" constant="-1" id="cG1-N2-jOs"/>
                         <constraint firstItem="e4J-sq-pKR" firstAttribute="centerX" secondItem="4qg-sC-vMF" secondAttribute="centerX" id="fgu-bu-45X"/>
                         <constraint firstItem="eCi-YV-0Mo" firstAttribute="bottom" secondItem="Rhk-5L-drT" secondAttribute="top" id="o7q-7J-cUd"/>
                         <constraint firstAttribute="bottom" secondItem="Rhk-5L-drT" secondAttribute="bottom" id="of4-Qf-JiL"/>
