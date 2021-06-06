@@ -34,7 +34,7 @@ class FeedChallengeTableViewCell: UITableViewCell {
 
         layoutCell()
 
-        roundedImageView()
+        // roundedImageView()
     }
 
     private func layoutCell() {

@@ -43,7 +43,7 @@ class FeedTableViewCell: UITableViewCell {
         
         self.selectionStyle = .none
 
-        roundedImageView()
+        // roundedImageView()
     }
 
     // 綁定VM對象來做替換

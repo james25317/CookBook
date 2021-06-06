@@ -42,7 +42,7 @@ class FeedChallengeDoneTableViewCell: UITableViewCell {
 
         layoutCell()
 
-        roundedImageView()
+        // roundedImageView()
 
         setupTapGesture()
     }
