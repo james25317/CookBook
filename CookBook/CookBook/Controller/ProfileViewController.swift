@@ -125,7 +125,7 @@ class ProfileViewController: UIViewController {
 
         labelChallengeCounts.text = String(describing: value.challengesCounts)
 
-        roundedPortrait()
+        // roundedPortrait()
     }
 
     private func roundedPortrait() {
@@ -152,7 +152,7 @@ class ProfileViewController: UIViewController {
 
         let width = floor((collectionView.bounds.width - itemSpace * (columnCount - 1)) / columnCount)
 
-        flowLayout.sectionInset = UIEdgeInsets(top: 360, left: 0, bottom: 0, right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
 
         flowLayout.itemSize = CGSize(width: width, height: width)
 
@@ -173,7 +173,7 @@ class ProfileViewController: UIViewController {
 
         NSLayoutConstraint.activate([
 
-            profileView.heightAnchor.constraint(equalToConstant: 360),
+            profileView.heightAnchor.constraint(equalToConstant: 300),
 
             profileView.leadingAnchor.constraint(equalTo: collectionView.frameLayoutGuide.leadingAnchor),
 
