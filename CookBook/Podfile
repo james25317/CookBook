@@ -13,5 +13,6 @@ target 'CookBook' do
   pod 'Kingfisher', '~> 6.0'
   pod 'Firebase/Auth'
   pod 'EasyRefresher'
+  pod 'JGProgressHUD'
 
 end
