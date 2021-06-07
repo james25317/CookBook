@@ -293,7 +293,7 @@
         <!--IngredientsPreview-->
         <scene sceneID="Le7-fz-6mX">
             <objects>
-                <viewController title="IngredientsPreview" id="AvZ-op-BtV" customClass="EditIngredientsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IngredientsPreview" title="IngredientsPreview" id="AvZ-op-BtV" customClass="EditIngredientsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jxJ-nQ-Kch">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="419"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +347,7 @@
         <!--StepsPreview-->
         <scene sceneID="OiX-qB-IzV">
             <objects>
-                <viewController title="StepsPreview" id="fK8-A1-YVQ" customClass="EditStepsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StepsPreview" title="StepsPreview" id="fK8-A1-YVQ" customClass="EditStepsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHA-cn-u23">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="419"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

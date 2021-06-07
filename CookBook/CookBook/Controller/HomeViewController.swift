@@ -40,10 +40,10 @@ class HomeViewController: UIViewController {
 
         self.navigationController?.navigationBar.shadowImage = image
 
-        CBProgressHUD.show()
-
         // fetch the latest Feeds data, trigger reloadData()
         viewModel.fetchFeedsData()
+        
+        CBProgressHUD.show()
     }
 
     override func viewDidLoad() {

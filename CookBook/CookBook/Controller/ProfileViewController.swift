@@ -43,6 +43,8 @@ class ProfileViewController: UIViewController {
 
     let viewModel = ProfileViewModel()
 
+    let editViewModel = EditViewModel()
+
     // mockuid
     let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
@@ -59,10 +61,10 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
-        CBProgressHUD.show()
-
         // fetch profile
         fetchProfileData(uid: uid)
+
+        CBProgressHUD.show()
 
         // 綁定 Fb Recipes 資料
         viewModel.recipeViewModels.bind { [weak self] recipes in
@@ -77,7 +79,7 @@ class ProfileViewController: UIViewController {
 
             self?.setupProfileInfo()
         }
-        
+
         setupProfileInfo()
 
         setupCollectionView()
@@ -215,9 +217,6 @@ extension ProfileViewController: UICollectionViewDataSource {
 
         // guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return 0 }
 
-        // mockuid
-        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-
         return viewModel.switchSection(with: uid, sortType: type).count
     }
 
@@ -231,9 +230,6 @@ extension ProfileViewController: UICollectionViewDataSource {
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
 
         // guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return cell }
-
-        // mockuid
-        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
         // 根據按鈕來源切換不同section的資料生成
         let cellViewModel = self.viewModel.switchSection(with: uid, sortType: type)[indexPath.row]
@@ -265,17 +261,49 @@ extension ProfileViewController: UICollectionViewDelegate {
 
         collectionView.deselectItem(at: indexPath, animated: false)
 
-        guard let readVC = UIStoryboard.read
-            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
-
         // 取 recipeId (recipe.id)
         let selectedItem = viewModel.recipeViewModels.value[indexPath.row].recipe
 
-        let recipeId = selectedItem.id
+        // 根據 isEditDone 決定去的方向
+        if !selectedItem.isEditDone {
 
-        // 傳 Id
-        readVC.recipeId = recipeId
-        
-        self.navigationController?.pushViewController(readVC, animated: true)
+            // go EditPreviewPage
+            guard let previewVC = UIStoryboard.edit
+                .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+
+            // go EditPreviewPage
+//            guard let ingredientsPreviewVC = UIStoryboard.edit
+//                .instantiateViewController(withIdentifier: "IngredientsPreview") as? EditIngredientsPreviewViewController else { return }
+
+            // go EditPreviewPage
+//            guard let stepsPreviewVC = UIStoryboard.edit
+//                .instantiateViewController(withIdentifier: "StepsPreview") as? EditStepsPreviewViewController else { return }
+
+            // 用 selectedItem 賦值 editViewModel.value
+            editViewModel.setRecipe(selectedItem)
+
+            // pass data
+            previewVC.viewModel = editViewModel
+
+
+//            ingredientsPreviewVC.viewModel = editViewModel
+
+
+//            stepsPreviewVC.viewModel = editViewModel
+
+            navigationController?.pushViewController(previewVC, animated: true)
+        } else {
+
+            // go ReadPage
+            guard let readVC = UIStoryboard.read
+                    .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+
+            let recipeId = selectedItem.id
+
+            // 傳 Id
+            readVC.recipeId = recipeId
+
+            self.navigationController?.pushViewController(readVC, animated: true)
+        }
     }
 }
