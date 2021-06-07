@@ -34,16 +34,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="Yam-Ha-ztM" userLabel="Recipe Image View Recipe">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yam-Ha-ztM" userLabel="Recipe Image View Recipe">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 </imageView>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akE-zf-zgY">
-                                                    <rect key="frame" x="44.666666666666671" y="54.000000000000007" width="38.666666666666671" height="20.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQN-0p-2mc">
                                                     <rect key="frame" x="0.0" y="105" width="128" height="23"/>
                                                     <subviews>
@@ -70,16 +64,42 @@
                                                         <constraint firstItem="tIg-9H-hy9" firstAttribute="centerY" secondItem="WQN-0p-2mc" secondAttribute="centerY" id="naD-oy-fY3"/>
                                                     </constraints>
                                                 </view>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgx-Gh-nuD" userLabel="Draft View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Draft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akE-zf-zgY">
+                                                            <rect key="frame" x="40" y="50" width="48" height="28"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DraftRecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptq-J8-flN">
+                                                            <rect key="frame" x="8" y="107.33333333333333" width="112" height="17"/>
+                                                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Ptq-J8-flN" secondAttribute="trailing" constant="8" id="3X9-9N-k4T"/>
+                                                        <constraint firstItem="Ptq-J8-flN" firstAttribute="leading" secondItem="jgx-Gh-nuD" secondAttribute="leading" constant="8" id="Dav-pK-rWF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ptq-J8-flN" secondAttribute="baseline" constant="8" id="Ier-MJ-WT5"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Yam-Ha-ztM" firstAttribute="top" secondItem="3eR-NY-g3h" secondAttribute="top" id="2l1-Rq-7Cr"/>
-                                                <constraint firstItem="akE-zf-zgY" firstAttribute="centerY" secondItem="3eR-NY-g3h" secondAttribute="centerY" id="ERh-rG-yT8"/>
+                                                <constraint firstAttribute="trailing" secondItem="jgx-Gh-nuD" secondAttribute="trailing" id="BSs-90-Jlu"/>
                                                 <constraint firstItem="WQN-0p-2mc" firstAttribute="leading" secondItem="3eR-NY-g3h" secondAttribute="leading" id="JAb-OA-vbP"/>
+                                                <constraint firstAttribute="bottom" secondItem="jgx-Gh-nuD" secondAttribute="bottom" id="KWM-jW-fLF"/>
                                                 <constraint firstAttribute="bottom" secondItem="Yam-Ha-ztM" secondAttribute="bottom" id="KfR-kq-U3n"/>
                                                 <constraint firstAttribute="bottom" secondItem="WQN-0p-2mc" secondAttribute="bottom" id="LW4-R8-3Dw"/>
                                                 <constraint firstItem="WQN-0p-2mc" firstAttribute="height" secondItem="3eR-NY-g3h" secondAttribute="height" multiplier="0.18" id="LaQ-7i-3tJ"/>
-                                                <constraint firstItem="akE-zf-zgY" firstAttribute="centerX" secondItem="3eR-NY-g3h" secondAttribute="centerX" id="Nrx-4I-0Zo"/>
+                                                <constraint firstItem="jgx-Gh-nuD" firstAttribute="leading" secondItem="3eR-NY-g3h" secondAttribute="leading" id="OWw-Zc-aF1"/>
                                                 <constraint firstAttribute="trailing" secondItem="WQN-0p-2mc" secondAttribute="trailing" id="aIa-h1-C3J"/>
+                                                <constraint firstItem="jgx-Gh-nuD" firstAttribute="top" secondItem="3eR-NY-g3h" secondAttribute="top" id="nrQ-6Z-O0Y"/>
                                                 <constraint firstItem="Yam-Ha-ztM" firstAttribute="leading" secondItem="3eR-NY-g3h" secondAttribute="leading" id="qbB-N7-T2e"/>
                                                 <constraint firstAttribute="trailing" secondItem="Yam-Ha-ztM" secondAttribute="trailing" id="xOF-ta-PLh"/>
                                             </constraints>
@@ -90,8 +110,11 @@
                                             </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="imageViewIcon" destination="tIg-9H-hy9" id="wbB-GX-5f7"/>
                                             <outlet property="imageViewRecipe" destination="Yam-Ha-ztM" id="aGt-9R-tL4"/>
+                                            <outlet property="labelDraftRecipeName" destination="Ptq-J8-flN" id="b6h-Zq-TIl"/>
                                             <outlet property="labelLikesCounts" destination="ZYV-Zw-CIl" id="FoX-bG-a0G"/>
+                                            <outlet property="viewDraftView" destination="jgx-Gh-nuD" id="pOg-fR-1yC"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -321,7 +344,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="demodish" width="1080" height="1080"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">

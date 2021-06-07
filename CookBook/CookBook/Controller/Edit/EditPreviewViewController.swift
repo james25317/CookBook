@@ -57,7 +57,7 @@ class EditPreviewViewController: UIViewController {
                 .setTitle("Ingredient (\(recipe?.ingredients.count ?? 0))", for: .normal)
 
             self?.sectionButtons[SectionType.steps.rawValue]
-                .setTitle( "Step (\(recipe?.steps.count ?? 0))", for: .normal)
+                .setTitle("Step (\(recipe?.steps.count ?? 0))", for: .normal)
         }
 
         // set first button is selected by default
@@ -78,13 +78,8 @@ class EditPreviewViewController: UIViewController {
 
     @IBAction func leave(_ sender: Any) {
 
-        // save draft alert logic
-
-        // back to homeVC
-        guard let navigationController = navigationController,
-            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
-
-        navigationController.popToViewController(homeVC, animated: true)
+        // alertPopup
+        setupAlert()
     }
 
     // MARK: go EditDone Page and pass data
@@ -93,20 +88,26 @@ class EditPreviewViewController: UIViewController {
         // 判斷_資料屬性
         // assign latest mainImage data
         guard let value = viewModel?.recipeViewModel.value,
-            let mainImage = value.recipe.steps.last?.image else { return }
+              let mainImage = value.recipe.steps.last?.image else { return }
+
+        // assign 本地 mainImage 資料
+        value.recipe.mainImage = mainImage
+
+        // assign 本地 isEditDone 資料
+        value.recipe.isEditDone = true
+
+        // updat isEditDone
+        viewModel?.updateIsEditDone()
 
         if !value.recipe.challenger.isEmpty {
 
             // go challengeDonePage
             guard let editChallengeDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
-                    withIdentifier: "EditChallengeDone"
-                ) as? EditChallengeDoneViewController else { return }
+                        withIdentifier: "EditChallengeDone"
+                    ) as? EditChallengeDoneViewController else { return }
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-            // assign 本地 mainImage 資料
-            viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
 
             // update MainImage
             viewModel?.updateMainImage(with: mainImage) { [weak self] result in
@@ -137,9 +138,6 @@ class EditPreviewViewController: UIViewController {
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            // assign 本地 mainImage 資料
-            viewModel?.recipeViewModel.value?.recipe.mainImage = mainImage
-
             // update MainImage
             viewModel?.updateMainImage(with: mainImage) { [weak self] result in
 
@@ -152,7 +150,7 @@ class EditPreviewViewController: UIViewController {
                 case .success(let mainImage):
 
                     print("MainImage: \(mainImage) updated")
-
+                    
                     // pass latest recipe data to EditDone
                     editDoneVC.viewModel = self?.viewModel
 
@@ -227,5 +225,49 @@ class EditPreviewViewController: UIViewController {
         case .steps:
             stepsContainerView.isHidden = false
         }
+    }
+
+    private func setupAlert() {
+
+        let alertController = UIAlertController(
+            title: "Save CookBook as Draft?",
+            message: "You can find your unfinished CookBook in your profile page.",
+            preferredStyle: .alert
+        )
+
+        let cancelAction = UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil
+        )
+
+        let saveAction = UIAlertAction(
+            title: "Save",
+            style: .default
+            ) { _ in
+
+            // save and leave
+            // isEditDone = false
+            self.goHomeVC()
+        }
+
+        alertController.addAction(cancelAction)
+
+        alertController.addAction(saveAction)
+
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil
+        )
+    }
+
+    private func goHomeVC() {
+
+        // back to homeVC
+        guard let navigationController = self.navigationController,
+            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+
+        navigationController.popToViewController(homeVC, animated: true)
     }
 }

@@ -59,6 +59,8 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
+        CBProgressHUD.show()
+
         // fetch profile
         fetchProfileData(uid: uid)
 
@@ -66,6 +68,8 @@ class ProfileViewController: UIViewController {
         viewModel.recipeViewModels.bind { [weak self] recipes in
 
             self?.collectionView.reloadData()
+
+            CBProgressHUD.dismiss()
         }
 
         // 綁定 Fb User 資料
@@ -79,9 +83,7 @@ class ProfileViewController: UIViewController {
         setupCollectionView()
 
         sortButtons.first!.isSelected = true
-
     }
-
 
     @IBAction func onChangeSortType(_ sender: UIButton) {
 
@@ -236,9 +238,24 @@ extension ProfileViewController: UICollectionViewDataSource {
         // 根據按鈕來源切換不同section的資料生成
         let cellViewModel = self.viewModel.switchSection(with: uid, sortType: type)[indexPath.row]
 
-        recipeCell.setup(viewModel: cellViewModel)
+        // 根據 isEditDone 生成樣式
+        if !cellViewModel.isEditDone {
 
-        return recipeCell
+            recipeCell.viewDraftView.isHidden = false
+
+            recipeCell.imageViewIcon.isHidden = true
+
+            recipeCell.labelLikesCounts.isHidden = true
+
+            recipeCell.setup(viewModel: cellViewModel)
+
+            return recipeCell
+        } else {
+
+            recipeCell.setup(viewModel: cellViewModel)
+
+            return recipeCell
+        }
     }
 }
 
@@ -249,7 +266,7 @@ extension ProfileViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: false)
 
         guard let readVC = UIStoryboard.read
-                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
         // 取 recipeId (recipe.id)
         let selectedItem = viewModel.recipeViewModels.value[indexPath.row].recipe

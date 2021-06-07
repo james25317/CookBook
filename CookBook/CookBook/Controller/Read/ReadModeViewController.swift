@@ -112,13 +112,13 @@ class ReadModeViewController: UIViewController {
     private func setupOptionMenu() {
 
         let controller = UIAlertController(
-            title: "選單",
+            title: "Option",
             message: nil,
             preferredStyle: .actionSheet
         )
 
         let blockAction = UIAlertAction(
-            title: "檢舉並封鎖",
+            title: "Block",
             style: .destructive) { _ in
 
             // update to blockList
@@ -126,7 +126,7 @@ class ReadModeViewController: UIViewController {
         }
 
         let cancelAction = UIAlertAction(
-            title: "取消",
+            title: "Cancel",
             style: .cancel)
 
         controller.addAction(blockAction)

@@ -445,6 +445,25 @@ class DataManager {
         }
     }
 
+    // MARK: IsEditDone (update)
+    func updateIsEditDone(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新(覆寫) MainImage 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(["isEditDone": true]) { error in
+
+            if let error = error {
+
+                completion(.failure(error))
+
+            } else {
+                
+                completion(.success(documentId))
+            }
+        }
+    }
+
     // MARK: RecipesCounts (update)
     func updateRecipesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 

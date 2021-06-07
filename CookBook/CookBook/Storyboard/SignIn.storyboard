@@ -18,7 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-Pk-ct1">
                                 <rect key="frame" x="180" y="112" width="30" height="30"/>
-                                <state key="normal" title="Skip"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
                                 <connections>
                                     <action selector="skipSignIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0nj-er-oox"/>
                                 </connections>
@@ -41,11 +43,18 @@
                                     <constraint firstAttribute="height" constant="48" id="Ehv-4a-mWJ"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPu-OO-tce">
+                                <rect key="frame" x="120.33333333333333" y="335.66666666666669" width="149.33333333333337" height="45"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Thin" family="PingFang TC" pointSize="32"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Fon-oy-MzM" firstAttribute="firstBaseline" secondItem="GDN-NG-Pt1" secondAttribute="firstBaseline" constant="24" id="1MB-TK-64n"/>
+                            <constraint firstItem="hPu-OO-tce" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1cD-fi-Kli"/>
                             <constraint firstItem="gAB-v2-MOY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="8KO-M9-9Iq"/>
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="top" secondItem="gAB-v2-MOY" secondAttribute="bottom" constant="48" id="DKd-Yb-RMg"/>
                             <constraint firstItem="Fon-oy-MzM" firstAttribute="centerX" secondItem="GDN-NG-Pt1" secondAttribute="centerX" id="ENE-FX-PL6"/>
@@ -54,6 +63,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gAB-v2-MOY" secondAttribute="trailing" constant="32" id="XeY-bn-jai"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Fon-oy-MzM" secondAttribute="bottom" constant="24" id="bee-mt-XxV"/>
                             <constraint firstItem="qV7-Pk-ct1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="d7x-Uy-6LS"/>
+                            <constraint firstItem="hPu-OO-tce" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-64" id="dIm-fh-xB1"/>
                             <constraint firstItem="gAB-v2-MOY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sVS-UO-HTo"/>
                             <constraint firstItem="qV7-Pk-ct1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="x6U-Kf-ylQ"/>
                         </constraints>

@@ -193,6 +193,25 @@ class EditViewModel {
         }
     }
 
+    func updateIsEditDone() {
+
+        guard let documentId = recipeViewModel.value?.recipe.id else { return }
+
+        DataManager.shared.updateIsEditDone(documentId: documentId) { result in
+
+            switch result {
+
+            case .success(let _):
+
+                print("IsEditDone updated, success")
+
+            case .failure(let error):
+
+                print("Updated fail, failure: \(error)")
+            }
+        }
+    }
+
     func updateMainImage(with mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }

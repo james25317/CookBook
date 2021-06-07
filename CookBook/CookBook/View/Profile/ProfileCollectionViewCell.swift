@@ -11,8 +11,14 @@ class ProfileCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageViewRecipe: UIImageView!
 
+    @IBOutlet weak var imageViewIcon: UIImageView!
+    
     @IBOutlet weak var labelLikesCounts: UILabel!
 
+    @IBOutlet weak var viewDraftView: UIView!
+
+    @IBOutlet weak var labelDraftRecipeName: UILabel!
+    
     var viewModel: RecipeViewModel?
 
     func setup(viewModel: RecipeViewModel) {
@@ -24,10 +30,12 @@ class ProfileCollectionViewCell: UICollectionViewCell {
 
     func layoutCell() {
 
-        guard let data = viewModel else { return }
+        guard let viewModel = viewModel else { return }
 
-        imageViewRecipe.loadImage(data.mainImage)
+        imageViewRecipe.loadImage(viewModel.mainImage)
 
-        labelLikesCounts.text = String(describing: data.likes)
+        labelLikesCounts.text = String(describing: viewModel.likes)
+
+        labelDraftRecipeName.text = String(describing: viewModel.name)
     }
 }
