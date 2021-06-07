@@ -51,13 +51,13 @@ class EditViewController: UIViewController {
     @IBAction func createCookBook(_ sender: Any) {
 
         // mockuid
-        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+        // let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
         // create Recipe, get documentId then fetch Recipe with it
-        viewModel.createRecipeData(with: &viewModel.recipe, with: uid)
+        viewModel.createRecipeData(with: &viewModel.recipe, with: UserManager.shared.mockUid)
 
         // Increased Recipes counts
-        viewModel.updateRecipesCounts(with: uid)
+        viewModel.updateRecipesCounts(with: UserManager.shared.mockUid)
 
         // go EditPreview Page
         guard let previewVC = storyboard?
@@ -76,7 +76,9 @@ class EditViewController: UIViewController {
 
     func setupTextView() {
 
-        textViewDescription.text = "請輸入食譜簡介"
+        textViewDescription.text = "  Recipe description"
+
+        textViewDescription.font = UIFont(name: "PingFang TC Regular", size: 17)
 
         textViewDescription.textColor = UIColor.lightGray
     }
@@ -112,7 +114,7 @@ extension EditViewController: UITextViewDelegate {
 
         if textView.text.isEmpty {
 
-            textView.text = "請輸入食譜簡介"
+            textView.text = "  Recipe description"
 
             textView.textColor = UIColor.lightGray
         }
@@ -126,7 +128,7 @@ extension EditViewController: UITextViewDelegate {
 
         if updatedText.isEmpty {
 
-            textView.text = "請輸入食譜簡介"
+            textView.text = "  Recipe description"
 
             textView.textColor = UIColor.lightGray
 

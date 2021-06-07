@@ -23,8 +23,8 @@ class EditViewModel {
         ingredients: [
             Ingredient(
             amount: 1,
-            name: "名稱",
-            unit: "單位"
+            name: "Ingredient",
+            unit: "Unit"
             )
         ],
 
@@ -37,8 +37,8 @@ class EditViewModel {
 
         steps: [
             Step(
-            description: "請輸入步驟的描述",
-            image: "https://loremflickr.com/320/240/food"
+            description: "Steps Description",
+            image: ""
             )
         ],
 
@@ -48,14 +48,14 @@ class EditViewModel {
     // init Ingredient
     var ingredient = Ingredient(
         amount: 1,
-        name: "名稱",
-        unit: "單位"
+        name: "Ingredient",
+        unit: "Unit"
     )
 
     // init Step
     var step = Step(
-        description: "請輸入步驟的描述",
-        image: "https://loremflickr.com/320/240/food"
+        description: "Steps Description",
+        image: ""
     )
 
     // init Feed

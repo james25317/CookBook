@@ -23,6 +23,8 @@ class EditPreviewViewController: UIViewController {
         static let steps = "SegueSteps"
     }
 
+    @IBOutlet weak var labelRecipeName: UILabel!
+
     @IBOutlet weak var indicatorView: UIView!
 
     @IBOutlet weak var indicatorCenterXConstraint: NSLayoutConstraint!
@@ -52,6 +54,8 @@ class EditPreviewViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel?.recipeViewModel.bind { [weak self] recipe in
+
+            // self?.labelRecipeName.text = recipe?.name
 
             self?.sectionButtons[SectionType.ingredients.rawValue]
                 .setTitle("Ingredient (\(recipe?.ingredients.count ?? 0))", for: .normal)

@@ -57,6 +57,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="48" id="5wW-DT-Jf8"/>
                             <constraint firstItem="Cab-QE-KaE" firstAttribute="centerY" secondItem="BFl-Hc-WJW" secondAttribute="centerY" id="Hvc-Ma-JJz"/>
@@ -66,11 +67,11 @@
                             <constraint firstItem="eNz-5p-vAf" firstAttribute="centerY" secondItem="BFl-Hc-WJW" secondAttribute="centerY" id="r8C-fC-RbY"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="4"/>
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                 <color key="value" systemColor="systemGray6Color"/>
@@ -78,6 +79,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="BFl-Hc-WJW" secondAttribute="bottom" id="aYD-mT-rgG"/>
                     <constraint firstItem="BFl-Hc-WJW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="cpz-nH-P6J"/>
