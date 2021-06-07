@@ -260,8 +260,7 @@ extension ProfileViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         collectionView.deselectItem(at: indexPath, animated: false)
-
-        // 取 recipeId (recipe.id)
+        
         let selectedItem = viewModel.recipeViewModels.value[indexPath.row].recipe
 
         // 根據 isEditDone 決定去的方向
@@ -271,25 +270,11 @@ extension ProfileViewController: UICollectionViewDelegate {
             guard let previewVC = UIStoryboard.edit
                 .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
 
-            // go EditPreviewPage
-//            guard let ingredientsPreviewVC = UIStoryboard.edit
-//                .instantiateViewController(withIdentifier: "IngredientsPreview") as? EditIngredientsPreviewViewController else { return }
-
-            // go EditPreviewPage
-//            guard let stepsPreviewVC = UIStoryboard.edit
-//                .instantiateViewController(withIdentifier: "StepsPreview") as? EditStepsPreviewViewController else { return }
-
-            // 用 selectedItem 賦值 editViewModel.value
+            // 用 selectedItem.id 重新取得 Fb 的綁定
             editViewModel.fetchRecipe(documentId: selectedItem.id!)
 
             // pass data
             previewVC.viewModel = editViewModel
-
-
-//            ingredientsPreviewVC.viewModel = editViewModel
-
-
-//            stepsPreviewVC.viewModel = editViewModel
 
             navigationController?.pushViewController(previewVC, animated: true)
         } else {

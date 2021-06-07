@@ -230,7 +230,7 @@ class EditPreviewViewController: UIViewController {
     private func setupAlert() {
 
         let alertController = UIAlertController(
-            title: "Save CookBook as Draft?",
+            title: "Save as Draft?",
             message: "You can find your unfinished CookBook in your profile page.",
             preferredStyle: .alert
         )
