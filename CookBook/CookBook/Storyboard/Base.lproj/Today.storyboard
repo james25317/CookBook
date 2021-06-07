@@ -46,16 +46,47 @@
                                             <constraint firstItem="ODM-B2-Kof" firstAttribute="centerY" secondItem="S5L-E2-sgG" secondAttribute="centerY" id="sqi-tk-a2V"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-aD-WyW">
+                                        <rect key="frame" x="257.66666666666669" y="16" width="68.333333333333314" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Official" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-24-diW">
+                                                <rect key="frame" x="14.000000000000004" y="1.3333333333333712" width="40.333333333333343" height="17"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
+                                                <color key="textColor" systemColor="systemGray6Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ugd-24-diW" firstAttribute="centerX" secondItem="4Is-aD-WyW" secondAttribute="centerX" id="6KN-WQ-7JE"/>
+                                            <constraint firstItem="ugd-24-diW" firstAttribute="centerY" secondItem="4Is-aD-WyW" secondAttribute="centerY" id="pNc-EN-2MV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <constraints>
+                                    <constraint firstItem="4Is-aD-WyW" firstAttribute="height" secondItem="8Ze-wo-bjs" secondAttribute="height" multiplier="0.12" id="6tC-WD-6OG"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Is-aD-WyW" secondAttribute="trailing" constant="16" id="9yp-Dg-Gtz"/>
                                     <constraint firstAttribute="trailing" secondItem="S5L-E2-sgG" secondAttribute="trailing" id="AKu-ym-RpW"/>
                                     <constraint firstItem="BCZ-ez-t4f" firstAttribute="top" secondItem="8Ze-wo-bjs" secondAttribute="top" id="DvM-Cy-2lH"/>
+                                    <constraint firstItem="4Is-aD-WyW" firstAttribute="width" secondItem="8Ze-wo-bjs" secondAttribute="width" multiplier="0.2" id="Jwf-3K-pLE"/>
                                     <constraint firstAttribute="bottom" secondItem="BCZ-ez-t4f" secondAttribute="bottom" id="Nle-7f-CSO"/>
                                     <constraint firstItem="BCZ-ez-t4f" firstAttribute="leading" secondItem="8Ze-wo-bjs" secondAttribute="leading" id="VbF-Va-lE4"/>
                                     <constraint firstAttribute="trailing" secondItem="BCZ-ez-t4f" secondAttribute="trailing" id="Xr1-0j-aDd"/>
                                     <constraint firstItem="S5L-E2-sgG" firstAttribute="height" secondItem="8Ze-wo-bjs" secondAttribute="height" multiplier="0.2" id="dA7-a2-5VR"/>
                                     <constraint firstAttribute="bottom" secondItem="S5L-E2-sgG" secondAttribute="bottom" id="gX1-kb-za0"/>
+                                    <constraint firstItem="4Is-aD-WyW" firstAttribute="top" secondItem="8Ze-wo-bjs" secondAttribute="top" constant="16" id="gyP-tN-Rv0"/>
                                     <constraint firstItem="S5L-E2-sgG" firstAttribute="leading" secondItem="8Ze-wo-bjs" secondAttribute="leading" id="ms7-gy-RhZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -67,7 +98,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-VT-5um" userLabel="VideoView">
                                 <rect key="frame" x="24" y="464.99999999999994" width="342" height="101.33333333333331"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-Z5-oU4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cook1" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-Z5-oU4">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="101.33333333333333"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </imageView>
@@ -113,7 +144,8 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-cN-dfR">
                                 <rect key="frame" x="205" y="694.66666666666663" width="20" height="22"/>
-                                <state key="normal" image="arrow.right.circle.fill" catalog="system"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" image="arrow.right" catalog="system"/>
                                 <connections>
                                     <action selector="skipThisPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyw-SH-tc8"/>
                                 </connections>
@@ -221,15 +253,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="cook1" width="1650" height="1100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

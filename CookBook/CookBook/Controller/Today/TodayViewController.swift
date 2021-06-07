@@ -16,6 +16,11 @@ class TodayViewController: UIViewController {
 
     let viewModel = TodayViewModel()
 
+    // 初始化面，fetch 最新的 User
+    // let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue)
+    // mockuid
+    let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
@@ -31,12 +36,6 @@ class TodayViewController: UIViewController {
 
         super.viewDidLoad()
 
-        // 初始化面，fetch 最新的 User
-
-        // let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue)
-        // mockuid
-        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-
         viewModel.fetchUserData(uid: uid)
 
         // fetch video 資料回 VM.value
@@ -44,6 +43,11 @@ class TodayViewController: UIViewController {
 
         // query recipe 資料
         viewModel.fetchOfficialRecipeData()
+
+        viewModel.onReNewed = { [weak self] () in
+
+            self?.imageViewTodayRecipe.loadImage(self?.viewModel.recipe?.mainImage)
+        }
 
         viewModel.todayRecipeViewModel.bind { [weak self] todayRecipe in
 
@@ -59,8 +63,11 @@ class TodayViewController: UIViewController {
     @IBAction func signOut(_ sender: Any) {
 
         print("SignOut button tapped!")
+
         let firebaseAuth = Auth.auth()
+
         do {
+            
           try firebaseAuth.signOut()
 
         } catch let signOutError as NSError {
@@ -112,7 +119,6 @@ class TodayViewController: UIViewController {
         guard let recipe = self.viewModel.recipe else { return }
 
         readVC.recipeId = recipe.id
-
     }
     
     @objc func goTodayRecipeVideo() {

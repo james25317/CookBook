@@ -260,7 +260,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="GrO-23-OQi" firstAttribute="centerX" secondItem="zE0-tp-PzS" secondAttribute="centerX" id="KC5-jJ-A3H"/>
                                                                 <constraint firstItem="GrO-23-OQi" firstAttribute="centerY" secondItem="zE0-tp-PzS" secondAttribute="centerY" id="Znh-8o-df9"/>
@@ -425,7 +425,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="dkS-El-eYR" firstAttribute="centerX" secondItem="GDC-4Q-Rwz" secondAttribute="centerX" id="SUJ-fZ-SCl"/>
                                                                 <constraint firstItem="dkS-El-eYR" firstAttribute="centerY" secondItem="GDC-4Q-Rwz" secondAttribute="centerY" id="uKV-vV-tV6"/>

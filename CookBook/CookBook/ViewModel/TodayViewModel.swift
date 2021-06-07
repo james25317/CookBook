@@ -12,6 +12,8 @@ class TodayViewModel {
     let todayRecipeViewModel: Box<TodayRecipeViewModel?> = Box(nil)
 
     var recipe: Recipe?
+
+    var onReNewed: (() -> Void)?
     
     func fetchUserData(uid: String) {
 
@@ -63,6 +65,8 @@ class TodayViewModel {
                 // assign official recipe data
                 self?.recipe = officialRecipe
 
+                self?.onReNewed?()
+                
             case .failure(let error):
 
                 print("fetchData failure: \(error)")
