@@ -57,11 +57,11 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-lS-Sgv">
                                                                     <rect key="frame" x="16" y="5.3333333333333428" width="310" height="19.666666666666668"/>
                                                                     <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="14"/>
-                                                                    <color key="textColor" systemColor="systemGray6Color"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="Tu3-lS-Sgv" secondAttribute="trailing" constant="16" id="4jm-MI-Kid"/>
                                                                 <constraint firstItem="Tu3-lS-Sgv" firstAttribute="centerY" secondItem="dQu-ur-FdL" secondAttribute="centerY" id="P0n-gD-CXI"/>
@@ -85,7 +85,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="sT4-cB-smn" secondAttribute="bottom" id="7i4-Hu-ch4"/>
                                                         <constraint firstAttribute="height" constant="200" id="8KK-D1-i8w"/>
@@ -110,6 +110,12 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -165,11 +171,11 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al2-1T-Byj">
                                                                             <rect key="frame" x="16" y="5" width="115" height="17"/>
                                                                             <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
-                                                                            <color key="textColor" systemColor="systemGray6Color"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstItem="Al2-1T-Byj" firstAttribute="leading" secondItem="JU4-dA-xjo" secondAttribute="leading" constant="16" id="7lj-Dq-Mfp"/>
                                                                         <constraint firstItem="Al2-1T-Byj" firstAttribute="centerY" secondItem="JU4-dA-xjo" secondAttribute="centerY" id="RWP-zb-g6A"/>
@@ -221,11 +227,11 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWh-aG-zGo">
                                                                             <rect key="frame" x="16" y="5" width="115" height="17"/>
                                                                             <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
-                                                                            <color key="textColor" systemColor="systemGray6Color"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstItem="oWh-aG-zGo" firstAttribute="centerY" secondItem="DSr-yq-F8r" secondAttribute="centerY" id="0Yy-Di-OLB"/>
                                                                         <constraint firstAttribute="trailing" secondItem="oWh-aG-zGo" secondAttribute="trailing" constant="16" id="nTx-Ag-etH"/>
@@ -260,7 +266,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="GrO-23-OQi" firstAttribute="centerX" secondItem="zE0-tp-PzS" secondAttribute="centerX" id="KC5-jJ-A3H"/>
                                                                 <constraint firstItem="GrO-23-OQi" firstAttribute="centerY" secondItem="zE0-tp-PzS" secondAttribute="centerY" id="Znh-8o-df9"/>
@@ -278,7 +284,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="uoF-BU-Fy7" firstAttribute="leading" secondItem="oYD-dd-uxI" secondAttribute="leading" constant="16" id="2k3-wa-Tac"/>
                                                         <constraint firstAttribute="trailing" secondItem="zE0-tp-PzS" secondAttribute="trailing" constant="16" id="3Ds-TB-13I"/>
@@ -308,6 +314,12 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -369,11 +381,11 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-LE-a7L">
                                                                             <rect key="frame" x="16.000000000000014" y="3.6666666666666572" width="230.33333333333337" height="19.666666666666668"/>
                                                                             <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="14"/>
-                                                                            <color key="textColor" systemColor="systemGray6Color"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstItem="JBR-LE-a7L" firstAttribute="centerY" secondItem="Ks5-mF-uK6" secondAttribute="centerY" id="1iU-cb-ehI"/>
                                                                         <constraint firstAttribute="trailing" secondItem="JBR-LE-a7L" secondAttribute="trailing" id="27F-Qh-VxO"/>
@@ -425,7 +437,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="dkS-El-eYR" firstAttribute="centerX" secondItem="GDC-4Q-Rwz" secondAttribute="centerX" id="SUJ-fZ-SCl"/>
                                                                 <constraint firstItem="dkS-El-eYR" firstAttribute="centerY" secondItem="GDC-4Q-Rwz" secondAttribute="centerY" id="uKV-vV-tV6"/>
@@ -451,16 +463,16 @@
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jFY-gF-A0k">
-                                                                    <rect key="frame" x="19.666666666666686" y="40.666666666666671" width="16" height="14.666666666666671"/>
-                                                                    <color key="tintColor" systemColor="systemYellowColor"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jFY-gF-A0k">
+                                                                    <rect key="frame" x="19.666666666666686" y="42.666666666666671" width="16" height="10.333333333333329"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="16" id="IFY-Ds-vff"/>
                                                                         <constraint firstAttribute="width" secondItem="jFY-gF-A0k" secondAttribute="height" multiplier="1:1" id="ZLE-St-QEo"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             <constraints>
                                                                 <constraint firstItem="IDN-0p-fRV" firstAttribute="centerX" secondItem="pO5-2D-say" secondAttribute="centerX" id="Ulb-mr-O7t"/>
                                                                 <constraint firstItem="jFY-gF-A0k" firstAttribute="bottom" secondItem="pO5-2D-say" secondAttribute="centerY" id="eaJ-iK-b0c"/>
@@ -474,7 +486,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="gmC-Ad-PSm" firstAttribute="leading" secondItem="bsk-kM-aLv" secondAttribute="leading" id="1Sf-fn-Mrc"/>
                                                         <constraint firstItem="gmC-Ad-PSm" firstAttribute="top" secondItem="bsk-kM-aLv" secondAttribute="bottom" constant="16" id="2dh-8M-7e0"/>
@@ -503,6 +515,12 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -565,7 +583,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.forward" catalog="system" width="128" height="98"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
@@ -583,9 +601,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
