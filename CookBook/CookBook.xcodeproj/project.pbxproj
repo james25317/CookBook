@@ -56,6 +56,7 @@
 		7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */; };
 		7FE2C20F26639A1400FCEAE3 /* TodayRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */; };
 		7FF736F5266CBD69006E1E3E /* JGProgressHUDWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF736F4266CBD69006E1E3E /* JGProgressHUDWrapper.swift */; };
+		7FF736F7266DFA92006E1E3E /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF736F6266DFA92006E1E3E /* PrivacyViewController.swift */; };
 		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
 		7FFCF0622650148D0082ED8E /* FeedChallengeDoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */; };
 		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
@@ -139,6 +140,7 @@
 		7FE2C20C2663993600FCEAE3 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		7FE2C20E26639A1400FCEAE3 /* TodayRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecipeViewModel.swift; sourceTree = "<group>"; };
 		7FF736F4266CBD69006E1E3E /* JGProgressHUDWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGProgressHUDWrapper.swift; sourceTree = "<group>"; };
+		7FF736F6266DFA92006E1E3E /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengeDoneTableViewCell.swift; sourceTree = "<group>"; };
 		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				7F7C7368265D374200D1AFD4 /* Edit */,
 				7F7C7369265D376300D1AFD4 /* Read */,
 				7FE2C2092663746F00FCEAE3 /* Today */,
+				7FF736F6266DFA92006E1E3E /* PrivacyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				7F13B15D265557980042F3EC /* UIView+Extension.swift in Sources */,
 				7FFCF0692650C8420082ED8E /* FeedViewModel.swift in Sources */,
 				7FF736F5266CBD69006E1E3E /* JGProgressHUDWrapper.swift in Sources */,
+				7FF736F7266DFA92006E1E3E /* PrivacyViewController.swift in Sources */,
 				7FFCF072265104EE0082ED8E /* HomeViewModel.swift in Sources */,
 				7F7C736126594C5F00D1AFD4 /* EditViewModel.swift in Sources */,
 				7F5256762666740B005A2DB9 /* SignInViewModel.swift in Sources */,

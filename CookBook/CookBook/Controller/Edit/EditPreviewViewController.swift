@@ -181,7 +181,7 @@ class EditPreviewViewController: UIViewController {
     // MARK: Prepare segue for data transfer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        guard let viewModel = viewModel else { return }
+        // guard let viewModel = viewModel else { return }
 
         let identifier = segue.identifier
 

@@ -44,7 +44,7 @@ class EditStepsPreviewViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        guard let viewModel = viewModel else { return }
+        // guard let viewModel = viewModel else { return }
 
         if segue.identifier == "SegueEditSteps",
            let editStepsVC = segue.destination as? EditStepsViewController {

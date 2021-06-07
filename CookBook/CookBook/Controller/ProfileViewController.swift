@@ -280,7 +280,7 @@ extension ProfileViewController: UICollectionViewDelegate {
 //                .instantiateViewController(withIdentifier: "StepsPreview") as? EditStepsPreviewViewController else { return }
 
             // 用 selectedItem 賦值 editViewModel.value
-            editViewModel.setRecipe(selectedItem)
+            editViewModel.fetchRecipe(documentId: selectedItem.id!)
 
             // pass data
             previewVC.viewModel = editViewModel
