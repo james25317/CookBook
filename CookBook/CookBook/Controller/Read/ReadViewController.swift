@@ -13,7 +13,7 @@ class ReadViewController: UIViewController {
 
     @IBOutlet weak var labelRecipeName: UILabel!
 
-    @IBOutlet weak var labelRecipeDescription: UILabel!
+    @IBOutlet weak var textViewRecipeDescription: UITextView!
 
     @IBOutlet weak var labelLikesCounts: UILabel!
 
@@ -36,8 +36,8 @@ class ReadViewController: UIViewController {
             self?.imageViewRecipeMainImage.loadImage(recipeViewModel.recipe.mainImage)
 
             self?.labelRecipeName.text = recipeViewModel.recipe.name
-
-            self?.labelRecipeDescription.text = recipeViewModel.recipe.description
+            
+            self?.textViewRecipeDescription.text = recipeViewModel.recipe.description
 
             self?.labelLikesCounts.text = String(describing: recipeViewModel.recipe.likes)
 

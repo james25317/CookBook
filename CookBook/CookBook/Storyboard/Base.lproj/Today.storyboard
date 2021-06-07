@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Menu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLd-Np-qs4">
-                                <rect key="frame" x="24" y="177.66666666666666" width="171" height="78.666666666666657"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="24" y="181.33333333333334" width="171" height="75.000000000000028"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ze-wo-bjs">
@@ -35,11 +35,12 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Recipe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODM-B2-Kof">
                                                 <rect key="frame" x="8" y="4.6666666666666856" width="326" height="24"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemGray6Color"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ODM-B2-Kof" secondAttribute="trailing" constant="8" id="9o1-Fn-rIn"/>
                                             <constraint firstItem="ODM-B2-Kof" firstAttribute="leading" secondItem="S5L-E2-sgG" secondAttribute="leading" constant="8" id="NL6-h0-330"/>
@@ -50,7 +51,7 @@
                                         <rect key="frame" x="257.66666666666669" y="16" width="68.333333333333314" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Official" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-24-diW">
-                                                <rect key="frame" x="14.000000000000004" y="1.3333333333333712" width="40.333333333333343" height="17"/>
+                                                <rect key="frame" x="13.666666666666625" y="1.3333333333333712" width="40.666666666666657" height="17"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGray6Color"/>
                                                 <nil key="highlightedColor"/>
@@ -98,7 +99,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-VT-5um" userLabel="VideoView">
                                 <rect key="frame" x="24" y="464.99999999999994" width="342" height="101.33333333333331"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cook1" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-Z5-oU4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cook1" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-Z5-oU4">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="101.33333333333333"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </imageView>
@@ -108,11 +109,12 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ub-hn-Nhb">
                                                 <rect key="frame" x="8" y="4.6666666666667425" width="326" height="24"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemGray6Color"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="7Ub-hn-Nhb" firstAttribute="leading" secondItem="w9m-ag-XY0" secondAttribute="leading" constant="8" id="dPF-4l-Qvu"/>
                                             <constraint firstAttribute="trailing" secondItem="7Ub-hn-Nhb" secondAttribute="trailing" constant="8" id="k9b-Xi-cNG"/>
@@ -137,14 +139,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sz-LL-7xV">
-                                <rect key="frame" x="173" y="697" width="28" height="17"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="169.33333333333334" y="690" width="35.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-cN-dfR">
-                                <rect key="frame" x="205" y="694.66666666666663" width="20" height="22"/>
-                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <rect key="frame" x="208.66666666666666" y="691" width="20" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="arrow.right" catalog="system"/>
                                 <connections>
                                     <action selector="skipThisPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyw-SH-tc8"/>
@@ -266,9 +268,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
