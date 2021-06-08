@@ -39,7 +39,6 @@
 		7FA1BA86264CDBA600B8ED13 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */; };
 		7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */; };
 		7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1BA8B264CFC9D00B8ED13 /* FeedTableViewCell.swift */; };
-		7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */; };
 		7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1BA93264E4C9200B8ED13 /* ProfileCollectionViewCell.swift */; };
 		7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BA97264E678000B8ED13 /* Read.storyboard */; };
 		7FC23EBB265FED1B00522ED4 /* ReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */; };
@@ -59,7 +58,6 @@
 		7FF736F7266DFA92006E1E3E /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF736F6266DFA92006E1E3E /* PrivacyViewController.swift */; };
 		7FFCF05E26500AE10082ED8E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */; };
 		7FFCF0622650148D0082ED8E /* FeedChallengeDoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */; };
-		7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */; };
 		7FFCF0672650C4AC0082ED8E /* KingFisherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0662650C4AC0082ED8E /* KingFisherWrapper.swift */; };
 		7FFCF0692650C8420082ED8E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0682650C8420082ED8E /* FeedViewModel.swift */; };
 		7FFCF06B2650CED80082ED8E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF06A2650CED80082ED8E /* Feed.swift */; };
@@ -123,7 +121,6 @@
 		7FA1BA85264CDBA600B8ED13 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7FA1BA87264CDCDE00B8ED13 /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 		7FA1BA8B264CFC9D00B8ED13 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		7FA1BA93264E4C9200B8ED13 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FA1BA97264E678000B8ED13 /* Read.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
 		7FC23EBA265FED1B00522ED4 /* ReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModel.swift; sourceTree = "<group>"; };
@@ -143,7 +140,6 @@
 		7FF736F6266DFA92006E1E3E /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		7FFCF05D26500AE10082ED8E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedChallengeDoneTableViewCell.swift; sourceTree = "<group>"; };
-		7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedChallengesTableViewCell.xib; sourceTree = "<group>"; };
 		7FFCF0662650C4AC0082ED8E /* KingFisherWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherWrapper.swift; sourceTree = "<group>"; };
 		7FFCF0682650C8420082ED8E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		7FFCF06A2650CED80082ED8E /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -222,8 +218,8 @@
 				7FA1BA82264CC85800B8ED13 /* Utility */,
 				7FA1BA7F264CC67900B8ED13 /* Controller */,
 				7FA1BA7C264CC5DD00B8ED13 /* Model */,
-				7FA1BA7B264CC5D600B8ED13 /* View */,
 				7FA1BA7D264CC5E400B8ED13 /* ViewModel */,
+				7FA1BA7B264CC5D600B8ED13 /* View */,
 				7FA1BA81264CC84200B8ED13 /* Storyboard */,
 				7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */,
 				7F284C39264BC19E001A0B4E /* Info.plist */,
@@ -376,8 +372,6 @@
 				7FFCF0602650148C0082ED8E /* FeedChallengeDoneTableViewCell.swift */,
 				7F12F8D72668B919007ADB8B /* FeedChallengeTableViewCell.swift */,
 				7FA1BA8B264CFC9D00B8ED13 /* FeedTableViewCell.swift */,
-				7FFCF0612650148C0082ED8E /* FeedChallengesTableViewCell.xib */,
-				7FA1BA8C264CFC9D00B8ED13 /* FeedTableViewCell.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -394,8 +388,8 @@
 			isa = PBXGroup;
 			children = (
 				7FE2142D264E819F00208667 /* ReadIngredientsCollectionViewCell.swift */,
-				7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */,
 				7FE21429264E769100208667 /* ReadStepsCollectionViewCell.swift */,
+				7FE2142E264E819F00208667 /* ReadIngredientsCollectionViewCell.xib */,
 				7FE2142A264E769100208667 /* ReadStepsCollectionViewCell.xib */,
 			);
 			path = Read;
@@ -405,10 +399,10 @@
 			isa = PBXGroup;
 			children = (
 				7FE21436264F948F00208667 /* EditIngredientsTableViewCell.swift */,
-				7FE21437264F948F00208667 /* EditIngredientsTableViewCell.xib */,
-				7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */,
-				7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */,
 				7F7C7364265D341100D1AFD4 /* EditStepsCollectionViewCell.swift */,
+				7FE2143A264F996D00208667 /* EditStepsTableViewCell.swift */,
+				7FE21437264F948F00208667 /* EditIngredientsTableViewCell.xib */,
+				7FE2143B264F996D00208667 /* EditStepsTableViewCell.xib */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -530,13 +524,11 @@
 			files = (
 				7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */,
 				7F284C35264BC19E001A0B4E /* Assets.xcassets in Resources */,
-				7FFCF0632650148D0082ED8E /* FeedChallengesTableViewCell.xib in Resources */,
 				7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */,
 				7FA1BA86264CDBA600B8ED13 /* Profile.storyboard in Resources */,
 				7FA1BA84264CD1A900B8ED13 /* Main.storyboard in Resources */,
 				7F5256702665C315005A2DB9 /* SignIn.storyboard in Resources */,
 				7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */,
-				7FA1BA8E264CFC9D00B8ED13 /* FeedTableViewCell.xib in Resources */,
 				7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */,
 				7FFCF08D2654B70D0082ED8E /* Challenge.storyboard in Resources */,
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,

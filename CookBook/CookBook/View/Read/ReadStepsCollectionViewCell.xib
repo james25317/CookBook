@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,34 +21,34 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-FW-BT3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-Jc-8Mn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="582.33333333333337"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tTS-Jc-8Mn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="537.66666666666663"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLb-CQ-LbS">
-                                <rect key="frame" x="189.66666666666666" y="851.66666666666663" width="35" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="189.33333333333334" y="851" width="35.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
+                                <color key="textColor" name="CB-text-gray-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyP-I1-oj8">
-                                <rect key="frame" x="24" y="851" width="20" height="22"/>
+                                <rect key="frame" x="24" y="850" width="20" height="22"/>
                                 <state key="normal" image="arrow.left" catalog="system"/>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-CX-ra2">
-                                <rect key="frame" x="370" y="851" width="20" height="22"/>
+                                <rect key="frame" x="370" y="850" width="20" height="22"/>
                                 <state key="normal" image="arrow.right" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
-                                <rect key="frame" x="24" y="598.33333333333337" width="366" height="237.33333333333337"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
+                                <rect key="frame" x="24" y="553.66666666666663" width="366" height="281.33333333333337"/>
                                 <string key="text">Heat the remaining tablespoon of oil in the pan over a high heat. Add the onion and pepper, then season with salt and pepper. Fry for 2 minutes, then add the garlic and ginger, if using, and fry for a further minute.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="CB-text-black-1"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" name="CB-background-white-1"/>
                         <constraints>
-                            <constraint firstItem="tTS-Jc-8Mn" firstAttribute="height" secondItem="w8O-FW-BT3" secondAttribute="height" multiplier="0.65" id="6bk-hJ-Q7U"/>
+                            <constraint firstItem="tTS-Jc-8Mn" firstAttribute="height" secondItem="w8O-FW-BT3" secondAttribute="height" multiplier="0.6" id="6bk-hJ-Q7U"/>
                             <constraint firstItem="VLb-CQ-LbS" firstAttribute="top" secondItem="XRy-Rs-eqJ" secondAttribute="bottom" constant="16" id="CSD-fm-M6s"/>
                             <constraint firstItem="VLb-CQ-LbS" firstAttribute="centerX" secondItem="w8O-FW-BT3" secondAttribute="centerX" id="Cmy-ch-vnR"/>
                             <constraint firstAttribute="trailing" secondItem="XRy-Rs-eqJ" secondAttribute="trailing" constant="24" id="MQh-B3-Thu"/>
@@ -64,13 +65,13 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" systemColor="systemGray5Color"/>
+                                <color key="value" systemColor="systemGray6Color"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="1"/>
+                                <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="8"/>
+                                <real key="value" value="16"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -94,13 +95,15 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
-        <image name="demodish" width="1080" height="1080"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="CB-background-white-1">
+            <color red="0.97600001096725464" green="0.9649999737739563" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-black-1">
+            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-gray-1">
+            <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

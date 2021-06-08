@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,24 +20,24 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookCreated!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp8-vz-cHU">
                                 <rect key="frame" x="86.666666666666686" y="146" width="217" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="24"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now, maybe you want to ... ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beN-Ct-p98">
-                                <rect key="frame" x="24" y="289.66666666666669" width="342" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="24" y="286" width="342" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQV-OK-bpe">
-                                <rect key="frame" x="32" y="329.66666666666669" width="326" height="42"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <rect key="frame" x="32" y="328" width="326" height="42"/>
+                                <color key="backgroundColor" name="CB-text-gray-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="yaF-Hn-6am"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
                                 <state key="normal" title="Share">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -48,8 +49,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1Q-9x-J3E">
-                                <rect key="frame" x="32" y="440.66666666666669" width="326" height="42"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="32" y="442" width="326" height="42"/>
+                                <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="T9C-uq-fgS"/>
                                 </constraints>
@@ -67,15 +68,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlN-Un-yHo">
-                                <rect key="frame" x="32" y="395.66666666666669" width="326" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <rect key="frame" x="32" y="394" width="326" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                <color key="textColor" name="CB-text-gray-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do3-Xp-VC7">
                                 <rect key="frame" x="145.66666666666666" y="712" width="114.99999999999997" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L67-av-4uK">
@@ -84,8 +85,8 @@
                                     <constraint firstAttribute="height" constant="24" id="Odb-an-cYM"/>
                                     <constraint firstAttribute="width" secondItem="L67-av-4uK" secondAttribute="height" multiplier="1:1" id="rgy-4n-kAa"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="arrow.left" catalog="system"/>
+                                <color key="tintColor" name="CB-prime-yellow-1"/>
+                                <state key="normal" image="arrow-left"/>
                                 <connections>
                                     <action selector="backToHome:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HCG-pz-pOd"/>
                                 </connections>
@@ -130,18 +131,18 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! You did great!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-uP-bMn">
                                 <rect key="frame" x="88" y="140" width="214" height="67.333333333333314"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="24"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIJ-7w-lRb">
                                 <rect key="frame" x="32" y="688" width="326" height="42"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="vNn-pm-XRm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
                                 <state key="normal" title="Share">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="shareBackToFeed:" destination="V6T-d6-RL4" eventType="touchUpInside" id="GaZ-5V-5pC"/>
@@ -149,9 +150,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your result with CookBook!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55D-sI-q3Z">
-                                <rect key="frame" x="77.666666666666671" y="619" width="234.66666666666663" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="62" y="640" width="266" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -161,7 +162,7 @@
                             <constraint firstItem="KN3-S2-IdB" firstAttribute="trailing" secondItem="mz4-uP-bMn" secondAttribute="trailing" constant="88" id="5cH-Cb-sUu"/>
                             <constraint firstItem="RIJ-7w-lRb" firstAttribute="leading" secondItem="KN3-S2-IdB" secondAttribute="leading" constant="32" id="7CK-zS-21L"/>
                             <constraint firstItem="mz4-uP-bMn" firstAttribute="centerX" secondItem="KN3-S2-IdB" secondAttribute="centerX" id="VbS-y5-zDl"/>
-                            <constraint firstItem="RIJ-7w-lRb" firstAttribute="top" secondItem="55D-sI-q3Z" secondAttribute="bottom" constant="48" id="aVW-M7-ODk"/>
+                            <constraint firstItem="RIJ-7w-lRb" firstAttribute="top" secondItem="55D-sI-q3Z" secondAttribute="bottom" constant="24" id="aVW-M7-ODk"/>
                             <constraint firstItem="RIJ-7w-lRb" firstAttribute="centerX" secondItem="mz4-uP-bMn" secondAttribute="centerX" id="c2O-YD-KAq"/>
                             <constraint firstItem="mz4-uP-bMn" firstAttribute="top" secondItem="KN3-S2-IdB" secondAttribute="top" constant="96" id="gev-Ar-XqA"/>
                             <constraint firstItem="mz4-uP-bMn" firstAttribute="leading" secondItem="KN3-S2-IdB" secondAttribute="leading" constant="88" id="gx5-wq-Fdq"/>
@@ -177,18 +178,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="arrow-left" width="24" height="24"/>
+        <namedColor name="CB-prime-yellow-1">
+            <color red="1" green="0.70200002193450928" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-black-1">
+            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-gray-1">
+            <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

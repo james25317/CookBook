@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,45 +23,45 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-3e-xFI">
                                 <rect key="frame" x="24" y="851" width="366" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                <color key="textColor" name="CB-text-gray-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-og-zFn">
-                                <rect key="frame" x="0.0" y="93" width="414" height="717"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="763"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8z-CT-RGc">
-                                <rect key="frame" x="24" y="48" width="366" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="24" y="24" width="366" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="I8z-CT-RGc" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" constant="24" id="0jh-x1-MYU"/>
                             <constraint firstItem="WHL-og-zFn" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" id="3QF-iB-wnA"/>
-                            <constraint firstItem="I8z-CT-RGc" firstAttribute="top" secondItem="W2J-NS-pUL" secondAttribute="top" constant="48" id="3kz-7g-WcH"/>
+                            <constraint firstItem="I8z-CT-RGc" firstAttribute="top" secondItem="W2J-NS-pUL" secondAttribute="top" constant="24" id="3kz-7g-WcH"/>
                             <constraint firstItem="Bca-3e-xFI" firstAttribute="leading" secondItem="W2J-NS-pUL" secondAttribute="leading" constant="24" id="3r1-FM-hUo"/>
-                            <constraint firstItem="WHL-og-zFn" firstAttribute="top" secondItem="I8z-CT-RGc" secondAttribute="bottom" constant="24" id="8Zu-He-fwf"/>
+                            <constraint firstItem="WHL-og-zFn" firstAttribute="top" secondItem="I8z-CT-RGc" secondAttribute="bottom" constant="16" id="8Zu-He-fwf"/>
                             <constraint firstItem="I8z-CT-RGc" firstAttribute="centerX" secondItem="W2J-NS-pUL" secondAttribute="centerX" id="AOc-5v-Rs2"/>
-                            <constraint firstItem="WHL-og-zFn" firstAttribute="height" secondItem="W2J-NS-pUL" secondAttribute="height" multiplier="0.8" id="BRn-3m-tiV"/>
                             <constraint firstAttribute="trailing" secondItem="Bca-3e-xFI" secondAttribute="trailing" constant="24" id="Cvn-8O-RZb"/>
                             <constraint firstAttribute="bottom" secondItem="Bca-3e-xFI" secondAttribute="bottom" constant="24" id="Ha8-l2-5fY"/>
                             <constraint firstAttribute="trailing" secondItem="WHL-og-zFn" secondAttribute="trailing" id="U6G-MU-mkV"/>
                             <constraint firstItem="Bca-3e-xFI" firstAttribute="centerX" secondItem="W2J-NS-pUL" secondAttribute="centerX" id="seh-Rj-UJG"/>
                             <constraint firstAttribute="trailing" secondItem="I8z-CT-RGc" secondAttribute="trailing" constant="24" id="usa-t0-oW8"/>
+                            <constraint firstItem="Bca-3e-xFI" firstAttribute="top" secondItem="WHL-og-zFn" secondAttribute="bottom" constant="24" id="wFn-Q6-usO"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="8"/>
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" systemColor="systemGray5Color"/>
+                                <color key="value" systemColor="systemGray6Color"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -81,11 +82,14 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="CB-text-black-1">
+            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-gray-1">
+            <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,8 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demodish" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-ag-hyF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-ag-hyF">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="506.33333333333331"/>
+                                <color key="backgroundColor" name="CB-background-white-1"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">
                                 <rect key="frame" x="338" y="60" width="36" height="36"/>
@@ -34,57 +36,57 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-mM-LJ2">
                                         <rect key="frame" x="32" y="16" width="326" height="28"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67o-lt-k8e">
                                         <rect key="frame" x="32" y="44.000000000000057" width="326" height="140.66666666666666"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" name="CB-text-gray-1"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g5-u7-m5U">
                                         <rect key="frame" x="156.66666666666666" y="225.66666666666669" width="77" height="21"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" name="CB-text-gray-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1G-rR-Ivp">
                                         <rect key="frame" x="277.33333333333331" y="225.66666666666669" width="39.666666666666686" height="21"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" name="CB-text-gray-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avX-UU-qSw">
                                         <rect key="frame" x="189.66666666666666" y="199.66666666666669" width="11" height="24"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwQ-Qb-8D5">
                                         <rect key="frame" x="291.66666666666669" y="199.66666666666669" width="11" height="24"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-cb-a4k">
                                         <rect key="frame" x="87.666666666666671" y="199.66666666666669" width="11" height="24"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Cook!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-bt-PYP">
                                         <rect key="frame" x="140.66666666666666" y="271.66666666666669" width="92.666666666666657" height="24"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-qj-X8S">
-                                        <rect key="frame" x="241.33333333333334" y="272.66666666666669" width="19.666666666666657" height="22"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="arrow.forward" catalog="system"/>
+                                        <rect key="frame" x="241.33333333333334" y="271.66666666666669" width="24.000000000000028" height="24"/>
+                                        <color key="tintColor" name="CB-prime-yellow-1"/>
+                                        <state key="normal" image="arrow-right"/>
                                         <connections>
                                             <action selector="goReadModePage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E7W-Mg-S97"/>
                                         </connections>
@@ -92,11 +94,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-xC-JfX">
                                         <rect key="frame" x="74.666666666666671" y="225.66666666666669" width="36.666666666666671" height="21"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" name="CB-text-gray-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="CB-background-white-1"/>
                                 <constraints>
                                     <constraint firstItem="wwE-mM-LJ2" firstAttribute="leading" secondItem="eed-yp-4lz" secondAttribute="leading" constant="32" id="4Ra-UO-dzF"/>
                                     <constraint firstItem="Mdj-cb-a4k" firstAttribute="centerX" secondItem="oj6-xC-JfX" secondAttribute="centerX" id="6By-RA-qGd"/>
@@ -131,7 +133,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mIV-j4-Pse" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="B0i-9y-154"/>
                             <constraint firstItem="eed-yp-4lz" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="CUe-lp-eZ7"/>
@@ -168,6 +170,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
                                 <rect key="frame" x="0.0" y="92" width="390" height="548.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mpa-Jj-7xj" customClass="SnapCollectionFlowLayout" customModule="CookBook" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -200,7 +203,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="arrow.uturn.backward" catalog="system" symbolScale="medium"/>
+                                            <imageReference key="image" image="skip-back" symbolScale="medium"/>
                                         </state>
                                         <connections>
                                             <action selector="returnToFirstPage:" destination="NTn-6P-TAi" eventType="touchUpInside" id="C0h-tb-JIj"/>
@@ -227,7 +230,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="star" catalog="system" symbolScale="medium"/>
+                                            <imageReference key="image" image="star" symbolScale="medium"/>
                                         </state>
                                         <connections>
                                             <action selector="saveToFavorites:" destination="NTn-6P-TAi" eventType="touchUpInside" id="YYI-qQ-eRn"/>
@@ -242,7 +245,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="ellipsis" catalog="system" symbolScale="medium"/>
+                                            <imageReference key="image" image="more-horizontal" symbolScale="medium"/>
                                         </state>
                                         <connections>
                                             <action selector="goOptionMenu:" destination="NTn-6P-TAi" eventType="touchUpInside" id="YPW-NO-8CV"/>
@@ -276,22 +279,24 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.forward" catalog="system" width="128" height="98"/>
-        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
-        <image name="demodish" width="1080" height="1080"/>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="arrow-right" width="24" height="24"/>
+        <image name="more-horizontal" width="24" height="24"/>
+        <image name="skip-back" width="24" height="24"/>
         <image name="speaker.slash" catalog="system" width="124" height="128"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star" width="24" height="24"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="CB-background-white-1">
+            <color red="0.97600001096725464" green="0.9649999737739563" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-prime-yellow-1">
+            <color red="1" green="0.70200002193450928" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-black-1">
+            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-gray-1">
+            <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

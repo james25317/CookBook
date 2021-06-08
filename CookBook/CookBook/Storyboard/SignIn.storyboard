@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,15 +20,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-Pk-ct1">
                                 <rect key="frame" x="180" y="68" width="30" height="30"/>
                                 <state key="normal" title="Skip">
-                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                    <color key="titleColor" name="CB-text-gray-1"/>
                                 </state>
                                 <connections>
                                     <action selector="skipSignIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0nj-er-oox"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fon-oy-MzM">
-                                <rect key="frame" x="152" y="759" width="86" height="27"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <rect key="frame" x="160" y="760" width="70" height="26"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="10"/>
                                 <state key="normal" title="隱私權政策連結">
                                     <color key="titleColor" systemColor="linkColor"/>
                                 </state>
@@ -36,13 +37,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="當您按下 Sign-In 按鈕 代表同意以下隱私權政策" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-NG-Pt1">
-                                <rect key="frame" x="32" y="741.33333333333337" width="326" height="15"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <color key="textColor" red="0.37254901959999998" green="0.41176470590000003" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="32" y="750" width="326" height="14"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="10"/>
+                                <color key="textColor" name="CB-text-gray-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAB-v2-MOY">
-                                <rect key="frame" x="32" y="645.33333333333337" width="326" height="48"/>
+                                <rect key="frame" x="32" y="654" width="326" height="48"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Ehv-4a-mWJ"/>
@@ -59,7 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fon-oy-MzM" firstAttribute="firstBaseline" secondItem="GDN-NG-Pt1" secondAttribute="firstBaseline" constant="24" id="1MB-TK-64n"/>
+                            <constraint firstItem="Fon-oy-MzM" firstAttribute="firstBaseline" secondItem="GDN-NG-Pt1" secondAttribute="firstBaseline" constant="16" id="1MB-TK-64n"/>
                             <constraint firstItem="pLr-4u-aHO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3XG-vT-Tdv"/>
                             <constraint firstItem="gAB-v2-MOY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="8KO-M9-9Iq"/>
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="top" secondItem="gAB-v2-MOY" secondAttribute="bottom" constant="48" id="DKd-Yb-RMg"/>
@@ -239,7 +240,7 @@ If you have any questions about this Privacy Policy, You can contact us:
 
 By email: hung.chiamao@gamil.com
 Privacy Policy for CookBook</string>
-                                <color key="textColor" red="0.078431372550000003" green="0.047058823530000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="CB-text-black-1"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -256,9 +257,9 @@ Privacy Policy for CookBook</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll down for more contents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfo-nC-jY3">
-                                <rect key="frame" x="94" y="717" width="202" height="19.666666666666629"/>
+                                <rect key="frame" x="94" y="725" width="202" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="14"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <color key="textColor" name="CB-text-gray-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -270,7 +271,7 @@ Privacy Policy for CookBook</string>
                             <constraint firstItem="u8L-3j-GpV" firstAttribute="trailing" secondItem="diW-or-2Uq" secondAttribute="trailing" constant="24" id="buT-ge-e4j"/>
                             <constraint firstItem="u8L-3j-GpV" firstAttribute="trailing" secondItem="Aqc-Fp-QDt" secondAttribute="trailing" constant="32" id="jPi-ni-GMQ"/>
                             <constraint firstItem="u8L-3j-GpV" firstAttribute="bottom" secondItem="Aqc-Fp-QDt" secondAttribute="bottom" constant="48" id="mBm-Fb-mhI"/>
-                            <constraint firstItem="Lfo-nC-jY3" firstAttribute="firstBaseline" secondItem="Aqc-Fp-QDt" secondAttribute="baseline" constant="24" id="nHo-9z-ppY"/>
+                            <constraint firstItem="Lfo-nC-jY3" firstAttribute="firstBaseline" secondItem="Aqc-Fp-QDt" secondAttribute="baseline" constant="32" id="nHo-9z-ppY"/>
                             <constraint firstItem="Aqc-Fp-QDt" firstAttribute="top" secondItem="u8L-3j-GpV" secondAttribute="top" constant="48" id="r95-6K-8ZO"/>
                             <constraint firstItem="Lfo-nC-jY3" firstAttribute="centerX" secondItem="u8L-3j-GpV" secondAttribute="centerX" id="uue-Qa-80g"/>
                         </constraints>
@@ -302,6 +303,12 @@ Privacy Policy for CookBook</string>
     </scenes>
     <resources>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="CB-text-black-1">
+            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-gray-1">
+            <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

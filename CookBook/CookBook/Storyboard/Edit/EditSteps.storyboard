@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -47,7 +48,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adW-cQ-4Ii">
                                                     <rect key="frame" x="16" y="259.66666666666669" width="302" height="193.33333333333331"/>
                                                     <string key="text">Tip the rice into a medium saucepan. Add 300ml/10fl oz water and bring to the boil. Reduce the heat, cover with a lid and simmer for 10 minutes. Remove from the heat, drain off any excess water and leave to steam dry, uncovered in the pan until ready to use.</string>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="CB-text-black-1"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -58,14 +59,14 @@
                                                         <constraint firstAttribute="width" constant="24" id="8oo-Zy-swj"/>
                                                         <constraint firstAttribute="width" secondItem="Rzt-oy-EZx" secondAttribute="height" multiplier="1:1" id="yPa-gr-1EL"/>
                                                     </constraints>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" name="CB-text-gray-1"/>
                                                     <state key="normal" image="xmark.circle.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="deleteImage:" destination="fqj-dV-gEW" eventType="touchUpInside" id="nao-Ui-sGF"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="CB-background-white-1"/>
                                             <constraints>
                                                 <constraint firstItem="TYP-lz-fHd" firstAttribute="top" secondItem="YDG-mR-vbp" secondAttribute="top" constant="16" id="4vV-Ck-6HB"/>
                                                 <constraint firstItem="fHl-bb-rnp" firstAttribute="trailing" secondItem="TYP-lz-fHd" secondAttribute="trailing" id="56p-6M-Zed"/>
@@ -113,7 +114,7 @@
                                     <constraint firstAttribute="height" constant="36" id="u21-Lk-5x1"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" image="xmark" catalog="system"/>
+                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="leave:" destination="HSX-hE-mW4" eventType="touchUpInside" id="gOR-yJ-Pzu"/>
                                 </connections>
@@ -127,7 +128,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZj-bp-qIR">
                                 <rect key="frame" x="32" y="712" width="326" height="42"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="NSy-3z-uSD"/>
                                 </constraints>
@@ -146,13 +147,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-ib-Qml">
                                 <rect key="frame" x="32" y="621" width="326" height="42"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="CB-text-gray-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="DVJ-s4-rZV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
                                 <state key="normal" title="Add Step">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -165,7 +166,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cSd-xe-yDv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ft8-ib-Qml" firstAttribute="leading" secondItem="cSd-xe-yDv" secondAttribute="leading" constant="32" id="1dM-oW-Nch"/>
                             <constraint firstItem="cSd-xe-yDv" firstAttribute="trailing" secondItem="ft8-ib-Qml" secondAttribute="trailing" constant="32" id="3Sc-e7-l4P"/>
@@ -195,13 +196,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="x" width="24" height="24"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="CB-background-white-1">
+            <color red="0.97600001096725464" green="0.9649999737739563" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-prime-yellow-1">
+            <color red="1" green="0.70200002193450928" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-black-1">
+            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-text-gray-1">
+            <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
