@@ -24,7 +24,15 @@ class EditStepsTableViewCell: UITableViewCell {
 
     func layoutCell(with step: Step, at index: Int) {
 
-        imageViewRecipeImage.loadImage(step.image)
+        if step.image.isEmpty {
+
+            imageViewRecipeImage.image = UIImage(named: "CookBook_image_placholder_edit_dim")
+        } else {
+
+            imageViewRecipeImage.loadImage(step.image)
+        }
+
+        // imageViewRecipeImage.loadImage(step.image)
 
         labelStepTitle.text = "Step \(index + 1)"
 

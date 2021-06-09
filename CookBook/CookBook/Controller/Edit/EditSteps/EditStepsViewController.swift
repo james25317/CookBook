@@ -103,13 +103,13 @@ class EditStepsViewController: UIViewController {
     private func setupUploadMenu() {
 
         let controller = UIAlertController(
-            title: "上傳步驟圖片",
+            title: "Upload Picture",
             message: nil,
             preferredStyle: .actionSheet
         )
 
         let cameraAction = UIAlertAction(
-            title: "拍照",
+            title: "Camera",
             style: .default) { _ in
 
             // 開啟相機
@@ -117,7 +117,7 @@ class EditStepsViewController: UIViewController {
         }
 
         let libraryAction = UIAlertAction(
-            title: "相簿照片",
+            title: "Album",
             style: .default) { _ in
 
             // 開啟相簿
@@ -125,7 +125,7 @@ class EditStepsViewController: UIViewController {
         }
 
         let cancelAction = UIAlertAction(
-            title: "取消",
+            title: "Cancel",
             style: .cancel)
 
         controller.addAction(cameraAction)
