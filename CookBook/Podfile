@@ -16,5 +16,6 @@ target 'CookBook' do
   pod 'JGProgressHUD'
   pod 'lottie-ios'
   pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Crashlytics'
 
 end

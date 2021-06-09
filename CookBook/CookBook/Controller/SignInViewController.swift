@@ -10,6 +10,7 @@ import FirebaseAuth
 import AuthenticationServices
 import CryptoKit
 import JGProgressHUD
+import FirebaseCrashlytics
 
 class SignInViewController: UIViewController {
 
@@ -44,9 +45,15 @@ class SignInViewController: UIViewController {
         }
 
         setupSignInButton()
+
+        // runCrashlytics()
     }
 
     @IBAction func skipSignIn(_ sender: Any) {
+
+        // Crashlytics.crashlytics().log("Crash Button Tapped")
+
+        // fatalError()
 
         guard let todayVC = UIStoryboard.today
             .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
@@ -104,7 +111,7 @@ class SignInViewController: UIViewController {
 
         precondition(length > 0)
 
-        let charset: Array<Character> =
+        let charset: [Character] =
             Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
 
         var result = ""
@@ -144,6 +151,14 @@ class SignInViewController: UIViewController {
         }
 
         return result
+    }
+
+    func runCrashlytics() {
+
+        Crashlytics.crashlytics().log("View Loaded")
+        Crashlytics.crashlytics().setCustomValue(2021, forKey: "Year")
+        Crashlytics.crashlytics().setCustomValue("Soham Paul", forKey: "Name")
+        Crashlytics.crashlytics().setUserID("424801")
     }
 
     @available(iOS 13, *)
