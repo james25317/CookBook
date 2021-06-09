@@ -59,6 +59,8 @@ class ReadViewController: UIViewController {
         // pass data to ReadModePage
         readModeVC.viewModel = viewModel
 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         navigationController?.pushViewController(readModeVC, animated: true)
     }
 }

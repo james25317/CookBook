@@ -30,6 +30,8 @@ class TodayViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
 
         self.navigationController?.navigationBar.shadowImage = image
+
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     override func viewDidLoad() {
@@ -59,6 +61,13 @@ class TodayViewController: UIViewController {
         setupRecipeVideoTapGesture()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+
+        super.viewWillDisappear(animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
     // 臨時 SignOut
     @IBAction func signOut(_ sender: Any) {
 
@@ -68,22 +77,21 @@ class TodayViewController: UIViewController {
 
         do {
             
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
 
         } catch let signOutError as NSError {
             
-          print ("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
     }
 
     @IBAction func skipThisPage(_ sender: UIButton) {
 
-        // comes from HomePage goes here
-        // navigationController?.popViewController(animated: true)
-
         // comes from beginning goes here
         guard let homeVC = UIStoryboard.main
                 .instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
+
+        // homeVC.navigationItem.setHidesBackButton(true, animated: false)
 
         navigationController?.pushViewController(homeVC, animated: true)
     }
@@ -117,7 +125,7 @@ class TodayViewController: UIViewController {
 
         // fetch 到資料後，傳 recipeId 過去
         guard let recipe = self.viewModel.recipe else { return }
-
+        
         readVC.recipeId = recipe.id
     }
     

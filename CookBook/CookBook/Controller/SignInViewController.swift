@@ -19,6 +19,13 @@ class SignInViewController: UIViewController {
 
     private var currentNonce: String?
 
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -30,6 +37,8 @@ class SignInViewController: UIViewController {
                 .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
             CBProgressHUD.showSuccess(text: "SignIn Success")
+
+            todayVC.navigationController?.setNavigationBarHidden(true, animated: true)
 
             self?.navigationController?.pushViewController(todayVC, animated: true)
         }

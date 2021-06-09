@@ -57,9 +57,22 @@ class ProfileViewController: UIViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+
+        super.viewWillAppear(animated)
+
+        let image = UIImage()
+
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+
+        self.navigationController?.navigationBar.shadowImage = image
+    }
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        // self.navigationController?.navigationBar.backgroundColor = .white
 
         // fetch profile
         fetchProfileData(uid: uid)
@@ -189,7 +202,9 @@ class ProfileViewController: UIViewController {
             )
         ])
 
-        let topConstraint = profileView.topAnchor.constraint(equalTo: collectionView.contentLayoutGuide.topAnchor)
+        let topConstraint = profileView.topAnchor.constraint(equalTo: collectionView.topAnchor)
+
+        // let topConstraint = profileView.topAnchor.constraint(equalTo: collectionView.contentLayoutGuide.topAnchor)
 
         topConstraint.priority = UILayoutPriority(999)
 
@@ -276,6 +291,8 @@ extension ProfileViewController: UICollectionViewDelegate {
             // pass data
             previewVC.viewModel = editViewModel
 
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
             navigationController?.pushViewController(previewVC, animated: true)
         } else {
 
@@ -287,6 +304,8 @@ extension ProfileViewController: UICollectionViewDelegate {
 
             // 傳 Id
             readVC.recipeId = recipeId
+
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
             self.navigationController?.pushViewController(readVC, animated: true)
         }

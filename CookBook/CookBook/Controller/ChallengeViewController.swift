@@ -151,6 +151,8 @@ class ChallengeViewController: UIViewController {
         // 傳 Id
         readVC.recipeId = recipeId
 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         self.navigationController?.pushViewController(readVC, animated: true)
     }
 }

@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-u4-Ucl">
                                 <rect key="frame" x="0.0" y="44" width="390" height="800"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="CB-background-white-1"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YoU-fv-pMf">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -129,7 +129,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DF7-oW-BfX"/>
-                        <color key="backgroundColor" name="CB-background-white-1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JmV-u4-Ucl" firstAttribute="trailing" secondItem="DF7-oW-BfX" secondAttribute="trailing" id="WNV-Sq-A3I"/>
                             <constraint firstItem="JmV-u4-Ucl" firstAttribute="top" secondItem="DF7-oW-BfX" secondAttribute="top" id="nf3-fh-f96"/>
@@ -229,7 +229,7 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="32"/>
+                                    <real key="value" value="40"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>

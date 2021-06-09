@@ -40,6 +40,8 @@ class HomeViewController: UIViewController {
 
         self.navigationController?.navigationBar.shadowImage = image
 
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
         // fetch the latest Feeds data, trigger reloadData()
         viewModel.fetchFeedsData()
         
@@ -91,6 +93,8 @@ class HomeViewController: UIViewController {
         guard let todayVC = UIStoryboard.today
             .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
+        // navigationItem.setHidesBackButton(false, animated: true)
+
         navigationController?.pushViewController(todayVC, animated: true)
     }
 
@@ -106,6 +110,8 @@ class HomeViewController: UIViewController {
 
         guard let profileVC = UIStoryboard.profile
             .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
+
+        // profileVC.navigationController?.navigationBar.backgroundColor = .clear
 
         navigationController?.pushViewController(profileVC, animated: true)
     }

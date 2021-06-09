@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV6-b7-ZH4">
-                                <rect key="frame" x="78" y="219.33333333333337" width="234" height="168.66666666666663"/>
+                                <rect key="frame" x="68.333333333333329" y="219.33333333333337" width="253.33333333333337" height="168.66666666666663"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now, maybe you want to ... ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beN-Ct-p98">
                                 <rect key="frame" x="24" y="469.66666666666669" width="342" height="21"/>
@@ -77,7 +77,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="15"/>
                                 <state key="normal" title="Share and Open for Challenger">
-                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -105,7 +105,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="beN-Ct-p98" secondAttribute="trailing" constant="24" id="FaZ-OT-y4m"/>
                             <constraint firstItem="G1Q-9x-J3E" firstAttribute="trailing" secondItem="lQV-OK-bpe" secondAttribute="trailing" id="G4T-mQ-2iW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lQV-OK-bpe" secondAttribute="trailing" constant="32" id="GFd-HK-xoq"/>
-                            <constraint firstItem="OV6-b7-ZH4" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="GV7-Bg-QHZ"/>
+                            <constraint firstItem="OV6-b7-ZH4" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.65" id="GV7-Bg-QHZ"/>
                             <constraint firstItem="NlN-Un-yHo" firstAttribute="top" secondItem="lQV-OK-bpe" secondAttribute="bottom" constant="16" id="Lvx-hM-Mqi"/>
                             <constraint firstItem="NlN-Un-yHo" firstAttribute="leading" secondItem="lQV-OK-bpe" secondAttribute="leading" id="O2X-tk-aXc"/>
                             <constraint firstItem="lQV-OK-bpe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="UT7-uv-XaA"/>
@@ -154,6 +154,11 @@
                                 <state key="normal" title="Share">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="shareBackToFeed:" destination="V6T-d6-RL4" eventType="touchUpInside" id="GaZ-5V-5pC"/>
                                     <action selector="shareFeedAndLeave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tGl-iN-GSC"/>
@@ -166,14 +171,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-DV-3Yj">
-                                <rect key="frame" x="78" y="317.33333333333331" width="234" height="168.66666666666669"/>
+                                <rect key="frame" x="68.333333333333329" y="317.33333333333331" width="253.33333333333337" height="168.66666666666669"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KN3-S2-IdB"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pwY-DV-3Yj" firstAttribute="bottom" secondItem="Ku8-jt-CFG" secondAttribute="centerY" constant="64" id="0vd-f8-hiQ"/>
-                            <constraint firstItem="pwY-DV-3Yj" firstAttribute="width" secondItem="Ku8-jt-CFG" secondAttribute="width" multiplier="0.6" id="4Cb-5r-And"/>
+                            <constraint firstItem="pwY-DV-3Yj" firstAttribute="width" secondItem="Ku8-jt-CFG" secondAttribute="width" multiplier="0.65" id="4Cb-5r-And"/>
                             <constraint firstItem="KN3-S2-IdB" firstAttribute="trailing" secondItem="mz4-uP-bMn" secondAttribute="trailing" constant="88" id="5cH-Cb-sUu"/>
                             <constraint firstItem="RIJ-7w-lRb" firstAttribute="leading" secondItem="KN3-S2-IdB" secondAttribute="leading" constant="32" id="7CK-zS-21L"/>
                             <constraint firstItem="pwY-DV-3Yj" firstAttribute="centerX" secondItem="Ku8-jt-CFG" secondAttribute="centerX" id="AgO-bi-sLV"/>
@@ -210,9 +215,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

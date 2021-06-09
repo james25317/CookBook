@@ -77,6 +77,7 @@ class EditPreviewViewController: UIViewController {
 
     @IBAction func back(_ sender: Any) {
 
+        // discard for now
         navigationController?.popViewController(animated: true)
     }
 

@@ -44,8 +44,16 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
     func setupCell(with step: Step, at index: Int) {
 
         labelStepTitle.text = "Step \(index + 1)"
-        
-        imageViewUploadedImage.loadImage(step.image)
+
+        if step.image.isEmpty {
+
+            imageViewUploadedImage.image = UIImage(named: "CookBook_image_placholder_edit_dim")
+        } else {
+
+            imageViewUploadedImage.loadImage(step.image)
+        }
+
+        // imageViewUploadedImage.loadImage(step.image)
 
         textViewDescription.text = step.description
     }
