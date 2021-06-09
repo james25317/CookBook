@@ -37,7 +37,7 @@ class EditViewModel {
 
         steps: [
             Step(
-            description: "Steps Description",
+            description: "Enter Steps Description",
             image: ""
             )
         ],
@@ -54,7 +54,7 @@ class EditViewModel {
 
     // init Step
     var step = Step(
-        description: "Steps Description",
+        description: "Enter Steps Description",
         image: ""
     )
 

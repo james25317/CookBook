@@ -18,6 +18,8 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
         didSet {
 
             textViewDescription.delegate = self
+
+            textViewDescription.textColor = UIColor.lightGray
         }
     }
 
@@ -81,11 +83,57 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
 
 extension EditStepsCollectionViewCell: UITextViewDelegate {
 
+    func textViewDidBeginEditing(_ textView: UITextView) {
+
+        if textView.textColor == UIColor.lightGray {
+
+            textView.text = nil
+
+            textView.textColor = UIColor.black
+        }
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
+
+        if textView.text.isEmpty {
+
+            textView.text = " Enter Steps Description"
+
+            textView.textColor = UIColor.lightGray
+        }
 
         guard let description = textView.text else { return }
 
         // 傳回去 EditSteps VC 本地 Steps 資料
         onDescriptionChanged?(description)
+    }
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+
+        let currentText: String = textView.text
+
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+
+        if updatedText.isEmpty {
+
+            textView.text = " Enter Steps Description"
+
+            textView.textColor = UIColor.lightGray
+
+            textView.selectedTextRange = textView.textRange(
+                from: textView.beginningOfDocument,
+                to: textView.beginningOfDocument
+            )
+        } else if textView.textColor == UIColor.lightGray && !text.isEmpty {
+
+            textView.textColor = UIColor.black
+
+            textView.text = text
+        } else {
+
+            return true
+        }
+
+        return false
     }
 }
