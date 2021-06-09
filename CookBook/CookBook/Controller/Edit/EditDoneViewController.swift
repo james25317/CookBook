@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class EditDoneViewController: UIViewController {
+
+    @IBOutlet weak var animationView: UIView!
+
+    var viewModel: EditViewModel?
 
     override func viewWillAppear(_ animated: Bool) {
 
@@ -16,11 +21,11 @@ class EditDoneViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
-    var viewModel: EditViewModel?
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        setUpAnimation()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,5 +86,28 @@ class EditDoneViewController: UIViewController {
             let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
 
         navigationController.popToViewController(homeVC, animated: true)
+    }
+
+    func setUpAnimation() {
+
+        let animeView = AnimationView()
+
+        let anim = Animation.named("45730-recipes-book-animation", bundle: .main)
+
+        animeView.frame = animationView.bounds
+
+        animeView.contentMode = .scaleAspectFill
+
+        animeView.animation = anim
+
+        animeView.loopMode = .loop
+
+        animeView.play()
+
+        // animeView.play(fromProgress: 0, toProgress: 1)
+
+        // animeView.play(fromMarker: "begin", toMarker: "end")
+
+        animationView.addSubview(animeView)
     }
 }

@@ -54,6 +54,8 @@ class ChallengeViewController: UIViewController {
             editVC.viewModel.recipe.challenger = uid
 
             editVC.viewModel.feedId = feedId
+
+            CBProgressHUD.showSuccess(text: "Challenge Assigned")
             
             self?.navigationController?.pushViewController(editVC, animated: true)
         }
@@ -62,6 +64,8 @@ class ChallengeViewController: UIViewController {
 
             // alert 提示
             print("Challenger has been assigned")
+
+            CBProgressHUD.showFailure(text: "Challenge Has Been Assigned")
         }
 
         viewModel.onReturned = { [weak self] () in

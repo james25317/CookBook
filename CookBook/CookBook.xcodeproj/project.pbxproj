@@ -21,6 +21,8 @@
 		7F284C33264BC19C001A0B4E /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C31264BC19C001A0B4E /* Today.storyboard */; };
 		7F284C35264BC19E001A0B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C34264BC19E001A0B4E /* Assets.xcassets */; };
 		7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */; };
+		7F4F3AFC26709F2A00E38DDC /* 45730-recipes-book-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */; };
+		7F4F3AFF2670A08700E38DDC /* 45726-recipes-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */; };
 		7F5256702665C315005A2DB9 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F52566F2665C315005A2DB9 /* SignIn.storyboard */; };
 		7F5256722665C392005A2DB9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256712665C392005A2DB9 /* SignInViewController.swift */; };
 		7F5256742665E2AC005A2DB9 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */; };
@@ -102,6 +104,8 @@
 		7F284C34264BC19E001A0B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F284C37264BC19E001A0B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F284C39264BC19E001A0B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "45730-recipes-book-animation.json"; sourceTree = "<group>"; };
+		7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "45726-recipes-animation.json"; sourceTree = "<group>"; };
 		7F52566E266553C4005A2DB9 /* CookBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookBook.entitlements; sourceTree = "<group>"; };
 		7F52566F2665C315005A2DB9 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		7F5256712665C392005A2DB9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				7F284C2B264BC19C001A0B4E /* AppDelegate.swift */,
 				7FFCF05F26500AEB0082ED8E /* Extension */,
 				7FFCF0652650C49E0082ED8E /* ThirdPartyWrapper */,
+				7F4F3AF926709DBC00E38DDC /* Resources */,
 				7FFCF06C2650F5070082ED8E /* Helper */,
 				7FA1BA7E264CC60C00B8ED13 /* Network */,
 				7FA1BA82264CC85800B8ED13 /* Utility */,
@@ -225,6 +230,15 @@
 				7F284C39264BC19E001A0B4E /* Info.plist */,
 			);
 			path = CookBook;
+			sourceTree = "<group>";
+		};
+		7F4F3AF926709DBC00E38DDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */,
+				7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7F7C7366265D36EF00D1AFD4 /* EditSteps */ = {
@@ -523,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */,
+				7F4F3AFC26709F2A00E38DDC /* 45730-recipes-book-animation.json in Resources */,
 				7F284C35264BC19E001A0B4E /* Assets.xcassets in Resources */,
 				7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */,
 				7FA1BA86264CDBA600B8ED13 /* Profile.storyboard in Resources */,
@@ -532,6 +547,7 @@
 				7FE2142C264E769100208667 /* ReadStepsCollectionViewCell.xib in Resources */,
 				7FFCF08D2654B70D0082ED8E /* Challenge.storyboard in Resources */,
 				7FA1BA88264CDCDE00B8ED13 /* Edit.storyboard in Resources */,
+				7F4F3AFF2670A08700E38DDC /* 45726-recipes-animation.json in Resources */,
 				7FE21439264F948F00208667 /* EditIngredientsTableViewCell.xib in Resources */,
 				7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */,
 				7FFCF08B26540BA40082ED8E /* EditDone.storyboard in Resources */,

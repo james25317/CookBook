@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class EditChallengeDoneViewController: UIViewController {
 
     var viewModel: EditViewModel?
+
+    @IBOutlet weak var animationView: UIView!
 
     override func viewWillAppear(_ animated: Bool) {
 
@@ -21,7 +24,7 @@ class EditChallengeDoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUpAnimation()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,8 +38,8 @@ class EditChallengeDoneViewController: UIViewController {
         
         // update challenge Feed's data
         guard let viewModel = viewModel,
-            let recipe = viewModel.recipeViewModel.value?.recipe,
-            let feedId = viewModel.feedId, let recipeId = recipe.id else { return }
+              let recipe = viewModel.recipeViewModel.value?.recipe,
+              let feedId = viewModel.feedId, let recipeId = recipe.id else { return }
 
         viewModel.updateFeedChallengeDoneStatus(
             documentId: feedId,
@@ -47,8 +50,31 @@ class EditChallengeDoneViewController: UIViewController {
 
         // back to homeFeed
         guard let navigationController = navigationController,
-            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+              let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
 
         navigationController.popToViewController(homeVC, animated: true)
+    }
+
+    func setUpAnimation() {
+
+        let animeView = AnimationView()
+
+        let anim = Animation.named("45726-recipes-animation", bundle: .main)
+
+        animeView.frame = animationView.bounds
+
+        animeView.contentMode = .scaleAspectFill
+
+        animeView.animation = anim
+
+        animeView.loopMode = .loop
+
+        animeView.play()
+
+        // animeView.play(fromProgress: 0, toProgress: 1)
+
+        // animeView.play(fromMarker: "begin", toMarker: "end")
+
+        animationView.addSubview(animeView)
     }
 }
