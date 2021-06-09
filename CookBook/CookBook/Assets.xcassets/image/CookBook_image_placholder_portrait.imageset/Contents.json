@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "demodish3.jpg",
+      "filename" : "CookBook_image_placholder_portrait.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "CookBook_image_placholder_portrait@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "CookBook_image_placholder_portrait@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

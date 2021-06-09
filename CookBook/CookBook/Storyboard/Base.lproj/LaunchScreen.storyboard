@@ -15,18 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IPA-Sd-eFH">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_logo_dim" translatesAutoresizingMaskIntoConstraints="NO" id="IPA-Sd-eFH">
+                                <rect key="frame" x="87" y="386" width="240" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="FOT-yD-B7K"/>
-                                    <constraint firstAttribute="height" constant="128" id="OaO-Tn-dtK"/>
+                                    <constraint firstAttribute="height" constant="60" id="OaO-Tn-dtK"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IPA-Sd-eFH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FP7-CU-xKa"/>
+                            <constraint firstItem="IPA-Sd-eFH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-32" id="FP7-CU-xKa"/>
                             <constraint firstItem="IPA-Sd-eFH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uE8-6B-5tn"/>
                         </constraints>
                     </view>
@@ -36,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CookBook_image_logo_dim" width="356" height="48.5"/>
+    </resources>
 </document>

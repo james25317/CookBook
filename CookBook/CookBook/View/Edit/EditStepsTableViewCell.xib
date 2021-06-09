@@ -21,7 +21,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxi-EF-8L4" userLabel="Bg View">
                         <rect key="frame" x="16" y="16" width="425" height="124"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-Qd-rPm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_placholder_edit_dim" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-Qd-rPm">
                                 <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
@@ -80,6 +80,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="CookBook_image_placholder_edit_dim" width="117" height="117"/>
         <namedColor name="CB-background-white-1">
             <color red="0.97600001096725464" green="0.9649999737739563" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

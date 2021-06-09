@@ -62,7 +62,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="CB-background-white-2"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="Tu3-lS-Sgv" secondAttribute="trailing" constant="16" id="4jm-MI-Kid"/>
                                                                 <constraint firstItem="Tu3-lS-Sgv" firstAttribute="centerY" secondItem="dQu-ur-FdL" secondAttribute="centerY" id="P0n-gD-CXI"/>
@@ -86,7 +86,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.97647058819999999" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="sT4-cB-smn" secondAttribute="bottom" id="7i4-Hu-ch4"/>
                                                         <constraint firstAttribute="height" constant="200" id="8KK-D1-i8w"/>
@@ -111,6 +111,12 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -171,7 +177,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" name="CB-background-white-2"/>
                                                                     <constraints>
                                                                         <constraint firstItem="Al2-1T-Byj" firstAttribute="leading" secondItem="JU4-dA-xjo" secondAttribute="leading" constant="16" id="7lj-Dq-Mfp"/>
                                                                         <constraint firstItem="Al2-1T-Byj" firstAttribute="centerY" secondItem="JU4-dA-xjo" secondAttribute="centerY" id="RWP-zb-g6A"/>
@@ -227,7 +233,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" name="CB-background-white-2"/>
                                                                     <constraints>
                                                                         <constraint firstItem="oWh-aG-zGo" firstAttribute="centerY" secondItem="DSr-yq-F8r" secondAttribute="centerY" id="0Yy-Di-OLB"/>
                                                                         <constraint firstAttribute="trailing" secondItem="oWh-aG-zGo" secondAttribute="trailing" constant="16" id="nTx-Ag-etH"/>
@@ -279,7 +285,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k9L-m7-LDo">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_challenge" translatesAutoresizingMaskIntoConstraints="NO" id="k9L-m7-LDo">
                                                             <rect key="frame" x="266" y="24.666666666666664" width="60" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="24" id="Ez2-zQ-lGl"/>
@@ -287,7 +293,7 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.97647058819999999" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="uoF-BU-Fy7" firstAttribute="leading" secondItem="oYD-dd-uxI" secondAttribute="leading" constant="16" id="2k3-wa-Tac"/>
                                                         <constraint firstAttribute="trailing" secondItem="zE0-tp-PzS" secondAttribute="trailing" constant="16" id="3Ds-TB-13I"/>
@@ -319,6 +325,12 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -385,7 +397,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" name="CB-background-white-2"/>
                                                                     <constraints>
                                                                         <constraint firstItem="JBR-LE-a7L" firstAttribute="centerY" secondItem="Ks5-mF-uK6" secondAttribute="centerY" id="1iU-cb-ehI"/>
                                                                         <constraint firstAttribute="trailing" secondItem="JBR-LE-a7L" secondAttribute="trailing" id="27F-Qh-VxO"/>
@@ -472,7 +484,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="CB-background-white-1"/>
                                                             <constraints>
                                                                 <constraint firstItem="IDN-0p-fRV" firstAttribute="centerX" secondItem="pO5-2D-say" secondAttribute="centerX" id="Ulb-mr-O7t"/>
                                                                 <constraint firstItem="jFY-gF-A0k" firstAttribute="bottom" secondItem="pO5-2D-say" secondAttribute="centerY" id="eaJ-iK-b0c"/>
@@ -485,7 +497,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-l6-pQz">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_challenge" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-l6-pQz">
                                                             <rect key="frame" x="266" y="24.666666666666664" width="60" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="4oX-Fh-p8N"/>
@@ -493,7 +505,7 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.97647058819999999" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="gmC-Ad-PSm" firstAttribute="leading" secondItem="bsk-kM-aLv" secondAttribute="leading" id="1Sf-fn-Mrc"/>
                                                         <constraint firstItem="gmC-Ad-PSm" firstAttribute="top" secondItem="bsk-kM-aLv" secondAttribute="bottom" constant="16" id="2dh-8M-7e0"/>
@@ -524,6 +536,12 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -586,10 +604,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CookBook_image_tag_challenge" width="63" height="25"/>
         <image name="arrow-right" width="24" height="24"/>
         <image name="edit-2" width="24" height="24"/>
         <image name="home" width="24" height="24"/>
         <image name="user" width="24" height="24"/>
+        <namedColor name="CB-background-white-1">
+            <color red="0.97600001096725464" green="0.9649999737739563" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CB-background-white-2">
+            <color red="0.97600001096725464" green="0.9649999737739563" blue="0.94499999284744263" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="CB-prime-yellow-1">
             <color red="1" green="0.70200002193450928" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

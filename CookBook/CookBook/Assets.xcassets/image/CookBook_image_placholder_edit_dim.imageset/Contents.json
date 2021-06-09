@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "catprofile2.jpeg",
+      "filename" : "CookBook_image_placholder_edit_dim.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "CookBook_image_placholder_edit_dim@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "CookBook_image_placholder_edit_dim@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

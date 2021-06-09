@@ -49,10 +49,10 @@
                                     <constraint firstAttribute="height" constant="48" id="Ehv-4a-mWJ"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-4u-aHO">
-                                <rect key="frame" x="75" y="358" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-4u-aHO">
+                                <rect key="frame" x="75" y="360" width="240" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="GXB-Ma-dKx"/>
+                                    <constraint firstAttribute="height" constant="60" id="GXB-Ma-dKx"/>
                                     <constraint firstAttribute="width" constant="240" id="yGA-K9-jME"/>
                                 </constraints>
                             </imageView>
@@ -66,7 +66,7 @@
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="top" secondItem="gAB-v2-MOY" secondAttribute="bottom" constant="48" id="DKd-Yb-RMg"/>
                             <constraint firstItem="Fon-oy-MzM" firstAttribute="centerX" secondItem="GDN-NG-Pt1" secondAttribute="centerX" id="ENE-FX-PL6"/>
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="leading" secondItem="gAB-v2-MOY" secondAttribute="leading" id="JPP-lM-IQ3"/>
-                            <constraint firstItem="pLr-4u-aHO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="PjM-s3-use"/>
+                            <constraint firstItem="pLr-4u-aHO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-32" id="PjM-s3-use"/>
                             <constraint firstItem="GDN-NG-Pt1" firstAttribute="trailing" secondItem="gAB-v2-MOY" secondAttribute="trailing" id="WCM-S4-B6c"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gAB-v2-MOY" secondAttribute="trailing" constant="32" id="XeY-bn-jai"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Fon-oy-MzM" secondAttribute="bottom" constant="24" id="bee-mt-XxV"/>
@@ -302,6 +302,7 @@ Privacy Policy for CookBook</string>
         </scene>
     </scenes>
     <resources>
+        <image name="CookBook_image_logo" width="355.33334350585938" height="48.333332061767578"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="CB-text-black-1">
             <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
