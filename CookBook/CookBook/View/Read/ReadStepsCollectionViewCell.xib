@@ -38,7 +38,7 @@
                                 <rect key="frame" x="370" y="850" width="20" height="22"/>
                                 <state key="normal" image="arrow.right" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-Rs-eqJ">
                                 <rect key="frame" x="24" y="553.66666666666663" width="366" height="281.33333333333337"/>
                                 <string key="text">Heat the remaining tablespoon of oil in the pan over a high heat. Add the onion and pepper, then season with salt and pepper. Fry for 2 minutes, then add the garlic and ginger, if using, and fry for a further minute.</string>
                                 <color key="textColor" name="CB-text-black-1"/>
