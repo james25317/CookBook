@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var indicatorView: UIView!
 
-    @IBOutlet weak var labelUserId: UILabel!
+    @IBOutlet weak var labelUserEmail: UILabel!
 
     @IBOutlet weak var labelRecipesCounts: UILabel!
 
@@ -45,8 +45,8 @@ class ProfileViewController: UIViewController {
 
     let editViewModel = EditViewModel()
 
-    // mockuid
-    let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+    // Useage: UserManager.shared.uid
+    let uid = UserManager.shared.uid
 
     // 一旦根據按鈕的 type 被按到，type 賦值觸發 reloadData()
     private var type: ProfileViewModel.SortType = .recipes {
@@ -60,12 +60,12 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
-
-        let image = UIImage()
-
-        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
-
-        self.navigationController?.navigationBar.shadowImage = image
+        
+//        let image = UIImage()
+//
+//        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+//
+//        self.navigationController?.navigationBar.shadowImage = image
     }
 
     override func viewDidLoad() {
@@ -132,9 +132,15 @@ class ProfileViewController: UIViewController {
 
         guard let value = viewModel.userViewModel.value else { return }
 
-        imageViewUserPortrait.loadImage(value.portrait)
+        if value.portrait.isEmpty {
 
-        labelUserId.text = value.user.email
+            imageViewUserPortrait.image = UIImage(named: "CookBook_image_placholder_portrait")
+        } else {
+
+            imageViewUserPortrait.loadImage(value.portrait)
+        }
+
+        labelUserEmail.text = value.user.email
 
         labelRecipesCounts.text = String(describing: value.recipesCounts)
 
@@ -230,8 +236,6 @@ extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        // guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return 0 }
-
         return viewModel.switchSection(with: uid, sortType: type).count
     }
 
@@ -243,9 +247,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         )
 
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
-
-        // guard let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue) else { return cell }
-
+        
         // 根據按鈕來源切換不同section的資料生成
         let cellViewModel = self.viewModel.switchSection(with: uid, sortType: type)[indexPath.row]
 

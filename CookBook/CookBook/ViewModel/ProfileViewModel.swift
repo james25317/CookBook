@@ -21,9 +21,7 @@ class ProfileViewModel {
     let userViewModel: Box<UserViewModel?> = Box(nil)
     
     let recipeViewModels: Box<[RecipeViewModel]> = Box([])
-
-    // let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue)
-
+    
     func fetchUserData(uid: String) {
 
         UserManager.shared.fetchUser(uid: uid) { [weak self] result in

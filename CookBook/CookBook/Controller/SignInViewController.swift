@@ -267,13 +267,17 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                         forKey: UserDefaults.Keys.email.rawValue
                     )
 
-                    // 初始 User 資料
+                    // 初始 UserManager.user 資料
                     UserManager.shared.uid = user.uid
 
                     UserManager.shared.user.email = user.email ?? ""
 
-                    // 以最新初始化的 User 與 uid 創建新 document
-                    self.viewModel.createUserData(user: UserManager.shared.user, uid: user.uid)
+                    guard let userUid = UserDefaults.standard.string(
+                            forKey: UserDefaults.Keys.uid.rawValue
+                    ) else { return }
+
+                    // 以最新初始化的 User 與 uid 創建新 User document
+                    self.viewModel.createUserData(user: UserManager.shared.user, uid: userUid)
                 }
 
             }

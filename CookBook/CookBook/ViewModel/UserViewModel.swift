@@ -17,13 +17,7 @@ class UserViewModel {
 
         self.user = user
     }
-
-//    var uid: String {
-//        get {
-//            return user.uid
-//        }
-//    }
-
+    
     var id: String {
         get {
             return user.id ?? ""

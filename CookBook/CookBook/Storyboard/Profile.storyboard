@@ -51,7 +51,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYV-Zw-CIl">
-                                                            <rect key="frame" x="31.999999999999996" y="3" width="7.3333333333333321" height="17"/>
+                                                            <rect key="frame" x="32" y="3" width="7.6666666666666643" height="17"/>
                                                             <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
                                                             <color key="textColor" red="0.078431372550000003" green="0.047058823530000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                         <outlet property="labelChallengeCounts" destination="KnP-WR-DGp" id="i0G-sx-AL2"/>
                         <outlet property="labelFavoritesCounts" destination="zmi-ST-xNI" id="2jA-A2-Tlq"/>
                         <outlet property="labelRecipesCounts" destination="4do-Rx-g8B" id="cUW-Jb-jBl"/>
-                        <outlet property="labelUserId" destination="6yZ-jo-GPb" id="40H-eT-Qr6"/>
+                        <outlet property="labelUserEmail" destination="6yZ-jo-GPb" id="40H-eT-Qr6"/>
                         <outlet property="labelUserName" destination="e4J-sq-pKR" id="Pqz-2g-LTG"/>
                         <outlet property="profileView" destination="NIF-T7-c0R" id="OS0-9X-az0"/>
                         <outletCollection property="sortButtons" destination="wza-PK-Oad" collectionClass="NSMutableArray" id="364-KU-lg1"/>

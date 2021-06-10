@@ -67,7 +67,8 @@ class EditDoneViewController: UIViewController {
 
         viewModel.createFeedData(with: &feed)
 
-        viewModel.updateChallengesCounts(with: UserManager.shared.mockUid)
+        // Useage: UserManager.shared.uid
+        viewModel.updateChallengesCounts(with: UserManager.shared.uid)
 
         guard let navigationController = navigationController,
             let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }

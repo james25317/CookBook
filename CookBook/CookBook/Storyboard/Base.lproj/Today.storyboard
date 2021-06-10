@@ -162,7 +162,7 @@
                                     <action selector="skipThisPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyw-SH-tc8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-nR-Vdz">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-nR-Vdz">
                                 <rect key="frame" x="320" y="229.33333333333334" width="46" height="27.000000000000028"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <state key="normal" title="SignOut">
@@ -184,12 +184,12 @@
                             <constraint firstItem="1d3-cN-dfR" firstAttribute="leading" secondItem="7sz-LL-7xV" secondAttribute="trailing" constant="4" id="L3m-BU-PKC"/>
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NuN-Il-KlX"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="top" secondItem="BCZ-ez-t4f" secondAttribute="bottom" constant="16" id="P1o-wm-Xd6"/>
+                            <constraint firstItem="ynw-nR-Vdz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KLd-Np-qs4" secondAttribute="trailing" constant="8" symbolic="YES" id="PZm-Fm-6oY"/>
                             <constraint firstItem="ynw-nR-Vdz" firstAttribute="trailing" secondItem="BCZ-ez-t4f" secondAttribute="trailing" id="UJg-5R-J7B"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="leading" secondItem="BCZ-ez-t4f" secondAttribute="leading" id="XMT-6X-kRl"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="height" secondItem="BCZ-ez-t4f" secondAttribute="height" multiplier="0.6" id="YrB-9C-oQb"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ZvC-OT-IzU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ze-wo-bjs" secondAttribute="trailing" constant="24" id="aFb-Wq-Gq5"/>
-                            <constraint firstItem="ynw-nR-Vdz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KLd-Np-qs4" secondAttribute="trailing" constant="8" symbolic="YES" id="dOH-Wz-QDX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7sz-LL-7xV" secondAttribute="bottom" constant="96" id="dZg-Qs-bEm"/>
                             <constraint firstItem="BCZ-ez-t4f" firstAttribute="top" secondItem="ynw-nR-Vdz" secondAttribute="bottom" constant="24" id="jL3-vN-At5"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mG8-l3-AVR"/>

@@ -49,15 +49,13 @@ class EditViewController: UIViewController {
     }
 
     @IBAction func createCookBook(_ sender: Any) {
-
-        // mockuid
-        // let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-
+        
         // create Recipe, get documentId then fetch Recipe with it
-        viewModel.createRecipeData(with: &viewModel.recipe, with: UserManager.shared.mockUid)
+        viewModel.createRecipeData(with: &viewModel.recipe, with: UserManager.shared.uid)
 
         // Increased Recipes counts
-        viewModel.updateRecipesCounts(with: UserManager.shared.mockUid)
+        // Useage: UserManager.shared.uid
+        viewModel.updateRecipesCounts(with: UserManager.shared.uid)
 
         // go EditPreview Page
         guard let previewVC = storyboard?

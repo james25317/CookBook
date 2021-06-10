@@ -36,8 +36,8 @@ class ChallengeViewController: UIViewController {
                 let selectedFeed = self?.viewModel.selectedFeed,
                 let feedId = selectedFeed.id else { return }
 
-            // mockuid
-            let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+            // Useage: UserManager.shared.uid
+            let uid = UserManager.shared.uid
 
             // updateFeed
             self?.viewModel.updateFeedStatus(feedId: feedId, uid: uid)

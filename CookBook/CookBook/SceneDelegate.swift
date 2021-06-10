@@ -53,6 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // user 存在 -> 進版頁
             let storyboard = UIStoryboard.today
 
+            // 回存 UserDefault 資料
             UserDefaults.standard.setValue(
                 user.uid,
                 forKey: UserDefaults.Keys.uid.rawValue
@@ -62,6 +63,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 user.email,
                 forKey: UserDefaults.Keys.email.rawValue
             )
+
+            // 初始 UserManager.user 資料
+            UserManager.shared.uid = user.uid
+
+            UserManager.shared.user.email = user.email ?? ""
 
             CBProgressHUD.showSuccess(text: "Welcome Back")
 

@@ -16,10 +16,8 @@ class TodayViewController: UIViewController {
 
     let viewModel = TodayViewModel()
 
-    // 初始化面，fetch 最新的 User
-    // let uid = UserDefaults.standard.string(forKey: UserDefaults.Keys.uid.rawValue)
-    // mockuid
-    let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+    // Useage: UserManager.shared.uid
+    let uid = UserManager.shared.uid
 
     override func viewWillAppear(_ animated: Bool) {
 

@@ -23,6 +23,9 @@ class ReadModeViewController: UIViewController {
 
     var viewModel: ReadViewModel?
 
+    // Useage: UserManager.shared.uid
+    let uid = UserManager.shared.uid
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -62,9 +65,7 @@ class ReadModeViewController: UIViewController {
     @IBAction func saveToFavorites(_ sender: Any) {
 
         // 1. prevent double likes logic (with UserDocumentId check)
-
-        // mockuid
-        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+        // ....not implemented yet
 
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value else { return }
@@ -138,26 +139,25 @@ class ReadModeViewController: UIViewController {
 
     private func addToBlockList() {
 
-        // mockuid
-        let uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-        
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value else { return }
 
         // cannot block its self logic
-//        if recipe.ownerId == uid {
-//
-//            print("You can not banned your own recipe")
-//
-//            return
-//        } else {
-//
-//            // 上傳此 RecipeId 至 User(uid) 的 blockList
-//            viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
-//        }
+        if recipe.ownerId == uid {
+
+            print("You can not banned your own recipe")
+
+            CBProgressHUD.showText(text: "You can not banned your own recipe")
+
+            return
+        } else {
+
+            // 上傳此 RecipeId 至 User(uid) 的 blockList
+            viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
+        }
 
         // 上傳此 RecipeId 至 User(uid) 的 blockList
-        viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
+        // viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
     }
 }
 

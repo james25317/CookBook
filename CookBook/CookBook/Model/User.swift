@@ -13,7 +13,6 @@ struct User: Identifiable, Codable {
 
     // Noted: DocumentId = Fbuid
     @DocumentID public var id: String?
-    // var uid: String
     var name: String
     var portrait: String
     var email: String

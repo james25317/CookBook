@@ -18,8 +18,9 @@ class UserManager {
 
     var uid = ""
 
-    var mockUid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-
+    // Useage: for mockuid
+    // var uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+    
     // init user
     var user = User(
         id: "",
