@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-u4-Ucl">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-u4-Ucl">
                                 <rect key="frame" x="0.0" y="44" width="390" height="800"/>
                                 <color key="backgroundColor" name="CB-background-white-1"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YoU-fv-pMf">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="2" id="YoU-fv-pMf">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,21 +29,21 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProfileCollectionViewCell" id="Ey3-ef-wD6" customClass="ProfileCollectionViewCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3eR-NY-g3h">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yam-Ha-ztM" userLabel="Recipe Image View Recipe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQN-0p-2mc">
-                                                    <rect key="frame" x="0.0" y="105" width="128" height="23"/>
+                                                    <rect key="frame" x="0.0" y="96" width="117" height="21"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-9H-hy9" userLabel="Icon Image View">
-                                                            <rect key="frame" x="8" y="0.99999999999999645" width="20" height="19.666666666666664"/>
+                                                            <rect key="frame" x="8" y="-3.5527136788005009e-15" width="20" height="19.666666666666664"/>
                                                             <color key="tintColor" name="CB-prime-yellow-1"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="tIg-9H-hy9" secondAttribute="height" multiplier="1:1" id="Kco-gK-fOv"/>
@@ -51,7 +51,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYV-Zw-CIl">
-                                                            <rect key="frame" x="32" y="3" width="7.6666666666666643" height="17"/>
+                                                            <rect key="frame" x="32" y="2" width="7.6666666666666643" height="17"/>
                                                             <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
                                                             <color key="textColor" red="0.078431372550000003" green="0.047058823530000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -66,10 +66,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgx-Gh-nuD" userLabel="Draft View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_placholder_edit_dim" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-MN-iur">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Draft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akE-zf-zgY">
@@ -80,7 +80,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DraftRecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptq-J8-flN">
-                                                            <rect key="frame" x="8" y="109.33333333333333" width="112" height="14"/>
+                                                            <rect key="frame" x="8" y="98.333333333333329" width="101" height="14"/>
                                                             <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="10"/>
                                                             <color key="textColor" name="CB-text-black-1"/>
                                                             <nil key="highlightedColor"/>
@@ -131,10 +131,10 @@
                         <viewLayoutGuide key="safeArea" id="DF7-oW-BfX"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JmV-u4-Ucl" firstAttribute="trailing" secondItem="DF7-oW-BfX" secondAttribute="trailing" id="WNV-Sq-A3I"/>
+                            <constraint firstItem="JmV-u4-Ucl" firstAttribute="trailing" secondItem="wg1-Gw-0Mk" secondAttribute="trailing" id="WNV-Sq-A3I"/>
                             <constraint firstItem="JmV-u4-Ucl" firstAttribute="top" secondItem="DF7-oW-BfX" secondAttribute="top" id="nf3-fh-f96"/>
                             <constraint firstAttribute="bottom" secondItem="JmV-u4-Ucl" secondAttribute="bottom" id="pCj-eW-kOQ"/>
-                            <constraint firstItem="JmV-u4-Ucl" firstAttribute="leading" secondItem="DF7-oW-BfX" secondAttribute="leading" id="tNS-wR-BVn"/>
+                            <constraint firstItem="JmV-u4-Ucl" firstAttribute="leading" secondItem="wg1-Gw-0Mk" secondAttribute="leading" id="tNS-wR-BVn"/>
                         </constraints>
                     </view>
                     <connections>

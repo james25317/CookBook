@@ -55,8 +55,8 @@ class SignInViewController: UIViewController {
 
         // fatalError()
 
-//        UserManager.shared.uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-//        UserManager.shared.user.email = "james49904230@gmail.com"
+        UserManager.shared.uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+        UserManager.shared.user.email = "james49904230@gmail.com"
         
         // ------ testing area
 

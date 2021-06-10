@@ -173,7 +173,9 @@ class ProfileViewController: UIViewController {
 
         let flowLayout = UICollectionViewFlowLayout()
 
-        let width = floor((collectionView.bounds.width - itemSpace * (columnCount - 1)) / columnCount)
+        // let width = floor((collectionView.bounds.width - itemSpace * (columnCount - 1)) / columnCount)
+
+        let width = floor((UIScreen.main.bounds.width - itemSpace * (columnCount - 1)) / columnCount)
 
         flowLayout.sectionInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
 
