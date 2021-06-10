@@ -177,7 +177,7 @@ extension HomeViewController: UITableViewDataSource {
 
         let cellViewModel = self.viewModel.filteredFeeds()[indexPath.row]
 
-        if cellViewModel.isChallenged == false {
+        if !cellViewModel.isChallenged {
 
             // challenge Feed
             let cell = tableView.dequeueReusableCell(
@@ -190,7 +190,9 @@ extension HomeViewController: UITableViewDataSource {
             feedChallengeCell.setup(viewModel: cellViewModel)
 
             return feedChallengeCell
-        } else if !cellViewModel.challenger.isEmpty {
+        } else if cellViewModel.isChallenged &&
+                    !cellViewModel.challenger.isEmpty &&
+                    !cellViewModel.challengerRecipeId.isEmpty {
 
             // challengeDone Feed
             let cell = tableView.dequeueReusableCell(
