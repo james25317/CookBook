@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController storyboardIdentifier="Read" id="Y6W-OH-hqX" customClass="ReadViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-ag-hyF">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="506.33333333333331"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <color key="backgroundColor" name="CB-background-white-1"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-j4-Pse" userLabel="Cancel Button">
-                                <rect key="frame" x="338" y="60" width="36" height="36"/>
+                                <rect key="frame" x="323" y="16" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="E8y-kI-bNV"/>
                                     <constraint firstAttribute="height" constant="36" id="ySb-I6-ZmL"/>
@@ -31,16 +31,16 @@
                                 <state key="normal" image="xmark" catalog="system"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eed-yp-4lz">
-                                <rect key="frame" x="0.0" y="474.33333333333326" width="390" height="369.66666666666674"/>
+                                <rect key="frame" x="0.0" y="368" width="375" height="299"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-mM-LJ2">
-                                        <rect key="frame" x="32" y="10.666666666666686" width="326" height="28"/>
+                                        <rect key="frame" x="32" y="11" width="311" height="28"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
                                         <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67o-lt-k8e">
-                                        <rect key="frame" x="32" y="38.666666666666686" width="326" height="146.33333333333334"/>
+                                        <rect key="frame" x="32" y="39" width="311" height="116"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="CB-text-gray-1"/>
@@ -48,40 +48,40 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgH-T1-H0b" userLabel="Text View">
-                                        <rect key="frame" x="32" y="189.00000000000006" width="326" height="58.333333333333343"/>
+                                        <rect key="frame" x="32" y="159" width="311" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g5-u7-m5U">
-                                                <rect key="frame" x="127" y="38.333333333333258" width="72" height="20"/>
+                                                <rect key="frame" x="119.5" y="26" width="72" height="20"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                                 <color key="textColor" name="CB-text-gray-1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj6-xC-JfX">
-                                                <rect key="frame" x="50" y="38.333333333333258" width="34" height="20"/>
+                                                <rect key="frame" x="42.5" y="26" width="34" height="20"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                                 <color key="textColor" name="CB-text-gray-1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avX-UU-qSw">
-                                                <rect key="frame" x="158.66666666666666" y="13.333333333333258" width="9" height="21"/>
+                                                <rect key="frame" x="151" y="1" width="9" height="21"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="15"/>
                                                 <color key="textColor" name="CB-text-black-1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwQ-Qb-8D5">
-                                                <rect key="frame" x="254.66666666666669" y="13.333333333333258" width="9" height="21"/>
+                                                <rect key="frame" x="247" y="1" width="9" height="21"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="15"/>
                                                 <color key="textColor" name="CB-text-black-1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-cb-a4k">
-                                                <rect key="frame" x="62.666666666666671" y="13.333333333333258" width="9" height="21"/>
+                                                <rect key="frame" x="55" y="1" width="9" height="21"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="15"/>
                                                 <color key="textColor" name="CB-text-black-1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1G-rR-Ivp">
-                                                <rect key="frame" x="240.66666666666669" y="38.333333333333258" width="37" height="20"/>
+                                                <rect key="frame" x="233" y="26" width="37" height="20"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                                                 <color key="textColor" name="CB-text-gray-1"/>
                                                 <nil key="highlightedColor"/>
@@ -109,13 +109,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Cook!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LF-bt-PYP">
-                                        <rect key="frame" x="140.66666666666666" y="277.33333333333331" width="93" height="24"/>
+                                        <rect key="frame" x="133" y="235" width="93" height="24"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                         <color key="textColor" name="CB-text-black-1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-qj-X8S">
-                                        <rect key="frame" x="241.66666666666666" y="277.33333333333331" width="23.999999999999972" height="24"/>
+                                        <rect key="frame" x="234" y="235" width="24" height="24"/>
                                         <color key="tintColor" name="CB-prime-yellow-1"/>
                                         <state key="normal" image="arrow-right"/>
                                         <connections>
@@ -181,11 +181,11 @@
             <objects>
                 <viewController storyboardIdentifier="ReadMode" modalPresentationStyle="fullScreen" id="NTn-6P-TAi" customClass="ReadModeViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XI8-js-dDB">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-3R-TAF">
-                                <rect key="frame" x="0.0" y="92" width="390" height="548.66666666666663"/>
+                                <rect key="frame" x="0.0" y="48" width="375" height="433.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mpa-Jj-7xj" customClass="SnapCollectionFlowLayout" customModule="CookBook" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
@@ -196,7 +196,7 @@
                                 <cells/>
                             </collectionView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-iX-c3n" userLabel="Cancel Button">
-                                <rect key="frame" x="330" y="60" width="36" height="36"/>
+                                <rect key="frame" x="315" y="16" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="YQn-tL-jCw"/>
                                     <constraint firstAttribute="height" constant="36" id="ZlP-i6-PeK"/>
@@ -208,7 +208,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="li5-pk-8Ww">
-                                <rect key="frame" x="99" y="718" width="192" height="36"/>
+                                <rect key="frame" x="91.5" y="575" width="192" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-QQ-vXg" userLabel="Return Button">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>

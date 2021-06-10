@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HSX-hE-mW4">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,16 +15,16 @@
             <objects>
                 <viewController storyboardIdentifier="EditSteps" title="EditSteps" id="HSX-hE-mW4" customClass="EditStepsViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y51-Su-vfw">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-AW-cfq">
-                                <rect key="frame" x="0.0" y="120" width="390" height="485"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="386"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="1vw-Xk-0wf" customClass="SnapCollectionFlowLayout" customModule="CookBook" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EditStepsCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-dV-gEW" customClass="EditStepsCollectionViewCell" customModule="CookBook" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="0.0" width="334" height="469"/>
+                                        <rect key="frame" x="20.5" y="0.0" width="334" height="469"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YDG-mR-vbp">
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="469"/>
@@ -37,7 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHl-bb-rnp">
-                                                    <rect key="frame" x="16" y="55.999999999999986" width="302" height="187.66666666666663"/>
+                                                    <rect key="frame" x="16" y="56" width="302" height="187.5"/>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -46,7 +46,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adW-cQ-4Ii">
-                                                    <rect key="frame" x="16" y="259.66666666666669" width="302" height="193.33333333333331"/>
+                                                    <rect key="frame" x="16" y="259.5" width="302" height="193.5"/>
                                                     <string key="text">Tip the rice into a medium saucepan. Add 300ml/10fl oz water and bring to the boil. Reduce the heat, cover with a lid and simmer for 10 minutes. Remove from the heat, drain off any excess water and leave to steam dry, uncovered in the pan until ready to use.</string>
                                                     <color key="textColor" name="CB-text-black-1"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
@@ -107,7 +107,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdF-Qa-wQ4" userLabel="Cancel Button">
-                                <rect key="frame" x="330" y="60" width="36" height="36"/>
+                                <rect key="frame" x="315" y="16" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xdF-Qa-wQ4" secondAttribute="height" multiplier="1:1" id="JrU-ei-CnW"/>
                                     <constraint firstAttribute="width" constant="36" id="SBA-Qg-65g"/>
@@ -120,14 +120,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUK-R8-tXk" userLabel="Divider View">
-                                <rect key="frame" x="0.0" y="687" width="390" height="1"/>
+                                <rect key="frame" x="0.0" y="544" width="375" height="1"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Thx-MU-ZL7"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZj-bp-qIR">
-                                <rect key="frame" x="32" y="712" width="326" height="42"/>
+                                <rect key="frame" x="32" y="569" width="311" height="42"/>
                                 <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="NSy-3z-uSD"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft8-ib-Qml">
-                                <rect key="frame" x="32" y="621" width="326" height="42"/>
+                                <rect key="frame" x="32" y="478" width="311" height="42"/>
                                 <color key="backgroundColor" name="CB-text-gray-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="DVJ-s4-rZV"/>

@@ -56,6 +56,8 @@ class EditStepsViewController: UIViewController {
 
         imagePicker.delegate = self
 
+        view.layoutIfNeeded()
+
         setupCollecitonViewFlowLayout()
     }
 
