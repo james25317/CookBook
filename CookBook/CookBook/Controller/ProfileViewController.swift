@@ -269,6 +269,12 @@ extension ProfileViewController: UICollectionViewDataSource {
             return recipeCell
         } else {
 
+            recipeCell.viewDraftView.isHidden = true
+
+            recipeCell.imageViewIcon.isHidden = false
+
+            recipeCell.labelLikesCounts.isHidden = false
+
             recipeCell.setup(viewModel: cellViewModel)
 
             return recipeCell
@@ -282,7 +288,9 @@ extension ProfileViewController: UICollectionViewDelegate {
 
         collectionView.deselectItem(at: indexPath, animated: false)
         
-        let selectedItem = viewModel.recipeViewModels.value[indexPath.row].recipe
+        // let selectedItem = viewModel.recipeViewModels.value[indexPath.row].recipe
+
+        let selectedItem = viewModel.switchSection(uid: uid, sortType: type)[indexPath.row].recipe
 
         // 根據 isEditDone 決定去的方向
         if !selectedItem.isEditDone {
