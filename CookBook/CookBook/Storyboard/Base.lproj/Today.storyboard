@@ -48,17 +48,17 @@
                                             <constraint firstItem="ODM-B2-Kof" firstAttribute="centerY" secondItem="S5L-E2-sgG" secondAttribute="centerY" id="sqi-tk-a2V"/>
                                         </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-aD-WyW">
-                                        <rect key="frame" x="257.66666666666669" y="16" width="68.333333333333314" height="20"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-aD-WyW" userLabel="Tag View">
+                                        <rect key="frame" x="265.66666666666669" y="8" width="68.333333333333314" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Official" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-24-diW">
                                                 <rect key="frame" x="13.666666666666625" y="1.3333333333333712" width="40.666666666666657" height="17"/>
                                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="12"/>
-                                                <color key="textColor" systemColor="systemGray6Color"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                         <constraints>
                                             <constraint firstItem="ugd-24-diW" firstAttribute="centerX" secondItem="4Is-aD-WyW" secondAttribute="centerX" id="6KN-WQ-7JE"/>
                                             <constraint firstItem="ugd-24-diW" firstAttribute="centerY" secondItem="4Is-aD-WyW" secondAttribute="centerY" id="pNc-EN-2MV"/>
@@ -68,14 +68,11 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemGray2Color"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_official" translatesAutoresizingMaskIntoConstraints="NO" id="wrN-Z3-Xck">
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_official" translatesAutoresizingMaskIntoConstraints="NO" id="wrN-Z3-Xck">
                                         <rect key="frame" x="266" y="16" width="60" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="YAb-3g-Wmp"/>
@@ -86,7 +83,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4Is-aD-WyW" firstAttribute="height" secondItem="8Ze-wo-bjs" secondAttribute="height" multiplier="0.12" id="6tC-WD-6OG"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Is-aD-WyW" secondAttribute="trailing" constant="16" id="9yp-Dg-Gtz"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Is-aD-WyW" secondAttribute="trailing" constant="8" id="9yp-Dg-Gtz"/>
                                     <constraint firstAttribute="trailing" secondItem="S5L-E2-sgG" secondAttribute="trailing" id="AKu-ym-RpW"/>
                                     <constraint firstAttribute="trailing" secondItem="wrN-Z3-Xck" secondAttribute="trailing" constant="16" id="Aqm-L7-W7s"/>
                                     <constraint firstItem="BCZ-ez-t4f" firstAttribute="top" secondItem="8Ze-wo-bjs" secondAttribute="top" id="DvM-Cy-2lH"/>
@@ -97,7 +94,7 @@
                                     <constraint firstAttribute="trailing" secondItem="BCZ-ez-t4f" secondAttribute="trailing" id="Xr1-0j-aDd"/>
                                     <constraint firstItem="S5L-E2-sgG" firstAttribute="height" secondItem="8Ze-wo-bjs" secondAttribute="height" multiplier="0.2" id="dA7-a2-5VR"/>
                                     <constraint firstAttribute="bottom" secondItem="S5L-E2-sgG" secondAttribute="bottom" id="gX1-kb-za0"/>
-                                    <constraint firstItem="4Is-aD-WyW" firstAttribute="top" secondItem="8Ze-wo-bjs" secondAttribute="top" constant="16" id="gyP-tN-Rv0"/>
+                                    <constraint firstItem="4Is-aD-WyW" firstAttribute="top" secondItem="8Ze-wo-bjs" secondAttribute="top" constant="8" id="gyP-tN-Rv0"/>
                                     <constraint firstItem="S5L-E2-sgG" firstAttribute="leading" secondItem="8Ze-wo-bjs" secondAttribute="leading" id="ms7-gy-RhZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -277,9 +274,6 @@
         <namedColor name="CB-text-black-1">
             <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

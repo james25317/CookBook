@@ -382,7 +382,7 @@ class EditViewModel {
             recipeId: recipe.id!,
             recipeName: recipe.name
         )
-
+        
         return feed
     }
 }
