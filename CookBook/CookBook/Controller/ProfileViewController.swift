@@ -74,10 +74,14 @@ class ProfileViewController: UIViewController {
 
         // self.navigationController?.navigationBar.backgroundColor = .white
 
+        CBProgressHUD.show()
+
         // fetch profile
         fetchProfileData(uid: uid)
 
-        CBProgressHUD.show()
+        setupProfileInfo()
+
+        setupCollectionView()
 
         // 綁定 Fb Recipes 資料
         viewModel.recipeViewModels.bind { [weak self] recipes in
@@ -92,10 +96,6 @@ class ProfileViewController: UIViewController {
 
             self?.setupProfileInfo()
         }
-
-        setupProfileInfo()
-
-        setupCollectionView()
 
         sortButtons.first!.isSelected = true
     }
@@ -119,11 +119,13 @@ class ProfileViewController: UIViewController {
 
     private func fetchProfileData(uid: String) {
 
-        viewModel.fetchOwnerRecipesData(with: uid)
+        // viewModel.fetchOwnerRecipesData(with: uid)
 
-        viewModel.fetchFavoritesRecipesData(with: uid)
+        // viewModel.fetchFavoritesRecipesData(with: uid)
 
-        viewModel.fetchChallengesRecipesData(with: uid)
+        // viewModel.fetchChallengesRecipesData(with: uid)
+
+        viewModel.fetchRecipesData()
 
         viewModel.fetchUserData(uid: uid)
     }
@@ -238,7 +240,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return viewModel.switchSection(with: uid, sortType: type).count
+        return viewModel.switchSection(uid: uid, sortType: type).count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -251,7 +253,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         guard let recipeCell = cell as? ProfileCollectionViewCell else { return cell }
         
         // 根據按鈕來源切換不同section的資料生成
-        let cellViewModel = self.viewModel.switchSection(with: uid, sortType: type)[indexPath.row]
+        let cellViewModel = self.viewModel.switchSection(uid: uid, sortType: type)[indexPath.row]
 
         // 根據 isEditDone 生成樣式
         if !cellViewModel.isEditDone {

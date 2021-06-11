@@ -45,7 +45,7 @@ class ProfileViewModel {
     }
 
     // 根據 button.tag 切換資料內容（利用 filter 出資料）
-    func switchSection(with uid: String, sortType: SortType) -> [RecipeViewModel] {
+    func switchSection(uid: String, sortType: SortType) -> [RecipeViewModel] {
 
         switch sortType {
 
@@ -112,7 +112,7 @@ class ProfileViewModel {
 
     func fetchFavoritesRecipesData(with ownerId: String) {
 
-        DataManager.shared.fetchFavoritesRecipes(ownerId: ownerId) { [weak self] result in
+        DataManager.shared.fetchFavoritesRecipes(uid: ownerId) { [weak self] result in
 
             switch result {
 

@@ -110,7 +110,9 @@ class DataManager {
 
                         do {
 
-                            if let recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+                            if var recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+
+                                recipe.id = document.documentID
 
                                 recipes.append(recipe)
                             }
@@ -167,10 +169,10 @@ class DataManager {
     }
 
     // MARK: Recipes (by favoritesUserId)
-    func fetchFavoritesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
+    func fetchFavoritesRecipes(uid: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
-            .whereField(Field.favorites.rawValue, arrayContains: ownerId)
+            .whereField(Field.favorites.rawValue, arrayContains: uid)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
 
