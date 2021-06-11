@@ -51,6 +51,8 @@ class SignInViewController: UIViewController {
 
     @IBAction func skipSignIn(_ sender: Any) {
 
+        // ------ testing area
+
         // Crashlytics.crashlytics().log("Crash Button Tapped")
 
         // fatalError()
@@ -58,7 +60,7 @@ class SignInViewController: UIViewController {
         UserManager.shared.uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
         UserManager.shared.user.email = "james49904230@gmail.com"
         
-        // ------ testing area
+        // ------ testing area end
 
         guard let todayVC = UIStoryboard.today
             .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }

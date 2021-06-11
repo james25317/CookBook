@@ -131,16 +131,18 @@ class TodayViewController: UIViewController {
 
         print("video start")
 
-        guard let todayVideoVC = storyboard?
-                .instantiateViewController(withIdentifier: "TodayVideo") as? TodayVideoViewController else { return }
+        CBProgressHUD.showText(text: "Coming Soon")
 
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-        navigationItem.backBarButtonItem?.tintColor = .white
-
-        // fetch 到資料後，傳 VM 過去
-        todayVideoVC.viewModel = viewModel
-
-        navigationController?.pushViewController(todayVideoVC, animated: true)
+//        guard let todayVideoVC = storyboard?
+//                .instantiateViewController(withIdentifier: "TodayVideo") as? TodayVideoViewController else { return }
+//
+//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+//
+//        navigationItem.backBarButtonItem?.tintColor = .white
+//
+//        // fetch 到資料後，傳 VM 過去
+//        todayVideoVC.viewModel = viewModel
+//
+//        navigationController?.pushViewController(todayVideoVC, animated: true)
     }
 }
