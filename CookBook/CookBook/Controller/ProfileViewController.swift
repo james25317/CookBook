@@ -260,9 +260,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
             recipeCell.viewDraftView.isHidden = false
 
-            recipeCell.imageViewIcon.isHidden = true
-
-            recipeCell.labelLikesCounts.isHidden = true
+            recipeCell.viewRecipeView.isHidden = true
 
             recipeCell.setup(viewModel: cellViewModel)
 
@@ -271,9 +269,7 @@ extension ProfileViewController: UICollectionViewDataSource {
 
             recipeCell.viewDraftView.isHidden = true
 
-            recipeCell.imageViewIcon.isHidden = false
-
-            recipeCell.labelLikesCounts.isHidden = false
+            recipeCell.viewRecipeView.isHidden = false
 
             recipeCell.setup(viewModel: cellViewModel)
 

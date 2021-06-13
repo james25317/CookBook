@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="168.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5L-E2-sgG" userLabel="Txt Bg View">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5L-E2-sgG" userLabel="Txt Bg View">
                                         <rect key="frame" x="0.0" y="135" width="342" height="33.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Recipe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODM-B2-Kof">
@@ -107,7 +107,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="101.33333333333333"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9m-ag-XY0" userLabel="Txt Bg View">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9m-ag-XY0" userLabel="Txt Bg View">
                                         <rect key="frame" x="0.0" y="67.666666666666629" width="342" height="33.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ub-hn-Nhb">
@@ -142,16 +142,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sz-LL-7xV">
-                                <rect key="frame" x="169.33333333333334" y="690" width="35.333333333333343" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-cN-dfR">
+                                <rect key="frame" x="165" y="690" width="60" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
-                                <color key="textColor" name="CB-text-black-1"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-cN-dfR">
-                                <rect key="frame" x="208.66666666666666" y="690" width="24" height="24"/>
                                 <color key="tintColor" name="CB-prime-yellow-1"/>
-                                <state key="normal" image="arrow-right"/>
+                                <state key="normal" title="Skip" image="arrow-right">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="skipThisPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyw-SH-tc8"/>
                                 </connections>
@@ -172,22 +169,20 @@
                         <constraints>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="trailing" secondItem="BCZ-ez-t4f" secondAttribute="trailing" id="1ob-iK-kZF"/>
                             <constraint firstItem="w9m-ag-XY0" firstAttribute="height" secondItem="S5L-E2-sgG" secondAttribute="height" id="35K-29-4T4"/>
-                            <constraint firstItem="7sz-LL-7xV" firstAttribute="centerY" secondItem="1d3-cN-dfR" secondAttribute="centerY" id="4Cj-IA-ez2"/>
                             <constraint firstItem="BCZ-ez-t4f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="9ML-D6-9wl"/>
-                            <constraint firstItem="7sz-LL-7xV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-8" id="KBA-8q-fe5"/>
-                            <constraint firstItem="1d3-cN-dfR" firstAttribute="leading" secondItem="7sz-LL-7xV" secondAttribute="trailing" constant="4" id="L3m-BU-PKC"/>
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NuN-Il-KlX"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="top" secondItem="BCZ-ez-t4f" secondAttribute="bottom" constant="16" id="P1o-wm-Xd6"/>
                             <constraint firstItem="ynw-nR-Vdz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KLd-Np-qs4" secondAttribute="trailing" constant="8" symbolic="YES" id="PZm-Fm-6oY"/>
                             <constraint firstItem="ynw-nR-Vdz" firstAttribute="trailing" secondItem="BCZ-ez-t4f" secondAttribute="trailing" id="UJg-5R-J7B"/>
+                            <constraint firstItem="1d3-cN-dfR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wfc-5o-nr9"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="leading" secondItem="BCZ-ez-t4f" secondAttribute="leading" id="XMT-6X-kRl"/>
                             <constraint firstItem="ppZ-VT-5um" firstAttribute="height" secondItem="BCZ-ez-t4f" secondAttribute="height" multiplier="0.6" id="YrB-9C-oQb"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ZvC-OT-IzU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ze-wo-bjs" secondAttribute="trailing" constant="24" id="aFb-Wq-Gq5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7sz-LL-7xV" secondAttribute="bottom" constant="96" id="dZg-Qs-bEm"/>
                             <constraint firstItem="BCZ-ez-t4f" firstAttribute="top" secondItem="ynw-nR-Vdz" secondAttribute="bottom" constant="24" id="jL3-vN-At5"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mG8-l3-AVR"/>
                             <constraint firstItem="8Ze-wo-bjs" firstAttribute="top" secondItem="KLd-Np-qs4" secondAttribute="bottom" constant="24" id="w8N-0C-Jye"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1d3-cN-dfR" secondAttribute="bottom" constant="96" id="xdp-eq-017"/>
                             <constraint firstItem="KLd-Np-qs4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yI7-55-65K"/>
                         </constraints>
                     </view>
@@ -267,9 +262,6 @@
         </namedColor>
         <namedColor name="CB-prime-yellow-1">
             <color red="1" green="0.70200002193450928" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="CB-text-black-1">
-            <color red="0.078000001609325409" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CB-text-gray-1">
             <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

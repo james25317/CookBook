@@ -24,9 +24,7 @@ class EditViewController: UIViewController {
             textViewDescription.delegate = self
         }
     }
-
-    @IBOutlet weak var labelNext: UILabel!
-
+    
     @IBOutlet weak var buttonNext: UIButton!
 
     var viewModel = EditViewModel()
@@ -82,9 +80,7 @@ class EditViewController: UIViewController {
     }
 
     func setupNextEntrance() {
-
-        labelNext.isHidden = true
-
+        
         buttonNext.isHidden = true
     }
 }
@@ -156,12 +152,12 @@ extension EditViewController: UITextFieldDelegate {
 
         if name.isEmpty == true && textViewDescription.text.isEmpty == true {
 
-            labelNext.isHidden = true
+            // labelNext.isHidden = true
 
             buttonNext.isHidden = true
         } else {
 
-            labelNext.isHidden = false
+            // labelNext.isHidden = false
 
             buttonNext.isHidden = false
         }

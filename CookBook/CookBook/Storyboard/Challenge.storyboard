@@ -76,20 +76,16 @@
                                     <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cov-1C-f3g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's try It!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trx-KZ-Rsq">
-                                <rect key="frame" x="136.66666666666666" y="613.33333333333337" width="85" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
-                                <color key="textColor" name="CB-text-black-1"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-tn-qbd">
-                                <rect key="frame" x="221.66666666666666" y="608" width="32" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-tn-qbd">
+                                <rect key="frame" x="133.66666666666666" y="608" width="122.99999999999997" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="1kA-c2-nZd"/>
-                                    <constraint firstAttribute="width" secondItem="vFW-tn-qbd" secondAttribute="height" multiplier="1:1" id="bsZ-Gt-4OB"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                 <color key="tintColor" name="CB-prime-yellow-1"/>
-                                <state key="normal" image="arrow-right"/>
+                                <state key="normal" title="That's try it!" image="arrow-right">
+                                    <color key="titleColor" name="CB-text-black-1"/>
+                                </state>
                                 <connections>
                                     <action selector="goEditRecipe:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rQ4-mL-hdb"/>
                                 </connections>
@@ -162,18 +158,16 @@
                             <constraint firstItem="YJf-xc-PgY" firstAttribute="top" secondItem="Qec-SI-0F4" secondAttribute="bottom" constant="24" id="OEf-oc-cg0"/>
                             <constraint firstItem="Ovp-ud-TKw" firstAttribute="leading" secondItem="YJf-xc-PgY" secondAttribute="leading" id="ONE-xe-8r1"/>
                             <constraint firstItem="Ovp-ud-TKw" firstAttribute="trailing" secondItem="J9h-Ne-nAF" secondAttribute="trailing" constant="8" id="PS4-1j-yUF"/>
+                            <constraint firstItem="vFW-tn-qbd" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="RYy-kd-9tr"/>
                             <constraint firstItem="TIf-Bj-jHT" firstAttribute="centerY" secondItem="J9h-Ne-nAF" secondAttribute="centerY" id="TBN-Fh-zCt"/>
-                            <constraint firstItem="Trx-KZ-Rsq" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" constant="-16" id="Tbg-lS-dyi"/>
                             <constraint firstItem="lm0-pO-Ttu" firstAttribute="leading" secondItem="8BU-I6-ePh" secondAttribute="leading" id="VMU-NY-Ora"/>
                             <constraint firstItem="oLg-3P-5E1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Wfm-Vc-MlK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vFW-tn-qbd" secondAttribute="bottom" constant="170" id="erv-tl-VAW"/>
                             <constraint firstItem="lm0-pO-Ttu" firstAttribute="firstBaseline" secondItem="8BU-I6-ePh" secondAttribute="baseline" constant="16" id="gnf-yf-oJ4"/>
-                            <constraint firstItem="Trx-KZ-Rsq" firstAttribute="firstBaseline" secondItem="Ovp-ud-TKw" secondAttribute="baseline" constant="96" id="koT-dU-A2q"/>
                             <constraint firstItem="Qec-SI-0F4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="oEK-YX-zed"/>
                             <constraint firstItem="8BU-I6-ePh" firstAttribute="leading" secondItem="YJf-xc-PgY" secondAttribute="trailing" constant="8" id="oKC-wC-Cb4"/>
                             <constraint firstItem="Ovp-ud-TKw" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="pVS-6g-48v"/>
-                            <constraint firstItem="vFW-tn-qbd" firstAttribute="centerY" secondItem="Trx-KZ-Rsq" secondAttribute="centerY" id="q2b-7J-BFO"/>
                             <constraint firstItem="Ovp-ud-TKw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="vZH-Hx-aad"/>
-                            <constraint firstItem="vFW-tn-qbd" firstAttribute="leading" secondItem="Trx-KZ-Rsq" secondAttribute="trailing" id="wDb-4H-0yI"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
