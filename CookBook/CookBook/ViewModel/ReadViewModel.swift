@@ -89,9 +89,9 @@ class ReadViewModel {
         }
     }
 
-    func updateLikes(documentId: String) {
+    func increaseLikes(documentId: String) {
 
-        DataManager.shared.updateLikes(documentId: documentId) { [weak self] result in
+        DataManager.shared.increaseLikes(documentId: documentId) { [weak self] result in
 
             switch result {
 
@@ -103,31 +103,63 @@ class ReadViewModel {
 
                 print(error)
             }
-            
         }
     }
 
-    func updateFavoritesCounts(documentId: String) {
+    func decreaseLikes(documentId: String) {
 
-        DataManager.shared.updateFavoritesCounts(documentId: documentId) { result in
+        DataManager.shared.decreaseLikes(documentId: documentId) { [weak self] result in
 
             switch result {
 
             case .success(let documentId):
 
-                print("\(documentId): FavoritesCounts increase 1")
+                print("\(documentId): Likes decrease 1")
 
             case .failure(let error):
 
                 print(error)
             }
-
         }
     }
 
-    func updateFavoritesUserId(documentId: String, favoritesUserId: String) {
+    func increaseFavoritesCounts(uid: String) {
 
-        DataManager.shared.updatefavoritesUserId(
+        DataManager.shared.increaseFavoritesCounts(documentId: uid) { result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("\(documentId): FavoritesCounts increased 1")
+
+            case .failure(let error):
+
+                print(error)
+            }
+        }
+    }
+
+    func decreaseFavoritesCounts(uid: String) {
+
+        DataManager.shared.decreaseFavoritesCounts(documentId: uid) { result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("\(documentId): FavoritesCounts decreased 1")
+
+            case .failure(let error):
+
+                print(error)
+            }
+        }
+    }
+
+    func addFavoritesUserId(documentId: String, favoritesUserId: String) {
+
+        DataManager.shared.addfavoritesUserId(
             documentId: documentId,
             favoritesUserId: favoritesUserId
         ) { [weak self] result in
@@ -136,7 +168,27 @@ class ReadViewModel {
 
             case .success(let documentId):
 
-                print("\(documentId): \(favoritesUserId) added")
+                print("\(documentId) recipe: \(favoritesUserId) added")
+
+            case .failure(let error):
+
+                print(error)
+            }
+        }
+    }
+
+    func removeFavoritesUserId(documentId: String, favoritesUserId: String) {
+
+        DataManager.shared.removefavoritesUserId(
+            documentId: documentId,
+            favoritesUserId: favoritesUserId
+        ) { [weak self] result in
+
+            switch result {
+
+            case .success(let documentId):
+
+                print("\(documentId) recipe: \(favoritesUserId) removed")
 
             case .failure(let error):
 

@@ -62,12 +62,12 @@ class ReadViewController: UIViewController {
         guard let readModeVC = storyboard?
             .instantiateViewController(withIdentifier: "ReadMode") as? ReadModeViewController else { return }
 
-        // pass data to ReadModePage
-        readModeVC.viewModel = viewModel
-
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         navigationController?.pushViewController(readModeVC, animated: true)
+
+        // pass data to ReadModePage
+        readModeVC.viewModel = viewModel
     }
 
     private func layoutReadPage() {

@@ -18,6 +18,8 @@ class ReadModeViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var buttonFavorites: UIButton!
+
     // CustomFlow Layout Outlet
     @IBOutlet weak var snapCollectionFlowLayout: SnapCollectionFlowLayout!
 
@@ -29,6 +31,17 @@ class ReadModeViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        viewModel?.recipeViewModel.bind { [weak self] recipeViewModel in
+
+            if recipeViewModel?.recipe.favoritesUserId.contains(UserManager.shared.uid) == true {
+
+                self?.buttonFavorites.isSelected = true
+            } else {
+
+                self?.buttonFavorites.isSelected = false
+            }
+        }
 
         viewModel?.onBlocked = { [weak self] () in
 
@@ -64,22 +77,40 @@ class ReadModeViewController: UIViewController {
 
     @IBAction func saveToFavorites(_ sender: Any) {
 
-        // 1. prevent double likes logic (with UserDocumentId check)
-        // ....not implemented yet
-
         guard let viewModel = viewModel,
-            let recipe = viewModel.recipeViewModel.value else { return }
+              let recipe = viewModel.recipeViewModel.value else { return }
 
-        // 2. update +1 to "likes" table
-        viewModel.updateLikes(documentId: recipe.id)
+        if buttonFavorites.isSelected {
 
-        // 3. update favoritesUserId
-        viewModel.updateFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
+            // if button was not pressed before:
+            buttonFavorites.isSelected = false
 
-        // 4. update favoritesCounts
-        viewModel.updateFavoritesCounts(documentId: uid)
+            // 2. remove 1 to "likes" table
+            viewModel.decreaseLikes(documentId: recipe.id)
 
-        CBProgressHUD.showSuccess(text: "CookBook Saved")
+            // 3. remove favoritesUserId
+            viewModel.removeFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
+
+            // 4. remove favoritesCounts
+            viewModel.decreaseFavoritesCounts(uid: uid)
+
+        } else {
+
+            // if button was not pressed before:
+            buttonFavorites.isSelected = true
+
+            // 2. update +1 to "likes" table
+            viewModel.increaseLikes(documentId: recipe.id)
+
+            // 3. update favoritesUserId
+            viewModel.addFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
+
+            // 4. update favoritesCounts
+            viewModel.increaseFavoritesCounts(uid: uid)
+
+            CBProgressHUD.showSuccess(text: "CookBook Saved")
+        }
+
     }
 
     @IBAction func goOptionMenu(_ sender: Any) {
