@@ -52,7 +52,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-ur-FdL" userLabel="Txt Bg View">
+                                                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-ur-FdL" userLabel="Txt Bg View">
                                                             <rect key="frame" x="0.0" y="169.66666666666666" width="342" height="30.333333333333343"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-lS-Sgv">
@@ -162,12 +162,11 @@
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQa-hg-btZ" userLabel="Image Bg View">
                                                             <rect key="frame" x="16" y="73" width="147" height="111"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IEa-kE-mAh">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IEa-kE-mAh">
                                                                     <rect key="frame" x="0.0" y="0.0" width="147" height="111"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 </imageView>
-                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-dA-xjo" userLabel="Txt Bg View">
+                                                                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-dA-xjo" userLabel="Txt Bg View">
                                                                     <rect key="frame" x="0.0" y="84.333333333333343" width="147" height="26.666666666666671"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Al2-1T-Byj">
@@ -187,10 +186,14 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="IEa-kE-mAh" secondAttribute="trailing" id="5bD-SE-znW"/>
                                                                 <constraint firstAttribute="bottom" secondItem="JU4-dA-xjo" secondAttribute="bottom" id="6b5-tg-tVb"/>
                                                                 <constraint firstItem="JU4-dA-xjo" firstAttribute="height" secondItem="dQa-hg-btZ" secondAttribute="height" multiplier="0.24" id="7JO-Ki-CXH"/>
                                                                 <constraint firstAttribute="trailing" secondItem="JU4-dA-xjo" secondAttribute="trailing" id="CVZ-UT-nyF"/>
                                                                 <constraint firstItem="JU4-dA-xjo" firstAttribute="leading" secondItem="dQa-hg-btZ" secondAttribute="leading" id="jTj-KS-W4L"/>
+                                                                <constraint firstItem="IEa-kE-mAh" firstAttribute="top" secondItem="dQa-hg-btZ" secondAttribute="top" id="ln9-cw-J5Z"/>
+                                                                <constraint firstAttribute="bottom" secondItem="IEa-kE-mAh" secondAttribute="bottom" id="myP-yh-rWj"/>
+                                                                <constraint firstItem="IEa-kE-mAh" firstAttribute="leading" secondItem="dQa-hg-btZ" secondAttribute="leading" id="yLL-Fp-iJF"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -213,9 +216,8 @@
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2L-pf-HUo" userLabel="Image Bg View">
                                                             <rect key="frame" x="179" y="73" width="147" height="111"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Xt-maU">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3W2-Xt-maU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="147" height="111"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -223,7 +225,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
-                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-yq-F8r" userLabel="Txt Bg View">
+                                                                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-yq-F8r" userLabel="Txt Bg View">
                                                                     <rect key="frame" x="0.0" y="84.333333333333343" width="147" height="26.666666666666671"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWh-aG-zGo">
@@ -248,9 +250,13 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="3W2-Xt-maU" secondAttribute="trailing" id="GDL-0h-iPg"/>
+                                                                <constraint firstAttribute="bottom" secondItem="3W2-Xt-maU" secondAttribute="bottom" id="HYn-VR-JIg"/>
                                                                 <constraint firstAttribute="bottom" secondItem="DSr-yq-F8r" secondAttribute="bottom" id="LmW-WG-l6T"/>
                                                                 <constraint firstItem="DSr-yq-F8r" firstAttribute="leading" secondItem="w2L-pf-HUo" secondAttribute="leading" id="Ml0-yn-H5E"/>
+                                                                <constraint firstItem="3W2-Xt-maU" firstAttribute="leading" secondItem="w2L-pf-HUo" secondAttribute="leading" id="bFF-Pa-Em3"/>
                                                                 <constraint firstAttribute="trailing" secondItem="DSr-yq-F8r" secondAttribute="trailing" id="dY1-Zj-LMN"/>
+                                                                <constraint firstItem="3W2-Xt-maU" firstAttribute="top" secondItem="w2L-pf-HUo" secondAttribute="top" id="mr4-TM-vxN"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -258,34 +264,28 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zE0-tp-PzS">
-                                                            <rect key="frame" x="260.33333333333331" y="26.333333333333336" width="65.666666666666686" height="20.333333333333336"/>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zE0-tp-PzS" userLabel="Tag View">
+                                                            <rect key="frame" x="260.33333333333331" y="26" width="65.666666666666686" height="21.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrO-23-OQi">
-                                                                    <rect key="frame" x="9.3333333333333712" y="3.3333333333333286" width="47" height="14"/>
+                                                                    <rect key="frame" x="9.3333333333333712" y="3.6666666666666643" width="47" height="14"/>
                                                                     <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="10"/>
-                                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                                             <constraints>
                                                                 <constraint firstItem="GrO-23-OQi" firstAttribute="centerX" secondItem="zE0-tp-PzS" secondAttribute="centerX" id="KC5-jJ-A3H"/>
                                                                 <constraint firstItem="GrO-23-OQi" firstAttribute="centerY" secondItem="zE0-tp-PzS" secondAttribute="centerY" id="Znh-8o-df9"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="10"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" systemColor="systemGray2Color"/>
+                                                                    <real key="value" value="12"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_challenge" translatesAutoresizingMaskIntoConstraints="NO" id="k9L-m7-LDo">
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_challenge" translatesAutoresizingMaskIntoConstraints="NO" id="k9L-m7-LDo">
                                                             <rect key="frame" x="266" y="24.666666666666664" width="60" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="24" id="Ez2-zQ-lGl"/>
@@ -314,7 +314,7 @@
                                                         <constraint firstItem="w2L-pf-HUo" firstAttribute="leading" secondItem="oYD-dd-uxI" secondAttribute="centerX" constant="8" id="XFf-if-akM"/>
                                                         <constraint firstItem="zE0-tp-PzS" firstAttribute="width" secondItem="uoF-BU-Fy7" secondAttribute="width" multiplier="1.6" id="fTB-ah-Udr"/>
                                                         <constraint firstItem="B8L-Dv-lG6" firstAttribute="leading" secondItem="zU5-kN-mlj" secondAttribute="leading" id="gR8-95-ijG"/>
-                                                        <constraint firstItem="zE0-tp-PzS" firstAttribute="height" secondItem="uoF-BU-Fy7" secondAttribute="height" multiplier="0.5" id="giY-Gd-o7h"/>
+                                                        <constraint firstItem="zE0-tp-PzS" firstAttribute="height" secondItem="uoF-BU-Fy7" secondAttribute="height" multiplier="0.52" id="giY-Gd-o7h"/>
                                                         <constraint firstAttribute="height" constant="200" id="inW-Z1-Xpi"/>
                                                         <constraint firstItem="zE0-tp-PzS" firstAttribute="leading" secondItem="zU5-kN-mlj" secondAttribute="trailing" constant="8" id="pWc-0K-McQ"/>
                                                         <constraint firstItem="zU5-kN-mlj" firstAttribute="firstBaseline" secondItem="uoF-BU-Fy7" secondAttribute="centerY" id="sO3-9G-I0U"/>
@@ -387,7 +387,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
-                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ks5-mF-uK6" userLabel="Txt Bg View">
+                                                                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ks5-mF-uK6" userLabel="Txt Bg View">
                                                                     <rect key="frame" x="0.0" y="84.333333333333343" width="246.33333333333334" height="26.666666666666671"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookBookName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-LE-a7L">
@@ -439,17 +439,17 @@
                                                             <color key="textColor" red="0.37254901959999998" green="0.41176470590000003" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-4Q-Rwz">
-                                                            <rect key="frame" x="260.33333333333331" y="26.333333333333336" width="65.666666666666686" height="20.333333333333336"/>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-4Q-Rwz" userLabel="Tag View">
+                                                            <rect key="frame" x="260.33333333333331" y="26" width="65.666666666666686" height="21.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-El-eYR">
-                                                                    <rect key="frame" x="9.3333333333333712" y="3.3333333333333286" width="47" height="14"/>
+                                                                    <rect key="frame" x="9.3333333333333712" y="3.6666666666666643" width="47" height="14"/>
                                                                     <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="10"/>
-                                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                                             <constraints>
                                                                 <constraint firstItem="dkS-El-eYR" firstAttribute="centerX" secondItem="GDC-4Q-Rwz" secondAttribute="centerX" id="SUJ-fZ-SCl"/>
                                                                 <constraint firstItem="dkS-El-eYR" firstAttribute="centerY" secondItem="GDC-4Q-Rwz" secondAttribute="centerY" id="uKV-vV-tV6"/>
@@ -458,15 +458,9 @@
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" systemColor="systemGray2Color"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pO5-2D-say">
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pO5-2D-say" userLabel="Try View">
                                                             <rect key="frame" x="270.33333333333331" y="73" width="55.666666666666686" height="111"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDN-0p-fRV">
@@ -497,7 +491,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_challenge" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-l6-pQz">
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_tag_challenge" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-l6-pQz">
                                                             <rect key="frame" x="266" y="24.666666666666664" width="60" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="4oX-Fh-p8N"/>
@@ -514,7 +508,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="pO5-2D-say" secondAttribute="bottom" constant="16" id="8Gw-5q-K5G"/>
                                                         <constraint firstAttribute="trailing" secondItem="CUq-l6-pQz" secondAttribute="trailing" constant="16" id="Bcf-Di-qAc"/>
                                                         <constraint firstItem="pO5-2D-say" firstAttribute="leading" secondItem="gmC-Ad-PSm" secondAttribute="trailing" constant="8" id="BgH-7e-ZcS"/>
-                                                        <constraint firstItem="GDC-4Q-Rwz" firstAttribute="height" secondItem="bsk-kM-aLv" secondAttribute="height" multiplier="0.5" id="CZu-fO-O3a"/>
+                                                        <constraint firstItem="GDC-4Q-Rwz" firstAttribute="height" secondItem="bsk-kM-aLv" secondAttribute="height" multiplier="0.52" id="CZu-fO-O3a"/>
                                                         <constraint firstItem="dQY-RJ-XNw" firstAttribute="firstBaseline" secondItem="cov-et-KzU" secondAttribute="bottom" constant="8" id="LOB-bT-IY2"/>
                                                         <constraint firstItem="GDC-4Q-Rwz" firstAttribute="width" secondItem="bsk-kM-aLv" secondAttribute="width" multiplier="1.6" id="LTM-WX-2mM"/>
                                                         <constraint firstAttribute="trailing" secondItem="GDC-4Q-Rwz" secondAttribute="trailing" constant="16" id="PbE-IP-Efn"/>
@@ -621,17 +615,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

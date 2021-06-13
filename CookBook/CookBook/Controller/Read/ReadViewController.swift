@@ -33,7 +33,13 @@ class ReadViewController: UIViewController {
 
             guard let recipeViewModel = recipeViewModel else { return }
 
-            self?.imageViewRecipeMainImage.loadImage(recipeViewModel.recipe.mainImage)
+            if recipeViewModel.recipe.mainImage.isEmpty {
+
+                self?.imageViewRecipeMainImage.image = UIImage(named: "CookBook_image_placholder_food_dim")
+            } else {
+
+                self?.imageViewRecipeMainImage.loadImage(recipeViewModel.recipe.mainImage)
+            }
 
             self?.labelRecipeName.text = recipeViewModel.recipe.name
             
@@ -56,11 +62,16 @@ class ReadViewController: UIViewController {
         guard let readModeVC = storyboard?
             .instantiateViewController(withIdentifier: "ReadMode") as? ReadModeViewController else { return }
 
-        // pass data to ReadModePage
-        readModeVC.viewModel = viewModel
-
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         navigationController?.pushViewController(readModeVC, animated: true)
+
+        // pass data to ReadModePage
+        readModeVC.viewModel = viewModel
+    }
+
+    private func layoutReadPage() {
+
+
     }
 }

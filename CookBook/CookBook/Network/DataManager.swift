@@ -110,7 +110,9 @@ class DataManager {
 
                         do {
 
-                            if let recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+                            if var recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
+
+                                recipe.id = document.documentID
 
                                 recipes.append(recipe)
                             }
@@ -167,10 +169,10 @@ class DataManager {
     }
 
     // MARK: Recipes (by favoritesUserId)
-    func fetchFavoritesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
+    func fetchFavoritesRecipes(uid: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
-            .whereField(Field.favorites.rawValue, arrayContains: ownerId)
+            .whereField(Field.favorites.rawValue, arrayContains: uid)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
 
@@ -490,7 +492,7 @@ class DataManager {
     }
 
     // MARK: FavoritesCounts (update)
-    func updateFavoritesCounts(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func increaseFavoritesCounts(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
         let ref = db.collection(Collections.user.rawValue).document(documentId)
@@ -501,14 +503,29 @@ class DataManager {
 
             if let error = error {
 
-                print("Error increase favoritesCounts: \(error)")
+                completion(.failure(error))
+            } else {
+                
+                completion(.success(documentId))
+            }
+        }
+    }
+
+    // MARK: FavoritesCounts (update)
+    func decreaseFavoritesCounts(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 likes 欄位
+        let ref = db.collection(Collections.user.rawValue).document(documentId)
+
+        ref.updateData(
+            ["favoritesCounts": FieldValue.increment(Int64(-1))]
+        ) { error in
+
+            if let error = error {
 
                 completion(.failure(error))
-
             } else {
-
-                print("\(documentId): FavoritesCounts successfully increased!")
-
+                
                 completion(.success(documentId))
             }
         }
@@ -540,7 +557,7 @@ class DataManager {
     }
 
     // MARK: Likes (update)
-    func updateLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func increaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
         let ref = db.collection(Collections.recipe.rawValue).document(documentId)
@@ -551,13 +568,28 @@ class DataManager {
 
             if let error = error {
 
-                print("Error increase likes: \(error)")
-
                 completion(.failure(error))
-
             } else {
 
-                print("\(documentId): Likes successfully increased!")
+                completion(.success(documentId))
+            }
+        }
+    }
+
+    // MARK: Likes (update)
+    func decreaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 likes 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(
+            ["likes": FieldValue.increment(Int64(-1))]
+        ) { error in
+
+            if let error = error {
+
+                completion(.failure(error))
+            } else {
 
                 completion(.success(documentId))
             }
@@ -565,7 +597,7 @@ class DataManager {
     }
 
     // MARK: FavoritesUserId (update)
-    func updatefavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func addfavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 favoritesUserId 欄位
         let ref = db.collection(Collections.recipe.rawValue).document(documentId)
@@ -576,13 +608,28 @@ class DataManager {
 
             if let error = error {
 
-                print("Error update favoritesUserId: \(error)")
-
                 completion(.failure(error))
-
             } else {
 
-                print("\(documentId): favoritesUserId successfully updated!")
+                completion(.success(documentId))
+            }
+        }
+    }
+
+    // MARK: FavoritesUserId (update)
+    func removefavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+        // 這邊寫更新 favoritesUserId 欄位
+        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+
+        ref.updateData(
+            ["favoritesUserId": FieldValue.arrayRemove([favoritesUserId])]
+        ) { error in
+
+            if let error = error {
+
+                completion(.failure(error))
+            } else {
 
                 completion(.success(documentId))
             }

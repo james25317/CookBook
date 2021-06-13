@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qYP-99-ctS">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="EditName" title="Edit" id="qYP-99-ctS" customClass="EditViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pb-wC-qx6">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XD-W2-exW">
-                                <rect key="frame" x="338" y="104" width="36" height="36"/>
+                                <rect key="frame" x="376" y="104" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="VJg-jB-4la"/>
                                     <constraint firstAttribute="height" constant="36" id="h1g-yc-1PC"/>
@@ -33,13 +33,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create CookBook" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwc-0o-Q5P">
-                                <rect key="frame" x="24" y="212.33333333333334" width="171" height="75.000000000000028"/>
+                                <rect key="frame" x="24" y="241" width="190" height="75"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  CookBook Name" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="06x-XG-dDU">
-                                <rect key="frame" x="24" y="311.33333333333331" width="342" height="42.333333333333314"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CookBook Name" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="06x-XG-dDU">
+                                <rect key="frame" x="24" y="340" width="380" height="46.333333333333314"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-d9-w7O">
-                                <rect key="frame" x="24" y="369.66666666666669" width="342" height="168.66666666666669"/>
+                                <rect key="frame" x="24" y="402.33333333333331" width="380" height="185.33333333333331"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
@@ -66,21 +66,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-al-bjg">
-                                <rect key="frame" x="168.33333333333334" y="636" width="37.333333333333343" height="24"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
-                                <color key="textColor" name="CB-text-black-1"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avS-kq-I1L">
-                                <rect key="frame" x="209.66666666666666" y="638" width="20" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avS-kq-I1L">
+                                <rect key="frame" x="183" y="720" width="62" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="avS-kq-I1L" secondAttribute="height" multiplier="1:1" id="Pm9-Bj-x4m"/>
                                     <constraint firstAttribute="height" constant="20" id="ZXx-pM-HVE"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                 <color key="tintColor" name="CB-prime-yellow-1"/>
-                                <state key="normal" image="arrow-right"/>
-                                <state key="disabled" image="arrow.right.circle" catalog="system"/>
+                                <state key="normal" title="Next" image="arrow-right">
+                                    <color key="titleColor" name="CB-text-black-1"/>
+                                </state>
+                                <state key="disabled" title="Next" image="arrow-right">
+                                    <color key="titleColor" systemColor="systemGray2Color"/>
+                                </state>
                                 <connections>
                                     <action selector="createCookBook:" destination="qYP-99-ctS" eventType="touchUpInside" id="1P0-pr-gTW"/>
                                 </connections>
@@ -91,13 +89,10 @@
                         <constraints>
                             <constraint firstItem="06x-XG-dDU" firstAttribute="top" secondItem="Vwc-0o-Q5P" secondAttribute="bottom" constant="24" id="1vL-8J-tFa"/>
                             <constraint firstItem="06x-XG-dDU" firstAttribute="height" secondItem="4pb-wC-qx6" secondAttribute="height" multiplier="0.05" id="2uE-zw-QXR"/>
-                            <constraint firstItem="bLf-9H-Yvv" firstAttribute="bottom" secondItem="cHn-al-bjg" secondAttribute="baseline" constant="156" id="GR0-M4-a8t"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="leading" secondItem="06x-XG-dDU" secondAttribute="leading" id="Hce-kl-hmC"/>
                             <constraint firstItem="bLf-9H-Yvv" firstAttribute="trailing" secondItem="4XD-W2-exW" secondAttribute="trailing" constant="16" id="JW1-uE-DXx"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="top" secondItem="06x-XG-dDU" secondAttribute="bottom" constant="16" id="Jht-hD-ylW"/>
                             <constraint firstItem="06x-XG-dDU" firstAttribute="leading" secondItem="bLf-9H-Yvv" secondAttribute="leading" constant="24" id="QWS-j3-gI3"/>
-                            <constraint firstItem="avS-kq-I1L" firstAttribute="leading" secondItem="cHn-al-bjg" secondAttribute="trailing" constant="4" id="ReN-uN-nnu"/>
-                            <constraint firstItem="cHn-al-bjg" firstAttribute="centerX" secondItem="bLf-9H-Yvv" secondAttribute="centerX" constant="-8" id="VMU-kd-0Y4"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="centerY" secondItem="4pb-wC-qx6" secondAttribute="centerY" constant="32" id="VQ2-b8-awQ"/>
                             <constraint firstItem="4XD-W2-exW" firstAttribute="top" secondItem="bLf-9H-Yvv" secondAttribute="top" constant="16" id="XGq-Ux-7Cj"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="width" secondItem="06x-XG-dDU" secondAttribute="width" id="c96-bA-6Xu"/>
@@ -105,15 +100,15 @@
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="height" secondItem="06x-XG-dDU" secondAttribute="height" multiplier="4" id="epe-0C-RWL"/>
                             <constraint firstItem="bLf-9H-Yvv" firstAttribute="centerX" secondItem="Vwc-0o-Q5P" secondAttribute="trailing" id="iUj-QZ-LRi"/>
                             <constraint firstItem="Vwc-0o-Q5P" firstAttribute="leading" secondItem="bLf-9H-Yvv" secondAttribute="leading" constant="24" id="mDV-au-fCy"/>
+                            <constraint firstItem="bLf-9H-Yvv" firstAttribute="bottom" secondItem="avS-kq-I1L" secondAttribute="bottom" constant="152" id="ogF-AT-eWK"/>
                             <constraint firstItem="Zsb-d9-w7O" firstAttribute="trailing" secondItem="06x-XG-dDU" secondAttribute="trailing" id="rBp-gx-gkk"/>
-                            <constraint firstItem="avS-kq-I1L" firstAttribute="centerY" secondItem="cHn-al-bjg" secondAttribute="centerY" id="rrX-NB-RGO"/>
+                            <constraint firstItem="avS-kq-I1L" firstAttribute="centerX" secondItem="bLf-9H-Yvv" secondAttribute="centerX" id="xUq-ff-aa8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8DH-i7-9tD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="buttonNext" destination="avS-kq-I1L" id="dOn-o4-YfB"/>
-                        <outlet property="labelNext" destination="cHn-al-bjg" id="cD1-iq-k4V"/>
                         <outlet property="textFieldName" destination="06x-XG-dDU" id="CP3-t5-C3k"/>
                         <outlet property="textViewDescription" destination="Zsb-d9-w7O" id="X9R-TQ-N1b"/>
                     </connections>
@@ -127,7 +122,7 @@
             <objects>
                 <viewController storyboardIdentifier="EditPreview" title="Edit Preview" id="Eai-jM-Ljp" customClass="EditPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ulu-Iw-0CM">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebl-uf-60B">
@@ -145,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luc-xT-CyG">
-                                <rect key="frame" x="338" y="60" width="36" height="36"/>
+                                <rect key="frame" x="376" y="60" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="2dt-61-jkg"/>
                                     <constraint firstAttribute="width" constant="36" id="3bz-V3-PHw"/>
@@ -159,16 +154,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit CookBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g0-wh-IFT">
-                                <rect key="frame" x="24" y="146" width="342" height="28"/>
+                                <rect key="frame" x="24" y="146" width="380" height="28"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
                                 <color key="textColor" name="CB-text-black-1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="lz6-f6-lPa">
-                                <rect key="frame" x="0.0" y="198" width="390" height="42"/>
+                                <rect key="frame" x="0.0" y="198" width="428" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-fd-ecV">
-                                        <rect key="frame" x="0.0" y="0.0" width="194" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="213" height="42"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Ingredients (0)">
@@ -182,7 +177,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-rX-5IY">
-                                        <rect key="frame" x="196" y="0.0" width="194" height="42"/>
+                                        <rect key="frame" x="215" y="0.0" width="213" height="42"/>
                                         <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Steps (0)">
@@ -201,19 +196,19 @@
                                 </constraints>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-F6-aKs" userLabel="Steps Container View">
-                                <rect key="frame" x="0.0" y="244" width="390" height="443"/>
+                                <rect key="frame" x="0.0" y="244" width="428" height="525"/>
                                 <connections>
                                     <segue destination="fK8-A1-YVQ" kind="embed" identifier="SegueSteps" id="4YA-Vd-3bD"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehl-8L-7ye" userLabel="Ingredients Container View">
-                                <rect key="frame" x="0.0" y="244" width="390" height="443"/>
+                                <rect key="frame" x="0.0" y="244" width="428" height="525"/>
                                 <connections>
                                     <segue destination="AvZ-op-BtV" kind="embed" identifier="SegueIngredients" id="Jih-Mv-dQb"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIJ-Eb-zd2" userLabel="Indicator View">
-                                <rect key="frame" x="85.333333333333329" y="232.66666666666666" width="23.333333333333329" height="2"/>
+                                <rect key="frame" x="93.666666666666671" y="232.66666666666666" width="25.666666666666671" height="2"/>
                                 <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="d9b-Ev-CYn"/>
@@ -225,14 +220,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-bD-Wxu" userLabel="Divider View">
-                                <rect key="frame" x="0.0" y="687" width="390" height="1"/>
+                                <rect key="frame" x="0.0" y="769" width="428" height="1"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Qd2-Gx-3cL"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJC-ys-hbg">
-                                <rect key="frame" x="32" y="712" width="326" height="42"/>
+                                <rect key="frame" x="32" y="794" width="364" height="42"/>
                                 <color key="backgroundColor" name="CB-prime-yellow-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="FgX-DY-1mw"/>
@@ -304,15 +299,15 @@
             <objects>
                 <viewController storyboardIdentifier="IngredientsPreview" title="IngredientsPreview" id="AvZ-op-BtV" customClass="EditIngredientsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jxJ-nQ-Kch">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="443"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="525"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-y6-lq6">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="353"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEt-2I-bCz">
-                                <rect key="frame" x="32" y="377" width="326" height="42"/>
+                                <rect key="frame" x="32" y="459" width="364" height="42"/>
                                 <color key="backgroundColor" name="CB-text-gray-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="mrI-R7-WCp"/>
@@ -364,15 +359,15 @@
             <objects>
                 <viewController storyboardIdentifier="StepsPreview" title="StepsPreview" id="fK8-A1-YVQ" customClass="EditStepsPreviewViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHA-cn-u23">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="443"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="525"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WsI-lC-g2o">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="353"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOW-Ku-f9g">
-                                <rect key="frame" x="32" y="377" width="326" height="42"/>
+                                <rect key="frame" x="32" y="459" width="364" height="42"/>
                                 <color key="backgroundColor" name="CB-text-gray-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Iyn-T1-8pO"/>
@@ -423,7 +418,6 @@
     </scenes>
     <resources>
         <image name="arrow-right" width="24" height="24"/>
-        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
         <image name="chevron-left" width="24" height="24"/>
         <image name="x" width="24" height="24"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
@@ -436,6 +430,9 @@
         <namedColor name="CB-text-gray-1">
             <color red="0.37299999594688416" green="0.41200000047683716" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

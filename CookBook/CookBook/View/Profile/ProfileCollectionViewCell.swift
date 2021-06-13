@@ -15,6 +15,8 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var labelLikesCounts: UILabel!
 
+    @IBOutlet weak var viewRecipeView: UIView!
+    
     @IBOutlet weak var viewDraftView: UIView!
 
     @IBOutlet weak var labelDraftRecipeName: UILabel!
@@ -32,7 +34,13 @@ class ProfileCollectionViewCell: UICollectionViewCell {
 
         guard let viewModel = viewModel else { return }
 
-        imageViewRecipe.loadImage(viewModel.mainImage)
+        if viewModel.mainImage.isEmpty {
+
+            imageViewRecipe.image = UIImage(named: "CookBook_image_placholder_food_dim")
+        } else {
+
+            imageViewRecipe.loadImage(viewModel.mainImage)
+        }
 
         labelLikesCounts.text = String(describing: viewModel.likes)
 

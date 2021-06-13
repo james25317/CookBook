@@ -19,15 +19,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Please allow access to your camera.</string>
+	<string>Please allow access to your camera. If not, you will not be able to capture photos to upload.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please allow reserve photos to your album.</string>
+	<string>Please allow reserve photos to your album. If not, you will not be able to save your captured photos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow access to upload photos.</string>
+	<string>Please allow access to upload photos.  If not, you will not be able to upload your photos.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -68,5 +68,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

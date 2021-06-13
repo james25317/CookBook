@@ -39,15 +39,29 @@ class FeedChallengeTableViewCell: UITableViewCell {
 
     private func layoutCell() {
 
-        labelUserName.text = viewModel?.name
+        guard let viewModel = viewModel else { return }
 
-        labelCreatedTime.text = viewModel?.createdTime
+        labelUserName.text = viewModel.name
 
-        imageViewPortrait.loadImage(viewModel?.portrait)
+        labelCreatedTime.text = viewModel.createdTime
 
-        imageViewOwnerRecipe.loadImage(viewModel?.mainImage)
+        if viewModel.portrait.isEmpty {
 
-        labelOwnerRecipeName.text = viewModel?.recipeName
+            imageViewPortrait.image = UIImage(named: "CookBook_image_placholder_portrait_dim")
+        } else {
+
+            imageViewPortrait.loadImage(viewModel.portrait)
+        }
+
+        if viewModel.mainImage.isEmpty {
+
+            imageViewOwnerRecipe.image = UIImage(named: "CookBook_image_placholder_food_dim")
+        } else {
+
+            imageViewOwnerRecipe.loadImage(viewModel.mainImage)
+        }
+
+        labelOwnerRecipeName.text = viewModel.recipeName
     }
 
     private func roundedImageView() {

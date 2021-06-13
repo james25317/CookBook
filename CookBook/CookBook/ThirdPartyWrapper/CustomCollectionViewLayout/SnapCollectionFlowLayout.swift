@@ -120,10 +120,10 @@ class SnapCollectionFlowLayout: UICollectionViewFlowLayout {
         
         var divider: CGFloat = 1.0
         
-        if unwrappedCollectionView.bounds.width > unwrappedCollectionView.bounds.height {
-            // collection view bounds are in landscape so we change the item width in a way where 2 rows can be displayed
-            divider = horizontalOrientationDevider
-        }
+//        if unwrappedCollectionView.bounds.width > unwrappedCollectionView.bounds.height {
+//            // collection view bounds are in landscape so we change the item width in a way where 2 rows can be displayed
+//            divider = horizontalOrientationDevider
+//        }
         
         // itemSize = CGSize(width: unwrappedCollectionView.bounds.width / divider - horizontalContentInset, height: itemHeight - (minLineSpacing * spacingMultiplier) - verticalContentInset)
 

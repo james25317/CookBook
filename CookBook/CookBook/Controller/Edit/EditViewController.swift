@@ -24,9 +24,7 @@ class EditViewController: UIViewController {
             textViewDescription.delegate = self
         }
     }
-
-    @IBOutlet weak var labelNext: UILabel!
-
+    
     @IBOutlet weak var buttonNext: UIButton!
 
     var viewModel = EditViewModel()
@@ -36,9 +34,6 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
 
         setupTextView()
-
-        // for testing, disable for now
-        // setupNextEntrance()
     }
     
     @IBAction func onNameChanged(_ sender: UITextField) {
@@ -49,22 +44,28 @@ class EditViewController: UIViewController {
     }
 
     @IBAction func createCookBook(_ sender: Any) {
-        
-        // create Recipe, get documentId then fetch Recipe with it
-        viewModel.createRecipeData(with: &viewModel.recipe, with: UserManager.shared.uid)
 
-        // Increased Recipes counts
-        // Useage: UserManager.shared.uid
-        viewModel.updateRecipesCounts(with: UserManager.shared.uid)
+        if textFieldName.text?.isEmpty == true {
 
-        // go EditPreview Page
-        guard let previewVC = storyboard?
-            .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+            CBProgressHUD.showText(text: "Please enter your CookBook name")
+        } else {
 
-        // pass VM
-        previewVC.viewModel = viewModel
+            // create Recipe, get documentId then fetch Recipe with it
+            viewModel.createRecipeData(with: &viewModel.recipe, with: UserManager.shared.uid)
+            
+            // Increased Recipes counts
+            // Useage: UserManager.shared.uid
+            viewModel.updateRecipesCounts(with: UserManager.shared.uid)
+            
+            // go EditPreview Page
+            guard let previewVC = storyboard?
+                    .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+            
+            // pass VM
+            previewVC.viewModel = viewModel
 
-        navigationController?.pushViewController(previewVC, animated: true)
+            navigationController?.pushViewController(previewVC, animated: true)
+        }
     }
 
     @IBAction func closePage(_ sender: Any) {
@@ -79,13 +80,6 @@ class EditViewController: UIViewController {
         textViewDescription.font = UIFont(name: "PingFang TC Regular", size: 17)
 
         textViewDescription.textColor = UIColor.lightGray
-    }
-
-    func setupNextEntrance() {
-
-        labelNext.isHidden = true
-
-        buttonNext.isHidden = true
     }
 }
 
@@ -150,20 +144,4 @@ extension EditViewController: UITextViewDelegate {
 
 extension EditViewController: UITextFieldDelegate {
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
-
-        guard let name = textFieldName.text else { return }
-
-        if name.isEmpty == true && textViewDescription.text.isEmpty == true {
-
-            labelNext.isHidden = true
-
-            buttonNext.isHidden = true
-        } else {
-
-            labelNext.isHidden = false
-
-            buttonNext.isHidden = false
-        }
-    }
 }
