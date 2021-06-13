@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-Pk-ct1">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-Pk-ct1">
                                 <rect key="frame" x="192" y="68" width="44" height="30"/>
                                 <state key="normal" title="Admin">
                                     <color key="titleColor" name="CB-text-gray-1"/>
@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookBook_image_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-4u-aHO">
-                                <rect key="frame" x="94" y="401" width="240" height="60"/>
+                                <rect key="frame" x="94" y="369" width="240" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="GXB-Ma-dKx"/>
                                     <constraint firstAttribute="width" constant="240" id="yGA-K9-jME"/>
@@ -63,7 +63,7 @@
                             <constraint firstItem="pLr-4u-aHO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3XG-vT-Tdv"/>
                             <constraint firstItem="gAB-v2-MOY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="8KO-M9-9Iq"/>
                             <constraint firstItem="Fon-oy-MzM" firstAttribute="centerX" secondItem="GDN-NG-Pt1" secondAttribute="centerX" id="ENE-FX-PL6"/>
-                            <constraint firstItem="pLr-4u-aHO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-32" id="PjM-s3-use"/>
+                            <constraint firstAttribute="centerY" secondItem="pLr-4u-aHO" secondAttribute="centerY" constant="64" id="PjM-s3-use"/>
                             <constraint firstItem="Fon-oy-MzM" firstAttribute="centerX" secondItem="gAB-v2-MOY" secondAttribute="centerX" id="RUl-rF-urP"/>
                             <constraint firstItem="gAB-v2-MOY" firstAttribute="trailing" secondItem="GDN-NG-Pt1" secondAttribute="trailing" constant="64" id="S7q-Fn-h8P"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GDN-NG-Pt1" secondAttribute="baseline" constant="16" id="T0V-Nn-9md"/>

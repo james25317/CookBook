@@ -186,9 +186,6 @@ class ReadModeViewController: UIViewController {
             // 上傳此 RecipeId 至 User(uid) 的 blockList
             viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
         }
-
-        // 上傳此 RecipeId 至 User(uid) 的 blockList
-        // viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
     }
 }
 
