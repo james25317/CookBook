@@ -22,14 +22,6 @@ class HomeViewController: UIViewController {
 
     let viewModel = HomeViewModel()
 
-    lazy var searchBar: UISearchBar = {
-
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
-
-        return searchBar
-    }()
-
-    // MARK: view lifecycle
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
@@ -42,7 +34,6 @@ class HomeViewController: UIViewController {
 
         self.navigationItem.setHidesBackButton(true, animated: true)
 
-        // fetch the latest Feeds data, trigger reloadData()
         viewModel.fetchFeedsData()
         
         CBProgressHUD.show()
@@ -52,12 +43,9 @@ class HomeViewController: UIViewController {
 
         super.viewDidLoad()
 
-        // 向 HomeVM 綁定 Box 觀察資料變化(fetch成功後的值)，VC 這邊要做的事情
         viewModel.feedViewModels.bind { [weak self] _ in
 
             self?.tableView.reloadData()
-
-            // self?.viewModel.onRefresh()
 
             CBProgressHUD.dismiss()
         }
@@ -75,16 +63,8 @@ class HomeViewController: UIViewController {
             self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
 
-        // 要 Feeds 資料
         viewModel.fetchFeedsData()
 
-        // Nib - 暫時屏蔽
-        // setupTableView()
-
-        // 搜尋欄 - 暫時屏蔽
-        // setupSearchBar()
-
-        // EasyRefresher
         setupRefresher()
     }
 
@@ -92,8 +72,6 @@ class HomeViewController: UIViewController {
         
         guard let todayVC = UIStoryboard.today
             .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
-
-        // navigationItem.setHidesBackButton(false, animated: true)
 
         navigationController?.pushViewController(todayVC, animated: true)
     }
@@ -111,34 +89,7 @@ class HomeViewController: UIViewController {
         guard let profileVC = UIStoryboard.profile
             .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
 
-        // profileVC.navigationController?.navigationBar.backgroundColor = .clear
-
         navigationController?.pushViewController(profileVC, animated: true)
-    }
-
-    private func setupTableView() {
-
-        tableView.registerCellWithNib(
-
-            identifier: String(describing: FeedTableViewCell.self),
-            bundle: nil
-        )
-
-        tableView.registerCellWithNib(
-
-            identifier: String(describing: FeedChallengeDoneTableViewCell.self),
-            bundle: nil)
-    }
-
-    private func setupSearchBar() {
-
-        searchBar.placeholder = "Search"
-
-        searchBar.sizeToFit()
-
-        let leftNavBarButton = UIBarButtonItem(customView: searchBar)
-
-        self.navigationItem.leftBarButtonItem = leftNavBarButton
     }
 
     private func setupRefresher() {
@@ -155,14 +106,6 @@ class HomeViewController: UIViewController {
 
             self?.tableView.refresh.header.endRefreshing()
         }
-    }
-
-    func refreshView() {
-
-        // unused.
-        print("Refreshing")
-
-        self.tableView.refresh.header.beginRefreshing()
     }
 }
 
@@ -191,8 +134,8 @@ extension HomeViewController: UITableViewDataSource {
 
             return feedChallengeCell
         } else if cellViewModel.isChallenged &&
-                    !cellViewModel.challenger.isEmpty &&
-                    !cellViewModel.challengerRecipeId.isEmpty {
+            !cellViewModel.challenger.isEmpty &&
+            !cellViewModel.challengerRecipeId.isEmpty {
 
             // challengeDone Feed
             let cell = tableView.dequeueReusableCell(
@@ -207,7 +150,6 @@ extension HomeViewController: UITableViewDataSource {
                 guard let readVC = UIStoryboard.read
                     .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
-                // 傳 Id
                 readVC.recipeId = cellViewModel.recipeId
 
                 self?.navigationController?.pushViewController(readVC, animated: true)
@@ -218,7 +160,6 @@ extension HomeViewController: UITableViewDataSource {
                 guard let readVC = UIStoryboard.read
                     .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
-                // 傳 Id
                 readVC.recipeId = cellViewModel.challengerRecipeId
 
                 self?.navigationController?.pushViewController(readVC, animated: true)
@@ -229,7 +170,7 @@ extension HomeViewController: UITableViewDataSource {
             return feedChallengeDoneCell
         } else {
 
-            // 一般 Feed
+            // usual Feed
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: String(describing: FeedTableViewCell.self),
                 for: indexPath
@@ -261,35 +202,31 @@ extension HomeViewController: UITableViewDelegate {
         } else if cellViewModel.isChallenged == false {
 
             // ChallengeCell
-            print("ChallengeCell tapped")
-
             guard let challengeVC = UIStoryboard.challenge
                 .instantiateViewController(withIdentifier: "Challenge") as? ChallengeViewController else { return }
 
-            // 傳 Id
             challengeVC.viewModel.recipeId = cellViewModel.feed.recipeId
 
-            // 傳 Feed
             challengeVC.viewModel.selectedFeed = cellViewModel.feed
 
             self.navigationController?.pushViewController(challengeVC, animated: true)
+
+            print("ChallengeCell tapped")
         } else {
 
             // NormalCell
-            print("NormalCell tapped")
-
             guard let readVC = UIStoryboard.read
                 .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
-            // 取 recipeId (feed.recipeId)
             let selectedFeed = cellViewModel.feed
 
             let recipeId = selectedFeed.recipeId
 
-            // 傳 Id
             readVC.recipeId = recipeId
 
             self.navigationController?.pushViewController(readVC, animated: true)
+
+            print("NormalCell tapped")
         }
     }
 }
@@ -300,7 +237,5 @@ extension HomeViewController: RefreshDelegate {
 
         // behavior after refreshed
         print("Home Feed Refreshed.")
-
-        // viewModel.onScrollToTop()
     }
 }
