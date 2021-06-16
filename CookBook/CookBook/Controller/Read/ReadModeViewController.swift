@@ -20,13 +20,12 @@ class ReadModeViewController: UIViewController {
 
     @IBOutlet weak var buttonFavorites: UIButton!
 
-    // CustomFlow Layout Outlet
+    // CustomFlowLayout Outlet
     @IBOutlet weak var snapCollectionFlowLayout: SnapCollectionFlowLayout!
 
     var viewModel: ReadViewModel?
 
-    // Useage: UserManager.shared.uid
-    let uid = UserManager.shared.uid
+    private let uid = UserManager.shared.uid
 
     override func viewDidLoad() {
 
@@ -34,7 +33,9 @@ class ReadModeViewController: UIViewController {
 
         viewModel?.recipeViewModel.bind { [weak self] recipeViewModel in
 
-            if recipeViewModel?.recipe.favoritesUserId.contains(UserManager.shared.uid) == true {
+            guard let uid = self?.uid else { return }
+
+            if recipeViewModel?.recipe.favoritesUserId.contains(uid) == true {
 
                 self?.buttonFavorites.isSelected = true
             } else {
@@ -67,7 +68,6 @@ class ReadModeViewController: UIViewController {
 
     @IBAction func returnToFirstPage(_ sender: Any) {
 
-        // scroll on top
         collectionView.scrollToItem(
             at: IndexPath(row: 0, section: 0),
             at: .centeredHorizontally,
@@ -78,44 +78,34 @@ class ReadModeViewController: UIViewController {
     @IBAction func saveToFavorites(_ sender: Any) {
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipeViewModel.value else { return }
+            let recipe = viewModel.recipeViewModel.value else { return }
 
         if buttonFavorites.isSelected {
 
-            // if button was not pressed before:
             buttonFavorites.isSelected = false
 
-            // 2. remove 1 to "likes" table
             viewModel.decreaseLikes(documentId: recipe.id)
 
-            // 3. remove favoritesUserId
             viewModel.removeFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
 
-            // 4. remove favoritesCounts
             viewModel.decreaseFavoritesCounts(uid: uid)
 
         } else {
 
-            // if button was not pressed before:
             buttonFavorites.isSelected = true
 
-            // 2. update +1 to "likes" table
             viewModel.increaseLikes(documentId: recipe.id)
 
-            // 3. update favoritesUserId
             viewModel.addFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
 
-            // 4. update favoritesCounts
             viewModel.increaseFavoritesCounts(uid: uid)
 
             CBProgressHUD.showSuccess(text: "CookBook Saved")
         }
-
     }
 
     @IBAction func goOptionMenu(_ sender: Any) {
 
-        // 打開選單欄位
         setupOptionMenu()
     }
 
@@ -153,7 +143,6 @@ class ReadModeViewController: UIViewController {
             title: "Block",
             style: .destructive) { _ in
 
-            // update to blockList
             self.addToBlockList()
         }
 
@@ -173,17 +162,13 @@ class ReadModeViewController: UIViewController {
         guard let viewModel = viewModel,
             let recipe = viewModel.recipeViewModel.value else { return }
 
-        // cannot block its self logic
         if recipe.ownerId == uid {
-
-            print("You can not banned your own recipe")
 
             CBProgressHUD.showText(text: "You can not banned your own recipe")
 
             return
         } else {
 
-            // 上傳此 RecipeId 至 User(uid) 的 blockList
             viewModel.updateBlockList(uid: uid, recipeId: recipe.id)
         }
     }
@@ -205,7 +190,6 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         if indexPath.row == 0 {
 
-            // go readStepCell
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: String(describing: ReadIngredientsCollectionViewCell.self),
                 for: indexPath
@@ -214,7 +198,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
             guard let readIngredientCell = cell as? ReadIngredientsCollectionViewCell else { return cell }
 
             guard let viewModel = viewModel,
-                  let recipe = viewModel.recipeViewModel.value else { return cell }
+                let recipe = viewModel.recipeViewModel.value else { return cell }
 
             readIngredientCell.viewModel = viewModel
 
@@ -224,7 +208,6 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
         } else {
 
-            // go readIngredientCell
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: String(describing: ReadStepsCollectionViewCell.self),
                 for: indexPath
@@ -233,7 +216,7 @@ extension ReadModeViewController: UICollectionViewDataSource {
             guard let readStepCell = cell as? ReadStepsCollectionViewCell else { return cell }
 
             guard let viewModel = viewModel,
-                  let recipe = viewModel.recipeViewModel.value else { return cell }
+                let recipe = viewModel.recipeViewModel.value else { return cell }
 
             readStepCell.layoutCell(
                 with: recipe.steps[indexPath.row - 1],
