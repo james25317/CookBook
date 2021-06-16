@@ -33,13 +33,12 @@ class SignInViewController: UIViewController {
 
         viewModel.onGranteed = { [weak self] () in
 
-            // 定義 SignIn 成功行為
             guard let todayVC = UIStoryboard.today
                 .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
-            CBProgressHUD.showSuccess(text: "SignIn Success")
-
             todayVC.navigationController?.setNavigationBarHidden(true, animated: true)
+
+            CBProgressHUD.showSuccess(text: "SignIn Success")
 
             self?.navigationController?.pushViewController(todayVC, animated: true)
         }
@@ -81,7 +80,6 @@ class SignInViewController: UIViewController {
 
         buttonView.addSubview(appleSignInButton)
 
-        // Add to the buttonView, position locked.
         NSLayoutConstraint.activate([
             appleSignInButton.leadingAnchor.constraint(equalTo: buttonView.leadingAnchor),
             appleSignInButton.trailingAnchor.constraint(equalTo: buttonView.trailingAnchor),
@@ -98,14 +96,12 @@ class SignInViewController: UIViewController {
 
         request.requestedScopes = [.fullName, .email]
 
-        // 將 request.nonce 套上 SHA 字串
         let nonce = randomNonceString()
 
         currentNonce = nonce
 
         request.nonce = sha256(nonce)
 
-        // SignIn popup menu
         let controller = ASAuthorizationController(authorizationRequests: [request])
 
         controller.delegate = self
@@ -185,37 +181,10 @@ class SignInViewController: UIViewController {
 @available(iOS 13.0, *)
 extension SignInViewController: ASAuthorizationControllerDelegate {
 
-    //    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-    //
-    //        // Firebase appleSignin handler
-    //
-    //        switch authorization.credential {
-    //
-    //        case let credentials as ASAuthorizationAppleIDCredential:
-    //
-    //            // ASAuthorizationAppleIDCredential -> UserInfo Object
-    //            // 登入完成的回傳資料
-    //            let signInUser = SignInUser(credentials: credentials)
-    //
-    //            // 回傳資料後的行為
-    //            // UserVM 儲存
-    //
-    //            guard let todayVC = UIStoryboard.today
-    //                    .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
-    //
-    //            navigationController?.pushViewController(todayVC, animated: true)
-    //
-    //        default:
-    //
-    //            break
-    //        }
-    //    }
-
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
 
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
 
-            // appleId callback data
             guard let nonce = currentNonce else {
 
                 fatalError("Invalid state: A login callback was received, but no login request was sent.")
@@ -247,24 +216,17 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
 
                 if let error = error {
 
-                    // Error. If error.code == .MissingOrInvalidNonce, make sure
-                    // you're sending the SHA256-hashed nonce as a hex string with
-                    // your request to Apple.
-
                     print(error.localizedDescription)
 
                     return
-
                 } else {
 
-                    // Firebase 回傳的 uid 用來作為生成新 User 的 DocumentId
                     guard let user = Auth.auth().currentUser else { return }
 
                     print("FirebaseUID: \(user.uid)")
 
                     print("UIDUser:\(user)")
 
-                    // 儲存 Firebase uid 至 UserDefault
                     UserDefaults.standard.setValue(
                         user.uid,
                         forKey: UserDefaults.Keys.uid.rawValue
@@ -275,26 +237,22 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
                         forKey: UserDefaults.Keys.email.rawValue
                     )
 
-                    // 初始 UserManager.user 資料
                     UserManager.shared.uid = user.uid
 
                     UserManager.shared.user.email = user.email ?? ""
 
                     guard let userUid = UserDefaults.standard.string(
-                            forKey: UserDefaults.Keys.uid.rawValue
+                        forKey: UserDefaults.Keys.uid.rawValue
                     ) else { return }
 
-                    // 以最新初始化的 User 與 uid 創建新 User document
                     self.viewModel.createUserData(user: UserManager.shared.user, uid: userUid)
                 }
-
             }
         }
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
 
-        // Handle error.
         print("Sign in with Apple errored: \(error)")
     }
 }
@@ -303,6 +261,6 @@ extension SignInViewController: ASAuthorizationControllerPresentationContextProv
 
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
 
-        return view.window!
+        return view.window ?? UIWindow()
     }
 }
