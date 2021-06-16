@@ -235,9 +235,9 @@ class EditViewModel {
         }
     }
 
-    func updateRecipesCounts(with uid: String) {
+    func increaseRecipesCounts(with uid: String) {
 
-        DataManager.shared.updateRecipesCounts(uid: uid) { result in
+        DataManager.shared.increaseRecipesCounts(uid: uid) { result in
 
             switch result {
 

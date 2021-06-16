@@ -29,6 +29,8 @@ class EditViewController: UIViewController {
 
     var viewModel = EditViewModel()
 
+    private let uid = UserManager.shared.uid
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -50,18 +52,13 @@ class EditViewController: UIViewController {
             CBProgressHUD.showText(text: "Please enter your CookBook name")
         } else {
 
-            // create Recipe, get documentId then fetch Recipe with it
-            viewModel.createRecipeData(with: &viewModel.recipe, with: UserManager.shared.uid)
-            
-            // Increased Recipes counts
-            // Useage: UserManager.shared.uid
-            viewModel.updateRecipesCounts(with: UserManager.shared.uid)
-            
-            // go EditPreview Page
+            viewModel.createRecipeData(with: &viewModel.recipe, with: uid)
+
+            viewModel.increaseRecipesCounts(with: uid)
+
             guard let previewVC = storyboard?
-                    .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
-            
-            // pass VM
+                .instantiateViewController(withIdentifier: "EditPreview") as? EditPreviewViewController else { return }
+
             previewVC.viewModel = viewModel
 
             navigationController?.pushViewController(previewVC, animated: true)
@@ -143,5 +140,5 @@ extension EditViewController: UITextViewDelegate {
 }
 
 extension EditViewController: UITextFieldDelegate {
-
+    
 }

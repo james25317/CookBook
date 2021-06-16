@@ -49,12 +49,12 @@ class DataManager {
 
     static let shared = DataManager()
 
-    lazy var db = Firestore.firestore()
+    lazy var firestoreDB = Firestore.firestore()
 
-    // MARK: Feeds (fetch)
+    // MARK: - Feeds (fetch)
     func fetchFeeds(completion: @escaping (Result<[Feed], Error>) -> Void) {
 
-        db.collection(Collections.feed.rawValue)
+        firestoreDB.collection(Collections.feed.rawValue)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
 
@@ -88,10 +88,10 @@ class DataManager {
             }
     }
     
-    // MARK: Recipes
+    // MARK: - Recipes
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .order(by: "createdTime", descending: true)
             .getDocuments { querySnapshot, error in
 
@@ -127,10 +127,10 @@ class DataManager {
             }
     }
 
-    // MARK: Recipes (by ownerId)
+    // MARK: - Recipes (by ownerId)
     func fetchOwnerRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .whereField(Field.owner.rawValue, isEqualTo: ownerId)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
@@ -168,10 +168,10 @@ class DataManager {
             }
     }
 
-    // MARK: Recipes (by favoritesUserId)
+    // MARK: - Recipes (by favoritesUserId)
     func fetchFavoritesRecipes(uid: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .whereField(Field.favorites.rawValue, arrayContains: uid)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
@@ -212,7 +212,7 @@ class DataManager {
     // MARK: Recipes (by challenger)
     func fetchChallengesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .whereField(Field.challenges.rawValue, isEqualTo: ownerId)
             .order(by: Field.time.rawValue, descending: true)
             .getDocuments { querySnapshot, error in
@@ -253,7 +253,7 @@ class DataManager {
     // MARK: - Recipe (by challenge status)
     func checkRecipeChallenger(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .document(documentId)
             .getDocument { documentSnapshot, error in
 
@@ -281,9 +281,9 @@ class DataManager {
     // MARK: - Recipe (snapshotListener)
     func fetchRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .document(documentId)
-            .addSnapshotListener({ documentSnapshot, error in
+            .addSnapshotListener { documentSnapshot, error in
 
                 if let error = error {
 
@@ -306,13 +306,13 @@ class DataManager {
                         completion(.failure(error))
                     }
                 }
-            })
+            }
     }
 
     // MARK: TodayRecipe
     func fetchTodayRecipe(completion: @escaping (Result<TodayRecipe, Error>) -> Void) {
 
-        db.collection(Collections.today.rawValue)
+        firestoreDB.collection(Collections.today.rawValue)
             .document(Document.todayRecipe.rawValue)
             .addSnapshotListener { documentSnapshot, error in
 
@@ -342,7 +342,7 @@ class DataManager {
     // MARK: OfficialRecipe (Query)
     func fetchOfficialRecipe(completion: @escaping (Result<Recipe, Error>) -> Void) {
 
-        db.collection(Collections.recipe.rawValue)
+        firestoreDB.collection(Collections.recipe.rawValue)
             .whereField("ownerId", isEqualTo: "official")
             .getDocuments { querySnapshot, error in
 
@@ -382,7 +382,7 @@ class DataManager {
     func updateIngredients(documentId: String, ingredients: [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Ingredient 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         let dicArray = ingredients.compactMap { ingredient in
 
@@ -405,7 +405,7 @@ class DataManager {
     func updateSteps(documentId: String, steps: [Step], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Step 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         let dicArray = steps.compactMap { step in
 
@@ -428,7 +428,7 @@ class DataManager {
     func updateMainImage(documentId: String, mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) MainImage 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(["mainImage": mainImage]) { error in
 
@@ -451,7 +451,7 @@ class DataManager {
     func updateIsEditDone(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) MainImage 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(["isEditDone": true]) { error in
 
@@ -466,11 +466,10 @@ class DataManager {
         }
     }
 
-    // MARK: RecipesCounts (update)
-    func updateRecipesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+    // MARK: - RecipesCounts (update)
+    func increaseRecipesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.user.rawValue).document(uid)
+        let ref = firestoreDB.collection(Collections.user.rawValue).document(uid)
 
         ref.updateData(
             ["recipesCounts": FieldValue.increment(Int64(1))]
@@ -478,24 +477,19 @@ class DataManager {
 
             if let error = error {
 
-                print("Error increase recipesCounts: \(error)")
-
                 completion(.failure(error))
-
             } else {
-
-                print("\(uid): RecipesCounts successfully increased!")
 
                 completion(.success(uid))
             }
         }
     }
 
-    // MARK: FavoritesCounts (update)
+    // MARK: - FavoritesCounts (update)
     func increaseFavoritesCounts(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.user.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.user.rawValue).document(documentId)
 
         ref.updateData(
             ["favoritesCounts": FieldValue.increment(Int64(1))]
@@ -515,7 +509,7 @@ class DataManager {
     func decreaseFavoritesCounts(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.user.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.user.rawValue).document(documentId)
 
         ref.updateData(
             ["favoritesCounts": FieldValue.increment(Int64(-1))]
@@ -535,7 +529,7 @@ class DataManager {
     func updateChallengesCounts(uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 ChallengesCounts 欄位
-        let ref = db.collection(Collections.user.rawValue).document(uid)
+        let ref = firestoreDB.collection(Collections.user.rawValue).document(uid)
 
         ref.updateData(
             ["challengesCounts": FieldValue.increment(Int64(1))]
@@ -560,7 +554,7 @@ class DataManager {
     func increaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(
             ["likes": FieldValue.increment(Int64(1))]
@@ -580,7 +574,7 @@ class DataManager {
     func decreaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 likes 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(
             ["likes": FieldValue.increment(Int64(-1))]
@@ -600,7 +594,7 @@ class DataManager {
     func addfavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 favoritesUserId 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(
             ["favoritesUserId": FieldValue.arrayUnion([favoritesUserId])]
@@ -620,7 +614,7 @@ class DataManager {
     func removefavoritesUserId(documentId: String, favoritesUserId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 favoritesUserId 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(
             ["favoritesUserId": FieldValue.arrayRemove([favoritesUserId])]
@@ -640,7 +634,7 @@ class DataManager {
     func updateBlockList(uid: String, recipeId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 favoritesUserId 欄位
-        let ref = db.collection(Collections.user.rawValue).document(uid)
+        let ref = firestoreDB.collection(Collections.user.rawValue).document(uid)
 
         ref.updateData(
             ["blockList": FieldValue.arrayUnion([recipeId])]
@@ -664,7 +658,7 @@ class DataManager {
     // MARK: FeedChallenger (update)
     func updateFeedChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        let ref = db.collection(Collections.feed.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.feed.rawValue).document(documentId)
 
         ref.updateData(
             ["challenger": uid, "isChallenged": true]
@@ -684,7 +678,7 @@ class DataManager {
     func updateFeedChallengeDoneStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 Challenger, isChallenged 欄位
-        let ref = db.collection(Collections.feed.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.feed.rawValue).document(documentId)
 
         ref.updateData(
             ["challengerRecipeId": recipeId, "challengerRecipeMainImage": mainImage, "challengerRecipeName": recipeName]
@@ -704,7 +698,7 @@ class DataManager {
     func updateRecipeChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 Challenger 欄位
-        let ref = db.collection(Collections.recipe.rawValue).document(documentId)
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(
             ["challenger": uid]
@@ -723,7 +717,7 @@ class DataManager {
     // MARK: Recipe (Add)
     func createRecipe(recipe: inout Recipe, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        let ref = db.collection(Collections.recipe.rawValue).document()
+        let ref = firestoreDB.collection(Collections.recipe.rawValue).document()
 
         // inout 屬性讓可以先 assign
         recipe.id = ref.documentID
@@ -751,7 +745,7 @@ class DataManager {
     // MARK: Feed (Add)
     func createFeed(feed: inout Feed, completion: @escaping (Result<String, Error>) -> Void) {
 
-        let ref = db.collection(Collections.feed.rawValue).document()
+        let ref = firestoreDB.collection(Collections.feed.rawValue).document()
 
         // inout 屬性讓可以先 assign
         feed.id = ref.documentID
