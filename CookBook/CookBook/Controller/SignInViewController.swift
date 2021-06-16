@@ -45,7 +45,7 @@ class SignInViewController: UIViewController {
 
         setupSignInButton()
 
-        // runCrashlytics()
+        // runCrashlyticsTest()
     }
 
     @IBAction func skipSignIn(_ sender: Any) {
@@ -157,15 +157,18 @@ class SignInViewController: UIViewController {
         return result
     }
 
-    func runCrashlytics() {
+    func runCrashlyticsTest() {
 
         Crashlytics.crashlytics().log("View Loaded")
+
         Crashlytics.crashlytics().setCustomValue(2021, forKey: "Year")
+
         Crashlytics.crashlytics().setCustomValue("Soham Paul", forKey: "Name")
+        
         Crashlytics.crashlytics().setUserID("424801")
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13.0, *)
     private func sha256(_ input: String) -> String {
 
         let inputData = Data(input.utf8)
@@ -212,7 +215,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
             )
 
             // Sign in with Firebase.
-            Auth.auth().signIn(with: credential) { authResult, error in
+            Auth.auth().signIn(with: credential) { _, error in
 
                 if let error = error {
 
