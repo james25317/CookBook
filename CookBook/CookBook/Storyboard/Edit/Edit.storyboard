@@ -125,20 +125,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebl-uf-60B">
-                                <rect key="frame" x="16" y="60" width="36" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="Tfq-0s-ehZ"/>
-                                    <constraint firstAttribute="height" constant="36" id="rb5-3w-ITS"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="chevron-left" symbolScale="medium"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="oAz-am-jhl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luc-xT-CyG">
                                 <rect key="frame" x="376" y="60" width="36" height="36"/>
                                 <constraints>
@@ -252,10 +238,8 @@
                             <constraint firstItem="ehl-8L-7ye" firstAttribute="leading" secondItem="7Vr-o8-0Pw" secondAttribute="leading" id="5SG-Kb-kF1"/>
                             <constraint firstItem="7Vr-o8-0Pw" firstAttribute="trailing" secondItem="lz6-f6-lPa" secondAttribute="trailing" id="5j7-T2-EEh"/>
                             <constraint firstItem="bJC-ys-hbg" firstAttribute="leading" secondItem="7Vr-o8-0Pw" secondAttribute="leading" constant="32" id="5tU-HK-8fn"/>
-                            <constraint firstItem="ebl-uf-60B" firstAttribute="leading" secondItem="7Vr-o8-0Pw" secondAttribute="leading" constant="16" id="6BC-Vh-8ja"/>
                             <constraint firstItem="tKJ-bD-Wxu" firstAttribute="top" secondItem="UBo-F6-aKs" secondAttribute="bottom" id="7F8-NX-Yhq"/>
                             <constraint firstItem="7Vr-o8-0Pw" firstAttribute="bottom" secondItem="bJC-ys-hbg" secondAttribute="bottom" constant="56" id="BXq-1o-bOU"/>
-                            <constraint firstItem="ebl-uf-60B" firstAttribute="top" secondItem="7Vr-o8-0Pw" secondAttribute="top" constant="16" id="DOs-Mp-SAF"/>
                             <constraint firstItem="kIJ-Eb-zd2" firstAttribute="top" secondItem="mjx-fd-ecV" secondAttribute="baseline" constant="8" id="EKb-Lh-lMk"/>
                             <constraint firstItem="lz6-f6-lPa" firstAttribute="centerX" secondItem="7Vr-o8-0Pw" secondAttribute="centerX" id="Fut-ej-ZVI"/>
                             <constraint firstItem="UBo-F6-aKs" firstAttribute="top" secondItem="lz6-f6-lPa" secondAttribute="bottom" constant="4" id="KjA-ru-fTH"/>
@@ -418,7 +402,6 @@
     </scenes>
     <resources>
         <image name="arrow-right" width="24" height="24"/>
-        <image name="chevron-left" width="24" height="24"/>
         <image name="x" width="24" height="24"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="CB-prime-yellow-1">

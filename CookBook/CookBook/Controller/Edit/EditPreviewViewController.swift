@@ -55,8 +55,6 @@ class EditPreviewViewController: UIViewController {
 
         viewModel?.recipeViewModel.bind { [weak self] recipe in
 
-            // self?.labelRecipeName.text = recipe?.name
-
             self?.sectionButtons[SectionType.ingredients.rawValue]
                 .setTitle("Ingredient (\(recipe?.ingredients.count ?? 0))", for: .normal)
 
@@ -64,7 +62,6 @@ class EditPreviewViewController: UIViewController {
                 .setTitle("Step (\(recipe?.steps.count ?? 0))", for: .normal)
         }
 
-        // set first button is selected by default
         sectionButtons[SectionType.ingredients.rawValue].isSelected = true
     }
 
@@ -75,25 +72,15 @@ class EditPreviewViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
 
-    @IBAction func back(_ sender: Any) {
-
-        // discard for now
-        navigationController?.popViewController(animated: true)
-    }
-
     @IBAction func leave(_ sender: Any) {
 
-        // alertPopup
         setupAlert()
     }
 
-    // MARK: go EditDone Page and pass data
     @IBAction func goEditDonePage(_ sender: Any) {
 
-        // 判斷_資料屬性
-        // assign latest mainImage data
         guard let value = viewModel?.recipeViewModel.value,
-              let mainImage = value.recipe.steps.last?.image else { return }
+            let mainImage = value.recipe.steps.last?.image else { return }
 
         // assign 本地 mainImage 資料
         value.recipe.mainImage = mainImage
@@ -101,20 +88,17 @@ class EditPreviewViewController: UIViewController {
         // assign 本地 isEditDone 資料
         value.recipe.isEditDone = true
 
-        // updat isEditDone
         viewModel?.updateIsEditDone()
 
         if !value.recipe.challenger.isEmpty {
 
-            // go challengeDonePage
             guard let editChallengeDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
-                        withIdentifier: "EditChallengeDone"
-                    ) as? EditChallengeDoneViewController else { return }
+                    withIdentifier: "EditChallengeDone"
+                ) as? EditChallengeDoneViewController else { return }
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            // update MainImage
             viewModel?.updateMainImage(with: mainImage) { [weak self] result in
 
                 switch result {
@@ -127,7 +111,6 @@ class EditPreviewViewController: UIViewController {
 
                     print("MainImage: \(mainImage) updated")
 
-                    // pass latest recipe data to EditDone
                     editChallengeDoneVC.viewModel = self?.viewModel
                     
                     CBProgressHUD.showSuccess(text: "Challenge CookBook Created")
@@ -137,13 +120,11 @@ class EditPreviewViewController: UIViewController {
             }
         } else {
 
-            // go editDonePage
             guard let editDoneVC = UIStoryboard.editDone
                 .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            // update MainImage
             viewModel?.updateMainImage(with: mainImage) { [weak self] result in
 
                 switch result {
@@ -155,8 +136,7 @@ class EditPreviewViewController: UIViewController {
                 case .success(let mainImage):
 
                     print("MainImage: \(mainImage) updated")
-                    
-                    // pass latest recipe data to EditDone
+
                     editDoneVC.viewModel = self?.viewModel
 
                     CBProgressHUD.showSuccess(text: "CookBook Created")
@@ -183,10 +163,7 @@ class EditPreviewViewController: UIViewController {
         updateContainer(type: type)
     }
 
-    // MARK: Prepare segue for data transfer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        // guard let viewModel = viewModel else { return }
 
         let identifier = segue.identifier
 
@@ -212,22 +189,24 @@ class EditPreviewViewController: UIViewController {
 
         indicatorCenterXConstraint.isActive = true
 
-        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+        UIView.animate(withDuration: 0.3) { [weak self] in
 
             self?.view.layoutIfNeeded()
-        })
+        }
     }
 
     private func updateContainer(type: SectionType) {
 
-        containerViews.forEach({ $0.isHidden = true })
+        containerViews.forEach { $0.isHidden = true }
 
         switch type {
 
         case .ingredients:
+
             ingredientsContainerView.isHidden = false
 
         case .steps:
+
             stepsContainerView.isHidden = false
         }
     }
@@ -251,8 +230,6 @@ class EditPreviewViewController: UIViewController {
             style: .default
             ) { _ in
 
-            // save and leave
-            // isEditDone = false
             self.goHomeVC()
         }
 
@@ -269,9 +246,10 @@ class EditPreviewViewController: UIViewController {
 
     private func goHomeVC() {
 
-        // back to homeVC
         guard let navigationController = self.navigationController,
-            let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+            let homeVC = navigationController.viewControllers.first(
+                where: { $0 is HomeViewController }
+            ) else { return }
 
         navigationController.popToViewController(homeVC, animated: true)
     }
