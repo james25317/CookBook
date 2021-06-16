@@ -24,8 +24,6 @@ class CBProgressHUD {
 
     var view: UIView {
 
-        // return AppDelegate.shared.window!.rootViewController!.view
-
         return (SceneDelegate.shared?.window?.rootViewController?.view)!
     }
 
@@ -43,6 +41,7 @@ class CBProgressHUD {
         }
     }
 
+    // MARK: TextOnly
     static func showText(text: String) {
 
         if !Thread.isMainThread {
@@ -63,6 +62,7 @@ class CBProgressHUD {
         shared.hud.dismiss(afterDelay: 1.0)
     }
 
+    // MARK: Success
     static func showSuccess(text: String = "success") {
 
         if !Thread.isMainThread {
@@ -83,6 +83,7 @@ class CBProgressHUD {
         shared.hud.dismiss(afterDelay: 1.0)
     }
 
+    // MARK: Failure
     static func showFailure(text: String = "Failure") {
 
         if !Thread.isMainThread {
@@ -103,6 +104,7 @@ class CBProgressHUD {
         shared.hud.dismiss(afterDelay: 1.0)
     }
 
+    // MARK: Show
     static func show() {
 
         if !Thread.isMainThread {
@@ -121,6 +123,7 @@ class CBProgressHUD {
         shared.hud.show(in: shared.view)
     }
 
+    // MARK: Dismiss
     static func dismiss() {
 
         if !Thread.isMainThread {
