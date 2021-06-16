@@ -664,7 +664,6 @@ class DataManager {
     // MARK: FeedChallenger (update)
     func updateFeedChallengeStatus(documentId: String, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫更新 Challenger, isChallenged 欄位
         let ref = db.collection(Collections.feed.rawValue).document(documentId)
 
         ref.updateData(

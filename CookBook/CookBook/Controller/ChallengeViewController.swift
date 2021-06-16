@@ -21,33 +21,22 @@ class ChallengeViewController: UIViewController {
 
     let viewModel = ReadViewModel()
     
-    // var recipeId: String?
-
-    // var selectedFeed: Feed?
-    
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
         viewModel.onGranteed = { [weak self] () in
-            
-            // 更新 挑戰者狀態
+
             guard let recipeId = self?.viewModel.recipeId,
                 let selectedFeed = self?.viewModel.selectedFeed,
                 let feedId = selectedFeed.id else { return }
 
-            // Useage: UserManager.shared.uid
             let uid = UserManager.shared.uid
 
-            // updateFeed
             self?.viewModel.updateFeedStatus(feedId: feedId, uid: uid)
 
-            // updateRecipe
             self?.viewModel.updateRecipeStatus(recipeId: recipeId, uid: uid)
-            
-            print("Challenge assigned")
 
-            // go create Recipe
             guard let editVC = UIStoryboard.edit
                 .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
 
@@ -58,21 +47,19 @@ class ChallengeViewController: UIViewController {
             CBProgressHUD.showSuccess(text: "Challenge Assigned")
             
             self?.navigationController?.pushViewController(editVC, animated: true)
+
+            print("Challenge assigned")
         }
 
-        viewModel.onDenied = { [weak self] () in
-
-            // alert 提示
-            print("Challenger has been assigned")
+        viewModel.onDenied = { () in
 
             CBProgressHUD.showFailure(text: "Challenge Has Been Assigned")
+
+            print("Challenger has been assigned")
         }
 
         viewModel.onReturned = { [weak self] () in
 
-            print("Redirect to homeVC")
-
-            // back to homeVC and reloadData()
             guard let navigationController = self?.navigationController,
                 let homeVC = navigationController.viewControllers.first(
                     where: { $0 is HomeViewController }
@@ -84,7 +71,7 @@ class ChallengeViewController: UIViewController {
         viewModel.recipeViewModel.bind { [weak self] recipeViewModel in
 
             guard let recipeViewModel = recipeViewModel,
-                  let selectedFeed = self?.viewModel.selectedFeed else { return }
+                let selectedFeed = self?.viewModel.selectedFeed else { return }
 
             if recipeViewModel.recipe.mainImage.isEmpty {
 
@@ -143,13 +130,6 @@ class ChallengeViewController: UIViewController {
         imageViewPortrait.loadImage(self.viewModel.selectedFeed?.portrait)
 
         labelOwnerName.text = self.viewModel.selectedFeed?.name
-
-        // roundedImageView()
-    }
-
-    private func roundedImageView() {
-
-        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
     }
 
     @objc func goReadPage() {
