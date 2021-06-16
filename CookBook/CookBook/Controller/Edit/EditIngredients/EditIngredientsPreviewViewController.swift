@@ -26,8 +26,7 @@ class EditIngredientsPreviewViewController: UIViewController {
 
         super.viewDidLoad()
 
-        // 綁定要 listen 的對象 (RecipeViewModel), 收到後刷新
-        viewModel?.recipeViewModel.bind { [weak self] recipe in
+        viewModel?.recipeViewModel.bind { [weak self] _ in
 
             self?.tableView.reloadData()
         }
@@ -43,15 +42,11 @@ class EditIngredientsPreviewViewController: UIViewController {
         )
     }
 
-    // MARK: Prepare segue for data transfer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        // guard let viewModel = viewModel else { return }
-
         if segue.identifier == "SegueEditIngredients",
-           let editIngredientsVC = segue.destination as? EditIngredientsViewController {
+        let editIngredientsVC = segue.destination as? EditIngredientsViewController {
 
-            // 傳 EditVM 過去
             editIngredientsVC.viewModel = viewModel
         }
     }
@@ -77,7 +72,7 @@ extension EditIngredientsPreviewViewController: UITableViewDataSource {
         guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
 
         guard let recipeViewModel = viewModel?.recipeViewModel.value,
-              indexPath.row < recipeViewModel.ingredients.count else { return cell }
+            indexPath.row < recipeViewModel.ingredients.count else { return cell }
 
         let ingredient = recipeViewModel.ingredients[indexPath.row]
 

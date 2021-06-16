@@ -154,12 +154,11 @@ class EditViewModel {
         }
     }
 
-
-    func updateIngredients(with ingredients: [Ingredient]) {
+    func uploadIngredients(with ingredients: [Ingredient]) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.updateIngredients(documentId: documentId, ingredients: ingredients) { result in
+        DataManager.shared.uploadIngredientsData(documentId: documentId, ingredients: ingredients) { result in
 
             switch result {
 
@@ -178,7 +177,7 @@ class EditViewModel {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.updateSteps(documentId: documentId, steps: steps) { result in
+        DataManager.shared.uploadStepsData(documentId: documentId, steps: steps) { result in
 
             switch result {
 

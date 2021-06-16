@@ -378,10 +378,9 @@ class DataManager {
             }
     }
 
-    // MARK: Ingredients (update)
-    func updateIngredients(documentId: String, ingredients: [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
-
-        // 這邊寫更新(覆寫) Ingredient 欄位
+    // MARK: - Ingredients (update)
+    func uploadIngredientsData(documentId: String, ingredients: [Ingredient], completion: @escaping (Result<String, Error>) -> Void) {
+        
         let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         let dicArray = ingredients.compactMap { ingredient in
@@ -401,8 +400,8 @@ class DataManager {
         }
     }
 
-    // MARK: Steps (update)
-    func updateSteps(documentId: String, steps: [Step], completion: @escaping (Result<String, Error>) -> Void) {
+    // MARK: - Steps (update)
+    func uploadStepsData(documentId: String, steps: [Step], completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) Step 欄位
         let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)

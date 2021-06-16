@@ -60,7 +60,7 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
         textViewDescription.text = step.description
     }
 
-    func setImage(with image: UIImage) {
+    func setupImage(with image: UIImage) {
 
         imageViewUploadedImage.image = image
     }

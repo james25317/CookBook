@@ -25,8 +25,7 @@ class EditStepsPreviewViewController: UIViewController {
 
         super.viewDidLoad()
 
-        // 綁定顯示的資料組
-        viewModel?.recipeViewModel.bind { [weak self] recipe in
+        viewModel?.recipeViewModel.bind { [weak self] _ in
 
             self?.tableView.reloadData()
         }
@@ -44,12 +43,9 @@ class EditStepsPreviewViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        // guard let viewModel = viewModel else { return }
-
         if segue.identifier == "SegueEditSteps",
-           let editStepsVC = segue.destination as? EditStepsViewController {
+        let editStepsVC = segue.destination as? EditStepsViewController {
 
-            // 傳 EditVM 過去
             editStepsVC.viewModel = viewModel
         }
     }
@@ -74,7 +70,7 @@ extension EditStepsPreviewViewController: UITableViewDataSource {
         guard let stepsCell = cell as? EditStepsTableViewCell else { return cell }
 
         guard let recipeViewModel = viewModel?.recipeViewModel.value,
-              indexPath.row < recipeViewModel.steps.count else { return cell }
+            indexPath.row < recipeViewModel.steps.count else { return cell }
 
         let step = recipeViewModel.steps[indexPath.row]
 

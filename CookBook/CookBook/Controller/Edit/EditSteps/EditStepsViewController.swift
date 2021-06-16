@@ -32,17 +32,14 @@ class EditStepsViewController: UIViewController {
         }
     }
 
-    // 本地資料組
+    // Local Steps Struct
     var steps: [Step]? {
 
         didSet {
 
             guard let collectionView = collectionView else { return }
 
-            // reload data
             collectionView.reloadData()
-
-            // steps 值變動，更替 mainImage 資料
         }
     }
 
@@ -63,8 +60,6 @@ class EditStepsViewController: UIViewController {
 
     @IBAction func leave(_ sender: Any) {
 
-        // save draft before leave logic
-
         dismiss(animated: true, completion: nil)
     }
 
@@ -74,7 +69,6 @@ class EditStepsViewController: UIViewController {
 
         steps?.append(step)
 
-        // move to latest cell's position
         if let steps = steps {
 
             let numberOfRowCounts = steps.count - 1
@@ -85,8 +79,8 @@ class EditStepsViewController: UIViewController {
 
     @IBAction func toTapSave(_ sender: Any) {
 
-        // uplaod before leave logic
-        guard let viewModel = viewModel, let steps = steps else { return }
+        guard let viewModel = viewModel,
+            let steps = steps else { return }
         
         viewModel.updateSteps(with: steps)
 
@@ -114,7 +108,6 @@ class EditStepsViewController: UIViewController {
             title: "Camera",
             style: .default) { _ in
 
-            // 開啟相機
             self.openCamera()
         }
 
@@ -122,7 +115,6 @@ class EditStepsViewController: UIViewController {
             title: "Album",
             style: .default) { _ in
 
-            // 開啟相簿
             self.openAlbum()
         }
 
@@ -143,16 +135,12 @@ class EditStepsViewController: UIViewController {
 
         imagePicker.sourceType = .camera
 
-        // imagePicker.allowsEditing = true
-
         present(imagePicker, animated: true)
     }
 
     private func openAlbum() {
 
         imagePicker.sourceType = .savedPhotosAlbum
-
-        // imagePicker.allowsEditing = true
 
         present(imagePicker, animated: true)
     }
@@ -193,22 +181,18 @@ extension EditStepsViewController: UICollectionViewDataSource {
 
         stepCell.onDescriptionChanged = { [weak self] description in
 
-            // write in steps data
             self?.steps?[indexPath.row].description = description
         }
 
         stepCell.onUploadedImageTapped = { [weak self] in
 
-            // upload menu open
             self?.setupUploadMenu()
 
-            // check: callback to know which cell is it
             self?.stepImageViewCell = stepCell
         }
 
         stepCell.onDeleteStep = { [weak self] in
 
-            // delete cell
             self?.steps?.remove(at: indexPath.row)
         }
 
@@ -226,7 +210,6 @@ extension EditStepsViewController: UIImagePickerControllerDelegate {
 
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
 
-            // upload function
             viewModel?.uploadImagePickerImage(with: image) { [weak self] result in
 
                 switch result {
@@ -239,14 +222,11 @@ extension EditStepsViewController: UIImagePickerControllerDelegate {
 
                     print("Image upload success!, downloadUrl: \(downloadUrl)")
 
-                    // locate indexpath from cell with pickerImgae
                     guard let cell = self?.stepImageViewCell,
-                          let indexpath = self?.collectionView.indexPath(for: cell) else { return }
+                        let indexpath = self?.collectionView.indexPath(for: cell) else { return }
 
-                    // replace cell's image with pickerImgae
-                    self?.stepImageViewCell?.setImage(with: image)
-
-                    // write in steps data
+                    self?.stepImageViewCell?.setupImage(with: image)
+                    
                     self?.steps?[indexpath.row].image = downloadUrl
                 }
             }

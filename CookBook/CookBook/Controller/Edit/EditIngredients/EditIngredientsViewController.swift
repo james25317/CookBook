@@ -41,7 +41,7 @@ class EditIngredientsViewController: UIViewController {
 
             tableView.dataSource = self
 
-            if let ingredients = ingredients {
+            if ingredients != nil {
 
                 tableView.reloadData()
             }
@@ -60,7 +60,7 @@ class EditIngredientsViewController: UIViewController {
         }
     }
 
-    // 傳過來的 Struct 來做本地增減
+    // Local ingredients Struct
     var ingredients: [Ingredient]? {
 
         didSet {
@@ -83,8 +83,6 @@ class EditIngredientsViewController: UIViewController {
 
     @IBAction func leave(_ sender: Any) {
 
-        // save draft before leave logic
-        
         dismiss(animated: true, completion: nil)
     }
 
@@ -113,20 +111,17 @@ class EditIngredientsViewController: UIViewController {
 
         guard let viewModel = viewModel else { return }
 
-        // Add Ingredient data with VM's function (local)
         ingredients?.append(viewModel.ingredient)
 
-        // reset 輸入框內容
         resetTextField()
     }
 
-
     @IBAction func onTapSave(_ sender: Any) {
 
-        guard let viewModel = viewModel, let ingredients = ingredients else { return }
+        guard let viewModel = viewModel,
+            let ingredients = ingredients else { return }
 
-        // update local Ingredient struct
-        viewModel.updateIngredients(with: ingredients)
+        viewModel.uploadIngredients(with: ingredients)
 
         CBProgressHUD.showSuccess(text: "Ingredients Added")
 
@@ -152,7 +147,6 @@ class EditIngredientsViewController: UIViewController {
 
     func deleteData(at index: Int) {
 
-        // 刪除 ingredients 中點擊的值
         ingredients?.remove(at: index)
     }
 }
@@ -172,18 +166,15 @@ extension EditIngredientsViewController: UITableViewDataSource {
             withIdentifier: String(describing: EditIngredientsTableViewCell.self
             ), for: indexPath)
 
-        guard let ingredientCell = cell as? EditIngredientsTableViewCell else { return cell }
-
-        // 用本地的 Ingredients 資料更新
-        guard let ingredients = ingredients else { return cell }
+        guard let ingredientCell = cell as? EditIngredientsTableViewCell,
+            let ingredients = ingredients else { return cell }
 
         let ingredient = ingredients[indexPath.item]
 
         ingredientCell.layoutCell(with: ingredient)
 
         ingredientCell.onDelete = { [weak self] in
-
-            // 定義刪除的行為
+            
             self?.deleteData(at: indexPath.item)
         }
 
@@ -200,11 +191,11 @@ extension EditIngredientsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         guard let textFieldingredient = textFieldingredientName.text,
-              let textFieldAmount = textFieldAmount.text,
-              let textFieldUnit = textFieldUnit.text,
-              !textFieldingredient.isEmpty,
-              !textFieldAmount.isEmpty,
-              !textFieldUnit.isEmpty
+            let textFieldAmount = textFieldAmount.text,
+            let textFieldUnit = textFieldUnit.text,
+            !textFieldingredient.isEmpty,
+            !textFieldAmount.isEmpty,
+            !textFieldUnit.isEmpty
         else {
 
             buttonAdd.isEnabled = false
