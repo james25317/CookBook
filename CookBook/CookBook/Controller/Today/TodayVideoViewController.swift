@@ -15,6 +15,7 @@ class TodayVideoViewController: UIViewController {
     var viewModel: TodayViewModel?
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         loadWebView()
@@ -22,9 +23,8 @@ class TodayVideoViewController: UIViewController {
 
     private func loadWebView() {
 
-        // load videoId data from Fb
         guard let viewModel = viewModel,
-              let value = viewModel.todayRecipeViewModel.value else { return }
+            let value = viewModel.todayRecipeViewModel.value else { return }
 
         let videoId = value.videoId
 

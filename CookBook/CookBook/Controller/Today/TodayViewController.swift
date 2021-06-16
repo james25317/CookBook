@@ -16,8 +16,7 @@ class TodayViewController: UIViewController {
 
     let viewModel = TodayViewModel()
 
-    // Useage: UserManager.shared.uid
-    let uid = UserManager.shared.uid
+    private let uid = UserManager.shared.uid
 
     override func viewWillAppear(_ animated: Bool) {
 
@@ -38,20 +37,13 @@ class TodayViewController: UIViewController {
 
         viewModel.fetchUserData(uid: uid)
 
-        // fetch video 資料回 VM.value
         viewModel.fetchTodayRecipeData()
 
-        // query recipe 資料
         viewModel.fetchOfficialRecipeData()
 
         viewModel.onReNewed = { [weak self] () in
 
             self?.imageViewTodayRecipe.loadImage(self?.viewModel.recipe?.mainImage)
-        }
-
-        viewModel.todayRecipeViewModel.bind { [weak self] todayRecipe in
-
-            // 資料更新後的行為
         }
 
         setupTodayRecipeTapGesture()
@@ -66,7 +58,7 @@ class TodayViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    // 臨時 SignOut
+    // SignOut
     @IBAction func signOut(_ sender: Any) {
 
         print("SignOut button tapped!")
@@ -85,11 +77,8 @@ class TodayViewController: UIViewController {
 
     @IBAction func skipThisPage(_ sender: UIButton) {
 
-        // comes from beginning goes here
         guard let homeVC = UIStoryboard.main
-                .instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
-
-        // homeVC.navigationItem.setHidesBackButton(true, animated: false)
+            .instantiateViewController(withIdentifier: "Home") as? HomeViewController else { return }
 
         navigationController?.pushViewController(homeVC, animated: true)
     }
@@ -115,13 +104,12 @@ class TodayViewController: UIViewController {
     @objc func goTodayReadPage() {
 
         guard let readVC = UIStoryboard.read
-                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+            .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         navigationController?.pushViewController(readVC, animated: true)
 
-        // fetch 到資料後，傳 recipeId 過去
         guard let recipe = self.viewModel.recipe else { return }
         
         readVC.recipeId = recipe.id
@@ -129,16 +117,16 @@ class TodayViewController: UIViewController {
     
     @objc func goTodayRecipeVideo() {
 
+        // hard coded uid for admin
         if UserManager.shared.uid == "EkrSAora4PRxZ1H22ggj6UfjU6A3" {
 
             guard let todayVideoVC = storyboard?
-                    .instantiateViewController(withIdentifier: "TodayVideo") as? TodayVideoViewController else { return }
+                .instantiateViewController(withIdentifier: "TodayVideo") as? TodayVideoViewController else { return }
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
             navigationItem.backBarButtonItem?.tintColor = .white
 
-            // fetch 到資料後，傳 VM 過去
             todayVideoVC.viewModel = viewModel
 
             navigationController?.pushViewController(todayVideoVC, animated: true)
@@ -146,6 +134,5 @@ class TodayViewController: UIViewController {
 
             CBProgressHUD.showText(text: "Coming Soon")
         }
-
     }
 }
