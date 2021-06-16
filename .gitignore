@@ -122,6 +122,8 @@ iOSInjectionProject/
 ###google plist###
 GoogleService-Info.plist
 
+###apple signIn###
+CookBook.entitlements
 
 ## Gcc Patch
 /*.gcno
