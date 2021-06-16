@@ -50,9 +50,9 @@ class ReadViewModel {
         }
     }
 
-    func checkRecipeValue(reciepeId: String) {
+    func checkRecipeChallenger(reciepeId: String) {
 
-        DataManager.shared.checkRecipe(documentId: reciepeId) { [weak self] result in
+        DataManager.shared.checkRecipeChallenger(documentId: reciepeId) { [weak self] result in
 
             switch result {
 

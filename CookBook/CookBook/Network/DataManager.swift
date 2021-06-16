@@ -250,8 +250,8 @@ class DataManager {
             }
     }
 
-    // MARK: Recipe (by challenge status)
-    func checkRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
+    // MARK: - Recipe (by challenge status)
+    func checkRecipeChallenger(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)
             .document(documentId)
@@ -278,7 +278,7 @@ class DataManager {
             }
     }
 
-    // MARK: Recipe (snapshotListener)
+    // MARK: - Recipe (snapshotListener)
     func fetchRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         db.collection(Collections.recipe.rawValue)

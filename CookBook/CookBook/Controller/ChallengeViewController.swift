@@ -110,10 +110,9 @@ class ChallengeViewController: UIViewController {
 
     @IBAction func goEditRecipe(_ sender: Any) {
         
-        // fetch this recipe for checking is challenger field is empty, if not, alert sign pops (and go back).
         guard let recipeId = self.viewModel.recipeId else { return }
 
-        viewModel.checkRecipeValue(reciepeId: recipeId)
+        viewModel.checkRecipeChallenger(reciepeId: recipeId)
     }
 
     private func setupTapGesture() {
@@ -134,20 +133,17 @@ class ChallengeViewController: UIViewController {
 
     @objc func goReadPage() {
 
-        print("OwnerRecipe tapped")
-
-        // go ReadPage
         guard let readVC = UIStoryboard.read
             .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
 
-        // 取 recipeId (feed.recipeId)
         let recipeId = self.viewModel.recipeId
 
-        // 傳 Id
         readVC.recipeId = recipeId
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         self.navigationController?.pushViewController(readVC, animated: true)
+
+        print("OwnerRecipe tapped")
     }
 }
