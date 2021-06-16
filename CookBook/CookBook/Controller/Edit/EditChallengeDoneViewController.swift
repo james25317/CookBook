@@ -24,7 +24,7 @@ class EditChallengeDoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUpAnimation()
+        setupAnimation()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,11 +35,10 @@ class EditChallengeDoneViewController: UIViewController {
     }
 
     @IBAction func shareBackToFeed(_ sender: Any) {
-        
-        // update challenge Feed's data
+
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipeViewModel.value?.recipe,
-              let feedId = viewModel.feedId, let recipeId = recipe.id else { return }
+            let recipe = viewModel.recipeViewModel.value?.recipe,
+            let feedId = viewModel.feedId, let recipeId = recipe.id else { return }
 
         viewModel.updateFeedChallengeDoneStatus(
             documentId: feedId,
@@ -48,14 +47,15 @@ class EditChallengeDoneViewController: UIViewController {
             recipeName: recipe.name
         )
 
-        // back to homeFeed
         guard let navigationController = navigationController,
-              let homeVC = navigationController.viewControllers.first(where: { $0 is HomeViewController }) else { return }
+            let homeVC = navigationController.viewControllers.first(
+                where: { $0 is HomeViewController }
+            ) else { return }
 
         navigationController.popToViewController(homeVC, animated: true)
     }
 
-    func setUpAnimation() {
+    func setupAnimation() {
 
         let animeView = AnimationView()
 
@@ -70,10 +70,6 @@ class EditChallengeDoneViewController: UIViewController {
         animeView.loopMode = .loop
 
         animeView.play()
-
-        // animeView.play(fromProgress: 0, toProgress: 1)
-
-        // animeView.play(fromMarker: "begin", toMarker: "end")
 
         animationView.addSubview(animeView)
     }
