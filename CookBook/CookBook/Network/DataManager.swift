@@ -89,7 +89,7 @@ class DataManager {
     }
     
     // MARK: - Recipes
-    func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
+    func fetchRecipesData(completion: @escaping (Result<[Recipe], Error>) -> Void) {
 
         firestoreDB.collection(Collections.recipe.rawValue)
             .order(by: "createdTime", descending: true)
@@ -112,129 +112,6 @@ class DataManager {
 
                             if var recipe = try document.data(as: Recipe.self, decoder: Firestore.Decoder()) {
 
-                                recipe.id = document.documentID
-
-                                recipes.append(recipe)
-                            }
-                        } catch {
-
-                            completion(.failure(error))
-                        }
-                    }
-
-                    completion(.success(recipes))
-                }
-            }
-    }
-
-    // MARK: - Recipes (by ownerId)
-    func fetchOwnerRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
-
-        firestoreDB.collection(Collections.recipe.rawValue)
-            .whereField(Field.owner.rawValue, isEqualTo: ownerId)
-            .order(by: Field.time.rawValue, descending: true)
-            .getDocuments { querySnapshot, error in
-
-                if let error = error {
-
-                    completion(.failure(error))
-                } else {
-
-                    var recipes: [Recipe] = []
-
-                    guard let querySnapshot = querySnapshot else { return }
-
-                    for document in querySnapshot.documents {
-
-                        print("\(document.documentID) => \(document.data())")
-
-                        do {
-
-                            if var recipe = try document.data(as: Recipe.self) {
-
-                                // assign documentId to each recipe
-                                recipe.id = document.documentID
-
-                                recipes.append(recipe)
-                            }
-                        } catch {
-
-                            completion(.failure(error))
-                        }
-                    }
-
-                    completion(.success(recipes))
-                }
-            }
-    }
-
-    // MARK: - Recipes (by favoritesUserId)
-    func fetchFavoritesRecipes(uid: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
-
-        firestoreDB.collection(Collections.recipe.rawValue)
-            .whereField(Field.favorites.rawValue, arrayContains: uid)
-            .order(by: Field.time.rawValue, descending: true)
-            .getDocuments { querySnapshot, error in
-
-                if let error = error {
-
-                    completion(.failure(error))
-                } else {
-
-                    var recipes: [Recipe] = []
-
-                    guard let querySnapshot = querySnapshot else { return }
-
-                    for document in querySnapshot.documents {
-
-                        print("\(document.documentID) => \(document.data())")
-
-                        do {
-
-                            if var recipe = try document.data(as: Recipe.self) {
-
-                                // assign documentId to each recipe
-                                recipe.id = document.documentID
-
-                                recipes.append(recipe)
-                            }
-                        } catch {
-
-                            completion(.failure(error))
-                        }
-                    }
-
-                    completion(.success(recipes))
-                }
-            }
-    }
-
-    // MARK: Recipes (by challenger)
-    func fetchChallengesRecipes(ownerId: String, completion: @escaping (Result<[Recipe], Error>) -> Void) {
-
-        firestoreDB.collection(Collections.recipe.rawValue)
-            .whereField(Field.challenges.rawValue, isEqualTo: ownerId)
-            .order(by: Field.time.rawValue, descending: true)
-            .getDocuments { querySnapshot, error in
-
-                if let error = error {
-
-                    completion(.failure(error))
-                } else {
-
-                    var recipes: [Recipe] = []
-
-                    guard let querySnapshot = querySnapshot else { return }
-
-                    for document in querySnapshot.documents {
-
-                        print("\(document.documentID) => \(document.data())")
-
-                        do {
-
-                            if var recipe = try document.data(as: Recipe.self) {
-
-                                // assign documentId to each recipe
                                 recipe.id = document.documentID
 
                                 recipes.append(recipe)

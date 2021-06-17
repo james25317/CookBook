@@ -100,7 +100,7 @@ class ProfileViewController: UIViewController {
 
     private func fetchProfileData(uid: String) {
 
-        viewModel.fetchRecipesData()
+        viewModel.fetchRecipes()
 
         viewModel.fetchUserData(uid: uid)
     }

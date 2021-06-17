@@ -9,13 +9,13 @@ import Foundation
 
 class ProfileViewModel {
 
-    public enum SortType: Int {
+    public enum SortType: Int, CaseIterable {
 
         case recipes = 0
 
-        case favorites = 1
+        case favorites
 
-        case challenges = 2
+        case challenges
     }
 
     let userViewModel: Box<UserViewModel?> = Box(nil)
@@ -30,12 +30,12 @@ class ProfileViewModel {
 
             case .success(let user):
 
-                print("Fetch user success: \(user)")
+                self?.setUserToViewModel(user)
 
-                self?.setUser(user)
-
-                // fetch 最新資料至 UserManager
+                // fetch latest user data
                 UserManager.shared.user = user
+
+                print("Fetch user success: \(user)")
 
             case .failure(let error):
 
@@ -44,7 +44,7 @@ class ProfileViewModel {
         }
     }
 
-    // 根據 button.tag 切換資料內容（利用 filter 出資料）
+    // Based on button.tag, switching section contents（by filter types）
     func switchSection(uid: String, sortType: SortType) -> [RecipeViewModel] {
 
         switch sortType {
@@ -72,9 +72,9 @@ class ProfileViewModel {
         }
     }
 
-    func fetchRecipesData() {
+    func fetchRecipes() {
 
-        DataManager.shared.fetchRecipes { [weak self] result in
+        DataManager.shared.fetchRecipesData { [weak self] result in
 
             switch result {
 
@@ -82,68 +82,11 @@ class ProfileViewModel {
 
                 print("Fetch recipes success!")
 
-                self?.setRecipes(recipes)
+                self?.setRecipesToViewModel(recipes)
 
             case .failure(let error):
 
                 print("fetchData.failure: \(error)")
-            }
-        }
-    }
-
-    func fetchOwnerRecipesData(with ownerId: String) {
-
-        DataManager.shared.fetchOwnerRecipes(ownerId: ownerId) { [weak self] result in
-
-            switch result {
-
-            case .success(let recipes):
-
-                print("Fetch \(ownerId) recipes success!")
-
-                self?.setRecipes(recipes)
-
-            case .failure(let error):
-
-                print("Fetch fail: \(error)")
-            }
-        }
-    }
-
-    func fetchFavoritesRecipesData(with ownerId: String) {
-
-        DataManager.shared.fetchFavoritesRecipes(uid: ownerId) { [weak self] result in
-
-            switch result {
-
-            case .success(let recipes):
-
-                print("Fetch \(ownerId) favorites recipes success!")
-
-                self?.setRecipes(recipes)
-
-            case .failure(let error):
-
-                print("Fetch fail: \(error)")
-            }
-        }
-    }
-
-    func fetchChallengesRecipesData(with ownerId: String) {
-
-        DataManager.shared.fetchChallengesRecipes(ownerId: ownerId) { [weak self] result in
-
-            switch result {
-
-            case .success(let recipes):
-
-                print("Fetch \(ownerId) challenges recipes success!")
-
-                self?.setRecipes(recipes)
-
-            case .failure(let error):
-
-                print("Fetch fail: \(error)")
             }
         }
     }
@@ -169,12 +112,12 @@ class ProfileViewModel {
         return viewModels
     }
 
-    func setUser(_ user: User) {
+    func setUserToViewModel(_ user: User) {
 
         userViewModel.value = convertUserToViewModel(from: user)
     }
 
-    func setRecipes(_ recipes: [Recipe]) {
+    func setRecipesToViewModel(_ recipes: [Recipe]) {
 
         recipeViewModels.value = convertRecipesToViewModels(from: recipes)
     }
