@@ -14,7 +14,7 @@ public enum RefreshState {
     case disabled
 }
 
-public protocol Refreshable: class {
+public protocol Refreshable: AnyObject {
     
     /// The state of refresher.
     var state: RefreshState { get }

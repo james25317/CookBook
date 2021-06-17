@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol HasStateTitle: class {
+public protocol HasStateTitle: AnyObject {
     
     var stateTitles: [RefreshState: String] { get set }
     

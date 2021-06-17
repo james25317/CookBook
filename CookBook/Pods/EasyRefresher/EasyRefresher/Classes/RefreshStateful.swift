@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol RefreshStateful: class {
+public protocol RefreshStateful: AnyObject {
     
     /// refresher state did change
     /// - Parameters:

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol RefreshDelegate: class {
+public protocol RefreshDelegate: AnyObject {
     func refresherDidRefresh(_ refresher: Refresher)
 }
 
