@@ -68,6 +68,10 @@ class EditViewModel {
 
     var challengerRecipeMainImage: String?
 
+    var onCreatedDone: (() -> Void)?
+
+    var onChallengeCreatedDone: (() -> Void)?
+
     func onNameChanged(text name: String) {
 
         self.recipe.name = name
@@ -194,21 +198,32 @@ class EditViewModel {
     }
 
     // MARK: - uploadMainImage
-    func uploadMainImage(with mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func uploadMainImage(with mainImage: String) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        RecipeManager.shared.uploadMainImage(documentId: documentId, mainImage: mainImage) { result in
+        RecipeManager.shared.uploadMainImage(documentId: documentId, mainImage: mainImage) { [weak self] result in
 
             switch result {
 
             case .success(let mainImage):
 
-                completion(.success(mainImage))
+                guard let value = self?.recipeViewModel.value else { return }
+
+                // check if challenger is assigned or not
+                if !value.recipe.challenger.isEmpty {
+
+                    self?.onChallengeCreatedDone?()
+                } else {
+
+                    self?.onCreatedDone?()
+                }
+
+                print("MainImage: \(mainImage) updated")
 
             case .failure(let error):
 
-                completion(.failure(error))
+                print("Updated fail, failure: \(error)")
             }
         }
     }

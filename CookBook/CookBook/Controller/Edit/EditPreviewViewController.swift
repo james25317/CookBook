@@ -44,14 +44,46 @@ class EditPreviewViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
 
-        navigationController?.setNavigationBarHidden(true, animated: true)
-
         super.viewWillAppear(animated)
+
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        viewModel?.onCreatedDone = { [weak self] () in
+
+            guard let editDoneVC = UIStoryboard.editDone
+                .instantiateViewController(
+                    withIdentifier: "EditDone"
+                ) as? EditDoneViewController else { return }
+
+            self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+            self?.navigationController?.pushViewController(editDoneVC, animated: true)
+
+            editDoneVC.viewModel = self?.viewModel
+
+            CBProgressHUD.showSuccess(text: "CookBook Created")
+        }
+
+        viewModel?.onChallengeCreatedDone = { [weak self] () in
+
+            guard let editChallengeDoneVC = UIStoryboard.editDone
+                .instantiateViewController(
+                    withIdentifier: "EditChallengeDone"
+                ) as? EditChallengeDoneViewController else { return }
+
+            self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+            self?.navigationController?.pushViewController(editChallengeDoneVC, animated: true)
+
+            editChallengeDoneVC.viewModel = self?.viewModel
+
+            CBProgressHUD.showSuccess(text: "Challenge CookBook Created")
+        }
 
         viewModel?.recipeViewModel.bind { [weak self] recipe in
 
@@ -82,69 +114,13 @@ class EditPreviewViewController: UIViewController {
         guard let value = viewModel?.recipeViewModel.value,
             let mainImage = value.recipe.steps.last?.image else { return }
 
-        // assign 本地 mainImage 資料
         value.recipe.mainImage = mainImage
 
-        // assign 本地 isEditDone 資料
         value.recipe.isEditDone = true
 
         viewModel?.updateRecipeEditStatus()
 
-        if !value.recipe.challenger.isEmpty {
-
-            guard let editChallengeDoneVC = UIStoryboard.editDone
-                .instantiateViewController(
-                    withIdentifier: "EditChallengeDone"
-                ) as? EditChallengeDoneViewController else { return }
-
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-            viewModel?.uploadMainImage(with: mainImage) { [weak self] result in
-
-                switch result {
-
-                case .failure(let error):
-
-                    print("updated error: \(error)")
-
-                case .success(let mainImage):
-
-                    print("MainImage: \(mainImage) updated")
-
-                    editChallengeDoneVC.viewModel = self?.viewModel
-                    
-                    CBProgressHUD.showSuccess(text: "Challenge CookBook Created")
-
-                    self?.navigationController?.pushViewController(editChallengeDoneVC, animated: true)
-                }
-            }
-        } else {
-
-            guard let editDoneVC = UIStoryboard.editDone
-                .instantiateViewController(withIdentifier: "EditDone") as? EditDoneViewController else { return }
-
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-            viewModel?.uploadMainImage(with: mainImage) { [weak self] result in
-
-                switch result {
-
-                case .failure(let error):
-
-                    print("updated error: \(error)")
-
-                case .success(let mainImage):
-
-                    print("MainImage: \(mainImage) updated")
-
-                    editDoneVC.viewModel = self?.viewModel
-
-                    CBProgressHUD.showSuccess(text: "CookBook Created")
-
-                    self?.navigationController?.pushViewController(editDoneVC, animated: true)
-                }
-            }
-        }
+        viewModel?.uploadMainImage(with: mainImage)
     }
 
     @IBAction func onChangeSections(_ sender: UIButton) {
