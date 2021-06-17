@@ -113,12 +113,12 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return self.viewModel.filteredFeeds().count
+        return self.viewModel.filteredBlockListFromFeeds().count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cellViewModel = self.viewModel.filteredFeeds()[indexPath.row]
+        let cellViewModel = self.viewModel.filteredBlockListFromFeeds()[indexPath.row]
 
         if !cellViewModel.isChallenged {
 
@@ -191,7 +191,7 @@ extension HomeViewController: UITableViewDelegate {
 
         tableView.deselectRow(at: indexPath, animated: false)
 
-        let cellViewModel = self.viewModel.filteredFeeds()[indexPath.row]
+        let cellViewModel = self.viewModel.filteredBlockListFromFeeds()[indexPath.row]
         
         if !cellViewModel.challenger.isEmpty {
 
