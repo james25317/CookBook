@@ -11,58 +11,39 @@ class UserViewModel {
     
     var user: User
 
-    // var onDelete: (() -> Void)?
-
     init(model user: User) {
-
         self.user = user
     }
     
     var id: String {
-        get {
-            return user.id ?? ""
-        }
+        return user.id ?? ""
     }
     
     var name: String {
-        get {
-            return user.name
-        }
+        return user.name
     }
 
     var portrait: String {
-        get {
-            return user.portrait
-        }
+        return user.portrait
     }
 
     var email: String {
-        get {
-            return user.email
-        }
+        return user.email
     }
 
     var challengesCounts: Int {
-        get {
-            return user.challengesCounts
-        }
+        return user.challengesCounts
     }
 
     var favoritesCounts: Int {
-        get {
-            return user.favoritesCounts
-        }
+        return user.favoritesCounts
     }
 
     var recipesCounts: Int {
-        get {
-            return user.recipesCounts
-        }
+        return user.recipesCounts
     }
 
     var blockList: [String] {
-        get {
-            return user.blockList
-        }
+        return user.blockList
     }
 }
