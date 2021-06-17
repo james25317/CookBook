@@ -13,85 +13,58 @@ class RecipeViewModel {
     var recipe: Recipe
     
     init(model recipe: Recipe) {
-
         self.recipe = recipe
     }
     
     var id: String {
-        get {
-            return recipe.id ?? ""
-        }
+        return recipe.id ?? ""
     }
     
     var createdTime: Timestamp {
-        get {
-            return recipe.createdTime
-        }
+        return recipe.createdTime
     }
     
     var description: String {
-        get {
-            return recipe.description
-        }
+        return recipe.description
     }
     
     var favoritesUserId: [String] {
-        get {
-            return recipe.favoritesUserId
-        }
+        return recipe.favoritesUserId
     }
     
     var ingredients: [Ingredient] {
-        get {
-            return recipe.ingredients
-        }
+        return recipe.ingredients
     }
     
     var isEditDone: Bool {
-        get {
-            return recipe.isEditDone
-        }
+        return recipe.isEditDone
     }
     
     var likedUserId: [String] {
-        get {
-            return recipe.likedUserId
-        }
+        return recipe.likedUserId
     }
     
     var likes: Int64 {
-        get {
-            return recipe.likes
-        }
+        return recipe.likes
     }
     
     var mainImage: String {
-        get {
-            return recipe.mainImage
-        }
+        return recipe.mainImage
     }
     
     var name: String {
-        get {
-            return recipe.name
-        }
+        return recipe.name
     }
     
     var ownerId: String {
-        get {
-            return recipe.ownerId
-        }
+        return recipe.ownerId
     }
     
     var steps: [Step] {
-        get {
-            return recipe.steps
-        }
+        return recipe.steps
     }
 
     var challenger: String {
-        get {
-            return recipe.challenger
-        }
+        return recipe.challenger
     }
 }
