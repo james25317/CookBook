@@ -4,7 +4,6 @@
 //
 //  Created by James Hung on 2021/5/16.
 //
-// swiftlint:disable implicit_getter
 
 import UIKit
 
@@ -13,98 +12,59 @@ class FeedViewModel {
     var feed: Feed
 
     init(model feed: Feed) {
-        
+
         self.feed = feed
     }
 
     var challenger: String {
-
-        get {
-            return feed.challenger
-        }
+        return feed.challenger
     }
 
     var challengerRecipeId: String {
-
-        get {
-            return feed.challengerRecipeId
-        }
+        return feed.challengerRecipeId
     }
 
     var challengerRecipeName: String {
-
-        get {
-            return feed.challengerRecipeName
-        }
+        return feed.challengerRecipeName
     }
 
     var challengerRecipeMainImage: String {
-
-        get {
-            return feed.challengerRecipeMainImage
-        }
+        return feed.challengerRecipeMainImage
     }
 
     var createdTime: String {
-
-        get {
-            return Date.dateFormatter.string(from: Date.init(milliseconds: feed.createdTime))
-        }
+        return Date.dateFormatter.string(from: Date.init(milliseconds: feed.createdTime))
     }
 
     var id: String {
-
-        get {
-            return feed.id!
-        }
+        return feed.id ?? ""
     }
 
     var isChallenged: Bool {
-
-        get {
-            return feed.isChallenged
-        }
+        return feed.isChallenged
     }
 
     var mainImage: String {
-
-        get {
-            return feed.mainImage
-        }
+        return feed.mainImage
     }
 
     var name: String {
-
-        get {
-            return feed.name
-        }
+        return feed.name
     }
 
     var ownerId: String {
-
-        get {
-            return feed.ownerId
-        }
+        return feed.ownerId
     }
 
     var portrait: String {
-
-        get {
-            return feed.portrait
-        }
+        return feed.portrait
     }
 
     var recipeId: String {
-
-        get {
-            return feed.recipeId
-        }
+        return feed.recipeId
     }
 
     var recipeName: String {
-        
-        get {
-            return feed.recipeName
-        }
+        return feed.recipeName
     }
 }
