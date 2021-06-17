@@ -184,13 +184,12 @@ class RecipeManager {
     }
     
     // MARK: - Recipe Likes (increase)
-    func increaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateLikes(documentId: String, number: Int, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫更新 likes 欄位
         let ref = fireStoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(
-            ["likes": FieldValue.increment(Int64(1))]
+            ["likes": FieldValue.increment(Int64(number))]
         ) { error in
 
             if let error = error {
@@ -206,7 +205,6 @@ class RecipeManager {
     // MARK: - Recipe Likes (decrease)
     func decreaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 這邊寫更新 likes 欄位
         let ref = fireStoreDB.collection(Collections.recipe.rawValue).document(documentId)
 
         ref.updateData(

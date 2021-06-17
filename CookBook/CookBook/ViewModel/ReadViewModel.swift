@@ -76,15 +76,15 @@ class ReadViewModel {
         }
     }
 
-    func increaseLikes(documentId: String) {
+    func updateLikes(documentId: String, by number: Int) {
 
-        UserManager.shared.increaseLikes(documentId: documentId) { result in
+        RecipeManager.shared.updateLikes(documentId: documentId, number: number) { result in
 
             switch result {
 
             case .success(let documentId):
 
-                print("\(documentId): Likes increase 1")
+                print("\(documentId): \(number) likes updated")
                 
             case .failure(let error):
 
@@ -92,24 +92,7 @@ class ReadViewModel {
             }
         }
     }
-
-    func decreaseLikes(documentId: String) {
-
-        UserManager.shared.decreaseLikes(documentId: documentId) { result in
-
-            switch result {
-
-            case .success(let documentId):
-
-                print("\(documentId): Likes decrease 1")
-
-            case .failure(let error):
-
-                print(error)
-            }
-        }
-    }
-
+    
     func increaseFavoritesCounts(uid: String) {
 
         UserManager.shared.increaseFavoritesCounts(documentId: uid) { result in

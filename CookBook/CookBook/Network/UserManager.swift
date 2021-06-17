@@ -156,45 +156,7 @@ class UserManager {
             }
         }
     }
-
-    // MARK: - Recipe Likes (increase)
-    func increaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
-        
-        let ref = fireStoreDB.collection(Collections.recipe.rawValue).document(documentId)
-
-        ref.updateData(
-            ["likes": FieldValue.increment(Int64(1))]
-        ) { error in
-
-            if let error = error {
-
-                completion(.failure(error))
-            } else {
-
-                completion(.success(documentId))
-            }
-        }
-    }
-
-    // MARK: - Recipe Likes (decrease)
-    func decreaseLikes(documentId: String, completion: @escaping (Result<String, Error>) -> Void) {
-        
-        let ref = fireStoreDB.collection(Collections.recipe.rawValue).document(documentId)
-
-        ref.updateData(
-            ["likes": FieldValue.increment(Int64(-1))]
-        ) { error in
-
-            if let error = error {
-
-                completion(.failure(error))
-            } else {
-
-                completion(.success(documentId))
-            }
-        }
-    }
-
+    
     // MARK: - User BlockList (update)
     func updateBlockList(uid: String, recipeId: String, completion: @escaping (Result<String, Error>) -> Void) {
 

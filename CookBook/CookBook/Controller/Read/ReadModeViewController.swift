@@ -84,7 +84,7 @@ class ReadModeViewController: UIViewController {
 
             buttonFavorites.isSelected = false
 
-            viewModel.decreaseLikes(documentId: recipe.id)
+            viewModel.updateLikes(documentId: recipe.id, by: -1)
 
             viewModel.removeFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
 
@@ -94,7 +94,7 @@ class ReadModeViewController: UIViewController {
 
             buttonFavorites.isSelected = true
 
-            viewModel.increaseLikes(documentId: recipe.id)
+            viewModel.updateLikes(documentId: recipe.id, by: 1)
 
             viewModel.addFavoritesUserId(documentId: recipe.id, favoritesUserId: uid)
 
