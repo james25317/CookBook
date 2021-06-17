@@ -7,42 +7,42 @@
 
 import UIKit
 
-private struct StoryboardCategory {
+private enum StoryboardCategory: String {
 
-    static let main = "Main"
+    case main = "Main"
 
-    static let signIn = "SignIn"
+    case signIn = "SignIn"
 
-    static let today = "Today"
+    case today = "Today"
 
-    static let edit = "Edit"
+    case edit = "Edit"
 
-    static let editDone = "EditDone"
+    case editDone = "EditDone"
 
-    static let challenge = "Challenge"
+    case challenge = "Challenge"
 
-    static let profile = "Profile"
+    case profile = "Profile"
 
-    static let read = "Read"
+    case read = "Read"
 }
 
 extension UIStoryboard {
 
-    static var main: UIStoryboard { return storyBoard(name: StoryboardCategory.main) }
+    static var main: UIStoryboard { return storyBoard(name: StoryboardCategory.main.rawValue) }
 
-    static var signIn: UIStoryboard { return storyBoard(name: StoryboardCategory.signIn) }
+    static var signIn: UIStoryboard { return storyBoard(name: StoryboardCategory.signIn.rawValue) }
 
-    static var today: UIStoryboard { return storyBoard(name: StoryboardCategory.today) }
+    static var today: UIStoryboard { return storyBoard(name: StoryboardCategory.today.rawValue) }
     
-    static var edit: UIStoryboard { return storyBoard(name: StoryboardCategory.edit) }
+    static var edit: UIStoryboard { return storyBoard(name: StoryboardCategory.edit.rawValue) }
 
-    static var editDone: UIStoryboard { return storyBoard(name: StoryboardCategory.editDone) }
+    static var editDone: UIStoryboard { return storyBoard(name: StoryboardCategory.editDone.rawValue) }
 
-    static var challenge: UIStoryboard { return storyBoard(name: StoryboardCategory.challenge) }
+    static var challenge: UIStoryboard { return storyBoard(name: StoryboardCategory.challenge.rawValue) }
 
-    static var profile: UIStoryboard { return storyBoard(name: StoryboardCategory.profile) }
+    static var profile: UIStoryboard { return storyBoard(name: StoryboardCategory.profile.rawValue) }
 
-    static var read: UIStoryboard { return storyBoard(name: StoryboardCategory.read) }
+    static var read: UIStoryboard { return storyBoard(name: StoryboardCategory.read.rawValue) }
 
     private static func storyBoard(name: String) -> UIStoryboard {
 

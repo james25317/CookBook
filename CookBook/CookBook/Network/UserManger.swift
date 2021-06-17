@@ -14,12 +14,9 @@ class UserManager {
 
     static let shared = UserManager()
 
-    lazy var db = Firestore.firestore()
+    lazy var fireStoreDB = Firestore.firestore()
 
     var uid = ""
-
-    // Useage: for mockuid
-    // var uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
     
     // init user
     var user = User(
@@ -33,10 +30,10 @@ class UserManager {
         blockList: []
     )
 
-    // MARK: User (Fetch)
+    // MARK: - User (Fetch)
     func fetchUserData(uid: String, completion: @escaping (Result<User, Error>) -> Void) {
 
-        db.collection(Collections.user.rawValue)
+        fireStoreDB.collection(Collections.user.rawValue)
             .document(uid)
             .addSnapshotListener { documentSnapshot, error in
 
@@ -61,11 +58,11 @@ class UserManager {
             }
     }
 
-    // MARK: User (Add)
+    // MARK: - User (Add)
     func createUser(user: User, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
-        // 新創 documentId = ownerId (Fbuid) 的資料
-        let ref = db.collection(Collections.user.rawValue).document(uid)
+        // create new UserData (documentId = ownerId (Fbuid))
+        let ref = fireStoreDB.collection(Collections.user.rawValue).document(uid)
 
         try? ref.setData(from: user) { error in
 

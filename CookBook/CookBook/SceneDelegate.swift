@@ -4,7 +4,6 @@
 //
 //  Created by James Hung on 2021/5/12.
 //
-// swiftlint:disable line_length
 
 import UIKit
 import FirebaseAuth
