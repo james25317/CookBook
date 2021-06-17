@@ -27,7 +27,7 @@ class HomeViewModel {
 
     func fetchFeedsData() {
 
-        DataManager.shared.fetchFeeds { [weak self] result in
+        FeedManager.shared.fetchFeeds { [weak self] result in
 
             switch result {
             case .success(let feeds):

@@ -28,7 +28,7 @@ class ReadViewModel {
     
     func fetchRecipe(reciepeId: String) {
 
-        DataManager.shared.fetchRecipeData(documentId: reciepeId) { [weak self] result in
+        RecipeManager.shared.fetchRecipeData(documentId: reciepeId) { [weak self] result in
 
             switch result {
 
@@ -47,7 +47,7 @@ class ReadViewModel {
 
     func checkRecipeChallenger(reciepeId: String) {
 
-        DataManager.shared.checkRecipeChallenger(documentId: reciepeId) { [weak self] result in
+        RecipeManager.shared.checkRecipeChallenger(documentId: reciepeId) { [weak self] result in
 
             switch result {
 
@@ -78,7 +78,7 @@ class ReadViewModel {
 
     func increaseLikes(documentId: String) {
 
-        DataManager.shared.increaseLikes(documentId: documentId) { result in
+        UserManager.shared.increaseLikes(documentId: documentId) { result in
 
             switch result {
 
@@ -95,7 +95,7 @@ class ReadViewModel {
 
     func decreaseLikes(documentId: String) {
 
-        DataManager.shared.decreaseLikes(documentId: documentId) { result in
+        UserManager.shared.decreaseLikes(documentId: documentId) { result in
 
             switch result {
 
@@ -112,7 +112,7 @@ class ReadViewModel {
 
     func increaseFavoritesCounts(uid: String) {
 
-        DataManager.shared.increaseFavoritesCounts(documentId: uid) { result in
+        UserManager.shared.increaseFavoritesCounts(documentId: uid) { result in
 
             switch result {
 
@@ -129,7 +129,7 @@ class ReadViewModel {
 
     func decreaseFavoritesCounts(uid: String) {
 
-        DataManager.shared.decreaseFavoritesCounts(documentId: uid) { result in
+        UserManager.shared.decreaseFavoritesCounts(documentId: uid) { result in
 
             switch result {
 
@@ -146,7 +146,7 @@ class ReadViewModel {
 
     func addFavoritesUserId(documentId: String, favoritesUserId: String) {
 
-        DataManager.shared.addfavoritesUserId(
+        RecipeManager.shared.addfavoritesUserId(
             documentId: documentId,
             favoritesUserId: favoritesUserId
         ) { result in
@@ -166,7 +166,7 @@ class ReadViewModel {
 
     func removeFavoritesUserId(documentId: String, favoritesUserId: String) {
 
-        DataManager.shared.removefavoritesUserId(
+        RecipeManager.shared.removefavoritesUserId(
             documentId: documentId,
             favoritesUserId: favoritesUserId
         ) { result in
@@ -186,7 +186,7 @@ class ReadViewModel {
 
     func updateBlockList(uid: String, recipeId: String) {
 
-        DataManager.shared.updateBlockList(
+        UserManager.shared.updateBlockList(
             uid: uid,
             recipeId: recipeId
         ) { [weak self] result in
@@ -208,7 +208,7 @@ class ReadViewModel {
 
     func updateFeedStatus(feedId documentId: String, uid: String) {
 
-        DataManager.shared.updateFeedChallengeStatus(
+        FeedManager.shared.updateFeedChallengeStatus(
             documentId: documentId,
             uid: uid
         ) { result in
@@ -228,7 +228,7 @@ class ReadViewModel {
 
     func updateRecipeStatus(recipeId documentId: String, uid: String) {
 
-        DataManager.shared.updateRecipeChallengeStatus(
+        RecipeManager.shared.updateRecipeChallengeStatus(
             documentId: documentId,
             uid: uid) { result in
 

@@ -74,7 +74,7 @@ class ProfileViewModel {
 
     func fetchRecipes() {
 
-        DataManager.shared.fetchRecipesData { [weak self] result in
+        RecipeManager.shared.fetchRecipesData { [weak self] result in
 
             switch result {
 

@@ -37,7 +37,7 @@ class TodayViewModel {
 
     func fetchTodayRecipe() {
 
-        DataManager.shared.fetchTodayRecipeData { [weak self] result in
+        RecipeManager.shared.fetchTodayRecipeData { [weak self] result in
 
             switch result {
 
@@ -54,7 +54,7 @@ class TodayViewModel {
 
     func fetchOfficialRecipe() {
 
-        DataManager.shared.fetchOfficialRecipeData { [weak self] result in
+        RecipeManager.shared.fetchOfficialRecipeData { [weak self] result in
 
             switch result {
 

@@ -138,7 +138,7 @@ class EditViewModel {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.uploadIngredientsData(documentId: documentId, ingredients: ingredients) { result in
+        RecipeManager.shared.uploadIngredientsData(documentId: documentId, ingredients: ingredients) { result in
 
             switch result {
 
@@ -158,7 +158,7 @@ class EditViewModel {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.uploadStepsData(documentId: documentId, steps: steps) { result in
+        RecipeManager.shared.uploadStepsData(documentId: documentId, steps: steps) { result in
 
             switch result {
 
@@ -178,7 +178,7 @@ class EditViewModel {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.updateIsEditDone(documentId: documentId) { result in
+        RecipeManager.shared.updateIsEditDone(documentId: documentId) { result in
 
             switch result {
 
@@ -198,7 +198,7 @@ class EditViewModel {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.uploadMainImage(documentId: documentId, mainImage: mainImage) { result in
+        RecipeManager.shared.uploadMainImage(documentId: documentId, mainImage: mainImage) { result in
 
             switch result {
 
@@ -216,7 +216,7 @@ class EditViewModel {
     // MARK: - increaseRecipesCounts
     func increaseRecipesCounts(with uid: String) {
 
-        DataManager.shared.increaseRecipesCounts(uid: uid) { result in
+        UserManager.shared.increaseRecipesCounts(uid: uid) { result in
 
             switch result {
 
@@ -234,7 +234,7 @@ class EditViewModel {
     // MARK: - updateChallengesCounts
     func updateChallengesCounts(with uid: String) {
 
-        DataManager.shared.updateChallengesCounts(uid: uid) { result in
+        UserManager.shared.updateChallengesCounts(uid: uid) { result in
 
             switch result {
 
@@ -252,7 +252,7 @@ class EditViewModel {
     // MARK: - updateFeedChallengeStatus
     func updateFeedChallengeStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String) {
 
-        DataManager.shared.updateChallengeStatus(
+        FeedManager.shared.updateChallengeStatus(
             documentId: documentId,
             recipeId: recipeId,
             mainImage: mainImage,
@@ -275,7 +275,7 @@ class EditViewModel {
     // MARK: - createRecipe
     func createRecipe(with recipe: inout Recipe, with uid: String) {
 
-        DataManager.shared.createRecipeData(recipe: &recipe, uid: uid) { result in
+        RecipeManager.shared.createRecipeData(recipe: &recipe, uid: uid) { result in
 
             switch result {
 
@@ -297,7 +297,7 @@ class EditViewModel {
     // MARK: - createFeed
     func createFeed(with feed: inout Feed) {
 
-        DataManager.shared.createFeedData(feed: &feed) { result in
+        FeedManager.shared.createFeedData(feed: &feed) { result in
 
             switch result {
 
@@ -317,7 +317,7 @@ class EditViewModel {
     // MARK: - fetchRecipe
     func fetchRecipe(documentId: String) {
 
-        DataManager.shared.fetchRecipeData(documentId: documentId) { [weak self] result in
+        RecipeManager.shared.fetchRecipeData(documentId: documentId) { [weak self] result in
 
             switch result {
 

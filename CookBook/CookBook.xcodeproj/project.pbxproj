@@ -15,6 +15,7 @@
 		7F13B16326568AFA0042F3EC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B16226568AFA0042F3EC /* Ingredient.swift */; };
 		7F13B16526568BB90042F3EC /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B16426568BB90042F3EC /* Step.swift */; };
 		7F13B1672656AD3E0042F3EC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13B1662656AD3E0042F3EC /* ProfileViewModel.swift */; };
+		7F23F548267B97BA009A126D /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23F547267B97BA009A126D /* RecipeManager.swift */; };
 		7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2B264BC19C001A0B4E /* AppDelegate.swift */; };
 		7F284C2E264BC19C001A0B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */; };
 		7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F284C2F264BC19C001A0B4E /* HomeViewController.swift */; };
@@ -27,7 +28,7 @@
 		7F5256722665C392005A2DB9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256712665C392005A2DB9 /* SignInViewController.swift */; };
 		7F5256742665E2AC005A2DB9 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */; };
 		7F5256762666740B005A2DB9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5256752666740B005A2DB9 /* SignInViewModel.swift */; };
-		7F52567826667938005A2DB9 /* UserManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52567726667938005A2DB9 /* UserManger.swift */; };
+		7F52567826667938005A2DB9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52567726667938005A2DB9 /* UserManager.swift */; };
 		7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */; };
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
@@ -64,7 +65,7 @@
 		7FFCF0692650C8420082ED8E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF0682650C8420082ED8E /* FeedViewModel.swift */; };
 		7FFCF06B2650CED80082ED8E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF06A2650CED80082ED8E /* Feed.swift */; };
 		7FFCF06E2650F51B0082ED8E /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF06D2650F51B0082ED8E /* DateHelper.swift */; };
-		7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF06F2650F73C0082ED8E /* DataManager.swift */; };
+		7FFCF0702650F73C0082ED8E /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF06F2650F73C0082ED8E /* FeedManager.swift */; };
 		7FFCF072265104EE0082ED8E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF071265104EE0082ED8E /* HomeViewModel.swift */; };
 		7FFCF074265105F00082ED8E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF073265105F00082ED8E /* Box.swift */; };
 		7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCF075265222520082ED8E /* TodayViewController.swift */; };
@@ -96,6 +97,7 @@
 		7F13B16226568AFA0042F3EC /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		7F13B16426568BB90042F3EC /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		7F13B1662656AD3E0042F3EC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		7F23F547267B97BA009A126D /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 		7F284C28264BC19C001A0B4E /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F284C2B264BC19C001A0B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F284C2D264BC19C001A0B4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		7F5256712665C392005A2DB9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		7F5256752666740B005A2DB9 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		7F52567726667938005A2DB9 /* UserManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManger.swift; sourceTree = "<group>"; };
+		7F52567726667938005A2DB9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditIngredients.storyboard; sourceTree = "<group>"; };
 		7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditSteps.storyboard; sourceTree = "<group>"; };
 		7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -148,7 +150,7 @@
 		7FFCF0682650C8420082ED8E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		7FFCF06A2650CED80082ED8E /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		7FFCF06D2650F51B0082ED8E /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
-		7FFCF06F2650F73C0082ED8E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7FFCF06F2650F73C0082ED8E /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		7FFCF071265104EE0082ED8E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7FFCF073265105F00082ED8E /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		7FFCF075265222520082ED8E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -336,8 +338,9 @@
 		7FA1BA7E264CC60C00B8ED13 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7FFCF06F2650F73C0082ED8E /* DataManager.swift */,
-				7F52567726667938005A2DB9 /* UserManger.swift */,
+				7FFCF06F2650F73C0082ED8E /* FeedManager.swift */,
+				7F52567726667938005A2DB9 /* UserManager.swift */,
+				7F23F547267B97BA009A126D /* RecipeManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -670,12 +673,12 @@
 				7F13B16526568BB90042F3EC /* Step.swift in Sources */,
 				7FFCF0822652C12D0082ED8E /* ReadModeViewController.swift in Sources */,
 				7FE2C20D2663993600FCEAE3 /* TodayViewModel.swift in Sources */,
-				7F52567826667938005A2DB9 /* UserManger.swift in Sources */,
+				7F52567826667938005A2DB9 /* UserManager.swift in Sources */,
 				7FA1BA8D264CFC9D00B8ED13 /* FeedTableViewCell.swift in Sources */,
 				7F7C735D26589CED00D1AFD4 /* User.swift in Sources */,
 				7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */,
 				7F12F8D82668B919007ADB8B /* FeedChallengeTableViewCell.swift in Sources */,
-				7FFCF0702650F73C0082ED8E /* DataManager.swift in Sources */,
+				7FFCF0702650F73C0082ED8E /* FeedManager.swift in Sources */,
 				7FFCF076265222520082ED8E /* TodayViewController.swift in Sources */,
 				7FFCF0872653F9770082ED8E /* EditIngredientsViewController.swift in Sources */,
 				7FFCF0942654EB9F0082ED8E /* UICollectionView+Extension.swift in Sources */,
@@ -698,6 +701,7 @@
 				7FA1BA95264E4C9200B8ED13 /* ProfileCollectionViewCell.swift in Sources */,
 				7FFCF0622650148D0082ED8E /* FeedChallengeDoneTableViewCell.swift in Sources */,
 				7FFCF07A26523C000082ED8E /* EditViewController.swift in Sources */,
+				7F23F548267B97BA009A126D /* RecipeManager.swift in Sources */,
 				7FE2C2082663746600FCEAE3 /* TodayVideoViewController.swift in Sources */,
 				7FFCF078265233820082ED8E /* UIStoryboard+Extension.swift in Sources */,
 			);
