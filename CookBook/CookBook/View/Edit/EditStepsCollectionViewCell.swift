@@ -55,8 +55,6 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
             imageViewUploadedImage.loadImage(step.image)
         }
 
-        // imageViewUploadedImage.loadImage(step.image)
-
         textViewDescription.text = step.description
     }
 
@@ -76,7 +74,6 @@ class EditStepsCollectionViewCell: UICollectionViewCell {
 
     @objc func openImageUploadMenu() {
 
-        // open imageUpload Menu
         onUploadedImageTapped?()
     }
 }
@@ -97,14 +94,13 @@ extension EditStepsCollectionViewCell: UITextViewDelegate {
 
         if textView.text.isEmpty {
 
-            textView.text = " Enter Steps Description"
+            textView.text = "Enter Steps Description"
 
             textView.textColor = UIColor.lightGray
         }
 
         guard let description = textView.text else { return }
-
-        // 傳回去 EditSteps VC 本地 Steps 資料
+        
         onDescriptionChanged?(description)
     }
 
@@ -116,7 +112,7 @@ extension EditStepsCollectionViewCell: UITextViewDelegate {
 
         if updatedText.isEmpty {
 
-            textView.text = " Enter Steps Description"
+            textView.text = "Enter Steps Description"
 
             textView.textColor = UIColor.lightGray
 
