@@ -44,7 +44,7 @@ class EditDoneViewController: UIViewController {
 
         var feed = viewModel.convertRecipeToFeed(from: recipe, challengeOn: false)
 
-        viewModel.createFeedData(with: &feed)
+        viewModel.createFeed(with: &feed)
 
         guard let navigationController = navigationController,
             let homeVC = navigationController.viewControllers.first(
@@ -63,7 +63,7 @@ class EditDoneViewController: UIViewController {
 
         var feed = viewModel.convertRecipeToFeed(from: recipe, challengeOn: true)
 
-        viewModel.createFeedData(with: &feed)
+        viewModel.createFeed(with: &feed)
 
         viewModel.updateChallengesCounts(with: uid)
 

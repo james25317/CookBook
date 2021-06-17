@@ -279,7 +279,7 @@ class DataManager {
     }
 
     // MARK: - Recipe (snapshotListener)
-    func fetchRecipe(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
+    func fetchRecipeData(documentId: String, completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         firestoreDB.collection(Collections.recipe.rawValue)
             .document(documentId)
@@ -424,7 +424,7 @@ class DataManager {
     }
 
     // MARK: MainImage (update)
-    func updateMainImage(documentId: String, mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func uploadMainImage(documentId: String, mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新(覆寫) MainImage 欄位
         let ref = firestoreDB.collection(Collections.recipe.rawValue).document(documentId)
@@ -674,7 +674,7 @@ class DataManager {
     }
 
     // MARK: FeedChallengeDone (update)
-    func updateFeedChallengeDoneStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func updateChallengeStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         // 這邊寫更新 Challenger, isChallenged 欄位
         let ref = firestoreDB.collection(Collections.feed.rawValue).document(documentId)
@@ -713,36 +713,29 @@ class DataManager {
         }
     }
 
-    // MARK: Recipe (Add)
-    func createRecipe(recipe: inout Recipe, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
+    // MARK: - Recipe (Add)
+    func createRecipeData(recipe: inout Recipe, uid: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = firestoreDB.collection(Collections.recipe.rawValue).document()
 
-        // inout 屬性讓可以先 assign
         recipe.id = ref.documentID
 
-        // 寫入該帳號使用者的 Id (Fbuid)
         recipe.ownerId = uid
 
         try? ref.setData(from: recipe) { error in
 
             if let error = error {
 
-                // print("Error adding document: \(error)")
-
                 completion(.failure(error))
             } else {
 
-                // print("Document added with ID: \(String(describing: ref.documentID))")
-
-                // 回傳新產生的 DocumentId
                 completion(.success(ref.documentID))
             }
         }
     }
 
-    // MARK: Feed (Add)
-    func createFeed(feed: inout Feed, completion: @escaping (Result<String, Error>) -> Void) {
+    // MARK: - Feed (Add)
+    func createFeedData(feed: inout Feed, completion: @escaping (Result<String, Error>) -> Void) {
 
         let ref = firestoreDB.collection(Collections.feed.rawValue).document()
 

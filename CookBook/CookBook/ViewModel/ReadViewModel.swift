@@ -28,7 +28,7 @@ class ReadViewModel {
     
     func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void = { _ in }) {
 
-        DataManager.shared.fetchRecipe(documentId: reciepeId) { [weak self] result in
+        DataManager.shared.fetchRecipeData(documentId: reciepeId) { [weak self] result in
 
             switch result {
 

@@ -82,7 +82,7 @@ class EditStepsViewController: UIViewController {
         guard let viewModel = viewModel,
             let steps = steps else { return }
         
-        viewModel.updateSteps(with: steps)
+        viewModel.uploadSteps(with: steps)
 
         CBProgressHUD.showSuccess(text: "Steps Added")
 

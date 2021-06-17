@@ -52,7 +52,7 @@ class EditViewController: UIViewController {
             CBProgressHUD.showText(text: "Please enter your CookBook name")
         } else {
 
-            viewModel.createRecipeData(with: &viewModel.recipe, with: uid)
+            viewModel.createRecipe(with: &viewModel.recipe, with: uid)
 
             viewModel.increaseRecipesCounts(with: uid)
 

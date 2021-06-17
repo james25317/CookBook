@@ -27,17 +27,17 @@ struct Recipe: Identifiable, Codable {
 
     enum CodingKeys: String, CodingKey {
         case createdTime,
-             description,
-             favoritesUserId,
-             ingredients,
-             isEditDone,
-             likedUserId,
-             likes,
-             mainImage,
-             name,
-             ownerId,
-             steps,
-             challenger
+            description,
+            favoritesUserId,
+            ingredients,
+            isEditDone,
+            likedUserId,
+            likes,
+            mainImage,
+            name,
+            ownerId,
+            steps,
+            challenger
     }
 
     var toDict: [String: Any] {

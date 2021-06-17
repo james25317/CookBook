@@ -88,7 +88,7 @@ class EditPreviewViewController: UIViewController {
         // assign 本地 isEditDone 資料
         value.recipe.isEditDone = true
 
-        viewModel?.updateIsEditDone()
+        viewModel?.updateRecipeEditStatus()
 
         if !value.recipe.challenger.isEmpty {
 
@@ -99,7 +99,7 @@ class EditPreviewViewController: UIViewController {
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            viewModel?.updateMainImage(with: mainImage) { [weak self] result in
+            viewModel?.uploadMainImage(with: mainImage) { [weak self] result in
 
                 switch result {
 
@@ -125,7 +125,7 @@ class EditPreviewViewController: UIViewController {
 
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-            viewModel?.updateMainImage(with: mainImage) { [weak self] result in
+            viewModel?.uploadMainImage(with: mainImage) { [weak self] result in
 
                 switch result {
 

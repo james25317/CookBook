@@ -58,25 +58,6 @@ class EditViewModel {
         image: ""
     )
 
-    // init Feed
-//    var feed = Feed(
-//        id: "",
-//        challenger: "",
-//        challengerRecipeId: "",
-//        challengerRecipeName: "",
-//        challengerRecipeMainImage: "",
-//        createdTime: Date().millisecondsSince1970,
-//        isChallenged: false,
-//        mainImage: "",
-//        name: "",
-//        ownerId: "",
-//        portrait: "",
-//        recipeId: "",
-//        recipeName: ""
-//    )
-
-    // var feed: Feed?
-
     var feedId: String?
 
     var challenger: String?
@@ -117,18 +98,17 @@ class EditViewModel {
         self.step.description = description
     }
 
+    // MARK: - uploadImagePickerImage
     func uploadImagePickerImage(with pickerImage: UIImage, completion: @escaping (Result<String, Error>) -> Void) {
 
         let uuid = UUID().uuidString
 
-        // 選擇的圖片（並壓縮）
         guard let image = pickerImage.jpegData(compressionQuality: 0.5) else { return }
 
         let storageRef = Storage.storage().reference()
 
         let imageRef = storageRef.child("CookBookImages").child("\(uuid).jpg")
 
-        // 上傳圖片
         imageRef.putData(image, metadata: nil) { metadata, error in
 
             if let error = error {
@@ -136,7 +116,7 @@ class EditViewModel {
                 completion(.failure(error))
             }
 
-            guard let metadata = metadata else { return }
+            guard metadata != nil else { return }
 
             imageRef.downloadURL { url, error in
 
@@ -147,13 +127,13 @@ class EditViewModel {
 
                 if let url = url {
 
-                    // escaping callback
                     completion(.success(url.absoluteString))
                 }
             }
         }
     }
 
+    // MARK: - uploadIngredients
     func uploadIngredients(with ingredients: [Ingredient]) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
@@ -173,7 +153,8 @@ class EditViewModel {
         }
     }
 
-    func updateSteps(with steps: [Step]) {
+    // MARK: - uploadSteps
+    func uploadSteps(with steps: [Step]) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
@@ -192,7 +173,8 @@ class EditViewModel {
         }
     }
 
-    func updateIsEditDone() {
+    // MARK: - updateRecipeEditStatus
+    func updateRecipeEditStatus() {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
@@ -200,7 +182,7 @@ class EditViewModel {
 
             switch result {
 
-            case .success(let _):
+            case .success(_):
 
                 print("IsEditDone updated, success")
 
@@ -211,29 +193,27 @@ class EditViewModel {
         }
     }
 
-    func updateMainImage(with mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
+    // MARK: - uploadMainImage
+    func uploadMainImage(with mainImage: String, completion: @escaping (Result<String, Error>) -> Void) {
 
         guard let documentId = recipeViewModel.value?.recipe.id else { return }
 
-        DataManager.shared.updateMainImage(documentId: documentId, mainImage: mainImage) { result in
+        DataManager.shared.uploadMainImage(documentId: documentId, mainImage: mainImage) { result in
 
             switch result {
 
             case .success(let mainImage):
 
-                print("MainImage updated, success")
-
                 completion(.success(mainImage))
 
             case .failure(let error):
-
-                print("Updated fail, failure: \(error)")
 
                 completion(.failure(error))
             }
         }
     }
 
+    // MARK: - increaseRecipesCounts
     func increaseRecipesCounts(with uid: String) {
 
         DataManager.shared.increaseRecipesCounts(uid: uid) { result in
@@ -248,10 +228,10 @@ class EditViewModel {
 
                 print(error)
             }
-
         }
     }
 
+    // MARK: - updateChallengesCounts
     func updateChallengesCounts(with uid: String) {
 
         DataManager.shared.updateChallengesCounts(uid: uid) { result in
@@ -269,9 +249,10 @@ class EditViewModel {
         }
     }
 
-    func updateFeedChallengeDoneStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String) {
+    // MARK: - updateFeedChallengeStatus
+    func updateFeedChallengeStatus(documentId: String, recipeId: String, mainImage: String, recipeName: String) {
 
-        DataManager.shared.updateFeedChallengeDoneStatus(
+        DataManager.shared.updateChallengeStatus(
             documentId: documentId,
             recipeId: recipeId,
             mainImage: mainImage,
@@ -291,9 +272,10 @@ class EditViewModel {
         }
     }
 
-    func createRecipeData(with recipe: inout Recipe, with uid: String) {
+    // MARK: - createRecipe
+    func createRecipe(with recipe: inout Recipe, with uid: String) {
 
-        DataManager.shared.createRecipe(recipe: &recipe, uid: uid) { result in
+        DataManager.shared.createRecipeData(recipe: &recipe, uid: uid) { result in
 
             switch result {
 
@@ -301,7 +283,6 @@ class EditViewModel {
 
                 print("ID: \(documentId) CookBook Created")
 
-                // 用回傳的 documentId 再去發一次請求，同步這個最新創的食譜
                 self.fetchRecipe(documentId: documentId)
 
             case .failure(let error):
@@ -313,9 +294,10 @@ class EditViewModel {
         print("Initial recipe: \(recipe)")
     }
 
-    func createFeedData(with feed: inout Feed) {
+    // MARK: - createFeed
+    func createFeed(with feed: inout Feed) {
 
-        DataManager.shared.createFeed(feed: &feed) { result in
+        DataManager.shared.createFeedData(feed: &feed) { result in
 
             switch result {
 
@@ -332,9 +314,10 @@ class EditViewModel {
         print("Initial recipe: \(feed)")
     }
 
+    // MARK: - fetchRecipe
     func fetchRecipe(documentId: String) {
 
-        DataManager.shared.fetchRecipe(documentId: documentId) { [weak self] result in
+        DataManager.shared.fetchRecipeData(documentId: documentId) { [weak self] result in
 
             switch result {
 
@@ -342,7 +325,7 @@ class EditViewModel {
 
                 print("Fetch recipe success!")
 
-                self?.setRecipe(recipe)
+                self?.setRecipeToViewModel(recipe: recipe)
 
             case .failure(let error):
 
@@ -351,9 +334,8 @@ class EditViewModel {
         }
     }
 
-    func setRecipe(_ recipe: Recipe) {
+    func setRecipeToViewModel(recipe: Recipe) {
 
-        // 接回有了 documentId 的 recipe 至 revipeViewModel.value (this is why.)
         recipeViewModel.value = convertRecipeToViewModel(from: recipe)
     }
 
@@ -378,7 +360,7 @@ class EditViewModel {
             name: UserManager.shared.user.name,
             ownerId: recipe.ownerId,
             portrait: UserManager.shared.user.portrait,
-            recipeId: recipe.id!,
+            recipeId: recipe.id ?? "",
             recipeName: recipe.name
         )
         

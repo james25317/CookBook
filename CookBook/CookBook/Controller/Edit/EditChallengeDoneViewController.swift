@@ -40,7 +40,7 @@ class EditChallengeDoneViewController: UIViewController {
             let recipe = viewModel.recipeViewModel.value?.recipe,
             let feedId = viewModel.feedId, let recipeId = recipe.id else { return }
 
-        viewModel.updateFeedChallengeDoneStatus(
+        viewModel.updateFeedChallengeStatus(
             documentId: feedId,
             recipeId: recipeId,
             mainImage: recipe.mainImage,
