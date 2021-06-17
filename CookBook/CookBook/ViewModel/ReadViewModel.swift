@@ -26,7 +26,7 @@ class ReadViewModel {
 
     var onRefreshed: (() -> Void)?
     
-    func fetchRecipe(reciepeId: String, completion: @escaping (Result<Recipe, Error>) -> Void = { _ in }) {
+    func fetchRecipe(reciepeId: String) {
 
         DataManager.shared.fetchRecipeData(documentId: reciepeId) { [weak self] result in
 
@@ -34,18 +34,13 @@ class ReadViewModel {
 
             case .success(let recipe):
 
-                print("Fetch recipe success!")
+                print("Fetch recipe success")
 
-                // 回傳的 Recipe 至 Box<RecipeViewModel?> 監聽
                 self?.recipeViewModel.value = RecipeViewModel(model: recipe)
-
-                completion(.success(recipe))
 
             case .failure(let error):
 
                 print("Fetch failure: \(error)")
-
-                completion(.failure(error))
             }
         }
     }
@@ -58,26 +53,18 @@ class ReadViewModel {
 
             case .success(let recipe):
 
-                print("Check recipe success!")
+                print("Check recipe success")
 
                 if !recipe.challenger.isEmpty {
 
                     print("Challenger is not empty")
-                    // challenger 已經有值:
-                    // 顯示提示＆返回主頁
 
-                    // 提示彈窗
                     self?.onDenied?()
 
-                    // 返回主頁
                     self?.onReturned?()
                 } else {
 
                     print("Challenger is empty")
-                    // challenger 無值:
-                    // 1. 更新 uid 為 challenger (Feed & Recipe)
-                    // 2. 更新 isChallenged = true
-                    // 3. create Recipe
 
                     self?.onGranteed?()
                 }
@@ -91,7 +78,7 @@ class ReadViewModel {
 
     func increaseLikes(documentId: String) {
 
-        DataManager.shared.increaseLikes(documentId: documentId) { [weak self] result in
+        DataManager.shared.increaseLikes(documentId: documentId) { result in
 
             switch result {
 
@@ -108,7 +95,7 @@ class ReadViewModel {
 
     func decreaseLikes(documentId: String) {
 
-        DataManager.shared.decreaseLikes(documentId: documentId) { [weak self] result in
+        DataManager.shared.decreaseLikes(documentId: documentId) { result in
 
             switch result {
 
@@ -162,7 +149,7 @@ class ReadViewModel {
         DataManager.shared.addfavoritesUserId(
             documentId: documentId,
             favoritesUserId: favoritesUserId
-        ) { [weak self] result in
+        ) { result in
 
             switch result {
 
@@ -182,7 +169,7 @@ class ReadViewModel {
         DataManager.shared.removefavoritesUserId(
             documentId: documentId,
             favoritesUserId: favoritesUserId
-        ) { [weak self] result in
+        ) { result in
 
             switch result {
 
@@ -194,7 +181,6 @@ class ReadViewModel {
 
                 print(error)
             }
-
         }
     }
 
@@ -211,7 +197,6 @@ class ReadViewModel {
 
                 print("BlockList update success")
 
-                // goHomeVC after blocked
                 self?.onBlocked?()
 
             case.failure(let error):
@@ -226,7 +211,7 @@ class ReadViewModel {
         DataManager.shared.updateFeedChallengeStatus(
             documentId: documentId,
             uid: uid
-        ) { [weak self] result in
+        ) { result in
 
             switch result {
 
@@ -245,7 +230,7 @@ class ReadViewModel {
 
         DataManager.shared.updateRecipeChallengeStatus(
             documentId: documentId,
-            uid: uid) { [weak self] result in
+            uid: uid) { result in
 
             switch result {
 
