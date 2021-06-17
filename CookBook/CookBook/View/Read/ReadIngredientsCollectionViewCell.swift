@@ -44,7 +44,7 @@ extension ReadIngredientsCollectionViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         guard let viewModel = viewModel,
-              let recipe = viewModel.recipeViewModel.value else { return 1 }
+            let recipe = viewModel.recipeViewModel.value else { return 1 }
 
         return recipe.ingredients.count
     }

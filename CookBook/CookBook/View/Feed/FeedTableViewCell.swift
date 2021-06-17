@@ -21,32 +21,13 @@ class FeedTableViewCell: UITableViewCell {
 
     var viewModel: FeedViewModel?
 
-    // 複寫外框初始值設定達到內縮效果
-//    override var frame: CGRect {
-//
-//        get {
-//            return super.frame
-//        }
-//        set {
-//            var frame = newValue
-//            frame.origin.x += 16
-//            frame.size.width -= 2 * 16
-//            frame.origin.y += 24
-//            // frame.size.height -= 2 * 16
-//            super.frame = frame
-//        }
-//    }
-
     override func awakeFromNib() {
 
         super.awakeFromNib()
         
         self.selectionStyle = .none
-
-        // roundedImageView()
     }
 
-    // 綁定VM對象來做替換
     func setup(viewModel: FeedViewModel) {
 
         self.viewModel = viewModel
@@ -79,10 +60,5 @@ class FeedTableViewCell: UITableViewCell {
 
             imageViewRecipe.loadImage(viewModel.mainImage)
         }
-    }
-
-    private func roundedImageView() {
-
-        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
     }
 }

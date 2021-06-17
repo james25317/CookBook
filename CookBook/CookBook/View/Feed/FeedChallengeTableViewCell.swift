@@ -33,8 +33,6 @@ class FeedChallengeTableViewCell: UITableViewCell {
         self.viewModel = viewModel
 
         layoutCell()
-
-        // roundedImageView()
     }
 
     private func layoutCell() {
@@ -62,10 +60,5 @@ class FeedChallengeTableViewCell: UITableViewCell {
         }
 
         labelOwnerRecipeName.text = viewModel.recipeName
-    }
-
-    private func roundedImageView() {
-
-        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
     }
 }

@@ -42,8 +42,6 @@ class FeedChallengeDoneTableViewCell: UITableViewCell {
 
         layoutCell()
 
-        // roundedImageView()
-
         setupTapGesture()
     }
 
@@ -82,11 +80,6 @@ class FeedChallengeDoneTableViewCell: UITableViewCell {
         }
 
         labelChallengerRecipeName.text = viewModel.challengerRecipeName
-    }
-
-    private func roundedImageView() {
-
-        imageViewPortrait.layer.cornerRadius = imageViewPortrait.frame.size.height / 2
     }
 
     private func setupTapGesture() {
