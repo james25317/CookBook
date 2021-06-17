@@ -11,13 +11,13 @@ class TodayViewModel {
 
     let todayRecipeViewModel: Box<TodayRecipeViewModel?> = Box(nil)
 
-    var recipe: Recipe?
+    var officialRecipe: Recipe?
 
-    var onReNewed: (() -> Void)?
+    var onLoadImage: (() -> Void)?
     
-    func fetchUserData(uid: String) {
+    func fetchUser(uid: String) {
 
-        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
+        UserManager.shared.fetchUserData(uid: uid) { result in
 
             switch result {
 
@@ -25,7 +25,7 @@ class TodayViewModel {
 
                 print("Fetch user success: \(user)")
 
-                // fetch 最新資料至 UserManager
+                // fetch latest user data
                 UserManager.shared.user = user
 
             case .failure(let error):
@@ -35,16 +35,15 @@ class TodayViewModel {
         }
     }
 
-    // fetch collection("Today").document("TodayRecipe")
-    func fetchTodayRecipeData() {
+    func fetchTodayRecipe() {
 
-        DataManager.shared.fetchTodayRecipe { [weak self] result in
+        DataManager.shared.fetchTodayRecipeData { [weak self] result in
 
             switch result {
 
             case .success(let todayRecipe):
 
-                self?.setTodayRecipe(todayRecipe)
+                self?.setTodayRecipeToViewModel(with: todayRecipe)
 
             case .failure(let error):
 
@@ -53,19 +52,17 @@ class TodayViewModel {
         }
     }
 
-    // query collection("Recipe").whereField("ownerId", isEqualTo: "official")
-    func fetchOfficialRecipeData() {
+    func fetchOfficialRecipe() {
 
-        DataManager.shared.fetchOfficialRecipe { [weak self] result in
+        DataManager.shared.fetchOfficialRecipeData { [weak self] result in
 
             switch result {
 
             case .success(let officialRecipe):
 
-                // assign official recipe data
-                self?.recipe = officialRecipe
+                self?.officialRecipe = officialRecipe
 
-                self?.onReNewed?()
+                self?.onLoadImage?()
                 
             case .failure(let error):
 
@@ -74,7 +71,7 @@ class TodayViewModel {
         }
     }
 
-    func setTodayRecipe(_ todayRecipe: TodayRecipe) {
+    func setTodayRecipeToViewModel(with todayRecipe: TodayRecipe) {
 
         todayRecipeViewModel.value = convertTodayRecipeToViewModel(from: todayRecipe)
     }

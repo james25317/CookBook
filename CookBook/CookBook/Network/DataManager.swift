@@ -187,7 +187,7 @@ class DataManager {
     }
 
     // MARK: TodayRecipe
-    func fetchTodayRecipe(completion: @escaping (Result<TodayRecipe, Error>) -> Void) {
+    func fetchTodayRecipeData(completion: @escaping (Result<TodayRecipe, Error>) -> Void) {
 
         firestoreDB.collection(Collections.today.rawValue)
             .document(Document.todayRecipe.rawValue)
@@ -217,7 +217,7 @@ class DataManager {
     }
 
     // MARK: OfficialRecipe (Query)
-    func fetchOfficialRecipe(completion: @escaping (Result<Recipe, Error>) -> Void) {
+    func fetchOfficialRecipeData(completion: @escaping (Result<Recipe, Error>) -> Void) {
 
         firestoreDB.collection(Collections.recipe.rawValue)
             .whereField("ownerId", isEqualTo: "official")

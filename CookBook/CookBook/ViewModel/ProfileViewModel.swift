@@ -24,7 +24,7 @@ class ProfileViewModel {
     
     func fetchUserData(uid: String) {
 
-        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
+        UserManager.shared.fetchUserData(uid: uid) { [weak self] result in
 
             switch result {
 

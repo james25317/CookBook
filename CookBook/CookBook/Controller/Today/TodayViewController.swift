@@ -35,15 +35,15 @@ class TodayViewController: UIViewController {
 
         super.viewDidLoad()
 
-        viewModel.fetchUserData(uid: uid)
+        viewModel.fetchUser(uid: uid)
 
-        viewModel.fetchTodayRecipeData()
+        viewModel.fetchTodayRecipe()
 
-        viewModel.fetchOfficialRecipeData()
+        viewModel.fetchOfficialRecipe()
 
-        viewModel.onReNewed = { [weak self] () in
+        viewModel.onLoadImage = { [weak self] () in
 
-            self?.imageViewTodayRecipe.loadImage(self?.viewModel.recipe?.mainImage)
+            self?.imageViewTodayRecipe.loadImage(self?.viewModel.officialRecipe?.mainImage)
         }
 
         setupTodayRecipeTapGesture()
@@ -110,7 +110,7 @@ class TodayViewController: UIViewController {
 
         navigationController?.pushViewController(readVC, animated: true)
 
-        guard let recipe = self.viewModel.recipe else { return }
+        guard let recipe = self.viewModel.officialRecipe else { return }
         
         readVC.recipeId = recipe.id
     }

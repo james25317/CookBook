@@ -34,7 +34,7 @@ class UserManager {
     )
 
     // MARK: User (Fetch)
-    func fetchUser(uid: String, completion: @escaping (Result<User, Error>) -> Void) {
+    func fetchUserData(uid: String, completion: @escaping (Result<User, Error>) -> Void) {
 
         db.collection(Collections.user.rawValue)
             .document(uid)
