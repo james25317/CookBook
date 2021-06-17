@@ -12,19 +12,14 @@ class TodayRecipeViewModel {
     var video: TodayRecipe
 
     init(model video: TodayRecipe) {
-
         self.video = video
     }
 
     var id: String {
-        get {
-            return video.id ?? ""
-        }
+        return video.id ?? ""
     }
 
     var videoId: String {
-        get {
-            return video.videoId
-        }
+        return video.videoId
     }
 }

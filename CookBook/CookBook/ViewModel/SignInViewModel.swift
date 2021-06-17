@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class SignInViewModel {
 
     let userViewModel: Box<UserViewModel?> = Box(nil)
@@ -24,36 +23,7 @@ class SignInViewModel {
         blockList: []
     )
 
-    // 到下一頁
     var onGranteed: (() -> Void)?
-
-//    func fetchUserData(with uid: String) {
-//
-//        UserManager.shared.fetchUser(uid: uid) { [weak self] result in
-//
-//            switch result {
-//
-//            case .success(let user):
-//
-//                // fetch 成功，有此位使用者，assign 資料
-//                // self?.setUser(user)
-//
-//                // 可去進版頁
-//                // self?.onGranteed?()
-//
-//                break
-//            case .failure(let error):
-//
-//                print("\(error), fetch user fail, creating new user now")
-//
-//                // 創新 User
-//                guard let userViewModel = self?.userViewModel,
-//                    let user = userViewModel.value?.user else { return }
-//
-//                self?.createUserData(user: user, uid: uid)
-//            }
-//        }
-//    }
     
     func createUserData(user: User, uid: String) {
 
@@ -65,7 +35,6 @@ class SignInViewModel {
 
                 print("User: \(documentId) created")
 
-                // 可去進版頁
                 self?.onGranteed?()
 
             case .failure(let error):
@@ -75,17 +44,5 @@ class SignInViewModel {
                 CBProgressHUD.showFailure(text: "SignIn Fail")
             }
         }
-    }
-
-    func convertUserToViewModel(from user: User) -> UserViewModel {
-
-        let viewModel = UserViewModel(model: user)
-
-        return viewModel
-    }
-
-    func setUser(_ user: User) {
-
-        userViewModel.value = convertUserToViewModel(from: user)
     }
 }
