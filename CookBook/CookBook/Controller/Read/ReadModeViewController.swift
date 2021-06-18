@@ -9,6 +9,13 @@ import UIKit
 
 class ReadModeViewController: UIViewController {
 
+    enum RecipeItems: Int {
+
+        case ingredients = 0
+
+        case steps
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
 
@@ -188,7 +195,9 @@ extension ReadModeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if indexPath.row == 0 {
+        let recipeItems = indexPath.row
+
+        if recipeItems == RecipeItems.ingredients.rawValue {
 
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: String(describing: ReadIngredientsCollectionViewCell.self),
