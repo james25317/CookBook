@@ -61,11 +61,9 @@ class ProfileViewController: UIViewController {
 
         CBProgressHUD.show()
 
-        fetchProfileData(uid: uid)
+        fetchProfileData()
 
-        setupProfileInfo()
-
-        setupCollectionView()
+        setupProfilePage()
 
         viewModel.recipeViewModels.bind { [weak self] _ in
 
@@ -98,11 +96,18 @@ class ProfileViewController: UIViewController {
         self.sortType = type
     }
 
-    private func fetchProfileData(uid: String) {
+    private func fetchProfileData() {
 
         viewModel.fetchRecipes()
 
         viewModel.fetchUserData(uid: uid)
+    }
+
+    private func setupProfilePage() {
+
+        setupProfileInfo()
+
+        setupCollectionView()
     }
 
     private func setupProfileInfo() {
