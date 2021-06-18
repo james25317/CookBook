@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController {
 
         CBProgressHUD.show()
 
-        fetchProfileData()
+        fetchProfilePageData(with: uid)
 
         setupProfilePage()
 
@@ -96,7 +96,7 @@ class ProfileViewController: UIViewController {
         self.sortType = type
     }
 
-    private func fetchProfileData() {
+    private func fetchProfilePageData(with uid: String) {
 
         viewModel.fetchRecipes()
 
