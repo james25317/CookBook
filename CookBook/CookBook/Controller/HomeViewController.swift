@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
 
         viewModel.fetchFeedsData()
-        
+
         CBProgressHUD.show()
     }
 
@@ -49,21 +49,11 @@ class HomeViewController: UIViewController {
 
             CBProgressHUD.dismiss()
         }
-
-        viewModel.refreshView = { [weak self] () in
-
-            DispatchQueue.main.async {
-
-                self?.tableView.reloadData()
-            }
-        }
-
+        
         viewModel.scrollToTop = { [weak self] () in
 
             self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
-
-        viewModel.fetchFeedsData()
 
         setupRefresher()
     }

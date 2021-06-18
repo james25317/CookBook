@@ -11,14 +11,7 @@ class HomeViewModel {
 
     let feedViewModels = Box([FeedViewModel]())
 
-    var refreshView: (() -> Void)?
-
     var scrollToTop: (() -> Void)?
-
-    func onRefresh() {
-
-        self.refreshView?()
-    }
 
     func onScrollToTop() {
 
