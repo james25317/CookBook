@@ -33,23 +33,7 @@ class ReadViewController: UIViewController {
 
             guard let recipeViewModel = recipeViewModel else { return }
 
-            if recipeViewModel.recipe.mainImage.isEmpty {
-
-                self?.imageViewRecipeMainImage.image = UIImage(named: "CookBook_image_placholder_food_dim")
-            } else {
-
-                self?.imageViewRecipeMainImage.loadImage(recipeViewModel.recipe.mainImage)
-            }
-
-            self?.labelRecipeName.text = recipeViewModel.recipe.name
-            
-            self?.textViewRecipeDescription.text = recipeViewModel.recipe.description
-
-            self?.labelLikesCounts.text = String(describing: recipeViewModel.recipe.likes)
-
-            self?.labelIngredientsCounts.text = String(describing: recipeViewModel.recipe.ingredients.count)
-
-            self?.labelStepsCounts.text = String(describing: recipeViewModel.recipe.steps.count)
+            self?.setupReadPage(recipeViewModel: recipeViewModel)
         }
 
         guard let recipeId = recipeId else { return }
@@ -66,12 +50,25 @@ class ReadViewController: UIViewController {
 
         navigationController?.pushViewController(readModeVC, animated: true)
 
-        // pass data to ReadModePage
         readModeVC.viewModel = viewModel
     }
 
-    private func layoutReadPage() {
+    private func setupReadPage(recipeViewModel: RecipeViewModel) {
 
+        if recipeViewModel.recipe.mainImage.isEmpty {
+            self.imageViewRecipeMainImage.image = UIImage(named: "CookBook_image_placholder_food_dim")
+        } else {
+            self.imageViewRecipeMainImage.loadImage(recipeViewModel.recipe.mainImage)
+        }
 
+        self.labelRecipeName.text = recipeViewModel.recipe.name
+
+        self.textViewRecipeDescription.text = recipeViewModel.recipe.description
+
+        self.labelLikesCounts.text = String(describing: recipeViewModel.recipe.likes)
+
+        self.labelIngredientsCounts.text = String(describing: recipeViewModel.recipe.ingredients.count)
+
+        self.labelStepsCounts.text = String(describing: recipeViewModel.recipe.steps.count)
     }
 }
