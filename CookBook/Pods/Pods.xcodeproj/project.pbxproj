@@ -218,6 +218,7 @@
 		097F56B937BE66CB1398E55239F28032 /* local_subchannel_pool.cc in Sources */ = {isa = PBXBuildFile; fileRef = F35A23BEB53D40912B436708524AA19C /* local_subchannel_pool.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		09A3BC5FA73706B6D133F5FEE313B0AD /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 5331AFFD9C846C2D77C0BE5A5CEF90DE /* thread.h */; };
 		09B3A939511A24DAB6BFA221AD12CB15 /* GULHeartbeatDateStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BF01EF4502826574C33AEE4C3D8D3D /* GULHeartbeatDateStorage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		09BC13030C782480EABEE9659167ECCA /* Pods-CookBookSlowTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A3A1451ADDF7F202CF2605B6AE918 /* Pods-CookBookSlowTests-dummy.m */; };
 		0A04AA64E62BBC1F2514C9CD81E97C0E /* FIRCLSReportUploader_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 000EB5C44CF6C5A8CDAFFC5751CE6FA7 /* FIRCLSReportUploader_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0A0BE6A730EB07A13FD22B107DBA133B /* secure_endpoint.h in Copy src/core/lib/security/transport Private Headers */ = {isa = PBXBuildFile; fileRef = E651A79013BC0EC5053CFCC0BEB0A81F /* secure_endpoint.h */; };
 		0A123FFFF1C577631B90BC288A481834 /* alts_zero_copy_grpc_protector.h in Copy src/core/tsi/alts/zero_copy_frame_protector Private Headers */ = {isa = PBXBuildFile; fileRef = 3914A389DA7DC31820E9AC7E12D52515 /* alts_zero_copy_grpc_protector.h */; };
@@ -427,6 +428,7 @@
 		1498896BCB0CF6F8D0DCF82C77E01589 /* stats_data.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4001ED30748078354D11101E0F4212 /* stats_data.h */; };
 		14AD5E0A4ADE958BEEF8597B249A8668 /* FIRCLSMachException.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3B622017B456B27D3E53BC5BAF3517 /* FIRCLSMachException.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		14B870B8A8D66DB132FA7832BE810916 /* alts_record_protocol_crypter_common.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2BA4572D02A261182F5F7789920C /* alts_record_protocol_crypter_common.h */; };
+		14D6F64950DD12261DC4C79CF48C061B /* Pods-CookBookSlowTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A4384AA511D905C5EF1950A0B0B2FE /* Pods-CookBookSlowTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14FC526F9DD83C1AE8DE16D63D03DABA /* array_contains_any_filter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 1B7086E29D7A423E0BE6B7A2BE76B193 /* array_contains_any_filter.cc */; settings = {COMPILER_FLAGS = "$(inherited) -Wreorder -Werror=reorder -Wno-comma -fno-objc-arc"; }; };
 		14FF0E6462D0F352077B8894FC836E64 /* FIRComponentType.h in Headers */ = {isa = PBXBuildFile; fileRef = E759451CA77D09B8ABD41CF59B45AA1F /* FIRComponentType.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		151EF78A443F98B37A3E3B487A8E55B2 /* port.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 8A60E3B2B643D32F10632CDDCCF1AC02 /* port.h */; };
@@ -717,7 +719,7 @@
 		22CA5A1FF4ABE11BF1CCC7A31D2B552D /* tls_credentials.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11C38EFEFA74C7AE0FA42B203BE99F45 /* tls_credentials.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		22CD903684C62AE6D1F0EB4DD146B9E3 /* FIRCLSOnboardingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 58042C653B0A5B97E93C0AC5B5CA3316 /* FIRCLSOnboardingOperation.m */; };
 		22E9A543136B10FC1E70D99C37C8C1F2 /* md32_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 50253B8445F3B65333F49B848C542C98 /* md32_common.h */; };
-		22F625F9FDD90DF37467DCAC70647FD6 /* Pods-CookBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC936E8A5362B755C86077445C885758 /* Pods-CookBook-dummy.m */; };
+		22F625F9FDD90DF37467DCAC70647FD6 /* Pods-CookBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 842A860E2BEEEF9DC7C7019C5ABAA0D8 /* Pods-CookBook-dummy.m */; };
 		22F6417963252129B4A1C7A40B5A63FA /* gethostname.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C7898D62299E3CE2081B43EF098724C /* gethostname.h */; };
 		2305ABCDC925ACA65CDFF1DA581B73FF /* forkunsafe.c in Sources */ = {isa = PBXBuildFile; fileRef = 87FD46A34154843761BFACCC7FAA970E /* forkunsafe.c */; settings = {COMPILER_FLAGS = "-DOPENSSL_NO_ASM -GCC_WARN_INHIBIT_ALL_WARNINGS -w -fno-objc-arc"; }; };
 		23169D471255EC7A2BDB3A09341F770D /* transport_security.h in Copy src/core/tsi Private Headers */ = {isa = PBXBuildFile; fileRef = FD25B44F7F8E3AF6C06970CE73B36877 /* transport_security.h */; };
@@ -4335,6 +4337,7 @@
 		E47B7DCCA716645FFE7A241D3B76C523 /* channel_argument_option.h in Headers */ = {isa = PBXBuildFile; fileRef = F62331E3F3DEA07721547DE3DAE5066B /* channel_argument_option.h */; };
 		E4A5458BCBCB034F53EBD923E58CA412 /* const_init.h in Headers */ = {isa = PBXBuildFile; fileRef = C38729E17AB9E2548910310761A0CE15 /* const_init.h */; };
 		E4A9054E21ACD8680CCC098FF205B362 /* outlier_detection.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = ADC886CF30BF970517572D4723D4856A /* outlier_detection.upb.h */; };
+		E4B1806D1435EA1F9D5624C8FC713437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6046CDC308D6B08E15BDE57C770796A9 /* Foundation.framework */; };
 		E4BDE4717428C55B975CF6FAC09C8896 /* error.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = 861A435F5C1156DBD8461C69BD2B4F31 /* error.h */; };
 		E4C07172D156DEED393E902700AE12E1 /* server_callback_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 65AF9B146651CDC905CFADEECF058E84 /* server_callback_impl.h */; };
 		E4D15F8B13CE31AD0927A513B417E51C /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D1AE9AD2667DB6A25594BFF3966DCC /* RedirectHandler.swift */; };
@@ -4489,7 +4492,7 @@
 		ECC3A9B707D5C57126E5434C3F010255 /* eventmanager_libuv.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1A894B6469D93AA118DC653CD466E7 /* eventmanager_libuv.h */; };
 		ECC62504A4254723045FCEEDF7919171 /* iomgr_custom.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = B44C59289F6CB28997ABE34359AC7FF1 /* iomgr_custom.h */; };
 		ECCD2E49F8D9F95E9A74D1E6D210E682 /* channel_filter.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A712E698DF387CFBCA5AEF95D4EC48 /* channel_filter.h */; };
-		ECD0792E564A53625C715803A21EBBE8 /* Pods-CookBook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48926409D0FF4284E44B201FA87E9DE0 /* Pods-CookBook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECD0792E564A53625C715803A21EBBE8 /* Pods-CookBook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 327E467F65BB41CBFAE1507430234DCA /* Pods-CookBook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECF0B4C30A1040E02B4D9F742B24B15A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCAF680F929C9A4CABDE793E6FB7F54 /* Security.framework */; };
 		ECF9F22271CFA92B9FE4261907CDB42D /* secure_server_credentials.h in Headers */ = {isa = PBXBuildFile; fileRef = D72855983CB06895BE8A1A18FBCDE99F /* secure_server_credentials.h */; };
 		ECFFE4B468F24AACDEC0F06270B6A630 /* ads.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = E9D0C008D469E02BD0C7F4DED077E181 /* ads.upb.h */; };
@@ -5136,6 +5139,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 50F380A87A4FC4EC7EE3AC9BDADB6D2D;
 			remoteInfo = "gRPC-Core";
+		};
+		B1EFCE039A3F5B821F7AF96CE6D833CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 637C7E39E1BFDD508FC102FDEC28CC11;
+			remoteInfo = "Pods-CookBook";
 		};
 		B449B8E461CDD0C70C154CF83D50ADF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -9131,6 +9141,7 @@
 		02E23FA17E078773188A0D545E669E03 /* stream_map.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = stream_map.cc; path = src/core/ext/transport/chttp2/transport/stream_map.cc; sourceTree = "<group>"; };
 		02E9FD73C8754A342DFE987B21B42F8E /* ec_derive.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ec_derive.c; path = src/crypto/ec_extra/ec_derive.c; sourceTree = "<group>"; };
 		02EEFA92ED8C13EA487678130B783539 /* transport_security.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = transport_security.h; path = src/core/tsi/transport_security.h; sourceTree = "<group>"; };
+		02FFCA1401848D10E10EE5B8643BA06B /* Pods-CookBookSlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookBookSlowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0317672131642C37CCEAC9490AFDCBCE /* subchannel_pool_interface.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = subchannel_pool_interface.cc; path = src/core/ext/filters/client_channel/subchannel_pool_interface.cc; sourceTree = "<group>"; };
 		031D30359A53CB0DA8AA7902C1D96B1F /* FIRVerifyClientResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVerifyClientResponse.m; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyClientResponse.m; sourceTree = "<group>"; };
 		031D3EEE425D4B7902E66B4099A7EF3F /* document_key.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = document_key.cc; path = Firestore/core/src/model/document_key.cc; sourceTree = "<group>"; };
@@ -9202,7 +9213,6 @@
 		07756EDA49D0F231EE5DFA071B6D530D /* frame_rst_stream.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = frame_rst_stream.cc; path = src/core/ext/transport/chttp2/transport/frame_rst_stream.cc; sourceTree = "<group>"; };
 		078BFE1BA38190ABA6790AB37C1B3B95 /* grpc_completion.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = grpc_completion.cc; path = Firestore/core/src/remote/grpc_completion.cc; sourceTree = "<group>"; };
 		0794C2CEC131F885C18E00C0FA5454D0 /* FIRVerifyPhoneNumberResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVerifyPhoneNumberResponse.h; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyPhoneNumberResponse.h; sourceTree = "<group>"; };
-		0798EA8F0DCB7AF51B2FCED808F8A7CC /* Pods-CookBook.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CookBook.modulemap"; sourceTree = "<group>"; };
 		079A0D76F3036D256DAF36A411A16322 /* memory_index_manager.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = memory_index_manager.cc; path = Firestore/core/src/local/memory_index_manager.cc; sourceTree = "<group>"; };
 		07AD7569047C2310D276DA1C69FE3430 /* time_zone.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = time_zone.h; path = absl/time/internal/cctz/include/cctz/time_zone.h; sourceTree = "<group>"; };
 		07B55EAEDE3F9905D4DAF16FD8CA19B4 /* ItemsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemsExtension.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Extensions/ItemsExtension.swift"; sourceTree = "<group>"; };
@@ -9241,6 +9251,7 @@
 		0A0037CD25194E21F5B02F5EECA86BE8 /* delete_mutation.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = delete_mutation.cc; path = Firestore/core/src/model/delete_mutation.cc; sourceTree = "<group>"; };
 		0A0566F784AD1ED77C9C46DD308E6B1C /* FIRDocumentChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDocumentChange.h; path = Firestore/Source/Public/FirebaseFirestore/FIRDocumentChange.h; sourceTree = "<group>"; };
 		0A34B053EBF7F7F0498477BE1F50BF49 /* timer_heap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = timer_heap.h; path = src/core/lib/iomgr/timer_heap.h; sourceTree = "<group>"; };
+		0A3EED1440A0DC294845A28D0928AAC3 /* Pods_CookBookSlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBookSlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A58AD75217E8A6EF2FE80C59A79C973 /* FIRCLSUserLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSUserLogging.m; path = Crashlytics/Crashlytics/Components/FIRCLSUserLogging.m; sourceTree = "<group>"; };
 		0A62C632EB83490F2DD58A3433D17C5F /* FIRCLSMachO.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSMachO.m; path = Crashlytics/Shared/FIRCLSMachO/FIRCLSMachO.m; sourceTree = "<group>"; };
 		0A87965768825812EB050365251501F7 /* FSTUserDataConverter.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FSTUserDataConverter.mm; path = Firestore/Source/API/FSTUserDataConverter.mm; sourceTree = "<group>"; };
@@ -9291,7 +9302,6 @@
 		0E6948D92F5E657BA042B05D972BF418 /* log_format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_format.h; path = db/log_format.h; sourceTree = "<group>"; };
 		0E7F3BE133CF8D4A034D0315F848C458 /* x86_64-gcc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = "x86_64-gcc.c"; path = "src/crypto/fipsmodule/bn/asm/x86_64-gcc.c"; sourceTree = "<group>"; };
 		0EA086059DA4958F9AA73B177F2E8FD2 /* asn1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1.h; path = src/include/openssl/asn1.h; sourceTree = "<group>"; };
-		0EA73B3B2FBFE7B9B87A130305D84849 /* Pods-CookBook-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookBook-frameworks.sh"; sourceTree = "<group>"; };
 		0ED5C8132CC0B64E90F371A6478C73A4 /* base.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base.upb.h; path = "src/core/ext/upb-generated/envoy/api/v2/core/base.upb.h"; sourceTree = "<group>"; };
 		0F0C5E0A9D34C20DF4F0C7EE0BEFA719 /* GDTCOREvent_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCOREvent_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCOREvent_Private.h; sourceTree = "<group>"; };
 		0F0D65517188DEEB9FB2AC3CA897CC6B /* external_connection_acceptor_impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = external_connection_acceptor_impl.cc; path = src/cpp/server/external_connection_acceptor_impl.cc; sourceTree = "<group>"; };
@@ -9350,6 +9360,7 @@
 		12D6AB6E420468A171397B5BFB47D8DB /* http.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = http.upb.h; path = "src/core/ext/upb-generated/google/api/http.upb.h"; sourceTree = "<group>"; };
 		12D79234584C7FD629FCE51BD4F0D7E3 /* timer.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = timer.cc; path = src/core/lib/iomgr/timer.cc; sourceTree = "<group>"; };
 		12E4B801C5124AABCD57AAE471DB7681 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
+		12EAD2D7E47F8E8644D077148676B7EA /* Pods-CookBook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CookBook-acknowledgements.markdown"; sourceTree = "<group>"; };
 		12F0B3C3171F9E41422F449A5481B509 /* alts_frame_protector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alts_frame_protector.h; path = src/core/tsi/alts/frame_protector/alts_frame_protector.h; sourceTree = "<group>"; };
 		12FAEE449060D878F58EB9825C36C7E9 /* ShapeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/ShapeNode.swift"; sourceTree = "<group>"; };
 		12FD9670595EEB309AF9A19E1FB6709B /* cmp.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cmp.c; path = src/crypto/fipsmodule/bn/cmp.c; sourceTree = "<group>"; };
@@ -9403,6 +9414,7 @@
 		1610ABA983FA9D8648A8E5D4211578BA /* internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = internal.h; path = src/third_party/fiat/internal.h; sourceTree = "<group>"; };
 		16265E945BB3389896E34E26B8D3603E /* pem_pkey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pem_pkey.c; path = src/crypto/pem/pem_pkey.c; sourceTree = "<group>"; };
 		1632BF4C5840B31E46254C2226ED9193 /* FIRCLSDemangleOperation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FIRCLSDemangleOperation.mm; path = Crashlytics/Crashlytics/Operations/Symbolication/FIRCLSDemangleOperation.mm; sourceTree = "<group>"; };
+		16352C6A123E0400C172A87BA76A26A5 /* Pods-CookBook-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookBook-frameworks.sh"; sourceTree = "<group>"; };
 		16372B06C89FD302378CE2587E394028 /* trace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = trace.h; path = src/core/lib/debug/trace.h; sourceTree = "<group>"; };
 		164EAA7C514BF6D02DD3467A21DCF96A /* load_system_roots_linux.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = load_system_roots_linux.h; path = src/core/lib/security/security_connector/load_system_roots_linux.h; sourceTree = "<group>"; };
 		165C2EF77A0C4191A5F3CC9133E81228 /* FirebaseInstallations.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseInstallations.modulemap; sourceTree = "<group>"; };
@@ -9439,6 +9451,7 @@
 		17CDEB90E7BC36BFF58661B58F36FF3C /* cycleclock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cycleclock.h; path = absl/base/internal/cycleclock.h; sourceTree = "<group>"; };
 		17DEE3B4593F9FFA3C9904BE4D212642 /* byte_buffer.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = byte_buffer.cc; path = src/core/lib/surface/byte_buffer.cc; sourceTree = "<group>"; };
 		1803ED45A900E18353C0A37122DA660D /* timers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = timers.h; path = src/core/lib/profiling/timers.h; sourceTree = "<group>"; };
+		18091ED94850FC24B9BF2391CA0FD592 /* Pods-CookBook-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookBook-Info.plist"; sourceTree = "<group>"; };
 		184570609B2609D4019A7B3F262F3BEC /* FIRCollectionReference.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FIRCollectionReference.mm; path = Firestore/Source/API/FIRCollectionReference.mm; sourceTree = "<group>"; };
 		185A0A7BAAA4EECCFC693CFCB73220AA /* FBLPromise+Do.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Do.m"; path = "Sources/FBLPromises/FBLPromise+Do.m"; sourceTree = "<group>"; };
 		1865C469BC9F47185EB51C888DB45152 /* FirebaseCrashlytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCrashlytics.modulemap; sourceTree = "<group>"; };
@@ -9810,6 +9823,7 @@
 		324E683E79E9342FD7AE77D672E12F29 /* conf_def.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conf_def.h; path = src/crypto/conf/conf_def.h; sourceTree = "<group>"; };
 		32705E335A578F559CC46DF7FFD74D61 /* poly1305_arm.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = poly1305_arm.c; path = src/crypto/poly1305/poly1305_arm.c; sourceTree = "<group>"; };
 		3270C2026ADAFB58AA5ED31890040984 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
+		327E467F65BB41CBFAE1507430234DCA /* Pods-CookBook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CookBook-umbrella.h"; sourceTree = "<group>"; };
 		32DD06601F5BF669BD8379DD78EBA8AB /* GDTCORRegistrar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORRegistrar.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORRegistrar.m; sourceTree = "<group>"; };
 		32E0CC4F734DDBD8C8116965A22B88B4 /* completion_queue_cc.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = completion_queue_cc.cc; path = src/cpp/common/completion_queue_cc.cc; sourceTree = "<group>"; };
 		32EC16877B549601863FCEDC84C52017 /* FIRInstallationsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsVersion.h; path = FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsVersion.h; sourceTree = "<group>"; };
@@ -9863,7 +9877,6 @@
 		3738F8661F6F3F84B06C788754B5471D /* log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log.h; path = include/grpc/support/log.h; sourceTree = "<group>"; };
 		376B119B9B83054088CE7A1844A33919 /* json_token.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = json_token.cc; path = src/core/lib/security/credentials/jwt/json_token.cc; sourceTree = "<group>"; };
 		3774DDCB4DF59AA493BBCE5DEB111FEE /* channelz.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = channelz.cc; path = src/core/lib/channel/channelz.cc; sourceTree = "<group>"; };
-		377A0EA491ADA50CAC9B08A78C0AEEA2 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		378A04FCB0D747CA11725A370A87B3CF /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppAssociationRegistration.h; path = FirebaseCore/Sources/FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
 		37B274CBC6350BE635E20194C97907DD /* blinding.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = blinding.c; path = src/crypto/fipsmodule/rsa/blinding.c; sourceTree = "<group>"; };
 		3806D881A32E3D3E32201A5E4DB18D62 /* FBLPromise+Validate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Validate.h"; path = "Sources/FBLPromises/include/FBLPromise+Validate.h"; sourceTree = "<group>"; };
@@ -10111,7 +10124,6 @@
 		48308E2B1E74D6C23BC89B7845399260 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
 		484E9DB7C6558FB1E6270A370F3E0549 /* FIRCLSSymbolicationOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSSymbolicationOperation.m; path = Crashlytics/Crashlytics/Operations/Symbolication/FIRCLSSymbolicationOperation.m; sourceTree = "<group>"; };
 		4860CD9A5E348565C105B027DE1A8A2C /* FirebaseFirestoreSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseFirestoreSwift-umbrella.h"; sourceTree = "<group>"; };
-		48926409D0FF4284E44B201FA87E9DE0 /* Pods-CookBook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CookBook-umbrella.h"; sourceTree = "<group>"; };
 		48A81E2CCA2BDB061DA92B5FD15791BE /* array_contains_filter.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = array_contains_filter.cc; path = Firestore/core/src/core/array_contains_filter.cc; sourceTree = "<group>"; };
 		48BD9BA6D5C557FAE9EFB8A2AF3E3B29 /* tcp_client.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tcp_client.h; path = src/core/lib/iomgr/tcp_client.h; sourceTree = "<group>"; };
 		48CCD571666C086A880B4B2FEDCAE3DB /* GULKeychainUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULKeychainUtils.h; path = GoogleUtilities/Environment/Private/GULKeychainUtils.h; sourceTree = "<group>"; };
@@ -10197,6 +10209,7 @@
 		4E4F47C93E426F79F96DE4A25F960AA0 /* FIRStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRStorage.m; path = FirebaseStorage/Sources/FIRStorage.m; sourceTree = "<group>"; };
 		4E6F5EB41EB22C70C8A327EA5C146DE1 /* ref_counted_ptr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ref_counted_ptr.h; path = src/core/lib/gprpp/ref_counted_ptr.h; sourceTree = "<group>"; };
 		4E75DFED5BD84F24A933A436E6E50001 /* route.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = route.upb.h; path = "src/core/ext/upb-generated/envoy/api/v2/route.upb.h"; sourceTree = "<group>"; };
+		4E7A3A1451ADDF7F202CF2605B6AE918 /* Pods-CookBookSlowTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CookBookSlowTests-dummy.m"; sourceTree = "<group>"; };
 		4E8E1FB3FC1B80360366C996FD5298FB /* chttp2_connector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chttp2_connector.h; path = src/core/ext/transport/chttp2/client/chttp2_connector.h; sourceTree = "<group>"; };
 		4EA550D01EF00DD017A2D5224C21C28F /* x_exten.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = x_exten.c; path = src/crypto/x509/x_exten.c; sourceTree = "<group>"; };
 		4EA9B450372D208186D69750721E08C2 /* uri_parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri_parser.h; path = src/core/lib/uri/uri_parser.h; sourceTree = "<group>"; };
@@ -10315,6 +10328,7 @@
 		5703A4DD1509D925333CAE877B063EE6 /* ssl_session_cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ssl_session_cache.cc; path = src/core/tsi/ssl/session_cache/ssl_session_cache.cc; sourceTree = "<group>"; };
 		5703DAD4C8E284F4A49642BD749668E2 /* FIRCLSContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSContext.h; path = Crashlytics/Crashlytics/Components/FIRCLSContext.h; sourceTree = "<group>"; };
 		57113ABF34B7E4B9312FCC5C3B4B7B13 /* global_subchannel_pool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = global_subchannel_pool.h; path = src/core/ext/filters/client_channel/global_subchannel_pool.h; sourceTree = "<group>"; };
+		572C419673254E304AA6FF45B5A254E0 /* Pods-CookBookSlowTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CookBookSlowTests.modulemap"; sourceTree = "<group>"; };
 		573078970AA767BDC4D38EB5D901421F /* json.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = json.h; path = src/core/lib/json/json.h; sourceTree = "<group>"; };
 		575134FFDA2EA456AA0589CB945354C8 /* FIRMultiFactorInfo+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRMultiFactorInfo+Internal.h"; path = "FirebaseAuth/Sources/MultiFactor/FIRMultiFactorInfo+Internal.h"; sourceTree = "<group>"; };
 		575780CB09218871FD5978C84020F438 /* ssl_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl_types.h; path = src/core/tsi/ssl_types.h; sourceTree = "<group>"; };
@@ -10373,6 +10387,7 @@
 		5AEED150BE3987A41FC357483EB0BF26 /* FIRErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrors.h; path = FirebaseCore/Sources/Private/FIRErrors.h; sourceTree = "<group>"; };
 		5AF16D9323525879724E5B5662510C12 /* spinlock_posix.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = spinlock_posix.inc; path = absl/base/internal/spinlock_posix.inc; sourceTree = "<group>"; };
 		5AFF1F87475499E42B822150EC8E58B5 /* FIRLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLogger.h; path = FirebaseCore/Sources/Private/FIRLogger.h; sourceTree = "<group>"; };
+		5B042C1AB8C61D915E7AC055259DDC9C /* Pods-CookBookSlowTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookBookSlowTests-Info.plist"; sourceTree = "<group>"; };
 		5B0CC471C112D1109F810C2F026F7616 /* log_severity.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = log_severity.cc; path = absl/base/log_severity.cc; sourceTree = "<group>"; };
 		5B100F1008D829486109D7C52625C982 /* call_op_set_interface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = call_op_set_interface.h; path = include/grpcpp/impl/codegen/call_op_set_interface.h; sourceTree = "<group>"; };
 		5B2341D309E7267BE4E0EBEEA3C8A0EC /* message_compress_filter.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = message_compress_filter.cc; path = src/core/ext/filters/http/message_compress/message_compress_filter.cc; sourceTree = "<group>"; };
@@ -10455,6 +10470,7 @@
 		607AD0CA23326D1B5BF3A80072509F0D /* internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = internal.h; path = src/crypto/bio/internal.h; sourceTree = "<group>"; };
 		607CC654B282E21B0F5359B400E7D30A /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift"; sourceTree = "<group>"; };
 		6092F2D50242701EB34F127624711620 /* x509_obj.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = x509_obj.c; path = src/crypto/x509/x509_obj.c; sourceTree = "<group>"; };
+		609D517CF10AB4B4E36001F9979A9776 /* Pods-CookBookSlowTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CookBookSlowTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		60B2F2EB8C56FB6B9576A879D64809AD /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ImageCompositionLayer.swift"; sourceTree = "<group>"; };
 		60B5CE36253112B43A2C204C1B55D5F8 /* pick_first.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = pick_first.cc; path = src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc; sourceTree = "<group>"; };
 		60BE12DDF22AB4F96F5FF6F37F895534 /* sockaddr_utils.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sockaddr_utils.cc; path = src/core/lib/iomgr/sockaddr_utils.cc; sourceTree = "<group>"; };
@@ -10708,6 +10724,7 @@
 		70CC2290C0C5FB8347A2096EF17FBEC7 /* FIRFirestore.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FIRFirestore.mm; path = Firestore/Source/API/FIRFirestore.mm; sourceTree = "<group>"; };
 		70EA81E0347BC6D28761F1751EF8642E /* database_info.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = database_info.cc; path = Firestore/core/src/core/database_info.cc; sourceTree = "<group>"; };
 		70F4940E6605C1855A6EF9083E3DFB4C /* resolver_result_parsing.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = resolver_result_parsing.cc; path = src/core/ext/filters/client_channel/resolver_result_parsing.cc; sourceTree = "<group>"; };
+		7104A372A5334AEB0A192C9DA6F40E02 /* Pods-CookBook.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CookBook.modulemap"; sourceTree = "<group>"; };
 		7152558A5302A7D2FAD82418ACBC45F6 /* status_conversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status_conversion.h; path = src/core/lib/transport/status_conversion.h; sourceTree = "<group>"; };
 		7154AC84727B017F36770132BD395B6D /* cpu_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = cpu_posix.cc; path = src/core/lib/gpr/cpu_posix.cc; sourceTree = "<group>"; };
 		716AC83ADADFC9329549D2442DBFF8F7 /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedButton.swift; path = "lottie-swift/src/Public/iOS/AnimatedButton.swift"; sourceTree = "<group>"; };
@@ -10763,7 +10780,6 @@
 		74F1D5E77B9CECC72F5E76F6E2C4F396 /* FIRErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRErrors.m; path = FirebaseCore/Sources/FIRErrors.m; sourceTree = "<group>"; };
 		74FD1E81F303D624B4A808872B05F32E /* v3_extku.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = v3_extku.c; path = src/crypto/x509v3/v3_extku.c; sourceTree = "<group>"; };
 		75038BFF8DC6ACD6ECEB738315D0D0BA /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
-		7527A152413392AEA2DA7BA2F5764157 /* Pods-CookBook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CookBook-acknowledgements.markdown"; sourceTree = "<group>"; };
 		753624F3DBF1F84CF764D54992CF99DB /* verify_mutation.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = verify_mutation.cc; path = Firestore/core/src/model/verify_mutation.cc; sourceTree = "<group>"; };
 		7539C6F9FD504F698C88CE4E9F20C9C3 /* FIRStartMFASignInResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRStartMFASignInResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/SignIn/FIRStartMFASignInResponse.h; sourceTree = "<group>"; };
 		753C14CD15A48B3FE1F17A1A0898AA46 /* base.upb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = base.upb.c; path = "src/core/ext/upb-generated/envoy/api/v2/core/base.upb.c"; sourceTree = "<group>"; };
@@ -10980,6 +10996,7 @@
 		83E3D45A27058DF9FA031C5A2B40A090 /* FIRCLSMachOBinary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSMachOBinary.h; path = Crashlytics/Shared/FIRCLSMachO/FIRCLSMachOBinary.h; sourceTree = "<group>"; };
 		8407DC25ACE36836E3F3C659719F9534 /* frame_ping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = frame_ping.h; path = src/core/ext/transport/chttp2/transport/frame_ping.h; sourceTree = "<group>"; };
 		84207D32F3DAD47B61B98C93BE6BBC58 /* FIRHeartbeatInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRHeartbeatInfo.h; path = FirebaseCore/Sources/Private/FIRHeartbeatInfo.h; sourceTree = "<group>"; };
+		842A860E2BEEEF9DC7C7019C5ABAA0D8 /* Pods-CookBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CookBook-dummy.m"; sourceTree = "<group>"; };
 		842B4A913E2F5DDC9BD6D591F80304DD /* aead.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aead.h; path = src/include/openssl/aead.h; sourceTree = "<group>"; };
 		842BD8C7C2DE0482C2584A0393734FA5 /* percent.upb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = percent.upb.h; path = "src/core/ext/upb-generated/envoy/type/percent.upb.h"; sourceTree = "<group>"; };
 		8430E51D045BA39B7AEEC28F40BA1E01 /* write_batch_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = write_batch_internal.h; path = db/write_batch_internal.h; sourceTree = "<group>"; };
@@ -11595,7 +11612,6 @@
 		AF11775371F9363E27BEB027AF895D8B /* cpu-ppc64le.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = "cpu-ppc64le.c"; path = "src/crypto/cpu-ppc64le.c"; sourceTree = "<group>"; };
 		AF59C61691D7689B90BEF885C4288DEB /* frame_handler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = frame_handler.h; path = src/core/tsi/alts/frame_protector/frame_handler.h; sourceTree = "<group>"; };
 		AF5C7B56F5338C20D49EC9F7E3647844 /* server_initializer_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = server_initializer_impl.h; path = include/grpcpp/impl/server_initializer_impl.h; sourceTree = "<group>"; };
-		AF61EE138D69A2F9477F97D0A0D52EAC /* Pods-CookBook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookBook-acknowledgements.plist"; sourceTree = "<group>"; };
 		AF62A6817ADE135BBF27DE574EF79AED /* FIRCLSFABAsyncOperation_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSFABAsyncOperation_Private.h; path = Crashlytics/Shared/FIRCLSOperation/FIRCLSFABAsyncOperation_Private.h; sourceTree = "<group>"; };
 		AF66F9E851BEFA0304390D4E815DC892 /* FIRFinalizeMFASignInResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFinalizeMFASignInResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/SignIn/FIRFinalizeMFASignInResponse.h; sourceTree = "<group>"; };
 		AF7A425306E520D6539BA3B4A978E01C /* async_unary_call.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = async_unary_call.h; path = include/grpcpp/support/async_unary_call.h; sourceTree = "<group>"; };
@@ -11759,7 +11775,6 @@
 		BAF80D16C6F16E585186B81DC6E328EE /* pollset_set_windows.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pollset_set_windows.h; path = src/core/lib/iomgr/pollset_set_windows.h; sourceTree = "<group>"; };
 		BB09E14BE331FFFD25853EC6602B05D4 /* http2_errors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = http2_errors.h; path = src/core/lib/transport/http2_errors.h; sourceTree = "<group>"; };
 		BB1379D7E3B5DB652E1BB967CB125101 /* compression_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = compression_types.h; path = include/grpc/impl/codegen/compression_types.h; sourceTree = "<group>"; };
-		BB1C79119439A922345CA99A39395E85 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		BB1F3ED8FEAD98D41F5257228B8650C1 /* FIRErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrorCode.h; path = FirebaseCore/Sources/Private/FIRErrorCode.h; sourceTree = "<group>"; };
 		BB4E2B3318B0CF2BEED88396A97BDCB9 /* FIRGetOOBConfirmationCodeResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRGetOOBConfirmationCodeResponse.h; path = FirebaseAuth/Sources/Backend/RPC/FIRGetOOBConfirmationCodeResponse.h; sourceTree = "<group>"; };
 		BB689E8277A7B308AF70A42ADD90B4FA /* v3_skey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = v3_skey.c; path = src/crypto/x509v3/v3_skey.c; sourceTree = "<group>"; };
@@ -11909,7 +11924,6 @@
 		C4BB886BED4E990D4CC0922009BA7397 /* bits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bits.h; path = absl/base/internal/bits.h; sourceTree = "<group>"; };
 		C4D14D26F88A6CAFA29E2BC5BF16290F /* oct.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = oct.c; path = src/crypto/fipsmodule/ec/oct.c; sourceTree = "<group>"; };
 		C4DBC6896AB166F177CB8BF6A4C3681E /* FIRCLSExecutionIdentifierModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSExecutionIdentifierModel.h; path = Crashlytics/Crashlytics/Models/FIRCLSExecutionIdentifierModel.h; sourceTree = "<group>"; };
-		C4EC5A3053A208F20F52ABF8502D53C3 /* Pods-CookBook-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookBook-Info.plist"; sourceTree = "<group>"; };
 		C4F2CB9143CF3BBDBB3D3EBFCBCB314C /* sha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha.h; path = src/include/openssl/sha.h; sourceTree = "<group>"; };
 		C50AE5EE68817492D96604A24FB37352 /* hpack_table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hpack_table.h; path = src/core/ext/transport/chttp2/transport/hpack_table.h; sourceTree = "<group>"; };
 		C510C14982D8D068AD7CE03757E9471C /* channel_args.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channel_args.h; path = src/core/lib/channel/channel_args.h; sourceTree = "<group>"; };
@@ -12319,6 +12333,7 @@
 		E15043FB53DF62899767FBF3DFF8B740 /* get_current_time_chrono.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = get_current_time_chrono.inc; path = absl/time/internal/get_current_time_chrono.inc; sourceTree = "<group>"; };
 		E1535EF24E6266B4CA8C21223A5840C8 /* FirebaseCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.debug.xcconfig; sourceTree = "<group>"; };
 		E1659ACAF6F4E2834C7E5C0B082419B0 /* FIRFinalizeMFAEnrollmentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRFinalizeMFAEnrollmentResponse.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/Enroll/FIRFinalizeMFAEnrollmentResponse.h; sourceTree = "<group>"; };
+		E185D9585F4EAEEBC885ED9DB3D74786 /* Pods-CookBook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookBook-acknowledgements.plist"; sourceTree = "<group>"; };
 		E18FD314C7388C8B382F2E73A856B4B8 /* FIRCLSProcessReportOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSProcessReportOperation.m; path = Crashlytics/Crashlytics/Operations/Reports/FIRCLSProcessReportOperation.m; sourceTree = "<group>"; };
 		E1904E6120FB1F293292B02D20377DF9 /* alts_frame_protector.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = alts_frame_protector.cc; path = src/core/tsi/alts/frame_protector/alts_frame_protector.cc; sourceTree = "<group>"; };
 		E19290137925A6944FCB4F57C7647B5C /* GULReachabilityMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityMessageCode.h; path = GoogleUtilities/Reachability/Private/GULReachabilityMessageCode.h; sourceTree = "<group>"; };
@@ -12345,6 +12360,7 @@
 		E2E647C9E7B7B481907E1AD7C1B8D6B3 /* e_aesgcmsiv.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = e_aesgcmsiv.c; path = src/crypto/cipher_extra/e_aesgcmsiv.c; sourceTree = "<group>"; };
 		E2FB54DFE618DB128E9E2781F98E52BF /* FIRInstallationsLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsLogger.h; path = FirebaseInstallations/Source/Library/FIRInstallationsLogger.h; sourceTree = "<group>"; };
 		E31AF74DA14E0549B237CB6945602735 /* FIRAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/FIRAuthProvider.m; sourceTree = "<group>"; };
+		E325B90915B283D7C89F51DAC76CAC5C /* Pods-CookBookSlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookBookSlowTests.release.xcconfig"; sourceTree = "<group>"; };
 		E32F059B2049D2E38BF6538C7ECFA65A /* server_builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = server_builder.h; path = include/grpcpp/server_builder.h; sourceTree = "<group>"; };
 		E3501D1AA4EB79A37DF94C5CC2BF72CB /* internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = internal.h; path = src/crypto/cipher_extra/internal.h; sourceTree = "<group>"; };
 		E364531407BBB00205E6A8CBFDCFD8A1 /* pollset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pollset.h; path = src/core/lib/iomgr/pollset.h; sourceTree = "<group>"; };
@@ -12492,6 +12508,7 @@
 		ED9CEB73AED9F0A383818FA3FF098384 /* utf8.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = utf8.cc; path = absl/strings/internal/utf8.cc; sourceTree = "<group>"; };
 		EDCA5B513E072795C427ADAB77A1654A /* firebase_metadata_provider_noop.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = firebase_metadata_provider_noop.cc; path = Firestore/core/src/remote/firebase_metadata_provider_noop.cc; sourceTree = "<group>"; };
 		EDCD402B7BACBBF252EFBFC03B4BC907 /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
+		EDCD9DE2F5D21ABF9A54F22C9FDAF07B /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		EDCFE403C2371F3CC0704864B4D17465 /* string.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = string.h; path = src/core/lib/gpr/string.h; sourceTree = "<group>"; };
 		EDEF8EAE1882566586AEA3F54B0E3596 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
 		EDF25C00726D5FB949A26329FB1544A3 /* channel_stack_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = channel_stack_builder.cc; path = src/core/lib/channel/channel_stack_builder.cc; sourceTree = "<group>"; };
@@ -12501,6 +12518,7 @@
 		EE2D5A0FCF1C6B129C2BFFD8DD017ED5 /* census.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = census.h; path = include/grpc/census.h; sourceTree = "<group>"; };
 		EE58B5DBFB5D7750A771161A0DFC554C /* field_mask.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = field_mask.cc; path = Firestore/core/src/model/field_mask.cc; sourceTree = "<group>"; };
 		EE5B8CA07DB7867C5CDB2B0A27C1731D /* lame_client.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lame_client.h; path = src/core/lib/surface/lame_client.h; sourceTree = "<group>"; };
+		EE72B64C6B66CE0E862AE7F33BDECCC3 /* Pods-CookBookSlowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookBookSlowTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EE8C5FE05BDBCD07DCEA0778CB57E57C /* FIRCLSSymbolResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSSymbolResolver.m; path = Crashlytics/Crashlytics/Models/FIRCLSSymbolResolver.m; sourceTree = "<group>"; };
 		EE8E0FE53F4839DE943F9C7014386B04 /* task.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = task.cc; path = Firestore/core/src/util/task.cc; sourceTree = "<group>"; };
 		EEA6E19248E5CD8FC1B0AF9B1CB7FC41 /* FIRFieldValue.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FIRFieldValue.mm; path = Firestore/Source/API/FIRFieldValue.mm; sourceTree = "<group>"; };
@@ -12606,6 +12624,7 @@
 		F594BF90B440B48976E88AF060BB5B4A /* memory_mutation_queue.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = memory_mutation_queue.cc; path = Firestore/core/src/local/memory_mutation_queue.cc; sourceTree = "<group>"; };
 		F59ADBCF46C28AEA896167B19A7D604D /* str_join_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = str_join_internal.h; path = absl/strings/internal/str_join_internal.h; sourceTree = "<group>"; };
 		F5A116295620F9970B3AD7C47F080A6B /* xds_client_stats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xds_client_stats.h; path = src/core/ext/filters/client_channel/xds/xds_client_stats.h; sourceTree = "<group>"; };
+		F5A4384AA511D905C5EF1950A0B0B2FE /* Pods-CookBookSlowTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CookBookSlowTests-umbrella.h"; sourceTree = "<group>"; };
 		F5BFF863403F5D4AB326EE69F7A4E5E1 /* CodableErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableErrors.swift; path = Firestore/Swift/Source/Codable/CodableErrors.swift; sourceTree = "<group>"; };
 		F5F9664A1C05B4F66F8F673691BEB698 /* FIRHeartbeatInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRHeartbeatInfo.h; path = FirebaseCore/Sources/Private/FIRHeartbeatInfo.h; sourceTree = "<group>"; };
 		F5FDD5F775C2A5386B5DCB413313F248 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
@@ -12719,11 +12738,11 @@
 		FC24718050FAE9DB8EA0DBE26EB8F3CA /* version_set.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = version_set.cc; path = db/version_set.cc; sourceTree = "<group>"; };
 		FC3B622017B456B27D3E53BC5BAF3517 /* FIRCLSMachException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSMachException.h; path = Crashlytics/Crashlytics/Handlers/FIRCLSMachException.h; sourceTree = "<group>"; };
 		FC3DA8D91BE72DAC866471E076038D61 /* JGProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		FC4E00C0A490DF5CC9AC456B5ADA127F /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		FC563CE6AF3FC4EF970A52CA8266506E /* grpc_ares_wrapper_windows.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = grpc_ares_wrapper_windows.cc; path = src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper_windows.cc; sourceTree = "<group>"; };
 		FC5F9720454C6D16FFF972DE3125469C /* FIRStorageReference_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRStorageReference_Private.h; path = FirebaseStorage/Sources/FIRStorageReference_Private.h; sourceTree = "<group>"; };
 		FC7156DCD537311F91B4F0789382180E /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		FC80900D1532E8831BA02CF00685C192 /* FIRCLSCrashedMarkerFile.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = FIRCLSCrashedMarkerFile.c; path = Crashlytics/Crashlytics/Components/FIRCLSCrashedMarkerFile.c; sourceTree = "<group>"; };
-		FC936E8A5362B755C86077445C885758 /* Pods-CookBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CookBook-dummy.m"; sourceTree = "<group>"; };
 		FCA7A0D7DB6620BDAC55A76298F2C752 /* iam_credentials.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iam_credentials.h; path = src/core/lib/security/credentials/iam/iam_credentials.h; sourceTree = "<group>"; };
 		FCB6A948CD053EA1902FBBFE7D7E3AD9 /* tcp_client_cfstream.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_client_cfstream.cc; path = src/core/lib/iomgr/tcp_client_cfstream.cc; sourceTree = "<group>"; };
 		FCB730AD7C201C07D95FBC461EDB72B3 /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
@@ -12781,6 +12800,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCC12588E6E63809D76D39941E6F9BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255B0B732C5103F481BD02BAEF8A2DC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B1806D1435EA1F9D5624C8FC713437 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -13230,6 +13257,22 @@
 				8029722CF8DA55B622AC1C5075AC5D82 /* Support Files */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2FD840872689379390BA471D042B15AE /* Pods-CookBookSlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				572C419673254E304AA6FF45B5A254E0 /* Pods-CookBookSlowTests.modulemap */,
+				609D517CF10AB4B4E36001F9979A9776 /* Pods-CookBookSlowTests-acknowledgements.markdown */,
+				EE72B64C6B66CE0E862AE7F33BDECCC3 /* Pods-CookBookSlowTests-acknowledgements.plist */,
+				4E7A3A1451ADDF7F202CF2605B6AE918 /* Pods-CookBookSlowTests-dummy.m */,
+				5B042C1AB8C61D915E7AC055259DDC9C /* Pods-CookBookSlowTests-Info.plist */,
+				F5A4384AA511D905C5EF1950A0B0B2FE /* Pods-CookBookSlowTests-umbrella.h */,
+				02FFCA1401848D10E10EE5B8643BA06B /* Pods-CookBookSlowTests.debug.xcconfig */,
+				E325B90915B283D7C89F51DAC76CAC5C /* Pods-CookBookSlowTests.release.xcconfig */,
+			);
+			name = "Pods-CookBookSlowTests";
+			path = "Target Support Files/Pods-CookBookSlowTests";
 			sourceTree = "<group>";
 		};
 		32D51EEB4C885F69C11F13BA01F2E47A /* compare */ = {
@@ -14106,23 +14149,6 @@
 			name = Implementation;
 			sourceTree = "<group>";
 		};
-		3F1270B202700554FAEDBBC28A6B218A /* Pods-CookBook */ = {
-			isa = PBXGroup;
-			children = (
-				0798EA8F0DCB7AF51B2FCED808F8A7CC /* Pods-CookBook.modulemap */,
-				7527A152413392AEA2DA7BA2F5764157 /* Pods-CookBook-acknowledgements.markdown */,
-				AF61EE138D69A2F9477F97D0A0D52EAC /* Pods-CookBook-acknowledgements.plist */,
-				FC936E8A5362B755C86077445C885758 /* Pods-CookBook-dummy.m */,
-				0EA73B3B2FBFE7B9B87A130305D84849 /* Pods-CookBook-frameworks.sh */,
-				C4EC5A3053A208F20F52ABF8502D53C3 /* Pods-CookBook-Info.plist */,
-				48926409D0FF4284E44B201FA87E9DE0 /* Pods-CookBook-umbrella.h */,
-				BB1C79119439A922345CA99A39395E85 /* Pods-CookBook.debug.xcconfig */,
-				377A0EA491ADA50CAC9B08A78C0AEEA2 /* Pods-CookBook.release.xcconfig */,
-			);
-			name = "Pods-CookBook";
-			path = "Target Support Files/Pods-CookBook";
-			sourceTree = "<group>";
-		};
 		401652E5CD7A0D5A75B203B02795B8E9 /* optional */ = {
 			isa = PBXGroup;
 			children = (
@@ -14452,14 +14478,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/nanopb";
-			sourceTree = "<group>";
-		};
-		53A1302A34E2C3014CB2F4C6FF5DEA2C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3F1270B202700554FAEDBBC28A6B218A /* Pods-CookBook */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		5710EA930015EC65E7CA60337B44B1DD /* time */ = {
@@ -16319,6 +16337,40 @@
 			path = "gRPC-C++";
 			sourceTree = "<group>";
 		};
+		A0FF215727927AB4D345BDA61BB77390 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF96B57ADE05E8909F823BDF6868B3E3 /* absl.framework */,
+				506EA6AFE3063F56D278EF896E052FCF /* EasyRefresher.bundle */,
+				3009996C8ED92208FF6BDEC324F23CC2 /* EasyRefresher.framework */,
+				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
+				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth.framework */,
+				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore.framework */,
+				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics.framework */,
+				86375444C196BA272DDBB8165BF64A15 /* FirebaseCrashlytics.framework */,
+				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore.framework */,
+				720974C5A5873C4DB14E6CC7A51AFDB7 /* FirebaseFirestoreSwift.framework */,
+				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations.framework */,
+				9CF8FA5F01F446F01AAC7331075452AD /* FirebaseStorage.framework */,
+				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
+				B471867C535B02FA55D87E260F6480F8 /* grpc.framework */,
+				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */,
+				1911113E0FBF13CFF9132E5FF7685228 /* grpcpp.framework */,
+				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				7FBAFAA66E9C7401884F439AE8BC662C /* JGProgressHUD.framework */,
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
+				514D7742C6CBB0BDBD9984AEE97DDFDE /* openssl_grpc.framework */,
+				BE5B4F5F7F1466B3004FD8139357C02A /* Pods_CookBook.framework */,
+				0A3EED1440A0DC294845A28D0928AAC3 /* Pods_CookBookSlowTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A120EB38037F26826B2FA75E38BF8FAE /* EasyRefresher */ = {
 			isa = PBXGroup;
 			children = (
@@ -16357,39 +16409,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/JGProgressHUD";
-			sourceTree = "<group>";
-		};
-		A482952C5BAD05BA84E7611FF9015BD6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF96B57ADE05E8909F823BDF6868B3E3 /* absl.framework */,
-				506EA6AFE3063F56D278EF896E052FCF /* EasyRefresher.bundle */,
-				3009996C8ED92208FF6BDEC324F23CC2 /* EasyRefresher.framework */,
-				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
-				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth.framework */,
-				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore.framework */,
-				8CC9178C366942FD6FF6A115604EAD58 /* FirebaseCoreDiagnostics.framework */,
-				86375444C196BA272DDBB8165BF64A15 /* FirebaseCrashlytics.framework */,
-				92000153CD73F7FC2DBAB4AB708269F3 /* FirebaseFirestore.framework */,
-				720974C5A5873C4DB14E6CC7A51AFDB7 /* FirebaseFirestoreSwift.framework */,
-				13C8C8B254851998F9289F71229B28A2 /* FirebaseInstallations.framework */,
-				9CF8FA5F01F446F01AAC7331075452AD /* FirebaseStorage.framework */,
-				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
-				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
-				B471867C535B02FA55D87E260F6480F8 /* grpc.framework */,
-				9C7C87B5D0A6752AFA2642F1BCA967A3 /* gRPCCertificates-Cpp.bundle */,
-				1911113E0FBF13CFF9132E5FF7685228 /* grpcpp.framework */,
-				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
-				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
-				7FBAFAA66E9C7401884F439AE8BC662C /* JGProgressHUD.framework */,
-				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
-				0A9F46A999C47653013D3AD854352507 /* leveldb.framework */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
-				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				514D7742C6CBB0BDBD9984AEE97DDFDE /* openssl_grpc.framework */,
-				BE5B4F5F7F1466B3004FD8139357C02A /* Pods_CookBook.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A8261360646D43A40550D8358C36487E /* base */ = {
@@ -16915,6 +16934,23 @@
 			name = malloc_internal;
 			sourceTree = "<group>";
 		};
+		BEBB34839B9EF449326FD8E2A6C56B28 /* Pods-CookBook */ = {
+			isa = PBXGroup;
+			children = (
+				7104A372A5334AEB0A192C9DA6F40E02 /* Pods-CookBook.modulemap */,
+				12EAD2D7E47F8E8644D077148676B7EA /* Pods-CookBook-acknowledgements.markdown */,
+				E185D9585F4EAEEBC885ED9DB3D74786 /* Pods-CookBook-acknowledgements.plist */,
+				842A860E2BEEEF9DC7C7019C5ABAA0D8 /* Pods-CookBook-dummy.m */,
+				16352C6A123E0400C172A87BA76A26A5 /* Pods-CookBook-frameworks.sh */,
+				18091ED94850FC24B9BF2391CA0FD592 /* Pods-CookBook-Info.plist */,
+				327E467F65BB41CBFAE1507430234DCA /* Pods-CookBook-umbrella.h */,
+				FC4E00C0A490DF5CC9AC456B5ADA127F /* Pods-CookBook.debug.xcconfig */,
+				EDCD9DE2F5D21ABF9A54F22C9FDAF07B /* Pods-CookBook.release.xcconfig */,
+			);
+			name = "Pods-CookBook";
+			path = "Target Support Files/Pods-CookBook";
+			sourceTree = "<group>";
+		};
 		BFBBE6AD39566948B99C7A5067751222 /* bad_variant_access */ = {
 			isa = PBXGroup;
 			children = (
@@ -17076,8 +17112,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D6BFA78B41700A94B93FFEDFB121004E /* Frameworks */,
 				13014342DFD722F167A69B1C956640AA /* Pods */,
-				A482952C5BAD05BA84E7611FF9015BD6 /* Products */,
-				53A1302A34E2C3014CB2F4C6FF5DEA2C /* Targets Support Files */,
+				A0FF215727927AB4D345BDA61BB77390 /* Products */,
+				E84F9428AA1B3CD9F675CF5E8E54D577 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -17492,6 +17528,15 @@
 				608637C323B8C48D8C05893AABBE8BEE /* strings */,
 			);
 			name = strings;
+			sourceTree = "<group>";
+		};
+		E84F9428AA1B3CD9F675CF5E8E54D577 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEBB34839B9EF449326FD8E2A6C56B28 /* Pods-CookBook */,
+				2FD840872689379390BA471D042B15AE /* Pods-CookBookSlowTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		EA40D5031AED9D02A00D8019F8707403 /* throw_delegate */ = {
@@ -19205,6 +19250,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37FAAD9C5FB760FD66D190A56EA7C808 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D6F64950DD12261DC4C79CF48C061B /* Pods-CookBookSlowTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		450CC29BE84FAE7EE5DC31A6824BDE0B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -19876,6 +19929,25 @@
 			productReference = 1911113E0FBF13CFF9132E5FF7685228 /* grpcpp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1CEC8A859DEA2758395CFFBFDA2C4CDC /* Pods-CookBookSlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D0B095199E47C30AC07B675984F509C /* Build configuration list for PBXNativeTarget "Pods-CookBookSlowTests" */;
+			buildPhases = (
+				37FAAD9C5FB760FD66D190A56EA7C808 /* Headers */,
+				D878AE32A6FA48A5C7B3AA42B8D73089 /* Sources */,
+				255B0B732C5103F481BD02BAEF8A2DC4 /* Frameworks */,
+				565C97ABBBE6478666E4EE5C82EAEACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F06B8ED542E2257CE64DDBCC95CA419 /* PBXTargetDependency */,
+			);
+			name = "Pods-CookBookSlowTests";
+			productName = "Pods-CookBookSlowTests";
+			productReference = 0A3EED1440A0DC294845A28D0928AAC3 /* Pods_CookBookSlowTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		23E7C4A52360C026F97E4A96D91B03CE /* FirebaseStorage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59ED9650F8B5E79E7952DF558FFE3A0E /* Build configuration list for PBXNativeTarget "FirebaseStorage" */;
@@ -20531,7 +20603,7 @@
 				"zh-Hant",
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A482952C5BAD05BA84E7611FF9015BD6 /* Products */;
+			productRefGroup = A0FF215727927AB4D345BDA61BB77390 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -20561,6 +20633,7 @@
 				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
 				D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */,
 				637C7E39E1BFDD508FC102FDEC28CC11 /* Pods-CookBook */,
+				1CEC8A859DEA2758395CFFBFDA2C4CDC /* Pods-CookBookSlowTests */,
 				2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
@@ -20611,6 +20684,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4F0C77F33E3C8541D2E490AEA9FE56AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		565C97ABBBE6478666E4EE5C82EAEACD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -22541,6 +22621,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D878AE32A6FA48A5C7B3AA42B8D73089 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BC13030C782480EABEE9659167ECCA /* Pods-CookBookSlowTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D893A4EF5C45029CFC60CDDDCC4FCC2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -22726,6 +22814,12 @@
 			name = "lottie-ios";
 			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
 			targetProxy = CB52166A0739348BB8B002DC9E02185B /* PBXContainerItemProxy */;
+		};
+		3F06B8ED542E2257CE64DDBCC95CA419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CookBook";
+			target = 637C7E39E1BFDD508FC102FDEC28CC11 /* Pods-CookBook */;
+			targetProxy = B1EFCE039A3F5B821F7AF96CE6D833CE /* PBXContainerItemProxy */;
 		};
 		40CB66864DC10050A08F16AE404D60E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -23020,43 +23114,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		015910E88E18E620CC33778CEFB163D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB1C79119439A922345CA99A39395E85 /* Pods-CookBook.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0508223AE60B997729F5D74126D9ED99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C239BDC442422A6A1B5BCE07B758971E /* nanopb.release.xcconfig */;
@@ -23072,7 +23129,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/nanopb/nanopb-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23108,44 +23165,6 @@
 			};
 			name = Debug;
 		};
-		07B27AD9407F6C61F7E481D3B8640779 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 377A0EA491ADA50CAC9B08A78C0AEEA2 /* Pods-CookBook.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		0C2C4E002DB5C2E6680708E38E1A49D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7724051234E3F09B90AF3795B373477 /* FirebaseStorage.debug.xcconfig */;
@@ -23160,7 +23179,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseStorage/FirebaseStorage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23194,7 +23213,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCrashlytics/FirebaseCrashlytics-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23230,7 +23249,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/leveldb-library/leveldb-library-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/leveldb-library/leveldb-library-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23265,7 +23284,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23334,7 +23353,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCore/FirebaseCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23369,7 +23388,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/abseil/abseil-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/abseil/abseil-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23395,7 +23414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23453,7 +23472,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseFirestoreSwift/FirebaseFirestoreSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23523,7 +23542,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/nanopb/nanopb-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23556,7 +23575,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseAuth/FirebaseAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23627,7 +23646,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23660,7 +23679,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCore/FirebaseCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23695,7 +23714,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCrashlytics/FirebaseCrashlytics-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23729,7 +23748,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseStorage/FirebaseStorage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23784,6 +23803,43 @@
 			};
 			name = Debug;
 		};
+		4E6636E9854FDE81445381E52D9F5BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4E00C0A490DF5CC9AC456B5ADA127F /* Pods-CookBook.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5009543D0B9653196F46CFDC4AB01020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFAA1D9C0C92A16B87A3B33B0C2AB81C /* gRPC-Core.debug.xcconfig */;
@@ -23799,7 +23855,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/gRPC-Core/gRPC-Core-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/gRPC-Core/gRPC-Core-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23818,6 +23874,68 @@
 			};
 			name = Debug;
 		};
+		593F10BFFA94DAC7D6E17FB8A7F32D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
 		5A8F96A9115D5EE9ABF1B6BD137C4B5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86CE072C07B0BBF18300BAC687B67482 /* GoogleUtilities.debug.xcconfig */;
@@ -23832,7 +23950,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23845,6 +23963,43 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5B18CD631B8DFB03E532E3D2CC1E3C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02FFCA1401848D10E10EE5B8643BA06B /* Pods-CookBookSlowTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CookBookSlowTests/Pods-CookBookSlowTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CookBookSlowTests/Pods-CookBookSlowTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -23865,7 +24020,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23920,6 +24075,44 @@
 			};
 			name = Debug;
 		};
+		75D949D2DB3112FDE25AE5850757A24F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E325B90915B283D7C89F51DAC76CAC5C /* Pods-CookBookSlowTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CookBookSlowTests/Pods-CookBookSlowTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CookBookSlowTests/Pods-CookBookSlowTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8C9A6ED3E6F7498B9B7277A97029462C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34ADC07A52118DE03AC2C73D0999EB3A /* gRPC-C++.debug.xcconfig */;
@@ -23935,7 +24128,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/gRPC-C++/gRPC-C++-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/gRPC-C++-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -23968,7 +24161,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GoogleDataTransport/GoogleDataTransport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24002,7 +24195,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GoogleDataTransport/GoogleDataTransport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24037,7 +24230,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseInstallations/FirebaseInstallations-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24072,6 +24265,72 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
+		};
+		A0374B8CF9A7D6A45F6D116D698D1C19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
 		};
 		A6C25141F9755327A5CE5AE5C1FBD1BB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -24139,7 +24398,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseFirestore/FirebaseFirestore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24174,7 +24433,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/leveldb-library/leveldb-library-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/leveldb-library/leveldb-library-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24228,79 +24487,13 @@
 			};
 			name = Debug;
 		};
-		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
 		BD560989BB2E607DEEE81B0338ACE4E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6B99ABF28BEB8F3AF60DE08899F7DC5 /* Firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24317,7 +24510,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
 				IBSC_MODULE = grpcpp;
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-Cpp-gRPC-C++-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "gRPCCertificates-Cpp";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -24325,68 +24518,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
-		};
-		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
 		};
 		D4394403D9B8124A37AED078851D6781 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -24439,7 +24570,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/abseil/abseil-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/abseil/abseil-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24472,7 +24603,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseFirestoreSwift/FirebaseFirestoreSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24542,7 +24673,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24593,7 +24724,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24627,7 +24758,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24661,7 +24792,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseInstallations/FirebaseInstallations-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24675,6 +24806,44 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F745742858624364B0EA39E88E569CC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCD9DE2F5D21ABF9A54F22C9FDAF07B /* Pods-CookBook.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CookBook/Pods-CookBook.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -24696,7 +24865,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseFirestore/FirebaseFirestore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24724,7 +24893,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/gRPC-C++";
 				IBSC_MODULE = grpcpp;
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-Cpp-gRPC-C++-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "gRPCCertificates-Cpp";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -24748,7 +24917,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JGProgressHUD/JGProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24781,7 +24950,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/FirebaseAuth/FirebaseAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24816,7 +24985,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JGProgressHUD/JGProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24851,7 +25020,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/gRPC-C++/gRPC-C++-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/gRPC-C++/gRPC-C++-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24885,7 +25054,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24920,7 +25089,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/gRPC-Core/gRPC-Core-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/gRPC-Core/gRPC-Core-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -24961,6 +25130,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2D0B095199E47C30AC07B675984F509C /* Build configuration list for PBXNativeTarget "Pods-CookBookSlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B18CD631B8DFB03E532E3D2CC1E3C13 /* Debug */,
+				75D949D2DB3112FDE25AE5850757A24F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		31DA5AC1CCC5CAB6FD156AAA46EA4988 /* Build configuration list for PBXNativeTarget "FirebaseInstallations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -24973,8 +25151,8 @@
 		3758CC3D2E18E02085C874A16B07615E /* Build configuration list for PBXNativeTarget "Pods-CookBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				015910E88E18E620CC33778CEFB163D8 /* Debug */,
-				07B27AD9407F6C61F7E481D3B8640779 /* Release */,
+				4E6636E9854FDE81445381E52D9F5BE8 /* Debug */,
+				F745742858624364B0EA39E88E569CC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -24991,8 +25169,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
-				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
+				A0374B8CF9A7D6A45F6D116D698D1C19 /* Debug */,
+				593F10BFFA94DAC7D6E17FB8A7F32D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

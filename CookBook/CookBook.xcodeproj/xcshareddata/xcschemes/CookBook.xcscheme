@@ -26,15 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F71652A267DB1BA0036FF35"
-               BuildableName = "CookBookTests.xctest"
-               BlueprintName = "CookBookTests"
+               BlueprintIdentifier = "7F71653E267E20570036FF35"
+               BuildableName = "CookBookSlowTests.xctest"
+               BlueprintName = "CookBookSlowTests"
                ReferencedContainer = "container:CookBook.xcodeproj">
             </BuildableReference>
          </TestableReference>
