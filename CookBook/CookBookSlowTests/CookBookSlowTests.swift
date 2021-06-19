@@ -24,7 +24,7 @@ class CookBookSlowTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testFetchUserDataFromFirebaseCallBack() throws {
+    func testFetchUserDataFromFirebaseCallBackSuccess() throws {
 
         // given
         let subbedUid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
