@@ -40,13 +40,13 @@ class ChallengeViewController: UIViewController {
             guard let editVC = UIStoryboard.edit
                 .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
 
+            self?.navigationController?.pushViewController(editVC, animated: true)
+
             editVC.viewModel.recipe.challenger = uid
 
             editVC.viewModel.feedId = feedId
 
             CBProgressHUD.showSuccess(text: "Challenge Assigned")
-            
-            self?.navigationController?.pushViewController(editVC, animated: true)
 
             print("Challenge assigned")
         }

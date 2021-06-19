@@ -32,6 +32,7 @@
 		7F5E0C9A264FBDEA00738668 /* EditIngredients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */; };
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
+		7F71652E267DB1BA0036FF35 /* CookBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71652D267DB1BA0036FF35 /* CookBookTests.swift */; };
 		7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */; };
 		7F7C735D26589CED00D1AFD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735C26589CED00D1AFD4 /* User.swift */; };
 		7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */; };
@@ -86,6 +87,16 @@
 		991048751A7C5C1BDBE51B69 /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7F716530267DB1BA0036FF35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F284C20264BC19C001A0B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F284C27264BC19C001A0B4E;
+			remoteInfo = CookBook;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0DAE1C997DAE8278848C0706 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		2BDA11CE3C80128E152603F5 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +128,9 @@
 		7F5E0C99264FBDEA00738668 /* EditIngredients.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditIngredients.storyboard; sourceTree = "<group>"; };
 		7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditSteps.storyboard; sourceTree = "<group>"; };
 		7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F71652B267DB1BA0036FF35 /* CookBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F71652D267DB1BA0036FF35 /* CookBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookTests.swift; sourceTree = "<group>"; };
+		7F71652F267DB1BA0036FF35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsPreviewViewController.swift; sourceTree = "<group>"; };
 		7F7C735C26589CED00D1AFD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -180,6 +194,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F716528267DB1BA0036FF35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -196,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				7F284C2A264BC19C001A0B4E /* CookBook */,
+				7F71652C267DB1BA0036FF35 /* CookBookTests */,
 				7F284C29264BC19C001A0B4E /* Products */,
 				390AC355E9D74259F804363B /* Pods */,
 				D63455D3A42A34D9C1BC7ED6 /* Frameworks */,
@@ -206,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				7F284C28264BC19C001A0B4E /* CookBook.app */,
+				7F71652B267DB1BA0036FF35 /* CookBookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +264,15 @@
 				7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7F71652C267DB1BA0036FF35 /* CookBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F71652D267DB1BA0036FF35 /* CookBookTests.swift */,
+				7F71652F267DB1BA0036FF35 /* Info.plist */,
+			);
+			path = CookBookTests;
 			sourceTree = "<group>";
 		};
 		7F7C7366265D36EF00D1AFD4 /* EditSteps */ = {
@@ -503,6 +535,24 @@
 			productReference = 7F284C28264BC19C001A0B4E /* CookBook.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7F71652A267DB1BA0036FF35 /* CookBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F716534267DB1BA0036FF35 /* Build configuration list for PBXNativeTarget "CookBookTests" */;
+			buildPhases = (
+				7F716527267DB1BA0036FF35 /* Sources */,
+				7F716528267DB1BA0036FF35 /* Frameworks */,
+				7F716529267DB1BA0036FF35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F716531267DB1BA0036FF35 /* PBXTargetDependency */,
+			);
+			name = CookBookTests;
+			productName = CookBookTests;
+			productReference = 7F71652B267DB1BA0036FF35 /* CookBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -514,6 +564,10 @@
 				TargetAttributes = {
 					7F284C27264BC19C001A0B4E = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					7F71652A267DB1BA0036FF35 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 7F284C27264BC19C001A0B4E;
 					};
 				};
 			};
@@ -531,6 +585,7 @@
 			projectRoot = "";
 			targets = (
 				7F284C27264BC19C001A0B4E /* CookBook */,
+				7F71652A267DB1BA0036FF35 /* CookBookTests */,
 			);
 		};
 /* End PBXProject section */
@@ -559,6 +614,13 @@
 				7FA1BA98264E678000B8ED13 /* Read.storyboard in Resources */,
 				7FE2143D264F996D00208667 /* EditStepsTableViewCell.xib in Resources */,
 				7F284C33264BC19C001A0B4E /* Today.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F716529267DB1BA0036FF35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +769,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F716527267DB1BA0036FF35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F71652E267DB1BA0036FF35 /* CookBookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F716531267DB1BA0036FF35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F284C27264BC19C001A0B4E /* CookBook */;
+			targetProxy = 7F716530267DB1BA0036FF35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7F284C31264BC19C001A0B4E /* Today.storyboard */ = {
@@ -891,6 +969,49 @@
 			};
 			name = Release;
 		};
+		7F716532267DB1BA0036FF35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = F3Q9U3H4LY;
+				INFOPLIST_FILE = CookBookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hungchiamao.CookBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookBook.app/CookBook";
+			};
+			name = Debug;
+		};
+		7F716533267DB1BA0036FF35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3Q9U3H4LY;
+				INFOPLIST_FILE = CookBookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hungchiamao.CookBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookBook.app/CookBook";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -908,6 +1029,15 @@
 			buildConfigurations = (
 				7F284C3D264BC19E001A0B4E /* Debug */,
 				7F284C3E264BC19E001A0B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F716534267DB1BA0036FF35 /* Build configuration list for PBXNativeTarget "CookBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F716532267DB1BA0036FF35 /* Debug */,
+				7F716533267DB1BA0036FF35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

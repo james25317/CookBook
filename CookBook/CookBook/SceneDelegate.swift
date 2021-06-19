@@ -49,10 +49,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if let user = Auth.auth().currentUser {
 
-            // user 存在 -> 進版頁
+            // User exist -> Go to TodayPage
             let storyboard = UIStoryboard.today
 
-            // 回存 UserDefault 資料
+            // Store back UserDefault's value
             UserDefaults.standard.setValue(
                 user.uid,
                 forKey: UserDefaults.Keys.uid.rawValue
@@ -63,7 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 forKey: UserDefaults.Keys.email.rawValue
             )
 
-            // 初始 UserManager.user 資料
+            // UserManager injection
             UserManager.shared.uid = user.uid
 
             UserManager.shared.user.email = user.email ?? ""
@@ -75,7 +75,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
         } else {
 
-            // user 不存在 -> 登入頁
+            // User doesn't exist -> Go to SignInPage
             let storyboard = UIStoryboard.signIn
 
             window?.rootViewController = storyboard.instantiateInitialViewController()

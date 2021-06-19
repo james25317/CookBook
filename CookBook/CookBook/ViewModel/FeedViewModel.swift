@@ -12,7 +12,6 @@ class FeedViewModel {
     var feed: Feed
 
     init(model feed: Feed) {
-
         self.feed = feed
     }
 
