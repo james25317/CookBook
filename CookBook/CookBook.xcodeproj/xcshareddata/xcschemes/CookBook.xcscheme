@@ -39,6 +39,16 @@
                ReferencedContainer = "container:CookBook.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F71655C267F3C5D0036FF35"
+               BuildableName = "CookBookTests.xctest"
+               BlueprintName = "CookBookTests"
+               ReferencedContainer = "container:CookBook.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

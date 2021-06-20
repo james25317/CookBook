@@ -20,5 +20,10 @@ target 'CookBook' do
   
   target 'CookBookSlowTests' do
         inherit! :search_paths
-    end
+  end
+
+  target 'CookBookTests' do
+        inherit! :search_paths
+  end
+
 end

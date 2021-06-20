@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
-struct User: Identifiable, Codable {
+struct User: Identifiable, Codable, Equatable {
 
     // Note: DocumentId = Fbuid
     @DocumentID public var id: String?
@@ -29,5 +29,19 @@ struct User: Identifiable, Codable {
             portrait,
             recipesCounts,
             blockList
+    }
+
+    static func == (currentValue: User, newValue: User) -> Bool {
+
+        guard currentValue.id == newValue.id,
+              currentValue.name == newValue.name,
+              currentValue.portrait == newValue.portrait,
+              currentValue.email == newValue.email,
+              currentValue.challengesCounts == newValue.challengesCounts,
+              currentValue.favoritesCounts == newValue.favoritesCounts,
+              currentValue.recipesCounts == newValue.recipesCounts,
+              currentValue.blockList == newValue.blockList else { return false }
+
+        return true
     }
 }
