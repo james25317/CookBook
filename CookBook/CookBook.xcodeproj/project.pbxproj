@@ -33,6 +33,7 @@
 		7F5E0C9C264FBE1B00738668 /* EditSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9B264FBE1B00738668 /* EditSteps.storyboard */; };
 		7F5E0C9E264FF58F00738668 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E0C9D264FF58F00738668 /* GoogleService-Info.plist */; };
 		7F716542267E20570036FF35 /* CookBookSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F716541267E20570036FF35 /* CookBookSlowTests.swift */; };
+		7F71654A267F1C5D0036FF35 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F716549267F1C5D0036FF35 /* NetworkMonitor.swift */; };
 		7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */; };
 		7F7C735D26589CED00D1AFD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735C26589CED00D1AFD4 /* User.swift */; };
 		7F7C735F2658A98E00D1AFD4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */; };
@@ -134,6 +135,7 @@
 		7F71653F267E20570036FF35 /* CookBookSlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookBookSlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F716541267E20570036FF35 /* CookBookSlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookSlowTests.swift; sourceTree = "<group>"; };
 		7F716543267E20570036FF35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F716549267F1C5D0036FF35 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		7F7C735826579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientsPreviewViewController.swift; sourceTree = "<group>"; };
 		7F7C735C26589CED00D1AFD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F7C735E2658A98E00D1AFD4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				7FFCF06F2650F73C0082ED8E /* FeedManager.swift */,
 				7F52567726667938005A2DB9 /* UserManager.swift */,
 				7F23F547267B97BA009A126D /* RecipeManager.swift */,
+				7F716549267F1C5D0036FF35 /* NetworkMonitor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				7FFCF06E2650F51B0082ED8E /* DateHelper.swift in Sources */,
 				7FE2143C264F996D00208667 /* EditStepsTableViewCell.swift in Sources */,
 				7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */,
+				7F71654A267F1C5D0036FF35 /* NetworkMonitor.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,
 				7FE2C20B266390D500FCEAE3 /* TodayRecipe.swift in Sources */,
 				7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */,

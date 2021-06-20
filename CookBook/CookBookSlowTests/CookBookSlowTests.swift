@@ -12,6 +12,8 @@ class CookBookSlowTests: XCTestCase {
 
     var sut: UserManager!
 
+    let networkMonitor = NetworkMonitor.shared
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
@@ -53,6 +55,11 @@ class CookBookSlowTests: XCTestCase {
     }
 
     func testFetchUserDataFromFirebaseCallBackCompletes() throws {
+
+        try XCTSkipUnless(
+            networkMonitor.isReachable,
+            "Network connectivity needed for this test."
+        )
 
         // given
         let subbedUid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
