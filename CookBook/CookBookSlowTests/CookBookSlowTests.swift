@@ -49,6 +49,41 @@ class CookBookSlowTests: XCTestCase {
         }
 
         // 3
-        wait(for: [promise], timeout: 1)
+        wait(for: [promise], timeout: 5)
+    }
+
+    func testFetchUserDataFromFirebaseCallBackCompletes() throws {
+
+        // given
+        let subbedUid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
+        let promise = expectation(description: "Invalid uid request")
+
+        var resultError: Error?
+
+        var resultUser: User?
+
+        // when
+        sut.fetchUserData(uid: subbedUid) { result in
+
+            switch result {
+
+            case .success(let user):
+
+                resultUser = user
+
+            case .failure(let error):
+
+                resultError = error
+            }
+
+            promise.fulfill()
+        }
+        wait(for: [promise], timeout: 5)
+
+        // then
+        XCTAssertNotNil(resultUser)
+
+        XCTAssertNil(resultError)
     }
 }
