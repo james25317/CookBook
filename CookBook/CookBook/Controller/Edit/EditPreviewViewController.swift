@@ -193,62 +193,7 @@ class EditPreviewViewController: UIViewController {
             stepsContainerView.isHidden = false
         }
     }
-
-    private func setupConfirmationAlert() {
-
-        //        present(
-        //            .saveDraftAlert(
-        //                title: "Save as Draft?",
-        //                message: "You can find your unfinished CookBook in your profile page.") {
-        //
-        //                self.goHomeVC()
-        //            }, animated: true
-        //        )
-
-        //        let alertController = UIAlertController.saveDraftAlert(
-        //            title: "Save as Draft?",
-        //            message: "You can find your unfinished CookBook in your profile page.") {
-        //
-        //            self.goHomeVC()
-        //        }
-        //
-        //        self.present(
-        //            alertController,
-        //            animated: true,
-        //            completion: nil
-        //        )
-        
-        //        let alertController = UIAlertController(
-        //            title: "Save as Draft?",
-        //            message: "You can find your unfinished CookBook in your profile page.",
-        //            preferredStyle: .alert
-        //        )
-        //
-        //        let cancelAction = UIAlertAction(
-        //            title: "Cancel",
-        //            style: .cancel,
-        //            handler: nil
-        //        )
-        //
-        //        alertController.addAction(cancelAction)
-        //
-        //        let saveAction = UIAlertAction(
-        //            title: "Save",
-        //            style: .default
-        //            ) { _ in
-        //
-        //            self.goHomeVC()
-        //        }
-        //
-        //        alertController.addAction(saveAction)
-        //
-        //        self.present(
-        //            alertController,
-        //            animated: true,
-        //            completion: nil
-        //        )
-    }
-
+    
     private func goHomeVC() {
 
         guard let navigationController = self.navigationController,

@@ -24,6 +24,7 @@
 		7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */; };
 		7F480E532680299500FEE722 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F480E522680299500FEE722 /* UIAlertController+Extension.swift */; };
 		7F480E5526806CAC00FEE722 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F480E5426806CAC00FEE722 /* UIViewController+Extension.swift */; };
+		7F480E5726807CFA00FEE722 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F480E5626807CFA00FEE722 /* UINavigationController+Extension.swift */; };
 		7F4F3AFC26709F2A00E38DDC /* 45730-recipes-book-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */; };
 		7F4F3AFF2670A08700E38DDC /* 45726-recipes-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */; };
 		7F5256702665C315005A2DB9 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F52566F2665C315005A2DB9 /* SignIn.storyboard */; };
@@ -134,6 +135,7 @@
 		7F284C39264BC19E001A0B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F480E522680299500FEE722 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		7F480E5426806CAC00FEE722 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		7F480E5626807CFA00FEE722 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "45730-recipes-book-animation.json"; sourceTree = "<group>"; };
 		7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "45726-recipes-animation.json"; sourceTree = "<group>"; };
 		7F52566E266553C4005A2DB9 /* CookBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookBook.entitlements; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 				7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */,
 				7F480E522680299500FEE722 /* UIAlertController+Extension.swift */,
 				7F480E5426806CAC00FEE722 /* UIViewController+Extension.swift */,
+				7F480E5626807CFA00FEE722 /* UINavigationController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -863,6 +866,7 @@
 				7F5256722665C392005A2DB9 /* SignInViewController.swift in Sources */,
 				7F7C7363265A2FFB00D1AFD4 /* EditStepsPreviewViewController.swift in Sources */,
 				7F7C735926579E7B00D1AFD4 /* EditIngredientsPreviewViewController.swift in Sources */,
+				7F480E5726807CFA00FEE722 /* UINavigationController+Extension.swift in Sources */,
 				7FE2142F264E819F00208667 /* ReadIngredientsCollectionViewCell.swift in Sources */,
 				7F13B161265689330042F3EC /* Recipe.swift in Sources */,
 				7F284C30264BC19C001A0B4E /* HomeViewController.swift in Sources */,

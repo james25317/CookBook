@@ -111,37 +111,6 @@ class EditStepsViewController: UIViewController {
                 }
             ), animated: true
         )
-//        let controller = UIAlertController(
-//            title: "Upload Picture",
-//            message: nil,
-//            preferredStyle: .actionSheet
-//        )
-//
-//        let cameraAction = UIAlertAction(
-//            title: "Camera",
-//            style: .default) { _ in
-//
-//            self.openCamera()
-//        }
-//
-//        controller.addAction(cameraAction)
-//
-//        let libraryAction = UIAlertAction(
-//            title: "Album",
-//            style: .default) { _ in
-//
-//            self.openAlbum()
-//        }
-//
-//        controller.addAction(libraryAction)
-//
-//        let cancelAction = UIAlertAction(
-//            title: "Cancel",
-//            style: .cancel)
-//
-//        controller.addAction(cancelAction)
-//
-//        present(controller, animated: true)
     }
 
     private func openCamera() {
