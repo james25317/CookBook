@@ -34,7 +34,7 @@ class SignInViewController: UIViewController {
         viewModel.onGranteed = { [weak self] () in
 
             guard let todayVC = UIStoryboard.today
-                .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+                    .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
 
             todayVC.navigationController?.setNavigationBarHidden(true, animated: true)
 
@@ -50,22 +50,22 @@ class SignInViewController: UIViewController {
 
     @IBAction func skipSignIn(_ sender: Any) {
 
-        // ------ testing area
+        // ====== testing area
 
         // Crashlytics.crashlytics().log("Crash Button Tapped")
 
         // fatalError()
 
-        UserManager.shared.uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
-        
-        UserManager.shared.user.email = "james49904230@gmail.com"
-        
-        // ------ testing area end
+        // ====== testing area end
 
-//        guard let todayVC = UIStoryboard.today
-//            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
-//
-//        self.navigationController?.pushViewController(todayVC, animated: true)
+        UserManager.shared.uid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
+
+        UserManager.shared.user.email = "james49904230@gmail.com"
+
+        //        guard let todayVC = UIStoryboard.today
+        //            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+        //
+        //        self.navigationController?.pushViewController(todayVC, animated: true)
 
         navigationController?.push(to: .today)
 

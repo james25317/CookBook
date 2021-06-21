@@ -55,10 +55,8 @@ class EditPreviewViewController: UIViewController {
 
         viewModel?.onCreatedDone = { [weak self] () in
 
-            guard let editDoneVC = UIStoryboard.editDone
-                .instantiateViewController(
-                    withIdentifier: "EditDone"
-                ) as? EditDoneViewController else { return }
+            guard let editDoneVC =
+                UIStoryboard.getViewController(for: .editDone) as? EditDoneViewController else { return }
 
             self?.navigationController?.pushViewController(editDoneVC, animated: true)
 

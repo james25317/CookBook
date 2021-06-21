@@ -48,4 +48,44 @@ extension UIStoryboard {
 
         return UIStoryboard(name: name, bundle: nil)
     }
+
+    static func getViewController(for viewControllerCategory: ViewControllerCategory) -> UIViewController {
+
+        var controller: UIViewController
+
+        switch viewControllerCategory {
+
+        case .editDone:
+
+            controller = UIStoryboard.editDone
+                .instantiateViewController(withIdentifier: viewControllerCategory.rawValue)
+
+        case .editName:
+
+            controller = UIStoryboard.edit
+                .instantiateViewController(withIdentifier: viewControllerCategory.rawValue)
+
+        case .profile:
+
+            controller = UIStoryboard.profile
+                .instantiateViewController(withIdentifier: viewControllerCategory.rawValue)
+
+        case .read:
+
+            controller = UIStoryboard.read
+                .instantiateViewController(withIdentifier: viewControllerCategory.rawValue)
+
+        case .today:
+
+            controller = UIStoryboard.today
+                .instantiateViewController(withIdentifier: viewControllerCategory.rawValue)
+
+        case .challenge:
+
+            controller = UIStoryboard.challenge
+                .instantiateViewController(withIdentifier: viewControllerCategory.rawValue)
+        }
+
+        return controller
+    }
 }

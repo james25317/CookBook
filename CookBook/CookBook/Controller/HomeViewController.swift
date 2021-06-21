@@ -128,8 +128,10 @@ extension HomeViewController: UITableViewDataSource {
 
             feedChallengeDoneCell.onOwnerTapped = { [weak self] () in
 
-                guard let readVC = UIStoryboard.read
-                    .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+                // guard let readVC = UIStoryboard.read.instantiateViewController(withIdentifier: ViewControllerCategory.read.rawValue) as? ReadViewController else { return }
+
+                guard let readVC =
+                    UIStoryboard.getViewController(for: .read) as? ReadViewController else { return }
 
                 readVC.recipeId = cellViewModel.recipeId
 
@@ -138,8 +140,8 @@ extension HomeViewController: UITableViewDataSource {
 
             feedChallengeDoneCell.onChallengerTapped = { [weak self] () in
                 
-                guard let readVC = UIStoryboard.read
-                    .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+                guard let readVC =
+                    UIStoryboard.getViewController(for: .read) as? ReadViewController else { return }
 
                 readVC.recipeId = cellViewModel.challengerRecipeId
 
@@ -183,8 +185,8 @@ extension HomeViewController: UITableViewDelegate {
         } else if cellViewModel.isChallenged == false {
 
             // ChallengeCell
-            guard let challengeVC = UIStoryboard.challenge
-                .instantiateViewController(withIdentifier: "Challenge") as? ChallengeViewController else { return }
+            guard let challengeVC =
+                UIStoryboard.getViewController(for: .challenge) as? ChallengeViewController else { return }
 
             challengeVC.viewModel.recipeId = cellViewModel.feed.recipeId
 
@@ -196,8 +198,8 @@ extension HomeViewController: UITableViewDelegate {
         } else {
 
             // NormalCell
-            guard let readVC = UIStoryboard.read
-                .instantiateViewController(withIdentifier: "Read") as? ReadViewController else { return }
+            guard let readVC =
+                UIStoryboard.getViewController(for: .read) as? ReadViewController else { return }
 
             let selectedFeed = cellViewModel.feed
 
