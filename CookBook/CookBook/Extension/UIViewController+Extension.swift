@@ -36,4 +36,43 @@ extension UIViewController {
 
         return alertController
     }
+
+    static func uploadImageActionSheet(title: String?, message: String?, cameraHandler: @escaping () -> Void, albumHandler: @escaping () -> Void) -> UIAlertController {
+
+        let controller = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .actionSheet
+        )
+
+        let cameraAction = UIAlertAction(
+            title: "Camera",
+            style: .default
+        ) { _ in
+
+            cameraHandler()
+        }
+
+        controller.addAction(cameraAction)
+
+        let albumAction = UIAlertAction(
+            title: "Album",
+            style: .default
+        ) { _ in
+
+            albumHandler()
+        }
+
+        controller.addAction(albumAction)
+
+        let cancelAction = UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil
+        )
+
+        controller.addAction(cancelAction)
+
+        return controller
+    }
 }

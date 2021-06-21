@@ -96,39 +96,52 @@ class EditStepsViewController: UIViewController {
         snapCollectionFlowLayout.scrollDirection = .horizontal
     }
 
-    private func setupUploadMenu() {
+    private func openUploadMenu() {
 
-        let controller = UIAlertController(
-            title: "Upload Picture",
-            message: nil,
-            preferredStyle: .actionSheet
+        present(
+            .uploadImageActionSheet(
+                title: "Upload Picture",
+                message: nil,
+                cameraHandler: {
+
+                    self.openCamera()
+                }, albumHandler: {
+
+                    self.openAlbum()
+                }
+            ), animated: true
         )
-
-        let cameraAction = UIAlertAction(
-            title: "Camera",
-            style: .default) { _ in
-
-            self.openCamera()
-        }
-
-        let libraryAction = UIAlertAction(
-            title: "Album",
-            style: .default) { _ in
-
-            self.openAlbum()
-        }
-
-        let cancelAction = UIAlertAction(
-            title: "Cancel",
-            style: .cancel)
-
-        controller.addAction(cameraAction)
-
-        controller.addAction(libraryAction)
-
-        controller.addAction(cancelAction)
-
-        present(controller, animated: true)
+//        let controller = UIAlertController(
+//            title: "Upload Picture",
+//            message: nil,
+//            preferredStyle: .actionSheet
+//        )
+//
+//        let cameraAction = UIAlertAction(
+//            title: "Camera",
+//            style: .default) { _ in
+//
+//            self.openCamera()
+//        }
+//
+//        controller.addAction(cameraAction)
+//
+//        let libraryAction = UIAlertAction(
+//            title: "Album",
+//            style: .default) { _ in
+//
+//            self.openAlbum()
+//        }
+//
+//        controller.addAction(libraryAction)
+//
+//        let cancelAction = UIAlertAction(
+//            title: "Cancel",
+//            style: .cancel)
+//
+//        controller.addAction(cancelAction)
+//
+//        present(controller, animated: true)
     }
 
     private func openCamera() {
@@ -186,7 +199,7 @@ extension EditStepsViewController: UICollectionViewDataSource {
 
         stepCell.onUploadedImageTapped = { [weak self] in
 
-            self?.setupUploadMenu()
+            self?.openUploadMenu()
 
             self?.stepImageViewCell = stepCell
         }
