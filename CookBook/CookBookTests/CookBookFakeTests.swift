@@ -28,11 +28,10 @@ class CookBookFakeTests: XCTestCase {
 
     func testFetchUserDataFromFirebaseCallBackParseData() {
 
-        // let promise = expectation(description: "Parse in closure")
-
+        // given
         let currentUid = "EkrSAora4PRxZ1H22ggj6UfjU6A3"
 
-        var currentUser = User(
+        let currentUser = User(
             id: "",
             name: "CookBookUser",
             portrait: "",
@@ -43,22 +42,21 @@ class CookBookFakeTests: XCTestCase {
             blockList: ["8Y8ABmZAgdxtDoOPfmZq"]
         )
 
+        // when
         sut.fetchUserData(uid: currentUid) { result in
 
             switch result {
 
             case .success(let user):
 
+                // then
                 XCTAssertEqual(currentUser, user)
-
-                // promise.fulfill()
 
             case .failure(let error):
 
                 XCTAssertNil(error.localizedDescription)
             }
 
-            // self.wait(for: [promise], timeout: 10)
         }
     }
 }

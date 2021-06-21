@@ -22,6 +22,8 @@
 		7F284C33264BC19C001A0B4E /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C31264BC19C001A0B4E /* Today.storyboard */; };
 		7F284C35264BC19E001A0B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C34264BC19E001A0B4E /* Assets.xcassets */; };
 		7F284C38264BC19E001A0B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F284C36264BC19E001A0B4E /* LaunchScreen.storyboard */; };
+		7F480E532680299500FEE722 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F480E522680299500FEE722 /* UIAlertController+Extension.swift */; };
+		7F480E5526806CAC00FEE722 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F480E5426806CAC00FEE722 /* UIViewController+Extension.swift */; };
 		7F4F3AFC26709F2A00E38DDC /* 45730-recipes-book-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */; };
 		7F4F3AFF2670A08700E38DDC /* 45726-recipes-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */; };
 		7F5256702665C315005A2DB9 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F52566F2665C315005A2DB9 /* SignIn.storyboard */; };
@@ -130,6 +132,8 @@
 		7F284C34264BC19E001A0B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F284C37264BC19E001A0B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F284C39264BC19E001A0B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F480E522680299500FEE722 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		7F480E5426806CAC00FEE722 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7F4F3AFA26709F2A00E38DDC /* 45730-recipes-book-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "45730-recipes-book-animation.json"; sourceTree = "<group>"; };
 		7F4F3AFE2670A08700E38DDC /* 45726-recipes-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "45726-recipes-animation.json"; sourceTree = "<group>"; };
 		7F52566E266553C4005A2DB9 /* CookBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookBook.entitlements; sourceTree = "<group>"; };
@@ -527,6 +531,8 @@
 				7FFCF0932654EB9F0082ED8E /* UICollectionView+Extension.swift */,
 				7F13B15C265557980042F3EC /* UIView+Extension.swift */,
 				7F5256732665E2AC005A2DB9 /* UserDefaults+Extension.swift */,
+				7F480E522680299500FEE722 /* UIAlertController+Extension.swift */,
+				7F480E5426806CAC00FEE722 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -886,8 +892,10 @@
 				7FFCF089265409BC0082ED8E /* EditDoneViewController.swift in Sources */,
 				7F71654A267F1C5D0036FF35 /* NetworkMonitor.swift in Sources */,
 				7FFCF07C265266BB0082ED8E /* ProfileViewController.swift in Sources */,
+				7F480E532680299500FEE722 /* UIAlertController+Extension.swift in Sources */,
 				7FE2C20B266390D500FCEAE3 /* TodayRecipe.swift in Sources */,
 				7FFCF0842653F44D0082ED8E /* EditStepsViewController.swift in Sources */,
+				7F480E5526806CAC00FEE722 /* UIViewController+Extension.swift in Sources */,
 				7FE2142B264E769100208667 /* ReadStepsCollectionViewCell.swift in Sources */,
 				7F284C2C264BC19C001A0B4E /* AppDelegate.swift in Sources */,
 				7FFCF0922654E8C70082ED8E /* SnapCollectionFlowLayout.swift in Sources */,

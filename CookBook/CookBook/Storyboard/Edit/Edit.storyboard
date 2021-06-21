@@ -136,7 +136,7 @@
                                     <imageReference key="image" image="x" symbolScale="medium"/>
                                 </state>
                                 <connections>
-                                    <action selector="leave:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="PLh-Zh-Uvc"/>
+                                    <action selector="saveDraftOrLeave:" destination="Eai-jM-Ljp" eventType="touchUpInside" id="PLh-Zh-Uvc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit CookBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g0-wh-IFT">

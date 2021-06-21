@@ -57,8 +57,8 @@ class EditPreviewViewController: UIViewController {
 
             guard let editDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
-                    withIdentifier: "EditDone"
-                ) as? EditDoneViewController else { return }
+                        withIdentifier: "EditDone"
+                    ) as? EditDoneViewController else { return }
 
             self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -73,8 +73,8 @@ class EditPreviewViewController: UIViewController {
 
             guard let editChallengeDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
-                    withIdentifier: "EditChallengeDone"
-                ) as? EditChallengeDoneViewController else { return }
+                        withIdentifier: "EditChallengeDone"
+                    ) as? EditChallengeDoneViewController else { return }
 
             self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -104,9 +104,16 @@ class EditPreviewViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
 
-    @IBAction func leave(_ sender: Any) {
+    @IBAction func saveDraftOrLeave(_ sender: Any) {
 
-        setupAlert()
+        present(
+            .saveDraftAlert(
+                title: "Save as Draft?",
+                message: "You can find your unfinished CookBook in your profile page."
+            ) {
+                self.goHomeVC()
+            }, animated: true
+        )
     }
 
     @IBAction func goEditDonePage(_ sender: Any) {
@@ -187,37 +194,59 @@ class EditPreviewViewController: UIViewController {
         }
     }
 
-    private func setupAlert() {
+    private func setupConfirmationAlert() {
 
-        let alertController = UIAlertController(
-            title: "Save as Draft?",
-            message: "You can find your unfinished CookBook in your profile page.",
-            preferredStyle: .alert
-        )
+        //        present(
+        //            .saveDraftAlert(
+        //                title: "Save as Draft?",
+        //                message: "You can find your unfinished CookBook in your profile page.") {
+        //
+        //                self.goHomeVC()
+        //            }, animated: true
+        //        )
 
-        let cancelAction = UIAlertAction(
-            title: "Cancel",
-            style: .cancel,
-            handler: nil
-        )
-
-        let saveAction = UIAlertAction(
-            title: "Save",
-            style: .default
-            ) { _ in
-
-            self.goHomeVC()
-        }
-
-        alertController.addAction(cancelAction)
-
-        alertController.addAction(saveAction)
-
-        self.present(
-            alertController,
-            animated: true,
-            completion: nil
-        )
+        //        let alertController = UIAlertController.saveDraftAlert(
+        //            title: "Save as Draft?",
+        //            message: "You can find your unfinished CookBook in your profile page.") {
+        //
+        //            self.goHomeVC()
+        //        }
+        //
+        //        self.present(
+        //            alertController,
+        //            animated: true,
+        //            completion: nil
+        //        )
+        
+        //        let alertController = UIAlertController(
+        //            title: "Save as Draft?",
+        //            message: "You can find your unfinished CookBook in your profile page.",
+        //            preferredStyle: .alert
+        //        )
+        //
+        //        let cancelAction = UIAlertAction(
+        //            title: "Cancel",
+        //            style: .cancel,
+        //            handler: nil
+        //        )
+        //
+        //        alertController.addAction(cancelAction)
+        //
+        //        let saveAction = UIAlertAction(
+        //            title: "Save",
+        //            style: .default
+        //            ) { _ in
+        //
+        //            self.goHomeVC()
+        //        }
+        //
+        //        alertController.addAction(saveAction)
+        //
+        //        self.present(
+        //            alertController,
+        //            animated: true,
+        //            completion: nil
+        //        )
     }
 
     private func goHomeVC() {
