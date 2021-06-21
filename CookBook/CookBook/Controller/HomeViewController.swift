@@ -61,28 +61,16 @@ class HomeViewController: UIViewController {
     @IBAction func goTodayPage(_ sender: Any) {
 
         navigationController?.push(to: .today)
-//        guard let todayVC = UIStoryboard.today
-//            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
-//
-//        navigationController?.pushViewController(todayVC, animated: true)
     }
 
     @IBAction func goEditPage(_ sender: Any) {
 
         navigationController?.push(to: .editName)
-//        guard let editVC = UIStoryboard.edit
-//            .instantiateViewController(withIdentifier: "EditName") as? EditViewController else { return }
-//
-//        navigationController?.pushViewController(editVC, animated: true)
     }
 
     @IBAction func goProfilePage(_ sender: Any) {
 
         navigationController?.push(to: .profile)
-//        guard let profileVC = UIStoryboard.profile
-//            .instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
-//
-//        navigationController?.pushViewController(profileVC, animated: true)
     }
 
     private func setupRefresher() {

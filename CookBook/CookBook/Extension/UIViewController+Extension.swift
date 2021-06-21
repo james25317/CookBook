@@ -9,6 +9,19 @@ import UIKit
 
 extension UIViewController {
 
+    enum ViewController: String {
+
+        case today = "Today"
+
+        case editName = "EditName"
+
+        case editDone = "EditDone"
+
+        case profile = "Profile"
+
+        case read = "Read"
+    }
+
     static func saveDraftAlert(title: String?, message: String?, saveHandler: @escaping () -> Void) -> UIAlertController {
 
         let alertController = UIAlertController(
@@ -74,5 +87,24 @@ extension UIViewController {
         controller.addAction(cancelAction)
 
         return controller
+    }
+
+    func instantiate(for viewController: ViewController) -> UIViewController {
+
+        switch viewController {
+
+        case .editName:
+            break
+        case .profile:
+            break
+        case .read:
+            break
+        case .today:
+            break
+        case .editDone:
+            break
+        }
+
+        return UIViewController()
     }
 }

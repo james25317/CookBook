@@ -62,12 +62,14 @@ class SignInViewController: UIViewController {
         
         // ------ testing area end
 
-        guard let todayVC = UIStoryboard.today
-            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+//        guard let todayVC = UIStoryboard.today
+//            .instantiateViewController(withIdentifier: "Today") as? TodayViewController else { return }
+//
+//        self.navigationController?.pushViewController(todayVC, animated: true)
+
+        navigationController?.push(to: .today)
 
         CBProgressHUD.showText(text: "Welcome Back")
-
-        self.navigationController?.pushViewController(todayVC, animated: true)
     }
 
     func setupSignInButton() {

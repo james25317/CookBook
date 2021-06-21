@@ -57,12 +57,12 @@ class EditPreviewViewController: UIViewController {
 
             guard let editDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
-                        withIdentifier: "EditDone"
-                    ) as? EditDoneViewController else { return }
-
-            self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                    withIdentifier: "EditDone"
+                ) as? EditDoneViewController else { return }
 
             self?.navigationController?.pushViewController(editDoneVC, animated: true)
+
+            self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
             editDoneVC.viewModel = self?.viewModel
 
@@ -73,8 +73,8 @@ class EditPreviewViewController: UIViewController {
 
             guard let editChallengeDoneVC = UIStoryboard.editDone
                 .instantiateViewController(
-                        withIdentifier: "EditChallengeDone"
-                    ) as? EditChallengeDoneViewController else { return }
+                    withIdentifier: "EditChallengeDone"
+                ) as? EditChallengeDoneViewController else { return }
 
             self?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
