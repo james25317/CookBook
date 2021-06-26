@@ -28,11 +28,9 @@ If you wish, you can also invite platform users to make dishes with the same the
 
 [TodayPage]: https://i.imgur.com/dr4oX4N.jpg
 
-[AppStoreBadge]:https://i.imgur.com/M8diaec.png
+[AppStoreBadge]:https://github.com/james25317/CookBook/blob/main/CookBook/res/image-App_Store_Badge_blk.png
 
-[AppIcon]: https://i.imgur.com/pOgk5cM.png
-
-[LogoBanner]:https://i.imgur.com/3H4wML3.png
+[LogoBanner]:https://github.com/james25317/CookBook/blob/main/CookBook/res/image-banner-logo.png
 
 
 ## Features
@@ -48,44 +46,44 @@ If you wish, you can also invite platform users to make dishes with the same the
 
 1. Enter editing process at the top right of the home page
 
-![](https://i.imgur.com/d27LTkb.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-1-create.png)
 
 2. Edit the recipe **name** and **description**.
 
-![](https://i.imgur.com/VWZvkXY.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-2-edit-name.png)
 
 3. Enter the name, quantity and unit for recipe ingredients.
 Tap **Save** to reserve the changes.
 
-![](https://i.imgur.com/ozcmPVZ.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-3-edit-ingredients.png)
 
 4. Edit steps and upload picture from album (or take a photo).
 Tap **Save** to reserve the changes.
 
-![](https://i.imgur.com/a6fqsOZ.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-4-edit-steps.png)
 
 5. If you have different ideas about the current recipe, you can tap **X** and save it to your profile page, then edit it later.
 
-![](https://i.imgur.com/HHKhu4K.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-5-draft.png)
 
 6. Once you have checked the contents of the recipe, tap **Create** and you are good to go! You can choose to **share recipes** on the CookBook community or share it with **challenge feature** on.
 
-![](https://i.imgur.com/aaKmXDo.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-6-done.png)
 
 
 ### How to join a recipe challenge
 
 1. You can join the challenge recipes shared by other users on the CookBook.
 
-![](https://i.imgur.com/MUAQ0q5.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-7-challenge-feed.png)
 
 2. After viewing their works, if you are interested, you can sign-up for the challenge and create your version of it. The process is the same as creating a general CookBook.
 
-![](https://i.imgur.com/iTX0ViV.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-8-challenge-preview.png)
 
 3. Great! After sharing it, other users can see your works on the main page and learn from each other.
 
-![](https://i.imgur.com/RDj6igi.png)
+![](https://github.com/james25317/CookBook/blob/main/CookBook/res/image-features-9-challenge-done.png)
 
 
 ### Technical highlights
