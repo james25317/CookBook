@@ -17,16 +17,7 @@ CookBook is a platform to learn and practice cooking, as well as recipes sharing
 You can create your own cookbook, or learn from others’ sharing recipes to practice a variety of exciting dishes.
 If you wish, you can also invite platform users to make dishes with the same theme of recipe, and share the results with other more users for learning.
 
-<img src="https://i.imgur.com/uxrDIKX.jpg" width="179" height=""><img src="https://i.imgur.com/dr4oX4N.jpg" width="179" height="">
-<img src="https://i.imgur.com/ES1DWsb.jpg" width="179" height=""><img src="https://i.imgur.com/uZBY9vT.jpg" width="179" height="">
-
-[ReadPreviewPage]: https://i.imgur.com/dr4oX4N.jpg
-
-[MainPage]: https://i.imgur.com/dr4oX4N.jpg
-
-[ProfilePage]: https://i.imgur.com/dr4oX4N.jpg
-
-[TodayPage]: https://i.imgur.com/dr4oX4N.jpg
+<img src="https://github.com/james25317/CookBook/blob/main/CookBook/res/image-CookBook-ReadPreviewPage.png" width="179" height=""><img src="https://github.com/james25317/CookBook/blob/main/CookBook/res/image-CookBook-MainPage.png" width="179" height=""><img src="https://github.com/james25317/CookBook/blob/main/CookBook/res/image-CookBook-ProfilePage.png" width="179" height=""><img src="https://github.com/james25317/CookBook/blob/main/CookBook/res/image-CookBook-TodayPage.png" width="179" height="">
 
 [AppStoreBadge]:https://github.com/james25317/CookBook/blob/main/CookBook/res/image-App_Store_Badge_blk.png
 
