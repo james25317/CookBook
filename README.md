@@ -1,12 +1,9 @@
 # CookBook - Your Recipe Journal
 
+[<img src="https://github.com/james25317/CookBook/blob/main/CookBook/res/image-App_Store_Badge_blk.png?raw=true" align="right" width = "120px"/>](https://bit.ly/ProjectCookBook)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/james25317/CookBook/blob/main/LICENSE)
-
-<!--
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
--->
-
-[![image alt][AppStoreBadge]](https://bit.ly/ProjectCookBook)
+[![GitHub release](https://img.shields.io/badge/release-v1.0.1-blue)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+[![swift-version](https://img.shields.io/badge/swift-5-brightgreen.svg)](https://github.com/apple/swift)
 
 ![image alt][LogoBanner]
 
@@ -28,10 +25,10 @@ If you wish, you can also invite platform users to make dishes with the same the
 
 ### Highlights
 
-- Designed the easy browsing recipe interface for cooking usage
-- Created your personal recipes with the CookBook document tool
-- Joined a recipe challenge from CookBook community
-- Explored the exciting new recipes from daily inspirations
+- Easy browsing recipe interface design for cooking usage
+- CookBook document tool for personal recipes
+- Recipe challenges from CookBook community
+- Daily inspiration with new exciting recipes
 
 ### How to create a CookBook
 
