@@ -1,13 +1,13 @@
 # CookBook - Your Recipe Journal
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/james25317/CookBook/blob/main/LICENSE)
+
 <!--
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 -->
 
-[![App Store](https://i.imgur.com/M8diaec.png)](https://bit.ly/ProjectCookBook)
-
-[banner image]
+[![image alt][AppStoreBadge]](https://bit.ly/ProjectCookBook)
+![image alt][LogoBanner]
 
 >Welcome to CookBook!
 You can learn, share and practice a variety of wonderful recipes with other food lovers.
@@ -16,21 +16,25 @@ CookBook is a platform to learn and practice cooking, as well as recipes sharing
 You can create your own cookbook, or learn from others’ sharing recipes to practice a variety of exciting dishes.
 If you wish, you can also invite platform users to make dishes with the same theme of recipe, and share the results with other more users for learning.
 
-<!-- ReadPreviewPage -->
 <img src="https://i.imgur.com/uxrDIKX.jpg" width="179" height="">
-
-<!-- MainPage -->
 <img src="https://i.imgur.com/dr4oX4N.jpg" width="179" height="">
-
-<!-- ProfilePage -->
 <img src="https://i.imgur.com/ES1DWsb.jpg" width="179" height="">
-
-<!-- TodayPage -->
 <img src="https://i.imgur.com/uZBY9vT.jpg" width="179" height="">
 
-[App Store]: https://i.imgur.com/M8diaec.png "Available on App Store"
+[ReadPreviewPage]: https://i.imgur.com/dr4oX4N.jpg
 
-[logo]: https://github.com/james25317/CookBook/blob/main/CookBook/res/playstore.png "CookBook - Your Recipe Journal"
+[MainPage]: https://i.imgur.com/dr4oX4N.jpg
+
+[ProfilePage]: https://i.imgur.com/dr4oX4N.jpg
+
+[TodayPage]: https://i.imgur.com/dr4oX4N.jpg
+
+[AppStoreBadge]:https://i.imgur.com/M8diaec.png
+
+[AppIcon]: https://i.imgur.com/pOgk5cM.png
+
+[LogoBanner]:https://i.imgur.com/3H4wML3.png
+
 
 ## Features
 
@@ -43,46 +47,47 @@ If you wish, you can also invite platform users to make dishes with the same the
 
 ### How to create a CookBook
 
-Enter editing process at the top right of the home page
+1. Enter editing process at the top right of the home page
 
-[2 images: mainpage -> editpage]
+![](https://i.imgur.com/d27LTkb.png)
 
-Edit the recipe **name** and **description**.
+2. Edit the recipe **name** and **description**.
 
-[1 images: enter name and description]
+![](https://i.imgur.com/VWZvkXY.png)
 
-Enter the name, quantity and unit for recipe ingredients.
+3. Enter the name, quantity and unit for recipe ingredients.
 Tap **Save** to reserve the changes.
 
-[1 images: enter ingredients -> preview]
+![](https://i.imgur.com/ozcmPVZ.png)
 
-Edit steps and upload picture from album (or take a photo).
+4. Edit steps and upload picture from album (or take a photo).
 Tap **Save** to reserve the changes.
 
-[1 images: enter Steps -> preview]
+![](https://i.imgur.com/a6fqsOZ.png)
 
-If you have different ideas about the current recipe, you can tap **X** and save it to your profile page, then edit it later.
+5. If you have different ideas about the current recipe, you can tap **X** and save it to your profile page, then edit it later.
 
-[2 images: daft popup -> profile]
+![](https://i.imgur.com/HHKhu4K.png)
 
-Once you have checked the contents of the recipe, tap **Create** and you are good to go! You can choose to **share recipes** on the CookBook community or share it with **challenge feature** on.
+6. Once you have checked the contents of the recipe, tap **Create** and you are good to go! You can choose to **share recipes** on the CookBook community or share it with **challenge feature** on.
 
-[1 gif: completion page]
+![](https://i.imgur.com/aaKmXDo.png)
+
 
 ### How to join a recipe challenge
 
-You can join the challenge recipes shared by other users on the CookBook.
+1. You can join the challenge recipes shared by other users on the CookBook.
 
-[1 image: challenge feed]
+![](https://i.imgur.com/MUAQ0q5.png)
 
-After viewing their works, if you are interested, you can sign-up for the challenge and create your version of it. The process is the same as creating a general CookBook.
+2. After viewing their works, if you are interested, you can sign-up for the challenge and create your version of it. The process is the same as creating a general CookBook.
 
-[1 image: challenge preview]
+![](https://i.imgur.com/iTX0ViV.png)
 
-Great! After sharing it, other users can see your works on the main page and learn from each other.
+3. Great! After sharing it, other users can see your works on the main page and learn from each other.
 
-[1 gif: completion page]
-[1 image: challenge done feed]
+![](https://i.imgur.com/RDj6igi.png)
+
 
 ### Technical highlights
 
@@ -124,7 +129,7 @@ Great! After sharing it, other users can see your works on the main page and lea
 
 [hung.chiamao@gmail.com](hung.chiamao@gmail.com)
 
-Please feel free to contact me if you have any questions.
+>Please feel free to contact me if you have any questions.
 
 Hung, Chia Mao (洪嘉懋)
 
