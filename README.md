@@ -7,6 +7,7 @@
 -->
 
 [![image alt][AppStoreBadge]](https://bit.ly/ProjectCookBook)
+
 ![image alt][LogoBanner]
 
 >Welcome to CookBook!
@@ -16,10 +17,8 @@ CookBook is a platform to learn and practice cooking, as well as recipes sharing
 You can create your own cookbook, or learn from others’ sharing recipes to practice a variety of exciting dishes.
 If you wish, you can also invite platform users to make dishes with the same theme of recipe, and share the results with other more users for learning.
 
-<img src="https://i.imgur.com/uxrDIKX.jpg" width="179" height="">
-<img src="https://i.imgur.com/dr4oX4N.jpg" width="179" height="">
-<img src="https://i.imgur.com/ES1DWsb.jpg" width="179" height="">
-<img src="https://i.imgur.com/uZBY9vT.jpg" width="179" height="">
+<img src="https://i.imgur.com/uxrDIKX.jpg" width="179" height=""><img src="https://i.imgur.com/dr4oX4N.jpg" width="179" height="">
+<img src="https://i.imgur.com/ES1DWsb.jpg" width="179" height=""><img src="https://i.imgur.com/uZBY9vT.jpg" width="179" height="">
 
 [ReadPreviewPage]: https://i.imgur.com/dr4oX4N.jpg
 
